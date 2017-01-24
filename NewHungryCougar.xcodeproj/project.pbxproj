@@ -1,0 +1,857 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F29974A81B001D1D0CBEA01 /* Pods_NewHungryCougar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AFC7DEA70D653F87FF4A47 /* Pods_NewHungryCougar.framework */; };
+		81F5F515AFB1BD27AD50A05F /* Pods_NewHungryCougarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA17B5C3FEA8DBA30230FE1 /* Pods_NewHungryCougarTests.framework */; };
+		8DD1C8B7DEBEA555033CB5E8 /* Pods_NewHungryCougarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6F044B865F2E7E3AD6CE1B /* Pods_NewHungryCougarUITests.framework */; };
+		BF05BE401D59B97400AA3DF6 /* DiningPlanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF05BE3F1D59B97400AA3DF6 /* DiningPlanVC.swift */; };
+		BF05BE421D59BBA000AA3DF6 /* DiningPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF05BE411D59BBA000AA3DF6 /* DiningPlanCell.swift */; };
+		BF05BE441D59C65600AA3DF6 /* DiningPointsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF05BE431D59C65600AA3DF6 /* DiningPointsVC.swift */; };
+		BF21D39A1D552B4F001A38F2 /* EastVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21D3991D552B4F001A38F2 /* EastVC.swift */; };
+		BF21D39C1D552C00001A38F2 /* WestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21D39B1D552C00001A38F2 /* WestVC.swift */; };
+		BF21D39E1D55A138001A38F2 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21D39D1D55A138001A38F2 /* CircleView.swift */; };
+		BF21D3A01D55C51D001A38F2 /* RestaurantHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21D39F1D55C51D001A38F2 /* RestaurantHours.swift */; };
+		BF35900A1E34713800D5A5E7 /* UserSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3590091E34713800D5A5E7 /* UserSettingsVC.swift */; };
+		BF35985B1D4EF79400AF28B3 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF35985A1D4EF79400AF28B3 /* Day.swift */; };
+		BF8C1BC01D4FDAD700E7B2B7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8C1BBF1D4FDAD700E7B2B7 /* HomeVC.swift */; };
+		BF8C1BC21D4FDCAF00E7B2B7 /* RoundCornersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8C1BC11D4FDCAF00E7B2B7 /* RoundCornersView.swift */; };
+		BF91ED4B1D7ABD40007B161E /* APUHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF91ED4A1D7ABD40007B161E /* APUHomeVC.swift */; };
+		BF91ED4D1D7ABD49007B161E /* InformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF91ED4C1D7ABD49007B161E /* InformationVC.swift */; };
+		BF91ED4F1D7ABD52007B161E /* DontCutMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF91ED4E1D7ABD52007B161E /* DontCutMe.swift */; };
+		BFBA146C1E37DE6200A00CF1 /* HarvestItal Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFBA146B1E37DE6200A00CF1 /* HarvestItal Regular.ttf */; };
+		BFCE9E0A1E23121D004D9B9B /* DiningPointsAnalysisVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE9E091E23121D004D9B9B /* DiningPointsAnalysisVC.swift */; };
+		BFECDD3B1D4EE5B100E626D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFECDD3A1D4EE5B100E626D3 /* AppDelegate.swift */; };
+		BFECDD3D1D4EE5B100E626D3 /* HoursVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFECDD3C1D4EE5B100E626D3 /* HoursVC.swift */; };
+		BFECDD401D4EE5B100E626D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFECDD3E1D4EE5B100E626D3 /* Main.storyboard */; };
+		BFECDD421D4EE5B100E626D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFECDD411D4EE5B100E626D3 /* Assets.xcassets */; };
+		BFECDD451D4EE5B100E626D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFECDD431D4EE5B100E626D3 /* LaunchScreen.storyboard */; };
+		BFECDD501D4EE5B100E626D3 /* Open_DenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFECDD4F1D4EE5B100E626D3 /* Open_DenTests.swift */; };
+		BFECDD5B1D4EE5B100E626D3 /* Open_DenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFECDD5A1D4EE5B100E626D3 /* Open_DenUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BFECDD4C1D4EE5B100E626D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFECDD2F1D4EE5B000E626D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFECDD361D4EE5B000E626D3;
+			remoteInfo = "Open Den";
+		};
+		BFECDD571D4EE5B100E626D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFECDD2F1D4EE5B000E626D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFECDD361D4EE5B000E626D3;
+			remoteInfo = "Open Den";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A14BCE60673E1C67F2540CC /* Pods-NewHungryCougar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewHungryCougar.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewHungryCougar/Pods-NewHungryCougar.release.xcconfig"; sourceTree = "<group>"; };
+		300B2B6E208D2563BE239BFA /* Pods-NewHungryCougarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewHungryCougarUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewHungryCougarUITests/Pods-NewHungryCougarUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		36D92F0CB51FFBCF6A885368 /* Pods-NewHungryCougarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewHungryCougarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewHungryCougarTests/Pods-NewHungryCougarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		75CA5521248C12BE2749B550 /* Pods-NewHungryCougarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewHungryCougarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewHungryCougarTests/Pods-NewHungryCougarTests.release.xcconfig"; sourceTree = "<group>"; };
+		99AFC7DEA70D653F87FF4A47 /* Pods_NewHungryCougar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewHungryCougar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20BA227F806ECC39F8B95C5 /* Pods-NewHungryCougar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewHungryCougar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewHungryCougar/Pods-NewHungryCougar.debug.xcconfig"; sourceTree = "<group>"; };
+		AC6F044B865F2E7E3AD6CE1B /* Pods_NewHungryCougarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewHungryCougarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDA17B5C3FEA8DBA30230FE1 /* Pods_NewHungryCougarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewHungryCougarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF05BE3F1D59B97400AA3DF6 /* DiningPlanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningPlanVC.swift; sourceTree = "<group>"; };
+		BF05BE411D59BBA000AA3DF6 /* DiningPlanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningPlanCell.swift; sourceTree = "<group>"; };
+		BF05BE431D59C65600AA3DF6 /* DiningPointsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningPointsVC.swift; sourceTree = "<group>"; };
+		BF21D3991D552B4F001A38F2 /* EastVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EastVC.swift; sourceTree = "<group>"; };
+		BF21D39B1D552C00001A38F2 /* WestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WestVC.swift; sourceTree = "<group>"; };
+		BF21D39D1D55A138001A38F2 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		BF21D39F1D55C51D001A38F2 /* RestaurantHours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantHours.swift; sourceTree = "<group>"; };
+		BF3590091E34713800D5A5E7 /* UserSettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingsVC.swift; sourceTree = "<group>"; };
+		BF35985A1D4EF79400AF28B3 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		BF54CECB1DCADB9800DFB40D /* Hungry Cougar 2.0.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hungry Cougar 2.0.entitlements"; sourceTree = SOURCE_ROOT; };
+		BF8C1BBF1D4FDAD700E7B2B7 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		BF8C1BC11D4FDCAF00E7B2B7 /* RoundCornersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundCornersView.swift; sourceTree = "<group>"; };
+		BF91ED4A1D7ABD40007B161E /* APUHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APUHomeVC.swift; sourceTree = "<group>"; };
+		BF91ED4C1D7ABD49007B161E /* InformationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationVC.swift; sourceTree = "<group>"; };
+		BF91ED4E1D7ABD52007B161E /* DontCutMe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DontCutMe.swift; sourceTree = "<group>"; };
+		BFBA146B1E37DE6200A00CF1 /* HarvestItal Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HarvestItal Regular.ttf"; sourceTree = "<group>"; };
+		BFCE9E091E23121D004D9B9B /* DiningPointsAnalysisVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningPointsAnalysisVC.swift; sourceTree = "<group>"; };
+		BFECDD371D4EE5B100E626D3 /* NewHungryCougar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewHungryCougar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFECDD3A1D4EE5B100E626D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BFECDD3C1D4EE5B100E626D3 /* HoursVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursVC.swift; sourceTree = "<group>"; };
+		BFECDD3F1D4EE5B100E626D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFECDD411D4EE5B100E626D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFECDD441D4EE5B100E626D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BFECDD461D4EE5B100E626D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFECDD4B1D4EE5B100E626D3 /* NewHungryCougarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewHungryCougarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFECDD4F1D4EE5B100E626D3 /* Open_DenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Open_DenTests.swift; sourceTree = "<group>"; };
+		BFECDD511D4EE5B100E626D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFECDD561D4EE5B100E626D3 /* NewHungryCougarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewHungryCougarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFECDD5A1D4EE5B100E626D3 /* Open_DenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Open_DenUITests.swift; sourceTree = "<group>"; };
+		BFECDD5C1D4EE5B100E626D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB3EE1C29745989C407640FA /* Pods-NewHungryCougarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewHungryCougarUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewHungryCougarUITests/Pods-NewHungryCougarUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFECDD341D4EE5B000E626D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F29974A81B001D1D0CBEA01 /* Pods_NewHungryCougar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFECDD481D4EE5B100E626D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81F5F515AFB1BD27AD50A05F /* Pods_NewHungryCougarTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFECDD531D4EE5B100E626D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD1C8B7DEBEA555033CB5E8 /* Pods_NewHungryCougarUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF21D3961D552A5A001A38F2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF8C1BBF1D4FDAD700E7B2B7 /* HomeVC.swift */,
+				BF21D3991D552B4F001A38F2 /* EastVC.swift */,
+				BF21D39B1D552C00001A38F2 /* WestVC.swift */,
+				BFECDD3C1D4EE5B100E626D3 /* HoursVC.swift */,
+				BF91ED4C1D7ABD49007B161E /* InformationVC.swift */,
+				BF05BE3F1D59B97400AA3DF6 /* DiningPlanVC.swift */,
+				BF05BE431D59C65600AA3DF6 /* DiningPointsVC.swift */,
+				BF91ED4A1D7ABD40007B161E /* APUHomeVC.swift */,
+				BF3590091E34713800D5A5E7 /* UserSettingsVC.swift */,
+				BFCE9E091E23121D004D9B9B /* DiningPointsAnalysisVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		BF21D3981D552A78001A38F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF35985A1D4EF79400AF28B3 /* Day.swift */,
+				BF21D39F1D55C51D001A38F2 /* RestaurantHours.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BF819A751D5666B200420B55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF91ED4E1D7ABD52007B161E /* DontCutMe.swift */,
+				BF8C1BC11D4FDCAF00E7B2B7 /* RoundCornersView.swift */,
+				BF21D39D1D55A138001A38F2 /* CircleView.swift */,
+				BF05BE411D59BBA000AA3DF6 /* DiningPlanCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BFC2FCA61E1FB385003A3149 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		BFC2FCA71E1FB397003A3149 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BFECDD461D4EE5B100E626D3 /* Info.plist */,
+				BFECDD3A1D4EE5B100E626D3 /* AppDelegate.swift */,
+				BF54CECB1DCADB9800DFB40D /* Hungry Cougar 2.0.entitlements */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		BFECDD2E1D4EE5B000E626D3 = {
+			isa = PBXGroup;
+			children = (
+				BFECDD391D4EE5B100E626D3 /* NewHungryCougar */,
+				BFECDD4E1D4EE5B100E626D3 /* Open DenTests */,
+				BFECDD591D4EE5B100E626D3 /* Open DenUITests */,
+				BFECDD381D4EE5B100E626D3 /* Products */,
+				F4EA31C6950B9F9CB7DCE946 /* Pods */,
+				D7489CB5051A668475C866C7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BFECDD381D4EE5B100E626D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFECDD371D4EE5B100E626D3 /* NewHungryCougar.app */,
+				BFECDD4B1D4EE5B100E626D3 /* NewHungryCougarTests.xctest */,
+				BFECDD561D4EE5B100E626D3 /* NewHungryCougarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFECDD391D4EE5B100E626D3 /* NewHungryCougar */ = {
+			isa = PBXGroup;
+			children = (
+				BFC2FCA61E1FB385003A3149 /* Services */,
+				BFC2FCA71E1FB397003A3149 /* Util */,
+				BF21D3981D552A78001A38F2 /* Model */,
+				BF819A751D5666B200420B55 /* View */,
+				BF21D3961D552A5A001A38F2 /* Controller */,
+				BFECDD3E1D4EE5B100E626D3 /* Main.storyboard */,
+				BFECDD411D4EE5B100E626D3 /* Assets.xcassets */,
+				BFECDD431D4EE5B100E626D3 /* LaunchScreen.storyboard */,
+				BFBA146B1E37DE6200A00CF1 /* HarvestItal Regular.ttf */,
+			);
+			path = NewHungryCougar;
+			sourceTree = "<group>";
+		};
+		BFECDD4E1D4EE5B100E626D3 /* Open DenTests */ = {
+			isa = PBXGroup;
+			children = (
+				BFECDD4F1D4EE5B100E626D3 /* Open_DenTests.swift */,
+				BFECDD511D4EE5B100E626D3 /* Info.plist */,
+			);
+			path = "Open DenTests";
+			sourceTree = "<group>";
+		};
+		BFECDD591D4EE5B100E626D3 /* Open DenUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BFECDD5A1D4EE5B100E626D3 /* Open_DenUITests.swift */,
+				BFECDD5C1D4EE5B100E626D3 /* Info.plist */,
+			);
+			path = "Open DenUITests";
+			sourceTree = "<group>";
+		};
+		D7489CB5051A668475C866C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99AFC7DEA70D653F87FF4A47 /* Pods_NewHungryCougar.framework */,
+				BDA17B5C3FEA8DBA30230FE1 /* Pods_NewHungryCougarTests.framework */,
+				AC6F044B865F2E7E3AD6CE1B /* Pods_NewHungryCougarUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4EA31C6950B9F9CB7DCE946 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A20BA227F806ECC39F8B95C5 /* Pods-NewHungryCougar.debug.xcconfig */,
+				1A14BCE60673E1C67F2540CC /* Pods-NewHungryCougar.release.xcconfig */,
+				36D92F0CB51FFBCF6A885368 /* Pods-NewHungryCougarTests.debug.xcconfig */,
+				75CA5521248C12BE2749B550 /* Pods-NewHungryCougarTests.release.xcconfig */,
+				300B2B6E208D2563BE239BFA /* Pods-NewHungryCougarUITests.debug.xcconfig */,
+				EB3EE1C29745989C407640FA /* Pods-NewHungryCougarUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFECDD361D4EE5B000E626D3 /* NewHungryCougar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFECDD5F1D4EE5B100E626D3 /* Build configuration list for PBXNativeTarget "NewHungryCougar" */;
+			buildPhases = (
+				54CBBB54D9D5F412BF4525EE /* [CP] Check Pods Manifest.lock */,
+				BFECDD331D4EE5B000E626D3 /* Sources */,
+				BFECDD341D4EE5B000E626D3 /* Frameworks */,
+				BFECDD351D4EE5B000E626D3 /* Resources */,
+				F2399EAC48E2FCDEDA46DD48 /* [CP] Embed Pods Frameworks */,
+				8A823244D204F7AA1E066624 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NewHungryCougar;
+			productName = "Open Den";
+			productReference = BFECDD371D4EE5B100E626D3 /* NewHungryCougar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BFECDD4A1D4EE5B100E626D3 /* NewHungryCougarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFECDD621D4EE5B100E626D3 /* Build configuration list for PBXNativeTarget "NewHungryCougarTests" */;
+			buildPhases = (
+				4C5A9B0AAEAFE564C8560FCA /* [CP] Check Pods Manifest.lock */,
+				BFECDD471D4EE5B100E626D3 /* Sources */,
+				BFECDD481D4EE5B100E626D3 /* Frameworks */,
+				BFECDD491D4EE5B100E626D3 /* Resources */,
+				3C3FB7CC403662975D19FECC /* [CP] Embed Pods Frameworks */,
+				B4B3159344DDADCE532D3C38 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFECDD4D1D4EE5B100E626D3 /* PBXTargetDependency */,
+			);
+			name = NewHungryCougarTests;
+			productName = "Open DenTests";
+			productReference = BFECDD4B1D4EE5B100E626D3 /* NewHungryCougarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BFECDD551D4EE5B100E626D3 /* NewHungryCougarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFECDD651D4EE5B100E626D3 /* Build configuration list for PBXNativeTarget "NewHungryCougarUITests" */;
+			buildPhases = (
+				BAC0E8002C6055FB770650D3 /* [CP] Check Pods Manifest.lock */,
+				BFECDD521D4EE5B100E626D3 /* Sources */,
+				BFECDD531D4EE5B100E626D3 /* Frameworks */,
+				BFECDD541D4EE5B100E626D3 /* Resources */,
+				927CCB991C9B38254E7B3A8C /* [CP] Embed Pods Frameworks */,
+				0F1BF8020E478AA6A02E976C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFECDD581D4EE5B100E626D3 /* PBXTargetDependency */,
+			);
+			name = NewHungryCougarUITests;
+			productName = "Open DenUITests";
+			productReference = BFECDD561D4EE5B100E626D3 /* NewHungryCougarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFECDD2F1D4EE5B000E626D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Kyle Nakamura";
+				TargetAttributes = {
+					BFECDD361D4EE5B000E626D3 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 7GDSF452LB;
+						DevelopmentTeamName = "Kyle Nakamura";
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.SafariKeychain = {
+								enabled = 0;
+							};
+						};
+					};
+					BFECDD4A1D4EE5B100E626D3 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 7GDSF452LB;
+						DevelopmentTeamName = "Kyle Nakamura";
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BFECDD361D4EE5B000E626D3;
+					};
+					BFECDD551D4EE5B100E626D3 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 7GDSF452LB;
+						DevelopmentTeamName = "Kyle Nakamura";
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BFECDD361D4EE5B000E626D3;
+					};
+				};
+			};
+			buildConfigurationList = BFECDD321D4EE5B000E626D3 /* Build configuration list for PBXProject "NewHungryCougar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BFECDD2E1D4EE5B000E626D3;
+			productRefGroup = BFECDD381D4EE5B100E626D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFECDD361D4EE5B000E626D3 /* NewHungryCougar */,
+				BFECDD4A1D4EE5B100E626D3 /* NewHungryCougarTests */,
+				BFECDD551D4EE5B100E626D3 /* NewHungryCougarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFECDD351D4EE5B000E626D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFBA146C1E37DE6200A00CF1 /* HarvestItal Regular.ttf in Resources */,
+				BFECDD451D4EE5B100E626D3 /* LaunchScreen.storyboard in Resources */,
+				BFECDD421D4EE5B100E626D3 /* Assets.xcassets in Resources */,
+				BFECDD401D4EE5B100E626D3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFECDD491D4EE5B100E626D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFECDD541D4EE5B100E626D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F1BF8020E478AA6A02E976C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewHungryCougarUITests/Pods-NewHungryCougarUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C3FB7CC403662975D19FECC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewHungryCougarTests/Pods-NewHungryCougarTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C5A9B0AAEAFE564C8560FCA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		54CBBB54D9D5F412BF4525EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8A823244D204F7AA1E066624 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewHungryCougar/Pods-NewHungryCougar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		927CCB991C9B38254E7B3A8C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewHungryCougarUITests/Pods-NewHungryCougarUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4B3159344DDADCE532D3C38 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewHungryCougarTests/Pods-NewHungryCougarTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAC0E8002C6055FB770650D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F2399EAC48E2FCDEDA46DD48 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewHungryCougar/Pods-NewHungryCougar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFECDD331D4EE5B000E626D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF21D39E1D55A138001A38F2 /* CircleView.swift in Sources */,
+				BF21D3A01D55C51D001A38F2 /* RestaurantHours.swift in Sources */,
+				BF05BE421D59BBA000AA3DF6 /* DiningPlanCell.swift in Sources */,
+				BF8C1BC21D4FDCAF00E7B2B7 /* RoundCornersView.swift in Sources */,
+				BFECDD3D1D4EE5B100E626D3 /* HoursVC.swift in Sources */,
+				BF91ED4D1D7ABD49007B161E /* InformationVC.swift in Sources */,
+				BF21D39C1D552C00001A38F2 /* WestVC.swift in Sources */,
+				BF35900A1E34713800D5A5E7 /* UserSettingsVC.swift in Sources */,
+				BF91ED4F1D7ABD52007B161E /* DontCutMe.swift in Sources */,
+				BFCE9E0A1E23121D004D9B9B /* DiningPointsAnalysisVC.swift in Sources */,
+				BFECDD3B1D4EE5B100E626D3 /* AppDelegate.swift in Sources */,
+				BF35985B1D4EF79400AF28B3 /* Day.swift in Sources */,
+				BF21D39A1D552B4F001A38F2 /* EastVC.swift in Sources */,
+				BF05BE401D59B97400AA3DF6 /* DiningPlanVC.swift in Sources */,
+				BF8C1BC01D4FDAD700E7B2B7 /* HomeVC.swift in Sources */,
+				BF91ED4B1D7ABD40007B161E /* APUHomeVC.swift in Sources */,
+				BF05BE441D59C65600AA3DF6 /* DiningPointsVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFECDD471D4EE5B100E626D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFECDD501D4EE5B100E626D3 /* Open_DenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFECDD521D4EE5B100E626D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFECDD5B1D4EE5B100E626D3 /* Open_DenUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BFECDD4D1D4EE5B100E626D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFECDD361D4EE5B000E626D3 /* NewHungryCougar */;
+			targetProxy = BFECDD4C1D4EE5B100E626D3 /* PBXContainerItemProxy */;
+		};
+		BFECDD581D4EE5B100E626D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFECDD361D4EE5B000E626D3 /* NewHungryCougar */;
+			targetProxy = BFECDD571D4EE5B100E626D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BFECDD3E1D4EE5B100E626D3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFECDD3F1D4EE5B100E626D3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BFECDD431D4EE5B100E626D3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFECDD441D4EE5B100E626D3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFECDD5D1D4EE5B100E626D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BFECDD5E1D4EE5B100E626D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BFECDD601D4EE5B100E626D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A20BA227F806ECC39F8B95C5 /* Pods-NewHungryCougar.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7GDSF452LB;
+				INFOPLIST_FILE = NewHungryCougar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kylenakamura.newhungrycougar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BFECDD611D4EE5B100E626D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A14BCE60673E1C67F2540CC /* Pods-NewHungryCougar.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7GDSF452LB;
+				INFOPLIST_FILE = NewHungryCougar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kylenakamura.newhungrycougar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		BFECDD631D4EE5B100E626D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36D92F0CB51FFBCF6A885368 /* Pods-NewHungryCougarTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Open DenTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyleNakamura.Open-DenTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewHungryCougar.app/NewHungryCougar";
+			};
+			name = Debug;
+		};
+		BFECDD641D4EE5B100E626D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75CA5521248C12BE2749B550 /* Pods-NewHungryCougarTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Open DenTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyleNakamura.Open-DenTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewHungryCougar.app/NewHungryCougar";
+			};
+			name = Release;
+		};
+		BFECDD661D4EE5B100E626D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 300B2B6E208D2563BE239BFA /* Pods-NewHungryCougarUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "Open DenUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyleNakamura.Open-DenUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Open Den";
+			};
+			name = Debug;
+		};
+		BFECDD671D4EE5B100E626D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB3EE1C29745989C407640FA /* Pods-NewHungryCougarUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "Open DenUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyleNakamura.Open-DenUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Open Den";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFECDD321D4EE5B000E626D3 /* Build configuration list for PBXProject "NewHungryCougar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFECDD5D1D4EE5B100E626D3 /* Debug */,
+				BFECDD5E1D4EE5B100E626D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFECDD5F1D4EE5B100E626D3 /* Build configuration list for PBXNativeTarget "NewHungryCougar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFECDD601D4EE5B100E626D3 /* Debug */,
+				BFECDD611D4EE5B100E626D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFECDD621D4EE5B100E626D3 /* Build configuration list for PBXNativeTarget "NewHungryCougarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFECDD631D4EE5B100E626D3 /* Debug */,
+				BFECDD641D4EE5B100E626D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFECDD651D4EE5B100E626D3 /* Build configuration list for PBXNativeTarget "NewHungryCougarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFECDD661D4EE5B100E626D3 /* Debug */,
+				BFECDD671D4EE5B100E626D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFECDD2F1D4EE5B000E626D3 /* Project object */;
+}
