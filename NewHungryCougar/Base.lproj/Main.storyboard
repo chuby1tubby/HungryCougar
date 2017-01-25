@@ -99,7 +99,7 @@
                                                 <rect key="frame" x="8" y="461.5" width="359" height="77.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin-white" translatesAutoresizingMaskIntoConstraints="NO" id="6PY-hl-SV9">
-                                                        <rect key="frame" x="63" y="13.5" width="50" height="50"/>
+                                                        <rect key="frame" x="63" y="14" width="50" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="6PY-hl-SV9" secondAttribute="height" multiplier="1:1" id="1gA-UG-wqL"/>
                                                             <constraint firstAttribute="width" constant="50" id="C7e-Gv-xu6"/>
@@ -107,7 +107,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Dining Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJ3-3o-di1">
-                                                        <rect key="frame" x="128" y="13.5" width="163" height="50"/>
+                                                        <rect key="frame" x="128" y="14" width="163" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="163" id="4f5-BR-Frm"/>
                                                             <constraint firstAttribute="height" constant="50" id="KM4-pL-eVX"/>
@@ -118,7 +118,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzR-Eu-YPj">
-                                                        <rect key="frame" x="21" y="3.5" width="318" height="70"/>
+                                                        <rect key="frame" x="21" y="4" width="318" height="70"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="hzR-Eu-YPj" secondAttribute="height" multiplier="227:50" id="0gv-Hp-Cax"/>
                                                             <constraint firstAttribute="width" constant="250" id="6h9-Pz-hvh"/>
@@ -558,65 +558,6 @@ Menu</string>
                                             <outletCollection property="gestureRecognizers" destination="1qJ-Ay-XA6" appends="YES" id="jf9-ii-7FA"/>
                                         </connections>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jsm-Xs-5Qj" customClass="CustomView" customModule="NewHungryCougar" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="379" width="359" height="71"/>
-                                        <subviews>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click to load dining points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1J-EW-Ozl" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="0.0" width="343" height="71"/>
-                                                <gestureRecognizers/>
-                                                <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="25"/>
-                                                <color key="textColor" red="0.5888887048" green="0.15054461359999999" blue="0.13530883190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="6C5-eI-McU" appends="YES" id="q2y-aT-3iO"/>
-                                                </connections>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.99739032983779907" green="0.90334665775299072" blue="0.90102463960647583" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="W1J-EW-Ozl" firstAttribute="leading" secondItem="Jsm-Xs-5Qj" secondAttribute="leading" constant="8" id="IGh-eE-1sK"/>
-                                            <constraint firstAttribute="bottom" secondItem="W1J-EW-Ozl" secondAttribute="bottom" id="YQc-up-uhk"/>
-                                            <constraint firstItem="W1J-EW-Ozl" firstAttribute="top" secondItem="Jsm-Xs-5Qj" secondAttribute="top" id="aU5-24-bn7"/>
-                                            <constraint firstAttribute="trailing" secondItem="W1J-EW-Ozl" secondAttribute="trailing" constant="8" id="k6x-pK-qAE"/>
-                                            <constraint firstAttribute="height" constant="71" id="u14-uj-vKE"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MIV-Xz-5hs" customClass="CustomView" customModule="NewHungryCougar" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="268" width="359" height="71"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dbH-ku-6ET">
-                                                <rect key="frame" x="8" y="16" width="343" height="40"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expected Dining Points:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="8xD-xO-ok1" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="218" height="40"/>
-                                                        <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="22"/>
-                                                        <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1068.50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="2au-c1-jMq" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                                        <rect key="frame" x="228" y="0.0" width="115" height="40"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="115" id="Fdg-da-rlC"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="32"/>
-                                                        <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="2au-c1-jMq" firstAttribute="centerY" secondItem="8xD-xO-ok1" secondAttribute="centerY" id="9u9-an-XO4"/>
-                                                    <constraint firstAttribute="height" constant="40" id="gK0-mq-vQy"/>
-                                                </constraints>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" red="1" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="dbH-ku-6ET" firstAttribute="leading" secondItem="MIV-Xz-5hs" secondAttribute="leading" constant="8" id="KPH-Qu-nz9"/>
-                                            <constraint firstAttribute="height" constant="71" id="g8D-LT-HNa"/>
-                                            <constraint firstAttribute="trailing" secondItem="dbH-ku-6ET" secondAttribute="trailing" constant="8" id="jiO-qB-2dY"/>
-                                            <constraint firstItem="dbH-ku-6ET" firstAttribute="centerY" secondItem="MIV-Xz-5hs" secondAttribute="centerY" id="pEY-53-eIu"/>
-                                        </constraints>
-                                    </view>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwi-76-HYX">
                                         <rect key="frame" x="92" y="613" width="191" height="34"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
@@ -625,20 +566,6 @@ Menu</string>
                                         </state>
                                         <connections>
                                             <action selector="pointsHistoryButtonPressed:" destination="Ih7-xX-Njt" eventType="touchUpInside" id="u9h-n6-VPH"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Mz-Jb-HCd">
-                                        <rect key="frame" x="152.5" y="490" width="70" height="25"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="70" id="lQJ-FG-qDv"/>
-                                            <constraint firstAttribute="height" constant="25" id="xcm-fV-lYN"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                        <state key="normal" title="Refresh">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="onRefreshPressed:" destination="Ih7-xX-Njt" eventType="touchUpInside" id="B2b-4n-rCV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zet-Hh-fSs">
@@ -655,40 +582,136 @@ Menu</string>
                                             <action selector="settingsButtonPressed:" destination="Ih7-xX-Njt" eventType="touchUpInside" id="K66-7r-AGz"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3t-a3-86V" customClass="CustomView" customModule="NewHungryCougar" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="379" width="359" height="71"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TLP-76-JKj">
+                                        <rect key="frame" x="8" y="273.5" width="359" height="220"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="19k-Fz-lzF">
-                                                <rect key="frame" x="8" y="16" width="343" height="40"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MIV-Xz-5hs" customClass="CustomView" customModule="NewHungryCougar" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="71"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Dining Points:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Jpl-fm-mfl" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="218" height="40"/>
-                                                        <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="22"/>
-                                                        <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999.99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="dUy-li-Qn6" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                                        <rect key="frame" x="228" y="0.0" width="115" height="40"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dbH-ku-6ET">
+                                                        <rect key="frame" x="8" y="16" width="343" height="40"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expected Dining Points:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="8xD-xO-ok1" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="218" height="40"/>
+                                                                <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="22"/>
+                                                                <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1068.50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="2au-c1-jMq" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
+                                                                <rect key="frame" x="228" y="0.0" width="115" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="115" id="Fdg-da-rlC"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="32"/>
+                                                                <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="115" id="De2-8H-jdN"/>
+                                                            <constraint firstItem="2au-c1-jMq" firstAttribute="centerY" secondItem="8xD-xO-ok1" secondAttribute="centerY" id="9u9-an-XO4"/>
+                                                            <constraint firstAttribute="height" constant="40" id="gK0-mq-vQy"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="32"/>
-                                                        <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="3P1-oe-Fh1"/>
+                                                    <constraint firstItem="dbH-ku-6ET" firstAttribute="leading" secondItem="MIV-Xz-5hs" secondAttribute="leading" constant="8" id="KPH-Qu-nz9"/>
+                                                    <constraint firstAttribute="height" constant="71" id="g8D-LT-HNa"/>
+                                                    <constraint firstAttribute="trailing" secondItem="dbH-ku-6ET" secondAttribute="trailing" constant="8" id="jiO-qB-2dY"/>
+                                                    <constraint firstItem="dbH-ku-6ET" firstAttribute="centerY" secondItem="MIV-Xz-5hs" secondAttribute="centerY" id="pEY-53-eIu"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jsm-Xs-5Qj" customClass="CustomView" customModule="NewHungryCougar" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="91" width="359" height="71"/>
+                                                <subviews>
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click to load dining points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1J-EW-Ozl" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="0.0" width="343" height="71"/>
+                                                        <gestureRecognizers/>
+                                                        <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="25"/>
+                                                        <color key="textColor" red="0.5888887048" green="0.15054461359999999" blue="0.13530883190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="6C5-eI-McU" appends="YES" id="q2y-aT-3iO"/>
+                                                        </connections>
                                                     </label>
                                                 </subviews>
+                                                <color key="backgroundColor" red="0.99739032983779907" green="0.90334665775299072" blue="0.90102463960647583" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="dUy-li-Qn6" firstAttribute="centerY" secondItem="Jpl-fm-mfl" secondAttribute="centerY" id="hzJ-C2-QWl"/>
-                                                    <constraint firstAttribute="height" constant="40" id="lMv-QI-fxn"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="HL1-6c-7T3"/>
+                                                    <constraint firstItem="W1J-EW-Ozl" firstAttribute="leading" secondItem="Jsm-Xs-5Qj" secondAttribute="leading" constant="8" id="IGh-eE-1sK"/>
+                                                    <constraint firstAttribute="bottom" secondItem="W1J-EW-Ozl" secondAttribute="bottom" id="YQc-up-uhk"/>
+                                                    <constraint firstItem="W1J-EW-Ozl" firstAttribute="top" secondItem="Jsm-Xs-5Qj" secondAttribute="top" id="aU5-24-bn7"/>
+                                                    <constraint firstAttribute="trailing" secondItem="W1J-EW-Ozl" secondAttribute="trailing" constant="8" id="k6x-pK-qAE"/>
+                                                    <constraint firstAttribute="height" constant="71" id="u14-uj-vKE"/>
                                                 </constraints>
-                                            </stackView>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Mz-Jb-HCd">
+                                                <rect key="frame" x="145" y="182" width="70" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="lQJ-FG-qDv"/>
+                                                    <constraint firstAttribute="height" constant="25" id="xcm-fV-lYN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                <state key="normal" title="Refresh">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onRefreshPressed:" destination="Ih7-xX-Njt" eventType="touchUpInside" id="B2b-4n-rCV"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3t-a3-86V" customClass="CustomView" customModule="NewHungryCougar" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="91" width="359" height="71"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="19k-Fz-lzF">
+                                                        <rect key="frame" x="8" y="15.5" width="343" height="40"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Dining Points:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Jpl-fm-mfl" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="218" height="40"/>
+                                                                <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="22"/>
+                                                                <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999.99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="dUy-li-Qn6" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
+                                                                <rect key="frame" x="228" y="0.0" width="115" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="115" id="De2-8H-jdN"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="32"/>
+                                                                <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="dUy-li-Qn6" firstAttribute="centerY" secondItem="Jpl-fm-mfl" secondAttribute="centerY" id="hzJ-C2-QWl"/>
+                                                            <constraint firstAttribute="height" constant="40" id="lMv-QI-fxn"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="Cmd-mz-SZW"/>
+                                                    <constraint firstItem="19k-Fz-lzF" firstAttribute="centerY" secondItem="O3t-a3-86V" secondAttribute="centerY" id="Uc8-5g-ebp"/>
+                                                    <constraint firstItem="19k-Fz-lzF" firstAttribute="leading" secondItem="O3t-a3-86V" secondAttribute="leading" constant="8" id="YF7-s5-s2S"/>
+                                                    <constraint firstAttribute="height" constant="71" id="f81-aQ-iiJ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="19k-Fz-lzF" secondAttribute="trailing" constant="8" id="fcb-tx-82x"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.5888887048" green="0.15054461359999999" blue="0.13530883190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="19k-Fz-lzF" firstAttribute="centerY" secondItem="O3t-a3-86V" secondAttribute="centerY" id="Uc8-5g-ebp"/>
-                                            <constraint firstItem="19k-Fz-lzF" firstAttribute="leading" secondItem="O3t-a3-86V" secondAttribute="leading" constant="8" id="YF7-s5-s2S"/>
-                                            <constraint firstAttribute="height" constant="71" id="f81-aQ-iiJ"/>
-                                            <constraint firstAttribute="trailing" secondItem="19k-Fz-lzF" secondAttribute="trailing" constant="8" id="fcb-tx-82x"/>
+                                            <constraint firstAttribute="trailing" secondItem="O3t-a3-86V" secondAttribute="trailing" id="3aL-HG-1IQ"/>
+                                            <constraint firstItem="MIV-Xz-5hs" firstAttribute="top" secondItem="TLP-76-JKj" secondAttribute="top" id="6Bj-ei-CJr"/>
+                                            <constraint firstAttribute="trailing" secondItem="MIV-Xz-5hs" secondAttribute="trailing" id="7F0-CJ-IAH"/>
+                                            <constraint firstItem="O3t-a3-86V" firstAttribute="top" secondItem="MIV-Xz-5hs" secondAttribute="bottom" constant="20" id="Gda-Yb-pNt"/>
+                                            <constraint firstItem="4Mz-Jb-HCd" firstAttribute="top" secondItem="O3t-a3-86V" secondAttribute="bottom" constant="20" id="RAF-qf-QbV"/>
+                                            <constraint firstItem="MIV-Xz-5hs" firstAttribute="leading" secondItem="TLP-76-JKj" secondAttribute="leading" id="TJk-JD-KCp"/>
+                                            <constraint firstAttribute="height" constant="220" id="cVh-21-cgo"/>
+                                            <constraint firstItem="4Mz-Jb-HCd" firstAttribute="centerX" secondItem="TLP-76-JKj" secondAttribute="centerX" id="phP-8L-2JI"/>
+                                            <constraint firstItem="O3t-a3-86V" firstAttribute="leading" secondItem="TLP-76-JKj" secondAttribute="leading" id="vaz-al-rHy"/>
+                                            <constraint firstItem="Jsm-Xs-5Qj" firstAttribute="leading" secondItem="TLP-76-JKj" secondAttribute="leading" id="wlo-De-tcO"/>
+                                            <constraint firstItem="Jsm-Xs-5Qj" firstAttribute="top" secondItem="MIV-Xz-5hs" secondAttribute="bottom" constant="20" id="ydu-8D-tTr"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jsm-Xs-5Qj" secondAttribute="trailing" id="ziE-2F-R92"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -697,41 +720,17 @@ Menu</string>
                                     <constraint firstItem="WHX-RX-sIg" firstAttribute="top" secondItem="mcw-QY-ZdD" secondAttribute="top" constant="120" id="5xu-iq-yRs">
                                         <variation key="heightClass=regular-widthClass=regular" constant="200"/>
                                     </constraint>
-                                    <constraint firstItem="MIV-Xz-5hs" firstAttribute="leading" secondItem="mcw-QY-ZdD" secondAttribute="leadingMargin" id="64o-Oe-qra">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
-                                    </constraint>
-                                    <constraint firstItem="Jsm-Xs-5Qj" firstAttribute="top" secondItem="MIV-Xz-5hs" secondAttribute="bottom" constant="40" id="GuN-ag-Lsb"/>
-                                    <constraint firstItem="4Mz-Jb-HCd" firstAttribute="top" secondItem="O3t-a3-86V" secondAttribute="bottom" constant="40" id="IBd-8y-7P6"/>
+                                    <constraint firstAttribute="trailing" secondItem="TLP-76-JKj" secondAttribute="trailing" constant="8" id="GVb-p0-WDL"/>
                                     <constraint firstItem="WHX-RX-sIg" firstAttribute="leading" secondItem="mcw-QY-ZdD" secondAttribute="leadingMargin" id="Kle-NQ-6v3"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="WHX-RX-sIg" secondAttribute="trailing" id="R52-Ph-2pU"/>
-                                    <constraint firstItem="O3t-a3-86V" firstAttribute="top" secondItem="MIV-Xz-5hs" secondAttribute="bottom" constant="40" id="SHv-ZR-DUs"/>
                                     <constraint firstItem="WHX-RX-sIg" firstAttribute="centerX" secondItem="mcw-QY-ZdD" secondAttribute="centerX" id="Tdn-64-C2f"/>
                                     <constraint firstAttribute="bottom" secondItem="Fwi-76-HYX" secondAttribute="bottom" constant="20" id="Wyr-02-qYx"/>
                                     <constraint firstItem="Fwi-76-HYX" firstAttribute="centerX" secondItem="mcw-QY-ZdD" secondAttribute="centerX" id="YKR-6V-lvd"/>
-                                    <constraint firstItem="O3t-a3-86V" firstAttribute="centerX" secondItem="mcw-QY-ZdD" secondAttribute="centerX" id="atl-fC-cZS"/>
-                                    <constraint firstAttribute="trailing" secondItem="O3t-a3-86V" secondAttribute="trailing" constant="8" id="fJS-Q5-t7S">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
-                                    </constraint>
-                                    <constraint firstItem="Jsm-Xs-5Qj" firstAttribute="trailing" secondItem="mcw-QY-ZdD" secondAttribute="trailingMargin" id="fwU-tp-jwY">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
-                                    </constraint>
-                                    <constraint firstItem="MIV-Xz-5hs" firstAttribute="centerX" secondItem="mcw-QY-ZdD" secondAttribute="centerX" id="gy9-aL-ZPB"/>
-                                    <constraint firstItem="Jsm-Xs-5Qj" firstAttribute="leading" secondItem="mcw-QY-ZdD" secondAttribute="leadingMargin" id="hvF-K5-50i">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
-                                    </constraint>
+                                    <constraint firstItem="TLP-76-JKj" firstAttribute="centerY" secondItem="mcw-QY-ZdD" secondAttribute="centerY" constant="50" id="gHP-zh-gwL"/>
                                     <constraint firstItem="zet-Hh-fSs" firstAttribute="top" secondItem="mcw-QY-ZdD" secondAttribute="top" constant="72" id="jag-rb-Xqa"/>
-                                    <constraint firstItem="MIV-Xz-5hs" firstAttribute="trailing" secondItem="mcw-QY-ZdD" secondAttribute="trailingMargin" id="lB2-iP-ZR0">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
-                                    </constraint>
-                                    <constraint firstItem="Jsm-Xs-5Qj" firstAttribute="centerX" secondItem="mcw-QY-ZdD" secondAttribute="centerX" id="mAt-Vr-K2P"/>
-                                    <constraint firstItem="MIV-Xz-5hs" firstAttribute="centerY" secondItem="mcw-QY-ZdD" secondAttribute="centerY" constant="-30" id="mJZ-1U-OU5">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
-                                    </constraint>
+                                    <constraint firstItem="TLP-76-JKj" firstAttribute="centerX" secondItem="mcw-QY-ZdD" secondAttribute="centerX" id="kvE-R5-DtK"/>
                                     <constraint firstAttribute="trailing" secondItem="zet-Hh-fSs" secondAttribute="trailing" constant="8" id="qfj-hx-GX2"/>
-                                    <constraint firstItem="4Mz-Jb-HCd" firstAttribute="centerX" secondItem="mcw-QY-ZdD" secondAttribute="centerX" id="sso-11-hXe"/>
-                                    <constraint firstItem="O3t-a3-86V" firstAttribute="leading" secondItem="mcw-QY-ZdD" secondAttribute="leading" constant="8" id="y5L-FB-fSs">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
-                                    </constraint>
+                                    <constraint firstItem="TLP-76-JKj" firstAttribute="leading" secondItem="mcw-QY-ZdD" secondAttribute="leading" constant="8" id="xJn-vg-bmd"/>
                                 </constraints>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
@@ -750,6 +749,7 @@ Menu</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="allPointsView" destination="TLP-76-JKj" id="HNZ-sn-ORc"/>
                         <outlet property="diningPlanLbl" destination="WHX-RX-sIg" id="5sG-g3-9Li"/>
                         <outlet property="diningPointsLbl" destination="2au-c1-jMq" id="1zC-pl-WGn"/>
                         <outlet property="expectedDiningPointsView" destination="MIV-Xz-5hs" id="MhL-OW-Jo3"/>

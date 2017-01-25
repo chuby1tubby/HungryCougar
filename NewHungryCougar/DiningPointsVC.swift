@@ -40,6 +40,7 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usersDiningPointsView: CustomView!
     @IBOutlet weak var loginView: CustomView!
     @IBOutlet var userTappedTitle: UITapGestureRecognizer!  // Tapped Dining Plan Title
+    @IBOutlet weak var allPointsView: UIView!
     
     
     
@@ -77,6 +78,28 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
                 defaults.set(textNum, forKey: "userDiningPointsDefaults")
             }
         }
+        
+        // If user already saved a dining plan
+        if let plan = prefs.string(forKey: "userDiningPlanDefaults") {
+            diningPlanLbl.text = plan
+            
+            switch diningPlanChoice {
+            case "No Worries":
+                dpDropDown.selectRow(at: 0)
+            case "We've Got You Covered":
+                dpDropDown.selectRow(at: 1)
+            case "Weekend Away":
+                dpDropDown.selectRow(at: 2)
+            case "Forgot To Cook":
+                dpDropDown.selectRow(at: 3)
+            case "Grab And Go":
+                dpDropDown.selectRow(at: 4)
+            default:
+                for index in 0...4 {
+                    dpDropDown.deselectRow(at: index)
+                }
+            }
+        }
     }
     
     func setupViews() {
@@ -89,13 +112,22 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
     
     // Apply custom attributes to Drop Down
     func customizeDropDown(_ sender: AnyObject) {
+        // ACTION: User selected an item
         dpDropDown.selectionAction = { [] (index: Int, item: String) in
             print("KYLE: Selected item: \(item)")
+            let defaults = UserDefaults.standard
+            defaults.set(item, forKey: "userDiningPlanDefaults")
+            
             self.diningPlanLbl.text = item
+            diningPlanChoice = item
+            self.calculateDiningPoints()
+            self.setSchoolWeek()
+            self.calculateBalance()
             
             self.moveEverything()
         }
         
+        // ACTION: User cancelled dropDown
         dpDropDown.cancelAction = { [unowned self] in
             self.moveEverything()
         }
@@ -105,14 +137,14 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
             "No Worries",
             "We've Got You Covered",
             "Weekend Away",
-            "Forgot to Cook",
+            "Forgot To Cook",
             "Grab And Go"
         ]
         
         // Preferences for behavior and location
         dpDropDown.dismissMode = .onTap // Options: .automatic or .onTap
         dpDropDown.direction = .any // Options: .any, .bottom, .top
-        dpDropDown.bottomOffset = CGPoint(x: 0, y: 0)
+        dpDropDown.bottomOffset = CGPoint(x: 0, y: -5)
         
         // Preferences for appearance
         let appearance = DropDown.appearance()
@@ -187,50 +219,26 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
     @IBAction func chooseDiningPlan(_ sender: AnyObject) {
         customizeDropDown(userTappedTitle)
         dpDropDown.show()
-        
         self.moveEverything()
     }
     
     func moveEverything() {
-        var namedView: CustomView
+        let namedView = self.allPointsView
+        let centerPoint = self.view.frame.midY
+        print("KYLE: CenterPoint = \(centerPoint)")
+        print("KYLE: CenterPointWithOffset = \(centerPoint + 50)")
+        print("KYLE: Actual origin.y = \(self.allPointsView.frame.origin.y)")
         // Move the views
-        if Int((self.expectedDiningPointsView.frame.origin.y)) == 268 {
-            namedView = self.expectedDiningPointsView
-            namedView.frame.origin.y += 250                 // Animate this?
-            refreshBtn.frame.origin.y += 250
-            self.moveViewDown()
-            namedView = self.usersDiningPointsView
-            namedView.frame.origin.y += 250                 // Animate this?
-            refreshBtn.frame.origin.y += 250
-            self.moveViewDown()
-            namedView = self.loginView
-            namedView.frame.origin.y += 250                 // Animate this?
-            refreshBtn.frame.origin.y += 250
-            self.moveViewDown()
-        } else {
-            namedView = self.expectedDiningPointsView
-            namedView.frame.origin.y -= 250
-            refreshBtn.frame.origin.y -= 250
-            self.moveViewUp()
-            namedView = self.usersDiningPointsView
-            namedView.frame.origin.y -= 250
-            refreshBtn.frame.origin.y -= 250
-            self.moveViewUp()
-            namedView = self.loginView
-            namedView.frame.origin.y -= 250
-            refreshBtn.frame.origin.y -= 250
-            self.moveViewUp()
+        if Double((self.allPointsView.frame.origin.y)) == Double(centerPoint - 60) {
+            UIView.animate(withDuration: 0.25, delay: 0, options: [.curveEaseOut], animations: {
+                namedView?.frame.origin.y += 220
+            }, completion: nil)
+            } else {
+            UIView.animate(withDuration: 0.25, delay: 0, options: [.curveEaseOut], animations: {
+                namedView?.frame.origin.y -= 220
+            }, completion: nil)
         }
     }
-    
-    func moveViewUp() {
-        print("KYLE: Moving up!\n")
-    }
-    
-    func moveViewDown() {
-        print("KYLE: Moving down!\n")
-    }
-    
     // Alert user that navigation away from Dining Services is denied
     func presentAlertToUser() {
         let alert = UIAlertController(title: "Missing Login Details", message: "Please update your account details in the settings page.", preferredStyle: UIAlertControllerStyle.alert)
