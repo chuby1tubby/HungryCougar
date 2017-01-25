@@ -26,6 +26,8 @@
 		BF91ED4F1D7ABD52007B161E /* DontCutMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF91ED4E1D7ABD52007B161E /* DontCutMe.swift */; };
 		BFBA146C1E37DE6200A00CF1 /* HarvestItal Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFBA146B1E37DE6200A00CF1 /* HarvestItal Regular.ttf */; };
 		BFCE9E0A1E23121D004D9B9B /* DiningPointsAnalysisVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE9E091E23121D004D9B9B /* DiningPointsAnalysisVC.swift */; };
+		BFE6F27D1E381C4C0083685B /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6F27C1E381C4C0083685B /* MyCell.swift */; };
+		BFE6F27F1E381C890083685B /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE6F27E1E381C890083685B /* MyCell.xib */; };
 		BFECDD3B1D4EE5B100E626D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFECDD3A1D4EE5B100E626D3 /* AppDelegate.swift */; };
 		BFECDD3D1D4EE5B100E626D3 /* HoursVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFECDD3C1D4EE5B100E626D3 /* HoursVC.swift */; };
 		BFECDD401D4EE5B100E626D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFECDD3E1D4EE5B100E626D3 /* Main.storyboard */; };
@@ -78,6 +80,8 @@
 		BF91ED4E1D7ABD52007B161E /* DontCutMe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DontCutMe.swift; sourceTree = "<group>"; };
 		BFBA146B1E37DE6200A00CF1 /* HarvestItal Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HarvestItal Regular.ttf"; sourceTree = "<group>"; };
 		BFCE9E091E23121D004D9B9B /* DiningPointsAnalysisVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningPointsAnalysisVC.swift; sourceTree = "<group>"; };
+		BFE6F27C1E381C4C0083685B /* MyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
+		BFE6F27E1E381C890083685B /* MyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
 		BFECDD371D4EE5B100E626D3 /* NewHungryCougar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewHungryCougar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFECDD3A1D4EE5B100E626D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFECDD3C1D4EE5B100E626D3 /* HoursVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursVC.swift; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 			children = (
 				BF35985A1D4EF79400AF28B3 /* Day.swift */,
 				BF21D39F1D55C51D001A38F2 /* RestaurantHours.swift */,
+				BFE6F27C1E381C4C0083685B /* MyCell.swift */,
+				BFE6F27E1E381C890083685B /* MyCell.xib */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -391,6 +397,7 @@
 				BFBA146C1E37DE6200A00CF1 /* HarvestItal Regular.ttf in Resources */,
 				BFECDD451D4EE5B100E626D3 /* LaunchScreen.storyboard in Resources */,
 				BFECDD421D4EE5B100E626D3 /* Assets.xcassets in Resources */,
+				BFE6F27F1E381C890083685B /* MyCell.xib in Resources */,
 				BFECDD401D4EE5B100E626D3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,6 +576,7 @@
 				BF21D39A1D552B4F001A38F2 /* EastVC.swift in Sources */,
 				BF05BE401D59B97400AA3DF6 /* DiningPlanVC.swift in Sources */,
 				BF8C1BC01D4FDAD700E7B2B7 /* HomeVC.swift in Sources */,
+				BFE6F27D1E381C4C0083685B /* MyCell.swift in Sources */,
 				BF91ED4B1D7ABD40007B161E /* APUHomeVC.swift in Sources */,
 				BF05BE441D59C65600AA3DF6 /* DiningPointsVC.swift in Sources */,
 			);

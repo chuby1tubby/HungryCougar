@@ -29,14 +29,19 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
     
     // Constants
     let mealBudgets: [Double] = [1162, 978, 696, 554, 363]
-
+    let dpDropDown = DropDown()   // Create a new drop down object
+    
     // Outlets
     @IBOutlet weak var refreshBtn: UIButton!
     @IBOutlet weak var diningPlanLbl: UILabel!
     @IBOutlet weak var diningPointsLbl: UILabel!
     @IBOutlet weak var usersDiningPointsLbl: DontCutMe!
+    @IBOutlet weak var expectedDiningPointsView: CustomView!
     @IBOutlet weak var usersDiningPointsView: CustomView!
     @IBOutlet weak var loginView: CustomView!
+    @IBOutlet var userTappedTitle: UITapGestureRecognizer!  // Tapped Dining Plan Title
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +52,8 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        customizeDropDown(userTappedTitle)
+
         let prefs = UserDefaults.standard
         if let value = prefs.string(forKey: "userDiningPointsDefaults") {
             usersDiningPointsView.isHidden = false
@@ -80,31 +87,58 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         diningPlanLbl.text = diningPlanChoice
     }
     
-    // Actions
-    @IBAction func onRefreshPressed(_ sender: Any) {
-        loginFunction()
-    }
-    
-    @IBAction func clickToLoadPressed(_ sender: Any) {
-        let prefs = UserDefaults.standard
-        if let name = prefs.string(forKey: "username") {
-            if let pass = prefs.string(forKey: "password") {
-                loginFunction()
-            } else {
-                presentAlertToUser()
-            }
-        } else {
-            presentAlertToUser()
+    // Apply custom attributes to Drop Down
+    func customizeDropDown(_ sender: AnyObject) {
+        dpDropDown.selectionAction = { [] (index: Int, item: String) in
+            print("KYLE: Selected item: \(item)")
+            self.diningPlanLbl.text = item
+            
+            self.moveEverything()
+        }
+        
+        dpDropDown.cancelAction = { [unowned self] in
+            self.moveEverything()
+        }
+        
+        // Set values for drop down list
+        dpDropDown.dataSource = [
+            "No Worries",
+            "We've Got You Covered",
+            "Weekend Away",
+            "Forgot to Cook",
+            "Grab And Go"
+        ]
+        
+        // Preferences for behavior and location
+        dpDropDown.dismissMode = .onTap // Options: .automatic or .onTap
+        dpDropDown.direction = .any // Options: .any, .bottom, .top
+        dpDropDown.bottomOffset = CGPoint(x: 0, y: 0)
+        
+        // Preferences for appearance
+        let appearance = DropDown.appearance()
+        appearance.cellHeight = 60
+        appearance.cornerRadius = 10
+        appearance.shadowRadius = 10
+        appearance.shadowOpacity = 0.65
+        appearance.animationduration = 0.25 // Duration of animation can be changed!
+        appearance.textColor = .darkGray
+        appearance.textFont = UIFont(name: "Georgia", size: 14.0)!
+        appearance.shadowColor = .darkGray
+        appearance.shadowOffset = CGSize(width: 5, height: 5)
+        appearance.separatorColor = UIColor(white: 0.7, alpha: 0.8)
+        appearance.backgroundColor = UIColor(white: 1.0, alpha: 1.0)
+        appearance.selectionBackgroundColor = UIColor(red: 0.6494, green: 0.8155, blue: 1.0, alpha: 0.2)
+        
+        dpDropDown.cellNib = UINib(nibName: "MyCell", bundle: nil)
+        dpDropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
+            guard let cell = cell as? MyCell else { return }
+            
+            // Setup your custom UI components
+            cell.suffixLabel.text = "         " // Add grey sub-text for each label. Not necessary for now
         }
     }
     
-    // Alert user that navigation away from Dining Services is denied
-    func presentAlertToUser() {
-        let alert = UIAlertController(title: "Missing Login Details", message: "Please update your account details in the settings page.", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
+    // Main function for performing login
     func loginFunction() {
         let prefs = UserDefaults.standard
         if let name = prefs.string(forKey: "username") {
@@ -116,6 +150,28 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         performSegue(withIdentifier: "APUHome", sender: nil)
     }
     
+    /*
+     *  Actions
+    */
+    
+    // Refresh dining points balance manually
+    @IBAction func onRefreshPressed(_ sender: Any) {
+        loginFunction()
+    }
+    
+    // Load dining points when no balance has been stored
+    @IBAction func clickToLoadPressed(_ sender: Any) {
+        let prefs = UserDefaults.standard
+        if let _ = prefs.string(forKey: "username") {
+            if let _ = prefs.string(forKey: "password") {
+                loginFunction()
+            } else {
+                presentAlertToUser()
+            }
+        } else {
+            presentAlertToUser()
+        }
+    }
     
     // Segue to Points History
     @IBAction func pointsHistoryButtonPressed(_ sender: Any) {
@@ -126,6 +182,62 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
     @IBAction func settingsButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "settingsSegue", sender: nil)
     }
+    
+    // User selected Dining Plan drop down
+    @IBAction func chooseDiningPlan(_ sender: AnyObject) {
+        customizeDropDown(userTappedTitle)
+        dpDropDown.show()
+        
+        self.moveEverything()
+    }
+    
+    func moveEverything() {
+        var namedView: CustomView
+        // Move the views
+        if Int((self.expectedDiningPointsView.frame.origin.y)) == 268 {
+            namedView = self.expectedDiningPointsView
+            namedView.frame.origin.y += 250                 // Animate this?
+            refreshBtn.frame.origin.y += 250
+            self.moveViewDown()
+            namedView = self.usersDiningPointsView
+            namedView.frame.origin.y += 250                 // Animate this?
+            refreshBtn.frame.origin.y += 250
+            self.moveViewDown()
+            namedView = self.loginView
+            namedView.frame.origin.y += 250                 // Animate this?
+            refreshBtn.frame.origin.y += 250
+            self.moveViewDown()
+        } else {
+            namedView = self.expectedDiningPointsView
+            namedView.frame.origin.y -= 250
+            refreshBtn.frame.origin.y -= 250
+            self.moveViewUp()
+            namedView = self.usersDiningPointsView
+            namedView.frame.origin.y -= 250
+            refreshBtn.frame.origin.y -= 250
+            self.moveViewUp()
+            namedView = self.loginView
+            namedView.frame.origin.y -= 250
+            refreshBtn.frame.origin.y -= 250
+            self.moveViewUp()
+        }
+    }
+    
+    func moveViewUp() {
+        print("KYLE: Moving up!\n")
+    }
+    
+    func moveViewDown() {
+        print("KYLE: Moving down!\n")
+    }
+    
+    // Alert user that navigation away from Dining Services is denied
+    func presentAlertToUser() {
+        let alert = UIAlertController(title: "Missing Login Details", message: "Please update your account details in the settings page.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     
     /*
         Dining Points calculation functions
