@@ -42,14 +42,8 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
     @IBOutlet var userTappedTitle: UITapGestureRecognizer!  // Tapped Dining Plan Title
     @IBOutlet weak var allPointsView: UIView!
     
-    
-    
     override func viewDidLoad() {
-        super.viewDidLoad()
         setupViews()
-        calculateDiningPoints()
-        setSchoolWeek()
-        calculateBalance()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,8 +76,9 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         // If user already saved a dining plan
         if let plan = prefs.string(forKey: "userDiningPlanDefaults") {
             diningPlanLbl.text = plan
+            diningPlanChoice = plan
             
-            switch diningPlanChoice {
+            switch plan {
             case "No Worries":
                 dpDropDown.selectRow(at: 0)
             case "We've Got You Covered":
@@ -99,7 +94,17 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
                     dpDropDown.deselectRow(at: index)
                 }
             }
+        } else {
+            diningPlanChoice = "No Worries"
+            diningPlanLbl.text = diningPlanChoice
+            for index in 0...4 {
+                dpDropDown.deselectRow(at: index)
+            }
         }
+        
+        calculateDiningPoints()
+        setSchoolWeek()
+        calculateBalance()
     }
     
     func setupViews() {
@@ -112,6 +117,7 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
     
     // Apply custom attributes to Drop Down
     func customizeDropDown(_ sender: AnyObject) {
+        
         // ACTION: User selected an item
         dpDropDown.selectionAction = { [] (index: Int, item: String) in
             print("KYLE: Selected item: \(item)")
@@ -159,7 +165,7 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         appearance.shadowOffset = CGSize(width: 5, height: 5)
         appearance.separatorColor = UIColor(white: 0.7, alpha: 0.8)
         appearance.backgroundColor = UIColor(white: 1.0, alpha: 1.0)
-        appearance.selectionBackgroundColor = UIColor(red: 0.6494, green: 0.8155, blue: 1.0, alpha: 0.2)
+        appearance.selectionBackgroundColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.1)
         
         dpDropDown.cellNib = UINib(nibName: "MyCell", bundle: nil)
         dpDropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
@@ -167,6 +173,27 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
             
             // Setup your custom UI components
             cell.suffixLabel.text = "         " // Add grey sub-text for each label. Not necessary for now
+        }
+        
+        // If user already saved a dining plan
+        let prefs = UserDefaults.standard
+        if let plan = prefs.string(forKey: "userDiningPlanDefaults") {
+            switch plan {
+            case "No Worries":
+                dpDropDown.selectRow(at: 0)
+            case "We've Got You Covered":
+                dpDropDown.selectRow(at: 1)
+            case "Weekend Away":
+                dpDropDown.selectRow(at: 2)
+            case "Forgot To Cook":
+                dpDropDown.selectRow(at: 3)
+            case "Grab And Go":
+                dpDropDown.selectRow(at: 4)
+            default:
+                for index in 0...4 {
+                    dpDropDown.deselectRow(at: index)
+                }
+            }
         }
     }
     

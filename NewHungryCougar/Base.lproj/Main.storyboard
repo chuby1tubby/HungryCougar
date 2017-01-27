@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aYT-vv-QhX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E144f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aYT-vv-QhX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -99,7 +99,7 @@
                                                 <rect key="frame" x="8" y="461.5" width="359" height="77.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin-white" translatesAutoresizingMaskIntoConstraints="NO" id="6PY-hl-SV9">
-                                                        <rect key="frame" x="63" y="14" width="50" height="50"/>
+                                                        <rect key="frame" x="63" y="13.5" width="50" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="6PY-hl-SV9" secondAttribute="height" multiplier="1:1" id="1gA-UG-wqL"/>
                                                             <constraint firstAttribute="width" constant="50" id="C7e-Gv-xu6"/>
@@ -107,7 +107,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Dining Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJ3-3o-di1">
-                                                        <rect key="frame" x="128" y="14" width="163" height="50"/>
+                                                        <rect key="frame" x="128" y="13.5" width="163" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="163" id="4f5-BR-Frm"/>
                                                             <constraint firstAttribute="height" constant="50" id="KM4-pL-eVX"/>
@@ -118,14 +118,14 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzR-Eu-YPj">
-                                                        <rect key="frame" x="21" y="4" width="318" height="70"/>
+                                                        <rect key="frame" x="21" y="3.5" width="318" height="70"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="hzR-Eu-YPj" secondAttribute="height" multiplier="227:50" id="0gv-Hp-Cax"/>
                                                             <constraint firstAttribute="width" constant="250" id="6h9-Pz-hvh"/>
                                                             <constraint firstAttribute="height" constant="70" id="M9w-nj-y3T"/>
                                                         </constraints>
                                                         <connections>
-                                                            <segue destination="xZM-Ix-Tu3" kind="show" id="qiu-vB-CTD"/>
+                                                            <segue destination="Ih7-xX-Njt" kind="show" id="NCf-ue-N85"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -559,8 +559,8 @@ Menu</string>
                                         </connections>
                                     </label>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwi-76-HYX">
-                                        <rect key="frame" x="92" y="613" width="191" height="34"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        <rect key="frame" x="86" y="608" width="203" height="39"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="22"/>
                                         <state key="normal" title="Dining Points Analysis">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -574,7 +574,7 @@ Menu</string>
                                             <constraint firstAttribute="height" constant="30" id="4qd-ef-3IX"/>
                                             <constraint firstAttribute="width" constant="88" id="gGq-7A-C9x"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="22"/>
                                         <state key="normal" title="Settings">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -647,12 +647,12 @@ Menu</string>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Mz-Jb-HCd">
-                                                <rect key="frame" x="145" y="182" width="70" height="25"/>
+                                                <rect key="frame" x="140" y="182" width="80" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="70" id="lQJ-FG-qDv"/>
-                                                    <constraint firstAttribute="height" constant="25" id="xcm-fV-lYN"/>
+                                                    <constraint firstAttribute="width" constant="80" id="lQJ-FG-qDv"/>
+                                                    <constraint firstAttribute="height" constant="30" id="xcm-fV-lYN"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="22"/>
                                                 <state key="normal" title="Refresh">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -714,6 +714,16 @@ Menu</string>
                                             <constraint firstAttribute="trailing" secondItem="Jsm-Xs-5Qj" secondAttribute="trailing" id="ziE-2F-R92"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(tap to select a dining plan)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRT-Np-FWW">
+                                        <rect key="frame" x="89" y="178" width="196" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="2DL-j2-GXk"/>
+                                            <constraint firstAttribute="width" constant="196" id="qEs-Vn-A7O"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.58823529411764708" green="0.14901960784313725" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -724,8 +734,10 @@ Menu</string>
                                     <constraint firstItem="WHX-RX-sIg" firstAttribute="leading" secondItem="mcw-QY-ZdD" secondAttribute="leadingMargin" id="Kle-NQ-6v3"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="WHX-RX-sIg" secondAttribute="trailing" id="R52-Ph-2pU"/>
                                     <constraint firstItem="WHX-RX-sIg" firstAttribute="centerX" secondItem="mcw-QY-ZdD" secondAttribute="centerX" id="Tdn-64-C2f"/>
+                                    <constraint firstItem="FRT-Np-FWW" firstAttribute="top" secondItem="WHX-RX-sIg" secondAttribute="bottom" id="VLf-hM-y4h"/>
                                     <constraint firstAttribute="bottom" secondItem="Fwi-76-HYX" secondAttribute="bottom" constant="20" id="Wyr-02-qYx"/>
                                     <constraint firstItem="Fwi-76-HYX" firstAttribute="centerX" secondItem="mcw-QY-ZdD" secondAttribute="centerX" id="YKR-6V-lvd"/>
+                                    <constraint firstItem="FRT-Np-FWW" firstAttribute="centerX" secondItem="mcw-QY-ZdD" secondAttribute="centerX" id="fcK-vC-D1S"/>
                                     <constraint firstItem="TLP-76-JKj" firstAttribute="centerY" secondItem="mcw-QY-ZdD" secondAttribute="centerY" constant="50" id="gHP-zh-gwL"/>
                                     <constraint firstItem="zet-Hh-fSs" firstAttribute="top" secondItem="mcw-QY-ZdD" secondAttribute="top" constant="72" id="jag-rb-Xqa"/>
                                     <constraint firstItem="TLP-76-JKj" firstAttribute="centerX" secondItem="mcw-QY-ZdD" secondAttribute="centerX" id="kvE-R5-DtK"/>
@@ -931,7 +943,7 @@ Menu</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="jMe-WQ-YeX">
-                                                <rect key="frame" x="8" y="242" width="188" height="59"/>
+                                                <rect key="frame" x="8" y="242" width="188" height="38"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kyle Nakamura" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tS-Gh-cGZ">
                                                         <rect key="frame" x="0.0" y="0.0" width="188" height="17"/>
@@ -943,22 +955,8 @@ Menu</string>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(626) 388 - 5416" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c37-Ea-oIO">
-                                                        <rect key="frame" x="0.0" y="21" width="188" height="17"/>
-                                                        <gestureRecognizers/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="17" id="DWu-ws-mMR"/>
-                                                            <constraint firstAttribute="width" constant="188" id="sYM-qE-5H6"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                        <connections>
-                                                            <outletCollection property="gestureRecognizers" destination="blv-Vt-5Fh" appends="YES" id="bkf-Ah-3id"/>
-                                                        </connections>
-                                                    </label>
                                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="knakamura13@apu.edu" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQW-NX-lSt">
-                                                        <rect key="frame" x="0.0" y="42" width="188" height="17"/>
+                                                        <rect key="frame" x="0.0" y="21" width="188" height="17"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="188" id="Rkr-Ea-1Kw"/>
@@ -1031,11 +1029,6 @@ Menu</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qa1-IG-t43" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="blv-Vt-5Fh" userLabel="phoneTap">
-                    <connections>
-                        <action selector="phoneLabelTapped:" destination="6mq-gA-Yq1" id="RAq-Q2-hMw"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <tapGestureRecognizer id="4RE-lm-i6N" userLabel="emailTap">
                     <connections>
                         <action selector="emailLabelTapped:" destination="6mq-gA-Yq1" id="1eZ-Kp-Y8Q"/>
@@ -1787,7 +1780,7 @@ Menu</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aYT-vv-QhX" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6j5-pb-k0w">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6j5-pb-k0w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1818,7 +1811,8 @@ Menu</string>
         <image name="money5" width="208" height="208"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vkx-zZ-DrN"/>
+        <segue reference="Mj2-Yc-eTl"/>
         <segue reference="HmY-Vi-mCP"/>
+        <segue reference="vkx-zZ-DrN"/>
     </inferredMetricsTieBreakers>
 </document>

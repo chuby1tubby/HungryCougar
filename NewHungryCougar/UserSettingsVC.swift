@@ -59,11 +59,6 @@ class UserSettingsVC: UIViewController, UITextFieldDelegate {
         passwordField.resignFirstResponder()
     }
     
-    @IBAction func phoneLabelTapped(_ sender: Any) {
-        let url = URL(string: "tel://6263885416")
-        UIApplication.shared.openURL(url!)
-    }
-    
     @IBAction func emailLabelTapped(_ sender: Any) {
         let url = URL(string: "mailto:knakamura13@apu.edu")
         UIApplication.shared.openURL(url!)
