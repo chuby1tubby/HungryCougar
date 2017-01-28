@@ -249,6 +249,12 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         self.moveEverything()
     }
     
+    @IBAction func tappedTinyLabel(_ sender: Any) {
+        customizeDropDown(userTappedTitle)
+        dpDropDown.show()
+        self.moveEverything()
+    }
+    
     func moveEverything() {
         let namedView = self.allPointsView
         let centerPoint = self.view.frame.midY
