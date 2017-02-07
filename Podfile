@@ -7,6 +7,8 @@ target 'NewHungryCougar' do
 
   # Pods for NewHungryCougar
   pod 'DropDown', '~> 2'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
 
   target 'NewHungryCougarTests' do
     inherit! :search_paths

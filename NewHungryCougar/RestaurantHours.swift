@@ -6,8 +6,9 @@
 //  Copyright © 2016 Kyle Nakamura. All rights reserved.
 //
 
-import Foundation
 import UIKit
+import FirebaseDatabase
+import Foundation
 
 // Initialized Days
 var Sunday: Day = Day(openTime: 0, closeTime: 0, hasNoHours: false)
