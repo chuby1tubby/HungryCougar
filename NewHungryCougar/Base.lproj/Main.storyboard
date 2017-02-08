@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E144f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aYT-vv-QhX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E154a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aYT-vv-QhX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -250,12 +250,12 @@
                                         <rect key="frame" x="45" y="273" width="285" height="121"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLOSED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojc-Un-ovC">
-                                                <rect key="frame" x="38.5" y="0.0" width="208" height="97"/>
+                                                <rect key="frame" x="9.5" y="0.0" width="266" height="71"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="97" id="TW0-ST-AeX"/>
                                                     <constraint firstAttribute="width" constant="350" id="eeJ-7m-Azr"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="64"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -265,9 +265,12 @@
                                                     </mask>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opening in XX minutes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vu1-9q-xnw">
-                                                <rect key="frame" x="41" y="97" width="203.5" height="24"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opening again at 5pm" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vu1-9q-xnw">
+                                                <rect key="frame" x="33.5" y="71" width="218.5" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="2K0-Ob-MMR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                                 <color key="textColor" red="0.78114880181347157" green="0.78114880181347157" blue="0.78114880181347157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1029,19 +1032,19 @@ Menu</string>
                                 <rect key="frame" x="0.0" y="0.0" width="188" height="667"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="zQK-fc-s9Y">
-                                        <rect key="frame" x="54" y="141" width="80" height="425"/>
+                                        <rect key="frame" x="49" y="103.5" width="100" height="500"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cQ2-pI-rZe">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="101.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="126.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UXe-ru-TbA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="79.5"/>
+                                                        <rect key="frame" x="11.5" y="0.0" width="77" height="76.5"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GRILL_FINAL" translatesAutoresizingMaskIntoConstraints="NO" id="OYH-zo-cEa">
-                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="79.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="77" height="76.5"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oty-Fu-v7o">
-                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="79.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="77" height="76.5"/>
                                                                 <connections>
                                                                     <action selector="grillButtonPressed:" destination="Bn5-0n-IEe" eventType="touchUpInside" id="ic8-Vu-0zF"/>
                                                                 </connections>
@@ -1052,122 +1055,107 @@ Menu</string>
                                                             <constraint firstAttribute="trailing" secondItem="oty-Fu-v7o" secondAttribute="trailing" id="1Vh-EP-oKa"/>
                                                             <constraint firstItem="oty-Fu-v7o" firstAttribute="leading" secondItem="UXe-ru-TbA" secondAttribute="leading" id="3Ly-0v-qaJ"/>
                                                             <constraint firstItem="OYH-zo-cEa" firstAttribute="top" secondItem="UXe-ru-TbA" secondAttribute="top" id="84x-l0-oyI"/>
-                                                            <constraint firstAttribute="width" constant="80" id="9CH-B9-Udk"/>
                                                             <constraint firstAttribute="trailing" secondItem="OYH-zo-cEa" secondAttribute="trailing" id="MoQ-s2-yOa"/>
                                                             <constraint firstAttribute="bottom" secondItem="oty-Fu-v7o" secondAttribute="bottom" id="VOu-9A-sQS"/>
-                                                            <constraint firstAttribute="height" constant="80" id="dZS-kg-Bgb"/>
+                                                            <constraint firstAttribute="width" secondItem="UXe-ru-TbA" secondAttribute="height" multiplier="1:1" id="hbp-az-YaE"/>
                                                             <constraint firstItem="OYH-zo-cEa" firstAttribute="leading" secondItem="UXe-ru-TbA" secondAttribute="leading" id="jSl-3D-mrW"/>
                                                             <constraint firstItem="oty-Fu-v7o" firstAttribute="top" secondItem="UXe-ru-TbA" secondAttribute="top" id="oIe-oX-5gj"/>
                                                             <constraint firstAttribute="bottom" secondItem="OYH-zo-cEa" secondAttribute="bottom" id="ybu-eR-zsL"/>
                                                         </constraints>
-                                                        <variation key="heightClass=regular-widthClass=regular">
-                                                            <mask key="constraints">
-                                                                <exclude reference="9CH-B9-Udk"/>
-                                                                <exclude reference="dZS-kg-Bgb"/>
-                                                            </mask>
-                                                        </variation>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heritage Grill" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agO-QE-b70">
-                                                        <rect key="frame" x="2.5" y="84.5" width="75" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agO-QE-b70">
+                                                        <rect key="frame" x="0.0" y="81.5" width="100" height="45"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="17" id="Mod-Ff-T8N"/>
-                                                            <constraint firstAttribute="width" constant="75" id="PKE-Gn-i9i"/>
+                                                            <constraint firstAttribute="height" constant="45" id="Mod-Ff-T8N"/>
+                                                            <constraint firstAttribute="width" constant="100" id="PKE-Gn-i9i"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="13"/>
+                                                        <string key="text">The Grill
+at Heritage</string>
+                                                        <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pJo-rZ-7yk">
-                                                <rect key="frame" x="0.0" y="161.5" width="80" height="102"/>
+                                                <rect key="frame" x="0.0" y="186.5" width="100" height="127"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1lp-PA-pkC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                        <rect key="frame" x="11.5" y="0.0" width="77" height="77"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="The-Market-transparent-2" translatesAutoresizingMaskIntoConstraints="NO" id="Pex-oe-3gw">
-                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUb-ug-hd7">
-                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
                                                                 <connections>
                                                                     <action selector="marketButtonPressed:" destination="Bn5-0n-IEe" eventType="touchUpInside" id="RZK-7U-bfT"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="80" id="0hS-Pt-AgU"/>
                                                             <constraint firstItem="Pex-oe-3gw" firstAttribute="top" secondItem="1lp-PA-pkC" secondAttribute="top" id="14r-9y-oJK"/>
                                                             <constraint firstItem="zUb-ug-hd7" firstAttribute="top" secondItem="1lp-PA-pkC" secondAttribute="top" id="2KB-Ub-jHN"/>
                                                             <constraint firstItem="zUb-ug-hd7" firstAttribute="leading" secondItem="1lp-PA-pkC" secondAttribute="leading" id="6IK-Nl-Zcq"/>
+                                                            <constraint firstAttribute="width" secondItem="1lp-PA-pkC" secondAttribute="height" multiplier="1:1" id="8kC-aa-WOZ"/>
                                                             <constraint firstItem="Pex-oe-3gw" firstAttribute="leading" secondItem="1lp-PA-pkC" secondAttribute="leading" id="J4o-Qy-UhP"/>
                                                             <constraint firstAttribute="bottom" secondItem="zUb-ug-hd7" secondAttribute="bottom" id="L5v-oJ-JDk"/>
-                                                            <constraint firstAttribute="height" constant="80" id="McJ-8m-9JX"/>
                                                             <constraint firstAttribute="trailing" secondItem="Pex-oe-3gw" secondAttribute="trailing" id="eEd-yr-Z43"/>
                                                             <constraint firstAttribute="bottom" secondItem="Pex-oe-3gw" secondAttribute="bottom" id="uo3-Oc-dfi"/>
                                                             <constraint firstAttribute="trailing" secondItem="zUb-ug-hd7" secondAttribute="trailing" id="vwo-mN-RMu"/>
                                                         </constraints>
-                                                        <variation key="heightClass=regular-widthClass=regular">
-                                                            <mask key="constraints">
-                                                                <exclude reference="0hS-Pt-AgU"/>
-                                                                <exclude reference="McJ-8m-9JX"/>
-                                                            </mask>
-                                                        </variation>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="West Market" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ul-oU-bAi">
-                                                        <rect key="frame" x="2.5" y="85" width="75" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ul-oU-bAi">
+                                                        <rect key="frame" x="0.0" y="82" width="100" height="45"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="17" id="CZU-fR-e7g"/>
-                                                            <constraint firstAttribute="width" constant="75" id="mK1-Xb-NbX"/>
+                                                            <constraint firstAttribute="height" constant="45" id="CZU-fR-e7g"/>
+                                                            <constraint firstAttribute="width" constant="100" id="mK1-Xb-NbX"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="13"/>
+                                                        <string key="text">The Market
+at Heritage</string>
+                                                        <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rEm-ud-9aR">
-                                                <rect key="frame" x="0.0" y="323.5" width="80" height="101.5"/>
+                                                <rect key="frame" x="0.0" y="373.5" width="100" height="126.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGB-Rt-Mza">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="79.5"/>
+                                                        <rect key="frame" x="11" y="0.0" width="78" height="76.5"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Umai-Sushi-transparent-2" translatesAutoresizingMaskIntoConstraints="NO" id="tTd-IG-Y7X">
-                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="79.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="78" height="76.5"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYT-WP-Gni">
-                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="79.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="78" height="76.5"/>
                                                                 <connections>
                                                                     <action selector="umaiButtonPressed:" destination="Bn5-0n-IEe" eventType="touchUpInside" id="Msi-kB-3a4"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
+                                                            <constraint firstAttribute="width" secondItem="yGB-Rt-Mza" secondAttribute="height" multiplier="1:1" constant="1" id="0k9-HS-ABL"/>
                                                             <constraint firstItem="tTd-IG-Y7X" firstAttribute="top" secondItem="yGB-Rt-Mza" secondAttribute="top" id="16w-be-zDY"/>
                                                             <constraint firstAttribute="trailing" secondItem="tTd-IG-Y7X" secondAttribute="trailing" id="4Da-EY-Kpk"/>
                                                             <constraint firstAttribute="bottom" secondItem="tTd-IG-Y7X" secondAttribute="bottom" id="9NA-Bp-76N"/>
                                                             <constraint firstItem="tTd-IG-Y7X" firstAttribute="leading" secondItem="yGB-Rt-Mza" secondAttribute="leading" id="Cw0-G9-w9b"/>
-                                                            <constraint firstAttribute="height" constant="80" id="GUm-ee-q85"/>
                                                             <constraint firstAttribute="bottom" secondItem="wYT-WP-Gni" secondAttribute="bottom" id="JKu-dN-1sd"/>
                                                             <constraint firstItem="wYT-WP-Gni" firstAttribute="leading" secondItem="yGB-Rt-Mza" secondAttribute="leading" id="bxe-eN-2QO"/>
-                                                            <constraint firstAttribute="width" constant="80" id="ge3-mv-Ogs"/>
                                                             <constraint firstItem="wYT-WP-Gni" firstAttribute="top" secondItem="yGB-Rt-Mza" secondAttribute="top" id="ukc-TW-T5G"/>
                                                             <constraint firstAttribute="trailing" secondItem="wYT-WP-Gni" secondAttribute="trailing" id="yqr-bv-uz3"/>
                                                         </constraints>
-                                                        <variation key="heightClass=regular-widthClass=regular">
-                                                            <mask key="constraints">
-                                                                <exclude reference="GUm-ee-q85"/>
-                                                                <exclude reference="ge3-mv-Ogs"/>
-                                                            </mask>
-                                                        </variation>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Umai Sushi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWB-0p-qnE">
-                                                        <rect key="frame" x="2.5" y="84.5" width="75" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWB-0p-qnE">
+                                                        <rect key="frame" x="0.0" y="81.5" width="100" height="45"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="17" id="Znb-c3-53R"/>
-                                                            <constraint firstAttribute="width" constant="75" id="cxK-tD-jTh"/>
+                                                            <constraint firstAttribute="height" constant="45" id="Znb-c3-53R"/>
+                                                            <constraint firstAttribute="width" constant="100" id="cxK-tD-jTh"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="13"/>
+                                                        <string key="text">Umai Sushi
+</string>
+                                                        <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1175,10 +1163,10 @@ Menu</string>
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="H8y-xT-lJz">
+                                            <constraint firstAttribute="width" constant="100" id="H8y-xT-lJz">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="150"/>
                                             </constraint>
-                                            <constraint firstAttribute="height" constant="425" id="fcg-Gd-s0b">
+                                            <constraint firstAttribute="height" constant="500" id="fcg-Gd-s0b">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="700"/>
                                             </constraint>
                                         </constraints>
@@ -1187,26 +1175,26 @@ Menu</string>
                                 <color key="backgroundColor" red="0.58823529409999997" green="0.14901960780000001" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="zQK-fc-s9Y" firstAttribute="centerY" secondItem="swx-Ps-VMF" secondAttribute="centerY" constant="20" id="8lL-uC-ZMA"/>
-                                    <constraint firstItem="zQK-fc-s9Y" firstAttribute="centerX" secondItem="swx-Ps-VMF" secondAttribute="centerX" id="GqG-4T-3FX"/>
+                                    <constraint firstItem="zQK-fc-s9Y" firstAttribute="centerX" secondItem="swx-Ps-VMF" secondAttribute="centerX" constant="5" id="GqG-4T-3FX"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPM-Ac-I9v">
                                 <rect key="frame" x="188" y="0.0" width="187" height="667"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Ppc-pf-rmb">
-                                        <rect key="frame" x="54" y="141" width="80" height="425"/>
+                                        <rect key="frame" x="38.5" y="103.5" width="100" height="500"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="V0g-RO-fFA">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="101.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="126.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ih0-gO-xCu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="79.5"/>
+                                                        <rect key="frame" x="11.5" y="0.0" width="77" height="76.5"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HILLSIDE_GROUNDS_FINAL" translatesAutoresizingMaskIntoConstraints="NO" id="Bfa-Zo-xed">
-                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="79.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="77" height="76.5"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V26-EY-JKj">
-                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="79.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="77" height="76.5"/>
                                                                 <connections>
                                                                     <action selector="hillsideButtonPressed:" destination="Bn5-0n-IEe" eventType="touchUpInside" id="EH3-Zo-v62"/>
                                                                 </connections>
@@ -1214,47 +1202,42 @@ Menu</string>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.5888887048" green="0.15054461359999999" blue="0.13530883190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="80" id="6OI-at-rh6"/>
                                                             <constraint firstAttribute="bottom" secondItem="Bfa-Zo-xed" secondAttribute="bottom" id="B7s-aL-QoR"/>
+                                                            <constraint firstAttribute="width" secondItem="Ih0-gO-xCu" secondAttribute="height" multiplier="1:1" id="KuO-ZO-6Uw"/>
                                                             <constraint firstItem="Bfa-Zo-xed" firstAttribute="leading" secondItem="Ih0-gO-xCu" secondAttribute="leading" id="P5Z-2o-P5W"/>
                                                             <constraint firstItem="V26-EY-JKj" firstAttribute="leading" secondItem="Ih0-gO-xCu" secondAttribute="leading" id="Pwv-JG-gB7"/>
                                                             <constraint firstAttribute="trailing" secondItem="Bfa-Zo-xed" secondAttribute="trailing" id="Ryv-1N-fHn"/>
-                                                            <constraint firstAttribute="width" constant="80" id="S1X-ka-9d2"/>
                                                             <constraint firstItem="Bfa-Zo-xed" firstAttribute="top" secondItem="Ih0-gO-xCu" secondAttribute="top" id="ft9-1I-nfU"/>
                                                             <constraint firstAttribute="bottom" secondItem="V26-EY-JKj" secondAttribute="bottom" id="qpr-SE-0cz"/>
                                                             <constraint firstItem="V26-EY-JKj" firstAttribute="top" secondItem="Ih0-gO-xCu" secondAttribute="top" id="rO2-vx-u0W"/>
                                                             <constraint firstAttribute="trailing" secondItem="V26-EY-JKj" secondAttribute="trailing" id="zzu-va-flW"/>
                                                         </constraints>
-                                                        <variation key="heightClass=regular-widthClass=regular">
-                                                            <mask key="constraints">
-                                                                <exclude reference="6OI-at-rh6"/>
-                                                                <exclude reference="S1X-ka-9d2"/>
-                                                            </mask>
-                                                        </variation>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fresh Grounds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ac-iH-zfJ">
-                                                        <rect key="frame" x="0.0" y="84.5" width="80" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ac-iH-zfJ">
+                                                        <rect key="frame" x="0.0" y="81.5" width="100" height="45"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="80" id="O8A-GU-Prl"/>
-                                                            <constraint firstAttribute="height" constant="17" id="xan-lv-5Vg"/>
+                                                            <constraint firstAttribute="width" constant="100" id="O8A-GU-Prl"/>
+                                                            <constraint firstAttribute="height" constant="45" id="xan-lv-5Vg"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="13"/>
+                                                        <string key="text">Fresh Grounds
+at Heritage</string>
+                                                        <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aGV-MR-syC">
-                                                <rect key="frame" x="0.0" y="161.5" width="80" height="102"/>
+                                                <rect key="frame" x="0.0" y="186.5" width="100" height="127"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qx-4P-yqD">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                        <rect key="frame" x="11" y="0.0" width="78" height="77"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sams-Subs-transparent-3" translatesAutoresizingMaskIntoConstraints="NO" id="B7o-ZN-ixA">
-                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="78" height="77"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bo0-Na-HZx">
-                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="78" height="77"/>
                                                                 <connections>
                                                                     <action selector="subsButtonPressed:" destination="Bn5-0n-IEe" eventType="touchUpInside" id="kl7-W6-fHZ"/>
                                                                 </connections>
@@ -1262,40 +1245,35 @@ Menu</string>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstAttribute="bottom" secondItem="B7o-ZN-ixA" secondAttribute="bottom" id="1al-W1-bSM"/>
-                                                            <constraint firstAttribute="height" constant="80" id="7RC-cP-Fs3"/>
                                                             <constraint firstItem="Bo0-Na-HZx" firstAttribute="leading" secondItem="2qx-4P-yqD" secondAttribute="leading" id="8lx-7X-P4B"/>
                                                             <constraint firstAttribute="bottom" secondItem="Bo0-Na-HZx" secondAttribute="bottom" id="BGO-pr-Eee"/>
                                                             <constraint firstItem="B7o-ZN-ixA" firstAttribute="top" secondItem="2qx-4P-yqD" secondAttribute="top" id="MiG-1X-EqT"/>
                                                             <constraint firstAttribute="trailing" secondItem="B7o-ZN-ixA" secondAttribute="trailing" id="NUC-14-BPC"/>
-                                                            <constraint firstAttribute="width" constant="80" id="Qbd-qf-ZfR"/>
                                                             <constraint firstAttribute="trailing" secondItem="Bo0-Na-HZx" secondAttribute="trailing" id="UHj-FN-7gN"/>
+                                                            <constraint firstAttribute="width" secondItem="2qx-4P-yqD" secondAttribute="height" multiplier="1:1" constant="1" id="c97-YG-fyE"/>
                                                             <constraint firstItem="Bo0-Na-HZx" firstAttribute="top" secondItem="2qx-4P-yqD" secondAttribute="top" id="gv7-ND-zbR"/>
                                                             <constraint firstItem="B7o-ZN-ixA" firstAttribute="leading" secondItem="2qx-4P-yqD" secondAttribute="leading" id="w1J-rO-6W1"/>
                                                         </constraints>
-                                                        <variation key="heightClass=regular-widthClass=regular">
-                                                            <mask key="constraints">
-                                                                <exclude reference="7RC-cP-Fs3"/>
-                                                                <exclude reference="Qbd-qf-ZfR"/>
-                                                            </mask>
-                                                        </variation>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sam's Subs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHm-fe-rxf">
-                                                        <rect key="frame" x="2.5" y="85" width="75" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHm-fe-rxf">
+                                                        <rect key="frame" x="0.0" y="82" width="100" height="45"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="17" id="H7N-3T-O6h"/>
-                                                            <constraint firstAttribute="width" constant="75" id="qTz-VI-v0Q"/>
+                                                            <constraint firstAttribute="height" constant="45" id="H7N-3T-O6h"/>
+                                                            <constraint firstAttribute="width" constant="100" id="qTz-VI-v0Q"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="13"/>
+                                                        <string key="text">Sam's Subs
+</string>
+                                                        <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ph3-OP-s4m">
-                                                <rect key="frame" x="0.0" y="323.5" width="80" height="101.5"/>
+                                                <rect key="frame" x="0.0" y="373.5" width="100" height="126.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVj-XA-f1i">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="79.5"/>
+                                                        <rect key="frame" x="10" y="0.0" width="80" height="104.5"/>
                                                         <color key="backgroundColor" red="0.58823529411764708" green="0.14901960784313725" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="80" id="8cJ-gY-hPy"/>
@@ -1303,7 +1281,7 @@ Menu</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eO-JP-Ksz">
-                                                        <rect key="frame" x="2.5" y="84.5" width="75" height="17"/>
+                                                        <rect key="frame" x="12.5" y="109.5" width="75" height="17"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="17" id="Exk-Vy-pE2"/>
                                                             <constraint firstAttribute="width" constant="75" id="Ya5-Ql-FFT"/>
@@ -1316,10 +1294,10 @@ Menu</string>
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="425" id="CRk-id-jBc">
+                                            <constraint firstAttribute="height" constant="500" id="CRk-id-jBc">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="700"/>
                                             </constraint>
-                                            <constraint firstAttribute="width" constant="80" id="cfm-5x-Ggi">
+                                            <constraint firstAttribute="width" constant="100" id="cfm-5x-Ggi">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="150"/>
                                             </constraint>
                                         </constraints>
@@ -1328,7 +1306,7 @@ Menu</string>
                                 <color key="backgroundColor" red="0.58823529409999997" green="0.14901960780000001" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Ppc-pf-rmb" firstAttribute="centerY" secondItem="GPM-Ac-I9v" secondAttribute="centerY" constant="20" id="S7n-mM-DwB"/>
-                                    <constraint firstItem="Ppc-pf-rmb" firstAttribute="centerX" secondItem="GPM-Ac-I9v" secondAttribute="centerX" id="pYe-a0-OLP"/>
+                                    <constraint firstItem="Ppc-pf-rmb" firstAttribute="centerX" secondItem="GPM-Ac-I9v" secondAttribute="centerX" constant="-5" id="pYe-a0-OLP"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1371,19 +1349,19 @@ Menu</string>
                                         <rect key="frame" x="0.0" y="0.0" width="188" height="667"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="QMW-Nr-MdC">
-                                                <rect key="frame" x="44" y="128.5" width="100" height="450"/>
+                                                <rect key="frame" x="49" y="103.5" width="100" height="500"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IFu-Qk-aSw">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="110"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="126.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTy-AV-BoI">
-                                                                <rect key="frame" x="12.5" y="0.0" width="75" height="75"/>
+                                                                <rect key="frame" x="11.5" y="0.0" width="77" height="76.5"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiningHall-transparent-2" translatesAutoresizingMaskIntoConstraints="NO" id="Jqe-RZ-2cM">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="76.5"/>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7t3-Jp-k6K">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="76.5"/>
                                                                         <connections>
                                                                             <action selector="diningHallButtonPressed:" destination="IC1-M4-iXJ" eventType="touchUpInside" id="Arp-iL-ZxJ"/>
                                                                         </connections>
@@ -1402,30 +1380,30 @@ Menu</string>
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Lb-fE-poO">
-                                                                <rect key="frame" x="21" y="80" width="58.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="81.5" width="100" height="45"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="30" id="Ajx-GP-teq"/>
-                                                                    <constraint firstAttribute="width" constant="75" id="u28-fa-9f8"/>
+                                                                    <constraint firstAttribute="width" constant="100" id="eO8-Fm-zla"/>
+                                                                    <constraint firstAttribute="height" constant="45" id="zh1-9F-Agg"/>
                                                                 </constraints>
                                                                 <string key="text">1899 
 Dining Hall</string>
-                                                                <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="13"/>
+                                                                <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="y9p-4x-VWa">
-                                                        <rect key="frame" x="0.0" y="170" width="100" height="110"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="y9p-4x-VWa">
+                                                        <rect key="frame" x="0.0" y="186.5" width="100" height="127"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thQ-Kk-cfF">
-                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="75"/>
+                                                                <rect key="frame" x="11.5" y="0.0" width="77" height="77"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CougarsDen-transparent-2" translatesAutoresizingMaskIntoConstraints="NO" id="DIx-2v-hGA">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="75"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZX-Cl-tmi">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="75"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
                                                                         <connections>
                                                                             <action selector="denButtonPressed:" destination="IC1-M4-iXJ" eventType="touchUpInside" id="Oph-RZ-9vx"/>
                                                                         </connections>
@@ -1444,38 +1422,30 @@ Dining Hall</string>
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFU-ce-ghj">
-                                                                <rect key="frame" x="0.0" y="80" width="100" height="30"/>
+                                                                <rect key="frame" x="0.0" y="82" width="100" height="45"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="30" id="4Sh-hN-ykZ"/>
-                                                                    <constraint firstAttribute="width" constant="75" id="Z7O-b4-l7n"/>
+                                                                    <constraint firstAttribute="width" constant="100" id="mRV-KA-GSz"/>
+                                                                    <constraint firstAttribute="height" constant="45" id="x2z-EZ-DgM"/>
                                                                 </constraints>
                                                                 <string key="text">Cougar's Den
 Café</string>
-                                                                <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="13"/>
+                                                                <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="102" id="SMg-5M-qdg"/>
-                                                        </constraints>
-                                                        <variation key="heightClass=regular-widthClass=regular">
-                                                            <mask key="constraints">
-                                                                <exclude reference="SMg-5M-qdg"/>
-                                                            </mask>
-                                                        </variation>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gAf-FM-y0M">
-                                                        <rect key="frame" x="0.0" y="340" width="100" height="110"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gAf-FM-y0M">
+                                                        <rect key="frame" x="0.0" y="373.5" width="100" height="126.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZz-uE-zYz">
-                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="75"/>
+                                                                <rect key="frame" x="11.5" y="0.0" width="77" height="76.5"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mexicali-Grill-transparent-2" translatesAutoresizingMaskIntoConstraints="NO" id="lws-P8-xEp">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="75"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="76.5"/>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ek-Ji-uNr">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="75"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="76.5"/>
                                                                         <connections>
                                                                             <action selector="mexicaliButtonPressed:" destination="IC1-M4-iXJ" eventType="touchUpInside" id="P1R-U5-clL"/>
                                                                         </connections>
@@ -1494,14 +1464,14 @@ Café</string>
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6G-y6-AcA">
-                                                                <rect key="frame" x="0.0" y="80" width="100" height="30"/>
+                                                                <rect key="frame" x="0.0" y="81.5" width="100" height="45"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="75" id="VrZ-Lp-lKN"/>
-                                                                    <constraint firstAttribute="height" constant="30" id="mTJ-kR-6tb"/>
+                                                                    <constraint firstAttribute="height" constant="45" id="GV6-oA-Z2w"/>
+                                                                    <constraint firstAttribute="width" constant="100" id="l0T-en-DZO"/>
                                                                 </constraints>
                                                                 <string key="text">Mexicali Grill
 </string>
-                                                                <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="13"/>
+                                                                <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -1512,7 +1482,7 @@ Café</string>
                                                     <constraint firstAttribute="width" constant="100" id="1yW-Zr-RIC">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="150"/>
                                                     </constraint>
-                                                    <constraint firstAttribute="height" constant="450" id="q5I-gd-Eqp">
+                                                    <constraint firstAttribute="height" constant="500" id="q5I-gd-Eqp">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="700"/>
                                                     </constraint>
                                                 </constraints>
@@ -1520,7 +1490,7 @@ Café</string>
                                         </subviews>
                                         <color key="backgroundColor" red="0.58823529411764708" green="0.14509803921568629" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="QMW-Nr-MdC" firstAttribute="centerX" secondItem="FnD-kq-uei" secondAttribute="centerX" id="bc6-gC-Xa4"/>
+                                            <constraint firstItem="QMW-Nr-MdC" firstAttribute="centerX" secondItem="FnD-kq-uei" secondAttribute="centerX" constant="5" id="bc6-gC-Xa4"/>
                                             <constraint firstItem="QMW-Nr-MdC" firstAttribute="centerY" secondItem="FnD-kq-uei" secondAttribute="centerY" constant="20" id="eY6-5r-fqu"/>
                                         </constraints>
                                     </view>
@@ -1528,19 +1498,19 @@ Café</string>
                                         <rect key="frame" x="188" y="0.0" width="187" height="667"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="pEW-si-ATN">
-                                                <rect key="frame" x="44" y="128.5" width="100" height="450"/>
+                                                <rect key="frame" x="38.5" y="103.5" width="100" height="500"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1Da-ui-v6m">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="110"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="126.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nd1-iD-sEv">
-                                                                <rect key="frame" x="12.5" y="0.0" width="75.5" height="75"/>
+                                                                <rect key="frame" x="11.5" y="0.0" width="77" height="76.5"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CornerstoneCoffeehouse-transparent-2" translatesAutoresizingMaskIntoConstraints="NO" id="lLP-Yz-8m6">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="75.5" height="75"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="76.5"/>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FV-Ah-QbL">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="75.5" height="75"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="76.5"/>
                                                                         <connections>
                                                                             <action selector="cornerstoneButtonPressed:" destination="IC1-M4-iXJ" eventType="touchUpInside" id="bTR-OY-LED"/>
                                                                         </connections>
@@ -1559,30 +1529,30 @@ Café</string>
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RM7-9o-y7x">
-                                                                <rect key="frame" x="10" y="80" width="80" height="30"/>
+                                                                <rect key="frame" x="0.0" y="81.5" width="100" height="45"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="30" id="UM2-Vk-E2o"/>
-                                                                    <constraint firstAttribute="width" constant="80" id="xJy-DN-YQ1"/>
+                                                                    <constraint firstAttribute="height" constant="45" id="UM2-Vk-E2o"/>
+                                                                    <constraint firstAttribute="width" constant="100" id="s9q-eV-YWo"/>
                                                                 </constraints>
                                                                 <string key="text">Cornerstone
 Coffeehouse</string>
-                                                                <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="13"/>
+                                                                <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Sh0-lF-gve">
-                                                        <rect key="frame" x="0.0" y="170" width="100" height="110"/>
+                                                        <rect key="frame" x="0.0" y="186.5" width="100" height="127"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atv-zT-DMq">
-                                                                <rect key="frame" x="12.5" y="0.0" width="75" height="75"/>
+                                                                <rect key="frame" x="11.5" y="0.0" width="77" height="77"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CougarWalkGrill-transparent-2" translatesAutoresizingMaskIntoConstraints="NO" id="Cu4-lf-864">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfV-yo-1Kw">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
                                                                         <connections>
                                                                             <action selector="cougarButtonPressed:" destination="IC1-M4-iXJ" eventType="touchUpInside" id="J4L-5E-6VY"/>
                                                                         </connections>
@@ -1601,30 +1571,30 @@ Coffeehouse</string>
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfF-Vk-40m">
-                                                                <rect key="frame" x="12.5" y="80" width="75" height="30"/>
+                                                                <rect key="frame" x="0.0" y="82" width="100" height="45"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="30" id="Fri-d3-StX"/>
-                                                                    <constraint firstAttribute="width" constant="75" id="qco-iu-eJi"/>
+                                                                    <constraint firstAttribute="width" constant="100" id="CT6-HL-UOz"/>
+                                                                    <constraint firstAttribute="height" constant="45" id="Fri-d3-StX"/>
                                                                 </constraints>
                                                                 <string key="text">Cougar Walk
 Café</string>
-                                                                <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="13"/>
+                                                                <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1wT-Vc-zdc">
-                                                        <rect key="frame" x="0.0" y="340" width="100" height="110"/>
+                                                        <rect key="frame" x="0.0" y="373.5" width="100" height="126.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBS-TC-9gX">
-                                                                <rect key="frame" x="12.5" y="0.0" width="75.5" height="75"/>
+                                                                <rect key="frame" x="11.5" y="0.0" width="77" height="76.5"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Paws-N-Go-transparent-2" translatesAutoresizingMaskIntoConstraints="NO" id="eUk-Io-vEM">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="75.5" height="75"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="76.5"/>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCi-V8-O16">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="75.5" height="75"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="76.5"/>
                                                                         <connections>
                                                                             <action selector="pawsButtonPressed:" destination="IC1-M4-iXJ" eventType="touchUpInside" id="bqo-BY-gyj"/>
                                                                         </connections>
@@ -1639,24 +1609,18 @@ Café</string>
                                                                     <constraint firstAttribute="trailing" secondItem="BCi-V8-O16" secondAttribute="trailing" id="WWx-S7-Neo"/>
                                                                     <constraint firstItem="eUk-Io-vEM" firstAttribute="top" secondItem="BBS-TC-9gX" secondAttribute="top" id="fvL-5u-uZJ"/>
                                                                     <constraint firstItem="BCi-V8-O16" firstAttribute="top" secondItem="BBS-TC-9gX" secondAttribute="top" id="qXF-Ep-dMp"/>
-                                                                    <constraint firstAttribute="height" constant="80" id="tEL-KX-EtA"/>
                                                                     <constraint firstAttribute="trailing" secondItem="eUk-Io-vEM" secondAttribute="trailing" id="yBq-jC-Byb"/>
                                                                 </constraints>
-                                                                <variation key="heightClass=regular-widthClass=regular">
-                                                                    <mask key="constraints">
-                                                                        <exclude reference="tEL-KX-EtA"/>
-                                                                    </mask>
-                                                                </variation>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLr-uM-ehu">
-                                                                <rect key="frame" x="12.5" y="80" width="75" height="30"/>
+                                                                <rect key="frame" x="0.0" y="81.5" width="100" height="45"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="75" id="WcB-ck-JtS"/>
-                                                                    <constraint firstAttribute="height" constant="30" id="qOx-OW-wQc"/>
+                                                                    <constraint firstAttribute="width" constant="100" id="Ml8-b8-96o"/>
+                                                                    <constraint firstAttribute="height" constant="45" id="qOx-OW-wQc"/>
                                                                 </constraints>
-                                                                <string key="text">Paws 'n Go
- </string>
-                                                                <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="13"/>
+                                                                <string key="text">Paws 'N Go
+Convenience</string>
+                                                                <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -1667,7 +1631,7 @@ Café</string>
                                                     <constraint firstAttribute="width" constant="100" id="IMQ-1s-asx">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="150"/>
                                                     </constraint>
-                                                    <constraint firstAttribute="height" constant="450" id="SSU-LT-MWS">
+                                                    <constraint firstAttribute="height" constant="500" id="SSU-LT-MWS">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="700"/>
                                                     </constraint>
                                                 </constraints>
@@ -1675,7 +1639,7 @@ Café</string>
                                         </subviews>
                                         <color key="backgroundColor" red="0.58823529411764708" green="0.14509803921568629" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="pEW-si-ATN" firstAttribute="centerX" secondItem="DHA-k0-7Dp" secondAttribute="centerX" id="82m-4U-OVy"/>
+                                            <constraint firstItem="pEW-si-ATN" firstAttribute="centerX" secondItem="DHA-k0-7Dp" secondAttribute="centerX" constant="-5" id="82m-4U-OVy"/>
                                             <constraint firstItem="pEW-si-ATN" firstAttribute="centerY" secondItem="DHA-k0-7Dp" secondAttribute="centerY" constant="20" id="VqX-3s-Da8"/>
                                         </constraints>
                                     </view>
@@ -1707,7 +1671,7 @@ Café</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMf-u9-k4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1097" y="-208"/>
+            <point key="canvasLocation" x="1096.8" y="-208.24587706146929"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nc8-hp-fFS">

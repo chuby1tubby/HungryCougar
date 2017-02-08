@@ -304,13 +304,13 @@ class HoursVC: UIViewController {
         // Extra cases for Dining Hall and Fusion Grill due to mid-day breaks
         if restaurantChoice == "Dining Hall" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
             if currentTimeInMinutes >= 570 && currentTimeInMinutes < 660 {
-                timeLabel.text = "Opening again at 11am for lunch"
+                timeLabel.text = "Opening at 11am\nfor lunch"
             } else if currentTimeInMinutes >= 840 && currentTimeInMinutes < 1020 {
-                timeLabel.text = "Opening again at 5pm for dinner"
+                timeLabel.text = "Opening at 5pm\nfor dinner"
             }
         } else if restaurantChoice == "Fusion Grill" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
             if currentTimeInMinutes >= 600 && currentTimeInMinutes < 630 {
-                timeLabel.text = "Opening again at 10:30am for lunch"
+                timeLabel.text = "Opening at 10:30am\nfor lunch"
             }
         }
     }

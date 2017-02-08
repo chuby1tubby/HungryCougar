@@ -15,7 +15,7 @@ class EastVC: UIViewController {
     }
     
     @IBAction func diningHallButtonPressed(_ sender: AnyObject) {
-        restaurantChoice = "Dining Hall"
+        restaurantChoice = "1899 Dining Hall"
         performSegue(withIdentifier: "restaurantSelected1", sender: nil)
     }
     

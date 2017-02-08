@@ -43,9 +43,11 @@ class InformationVC: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWeb
         }
         webView.loadRequest(URLRequest(url: url))
     }
+    
+    // Names for APU Website URL
     func setRestaurantName() {
         switch restaurantChoice {
-        case "Dining Hall":
+        case "1899 Dining Hall":
             nameOfRestaurant = "dininghall"
         case "Coffeehouse":
             nameOfRestaurant = "cornerstone"
