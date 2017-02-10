@@ -116,6 +116,8 @@ class HoursVC: UIViewController {
             // If today closes after midnight
             if Today.closeTime <= 120 {
                 print("KYLE: OPEN-CLOSE BOOL #3")
+                print("KYLE: STORE IS OPEN")
+                storeIsOpen = true
             } else {
                 // If current time is after today close time
                 if currentTimeInMinutes >= Today.closeTime {
@@ -126,20 +128,27 @@ class HoursVC: UIViewController {
         }
         
         // Extra cases for Dining Hall and Fusion Grill due to mid-day breaks
-        if restaurantChoice == "Dining Hall" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
+        if restaurantChoice == "1899 Dining Hall" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
             if currentTimeInMinutes >= 570 && currentTimeInMinutes < 660 {
                 storeIsOpen = false
+                print("KYLE: TRIGGERED WRONG BOOLEAN")
             } else if currentTimeInMinutes >= 840 && currentTimeInMinutes < 1020 {
                 storeIsOpen = false
+                print("KYLE: TRIGGERED WRONG BOOLEAN")
+
             }
-        } else if restaurantChoice == "Fusion Grill" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
+        } else if restaurantChoice == "The Grill at Heritage" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
             if currentTimeInMinutes >= 600 && currentTimeInMinutes < 630 {
                 storeIsOpen = false
+                print("KYLE: TRIGGERED WRONG BOOLEAN")
+
             }
         }
         
         if Today.hasNoHours {
             storeIsOpen = false
+            print("KYLE: TRIGGERED WRONG BOOLEAN")
+
         }
         
         // Set yesNoLabel
@@ -173,13 +182,13 @@ class HoursVC: UIViewController {
         }
         
         // Extra cases for Dining Hall and Fusion Grill due to mid-day breaks
-        if restaurantChoice == "Dining Hall" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
+        if restaurantChoice == "1899 Dining Hall" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
             if currentTimeInMinutes >= 570 && currentTimeInMinutes < 660 {
                 minutesUntilOpen = 660 - currentTimeInMinutes
             } else if currentTimeInMinutes >= 840 && currentTimeInMinutes < 1020 {
                 minutesUntilOpen = 1020 - currentTimeInMinutes
             }
-        } else if restaurantChoice == "Fusion Grill" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
+        } else if restaurantChoice == "The Grill at Heritage" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
             if currentTimeInMinutes >= 600 && currentTimeInMinutes < 630 {
                 minutesUntilOpen = 630 - currentTimeInMinutes
             }
@@ -302,13 +311,13 @@ class HoursVC: UIViewController {
         }
         
         // Extra cases for Dining Hall and Fusion Grill due to mid-day breaks
-        if restaurantChoice == "Dining Hall" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
+        if restaurantChoice == "1899 Dining Hall" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
             if currentTimeInMinutes >= 570 && currentTimeInMinutes < 660 {
                 timeLabel.text = "Opening at 11am\nfor lunch"
             } else if currentTimeInMinutes >= 840 && currentTimeInMinutes < 1020 {
                 timeLabel.text = "Opening at 5pm\nfor dinner"
             }
-        } else if restaurantChoice == "Fusion Grill" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
+        } else if restaurantChoice == "The Grill at Heritage" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
             if currentTimeInMinutes >= 600 && currentTimeInMinutes < 630 {
                 timeLabel.text = "Opening at 10:30am\nfor lunch"
             }

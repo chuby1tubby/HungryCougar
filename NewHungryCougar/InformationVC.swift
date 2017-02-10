@@ -47,27 +47,31 @@ class InformationVC: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWeb
     // Names for APU Website URL
     func setRestaurantName() {
         switch restaurantChoice {
+            
+        // East campus
         case "1899 Dining Hall":
             nameOfRestaurant = "dininghall"
-        case "Coffeehouse":
+        case "Cornerstone Coffeehouse":
             nameOfRestaurant = "cornerstone"
-        case "The Den":
+        case "Cougar's Den Café":
             nameOfRestaurant = "cougarsden"
-        case "Cougar BBQ":
+        case "Cougar Walk Café":
             nameOfRestaurant = "cougar-walk"
-        case "Cali Grill":
+        case "Mexicali Grill":
             nameOfRestaurant = "mexicali"
-        case "Pause 'n Go":
+        case "Paws 'N Go Convenience":
             nameOfRestaurant = "pawsngo"
-        case "Fusion Grill":
+            
+        // West campus
+        case "The Grill at Heritage":
             nameOfRestaurant = "grill"
-        case "Fresh Grounds":
+        case "Hillside Ground at Heritage":
             nameOfRestaurant = "hillside"
-        case "West Market":
+        case "The Market at Heritage":
             nameOfRestaurant = "market"
-        case "Tam's Subs":
+        case "Sam's Subs":
             nameOfRestaurant = "samssubs"
-        case "Tasti Sushi":
+        case "Umai Sushi":
             nameOfRestaurant = "umaisushi"
         default:
             nameOfRestaurant = "cornerstone"

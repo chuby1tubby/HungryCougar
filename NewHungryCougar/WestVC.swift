@@ -15,27 +15,27 @@ class WestVC: UIViewController {
     }
     
     @IBAction func grillButtonPressed(_ sender: AnyObject) {
-        restaurantChoice = "Fusion Grill"
+        restaurantChoice = "The Grill at Heritage"
         performSegue(withIdentifier: "restaurantSelected2", sender: nil)
     }
     
     @IBAction func hillsideButtonPressed(_ sender: AnyObject) {
-        restaurantChoice = "Fresh Grounds"
+        restaurantChoice = "Hillside Grounds at Heritage"
         performSegue(withIdentifier: "restaurantSelected2", sender: nil)
     }
     
     @IBAction func marketButtonPressed(_ sender: AnyObject) {
-        restaurantChoice = "West Market"
+        restaurantChoice = "The Market at Heritage"
         performSegue(withIdentifier: "restaurantSelected2", sender: nil)
     }
     
     @IBAction func subsButtonPressed(_ sender: AnyObject) {
-        restaurantChoice = "Tam's Subs"
+        restaurantChoice = "Sam's Subs"
         performSegue(withIdentifier: "restaurantSelected2", sender: nil)
     }
     
     @IBAction func umaiButtonPressed(_ sender: AnyObject) {
-        restaurantChoice = "Tasti Sushi"
+        restaurantChoice = "Umai Sushi"
         performSegue(withIdentifier: "restaurantSelected2", sender: nil)
     }
 }

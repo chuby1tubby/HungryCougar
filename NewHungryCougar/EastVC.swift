@@ -20,27 +20,27 @@ class EastVC: UIViewController {
     }
     
     @IBAction func cornerstoneButtonPressed(_ sender: AnyObject) {
-        restaurantChoice = "Coffeehouse"
+        restaurantChoice = "Cornerstone Coffeehouse"
         performSegue(withIdentifier: "restaurantSelected1", sender: nil)
     }
     
     @IBAction func denButtonPressed(_ sender: AnyObject) {
-        restaurantChoice = "The Den"
+        restaurantChoice = "Cougar's Den Café"
         performSegue(withIdentifier: "restaurantSelected1", sender: nil)
     }
     
     @IBAction func cougarButtonPressed(_ sender: AnyObject) {
-        restaurantChoice = "Cougar BBQ"
+        restaurantChoice = "Cougar Walk Café"
         performSegue(withIdentifier: "restaurantSelected1", sender: nil)
     }
     
     @IBAction func mexicaliButtonPressed(_ sender: AnyObject) {
-        restaurantChoice = "Cali Grill"
+        restaurantChoice = "Mexicali Grill"
         performSegue(withIdentifier: "restaurantSelected1", sender: nil)
     }
     
     @IBAction func pawsButtonPressed(_ sender: AnyObject) {
-        restaurantChoice = "Pause 'n Go"
+        restaurantChoice = "Paws 'N Go Convenience"
         performSegue(withIdentifier: "restaurantSelected1", sender: nil)
     }
 }
