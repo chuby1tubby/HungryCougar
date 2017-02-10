@@ -512,13 +512,13 @@ Menu</string>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TLP-76-JKj">
-                                        <rect key="frame" x="8" y="233.5" width="359" height="300"/>
+                                        <rect key="frame" x="8" y="278.5" width="359" height="250"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MIV-Xz-5hs" customClass="CustomView" customModule="NewHungryCougar" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="359" height="71"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="70"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dbH-ku-6ET">
-                                                        <rect key="frame" x="8" y="16" width="343" height="40"/>
+                                                        <rect key="frame" x="8" y="15.5" width="343" height="40"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expected Dining Points:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="8xD-xO-ok1" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="218" height="40"/>
@@ -544,15 +544,14 @@ Menu</string>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="3P1-oe-Fh1"/>
                                                     <constraint firstItem="dbH-ku-6ET" firstAttribute="leading" secondItem="MIV-Xz-5hs" secondAttribute="leading" constant="8" id="KPH-Qu-nz9"/>
-                                                    <constraint firstAttribute="height" constant="71" id="g8D-LT-HNa"/>
+                                                    <constraint firstAttribute="height" constant="70" id="g8D-LT-HNa"/>
                                                     <constraint firstAttribute="trailing" secondItem="dbH-ku-6ET" secondAttribute="trailing" constant="8" id="jiO-qB-2dY"/>
                                                     <constraint firstItem="dbH-ku-6ET" firstAttribute="centerY" secondItem="MIV-Xz-5hs" secondAttribute="centerY" id="pEY-53-eIu"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jsm-Xs-5Qj" customClass="CustomView" customModule="NewHungryCougar" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="91" width="359" height="71"/>
+                                                <rect key="frame" x="0.0" y="90" width="359" height="71"/>
                                                 <subviews>
                                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click to load dining points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1J-EW-Ozl" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
                                                         <rect key="frame" x="8" y="0.0" width="343" height="71"/>
@@ -575,27 +574,13 @@ Menu</string>
                                                     <constraint firstAttribute="height" constant="71" id="u14-uj-vKE"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Mz-Jb-HCd">
-                                                <rect key="frame" x="140" y="182" width="80" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="lQJ-FG-qDv"/>
-                                                    <constraint firstAttribute="height" constant="30" id="xcm-fV-lYN"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="22"/>
-                                                <state key="normal" title="Refresh">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="onRefreshPressed:" destination="Ih7-xX-Njt" eventType="touchUpInside" id="B2b-4n-rCV"/>
-                                                </connections>
-                                            </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3t-a3-86V" customClass="CustomView" customModule="NewHungryCougar" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="91" width="359" height="71"/>
+                                                <rect key="frame" x="0.0" y="90" width="359" height="100"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="19k-Fz-lzF">
-                                                        <rect key="frame" x="8" y="15.5" width="343" height="40"/>
+                                                        <rect key="frame" x="8" y="8" width="343" height="40"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Dining Points:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Jpl-fm-mfl" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Dining Points:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Jpl-fm-mfl" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="218" height="40"/>
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="22"/>
                                                                 <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -616,27 +601,67 @@ Menu</string>
                                                             <constraint firstAttribute="height" constant="40" id="lMv-QI-fxn"/>
                                                         </constraints>
                                                     </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7CM-pH-cnW">
+                                                        <rect key="frame" x="8" y="52" width="343" height="40"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Cougar Bucks:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="YNc-R0-M1H" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="218" height="40"/>
+                                                                <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="22"/>
+                                                                <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999.99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="AcD-LQ-9sR" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
+                                                                <rect key="frame" x="228" y="0.0" width="115" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="115" id="beT-8h-srj"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="32"/>
+                                                                <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="AcD-LQ-9sR" firstAttribute="centerY" secondItem="YNc-R0-M1H" secondAttribute="centerY" id="pca-A6-BcI"/>
+                                                            <constraint firstAttribute="height" constant="40" id="sB9-KU-0Y8"/>
+                                                        </constraints>
+                                                    </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="Cmd-mz-SZW"/>
-                                                    <constraint firstItem="19k-Fz-lzF" firstAttribute="centerY" secondItem="O3t-a3-86V" secondAttribute="centerY" id="Uc8-5g-ebp"/>
+                                                    <constraint firstItem="7CM-pH-cnW" firstAttribute="leading" secondItem="O3t-a3-86V" secondAttribute="leading" constant="8" id="4Ja-p7-KIA"/>
+                                                    <constraint firstItem="19k-Fz-lzF" firstAttribute="top" secondItem="O3t-a3-86V" secondAttribute="top" constant="8" id="7pw-5y-zwm"/>
+                                                    <constraint firstAttribute="trailing" secondItem="7CM-pH-cnW" secondAttribute="trailing" constant="8" id="Xx8-AR-deU"/>
                                                     <constraint firstItem="19k-Fz-lzF" firstAttribute="leading" secondItem="O3t-a3-86V" secondAttribute="leading" constant="8" id="YF7-s5-s2S"/>
-                                                    <constraint firstAttribute="height" constant="71" id="f81-aQ-iiJ"/>
+                                                    <constraint firstAttribute="height" constant="100" id="f81-aQ-iiJ"/>
                                                     <constraint firstAttribute="trailing" secondItem="19k-Fz-lzF" secondAttribute="trailing" constant="8" id="fcb-tx-82x"/>
+                                                    <constraint firstAttribute="bottom" secondItem="7CM-pH-cnW" secondAttribute="bottom" constant="8" id="hz6-sZ-hZ4"/>
                                                 </constraints>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Mz-Jb-HCd">
+                                                <rect key="frame" x="139" y="210" width="80" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="lQJ-FG-qDv"/>
+                                                    <constraint firstAttribute="height" constant="30" id="xcm-fV-lYN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="22"/>
+                                                <state key="normal" title="Refresh">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onRefreshPressed:" destination="Ih7-xX-Njt" eventType="touchUpInside" id="B2b-4n-rCV"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.5888887048" green="0.15054461359999999" blue="0.13530883190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="O3t-a3-86V" secondAttribute="trailing" id="3aL-HG-1IQ"/>
                                             <constraint firstItem="MIV-Xz-5hs" firstAttribute="top" secondItem="TLP-76-JKj" secondAttribute="top" id="6Bj-ei-CJr"/>
                                             <constraint firstAttribute="trailing" secondItem="MIV-Xz-5hs" secondAttribute="trailing" id="7F0-CJ-IAH"/>
+                                            <constraint firstItem="4Mz-Jb-HCd" firstAttribute="centerX" secondItem="TLP-76-JKj" secondAttribute="centerX" id="DhL-Le-6Da"/>
                                             <constraint firstItem="O3t-a3-86V" firstAttribute="top" secondItem="MIV-Xz-5hs" secondAttribute="bottom" constant="20" id="Gda-Yb-pNt"/>
-                                            <constraint firstItem="4Mz-Jb-HCd" firstAttribute="top" secondItem="O3t-a3-86V" secondAttribute="bottom" constant="20" id="RAF-qf-QbV"/>
                                             <constraint firstItem="MIV-Xz-5hs" firstAttribute="leading" secondItem="TLP-76-JKj" secondAttribute="leading" id="TJk-JD-KCp"/>
-                                            <constraint firstAttribute="height" constant="300" id="cVh-21-cgo"/>
-                                            <constraint firstItem="4Mz-Jb-HCd" firstAttribute="centerX" secondItem="TLP-76-JKj" secondAttribute="centerX" id="phP-8L-2JI"/>
+                                            <constraint firstItem="4Mz-Jb-HCd" firstAttribute="top" secondItem="O3t-a3-86V" secondAttribute="bottom" constant="20" id="UfE-ip-AzR"/>
+                                            <constraint firstAttribute="height" constant="250" id="cVh-21-cgo"/>
                                             <constraint firstItem="O3t-a3-86V" firstAttribute="leading" secondItem="TLP-76-JKj" secondAttribute="leading" id="vaz-al-rHy"/>
                                             <constraint firstItem="Jsm-Xs-5Qj" firstAttribute="leading" secondItem="TLP-76-JKj" secondAttribute="leading" id="wlo-De-tcO"/>
                                             <constraint firstItem="Jsm-Xs-5Qj" firstAttribute="top" secondItem="MIV-Xz-5hs" secondAttribute="bottom" constant="20" id="ydu-8D-tTr"/>
@@ -671,7 +696,7 @@ Menu</string>
                                     <constraint firstAttribute="bottom" secondItem="Fwi-76-HYX" secondAttribute="bottom" constant="20" id="Wyr-02-qYx"/>
                                     <constraint firstItem="Fwi-76-HYX" firstAttribute="centerX" secondItem="mcw-QY-ZdD" secondAttribute="centerX" id="YKR-6V-lvd"/>
                                     <constraint firstItem="FRT-Np-FWW" firstAttribute="centerX" secondItem="mcw-QY-ZdD" secondAttribute="centerX" id="fcK-vC-D1S"/>
-                                    <constraint firstItem="TLP-76-JKj" firstAttribute="centerY" secondItem="mcw-QY-ZdD" secondAttribute="centerY" constant="50" id="gHP-zh-gwL"/>
+                                    <constraint firstItem="TLP-76-JKj" firstAttribute="centerY" secondItem="mcw-QY-ZdD" secondAttribute="centerY" constant="70" id="gHP-zh-gwL"/>
                                     <constraint firstItem="zet-Hh-fSs" firstAttribute="top" secondItem="mcw-QY-ZdD" secondAttribute="top" constant="72" id="jag-rb-Xqa"/>
                                     <constraint firstItem="TLP-76-JKj" firstAttribute="centerX" secondItem="mcw-QY-ZdD" secondAttribute="centerX" id="kvE-R5-DtK"/>
                                     <constraint firstAttribute="trailing" secondItem="zet-Hh-fSs" secondAttribute="trailing" constant="8" id="qfj-hx-GX2"/>
@@ -871,7 +896,7 @@ Menu</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developer Contact Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQN-wm-Nyf">
-                                                <rect key="frame" x="8" y="214" width="250" height="20"/>
+                                                <rect key="frame" x="8" y="325" width="250" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="MNj-wZ-JSe"/>
                                                     <constraint firstAttribute="height" constant="20" id="sTu-7d-AHL"/>
@@ -881,7 +906,7 @@ Menu</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jMe-WQ-YeX">
-                                                <rect key="frame" x="8" y="242" width="188" height="45"/>
+                                                <rect key="frame" x="8" y="353" width="188" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kyle Nakamura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tS-Gh-cGZ">
                                                         <rect key="frame" x="0.0" y="0.0" width="188" height="20"/>
@@ -909,22 +934,49 @@ Menu</string>
                                                     </label>
                                                 </subviews>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Options" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kY5-jh-MbW">
+                                                <rect key="frame" x="8" y="214" width="64" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="wjI-VF-lYe"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" red="0.47058611690000002" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="04H-nJ-dCP">
+                                                <rect key="frame" x="8" y="244" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.47223150730133057" green="0.031547714024782181" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="thumbTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </switch>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hide Cougar Bucks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSp-ji-9DR">
+                                                <rect key="frame" x="69" y="244" width="148.5" height="31"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.97162515862944165" green="0.97162515862944165" blue="0.97162515862944165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="04H-nJ-dCP" firstAttribute="top" secondItem="kY5-jh-MbW" secondAttribute="bottom" constant="10" id="3v3-HR-ocT"/>
                                             <constraint firstItem="HEf-Jr-fH6" firstAttribute="top" secondItem="Bga-Ol-Oqt" secondAttribute="bottom" constant="8" id="86v-vo-R3K"/>
+                                            <constraint firstItem="xSp-ji-9DR" firstAttribute="leading" secondItem="04H-nJ-dCP" secondAttribute="trailing" constant="12" id="8nA-uv-XIc"/>
+                                            <constraint firstItem="xSp-ji-9DR" firstAttribute="centerY" secondItem="04H-nJ-dCP" secondAttribute="centerY" id="9rX-QR-RQh"/>
                                             <constraint firstItem="Bga-Ol-Oqt" firstAttribute="top" secondItem="Hkq-ft-LF8" secondAttribute="top" constant="15" id="Dc2-Fh-NKY"/>
                                             <constraint firstItem="1Ah-ww-fRx" firstAttribute="top" secondItem="HEf-Jr-fH6" secondAttribute="bottom" constant="-1" id="GTk-JH-Nvi"/>
                                             <constraint firstAttribute="trailing" secondItem="HEf-Jr-fH6" secondAttribute="trailing" id="Hgp-ny-h0C"/>
+                                            <constraint firstItem="kY5-jh-MbW" firstAttribute="top" secondItem="izy-Yf-dBW" secondAttribute="bottom" constant="50" id="IgR-Ht-0Lc"/>
                                             <constraint firstAttribute="trailing" secondItem="1Ah-ww-fRx" secondAttribute="trailing" id="Sgt-t5-6Qh"/>
-                                            <constraint firstItem="OQN-wm-Nyf" firstAttribute="top" secondItem="izy-Yf-dBW" secondAttribute="bottom" constant="50" id="a1m-8R-eVT"/>
                                             <constraint firstItem="Bga-Ol-Oqt" firstAttribute="leading" secondItem="Hkq-ft-LF8" secondAttribute="leading" constant="8" id="a6m-pX-B1d"/>
                                             <constraint firstItem="1Ah-ww-fRx" firstAttribute="leading" secondItem="Hkq-ft-LF8" secondAttribute="leading" id="d7q-5L-Kfr"/>
+                                            <constraint firstItem="OQN-wm-Nyf" firstAttribute="top" secondItem="04H-nJ-dCP" secondAttribute="bottom" constant="50" id="fGD-j2-gzZ"/>
                                             <constraint firstItem="HEf-Jr-fH6" firstAttribute="leading" secondItem="Hkq-ft-LF8" secondAttribute="leading" id="fmZ-Zm-NBI"/>
                                             <constraint firstItem="izy-Yf-dBW" firstAttribute="top" secondItem="1Ah-ww-fRx" secondAttribute="bottom" constant="8" id="hf8-x6-1qu"/>
                                             <constraint firstItem="izy-Yf-dBW" firstAttribute="leading" secondItem="Hkq-ft-LF8" secondAttribute="leading" constant="8" id="jAy-mX-GQ7"/>
                                             <constraint firstItem="jMe-WQ-YeX" firstAttribute="leading" secondItem="Hkq-ft-LF8" secondAttribute="leading" constant="8" id="mGy-0F-wVU"/>
+                                            <constraint firstItem="xSp-ji-9DR" firstAttribute="height" secondItem="04H-nJ-dCP" secondAttribute="height" id="veK-Xg-Ar7"/>
                                             <constraint firstItem="OQN-wm-Nyf" firstAttribute="leading" secondItem="Hkq-ft-LF8" secondAttribute="leading" constant="8" id="wDt-Nf-smF"/>
+                                            <constraint firstItem="04H-nJ-dCP" firstAttribute="leading" secondItem="Hkq-ft-LF8" secondAttribute="leading" constant="8" id="yRd-F0-BLc"/>
+                                            <constraint firstItem="kY5-jh-MbW" firstAttribute="leading" secondItem="Hkq-ft-LF8" secondAttribute="leading" constant="8" id="zqE-3B-vuX"/>
                                             <constraint firstItem="jMe-WQ-YeX" firstAttribute="top" secondItem="OQN-wm-Nyf" secondAttribute="bottom" constant="8" id="zwp-C1-emc"/>
                                         </constraints>
                                         <connections>
