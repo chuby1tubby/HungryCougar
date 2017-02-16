@@ -144,12 +144,6 @@ class APUHomeVC: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWebView
     func getHTML(){
         //Here is the line of code you need to run after it is logged in.
         let html = webView.stringByEvaluatingJavaScript(from: "document.documentElement.innerHTML")
-        
-        /*
-         DINING POINTS HTML
-         COUGAR BUCKS HTML
-         Both stored as strings in Defaults
-         */
         let defaults = UserDefaults.standard
         
         // Dining Points
@@ -195,78 +189,6 @@ class APUHomeVC: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWebView
             }
         }
     }
-    
-    //    /*
-    //        DEPRECATED:
-    //    */
-    //
-    //    // This is the function that you need to call with the string of HTML that you grab
-    //    // Courtesy of David Bartholemew.
-    //    var count = 0
-    //    func parseHTML(html: String) {
-    //        count += 1
-    //        //Parses for the index Of specific location in the HTML
-    //        let fontString = "font-weight: bold;\">"
-    //
-    //        if let range = html.range(of: fontString) {
-    //            let lo = html.index((range.lowerBound), offsetBy: 20)
-    //            let hi = html.index((range.lowerBound), offsetBy: 27)
-    //            let subRange = lo ..< hi
-    //
-    //            // Access the string by the range.
-    //            let substring = html[subRange]
-    //
-    //            //Converts the number to a double
-    //            let str = substring
-    //            let numArray: [Character] = ["0","1","2","3","4","5","6","7","8","9","."]
-    //            let symbolsArray: [Character] = ["$", ",",]
-    //            var finalNumArray: [Character] = []
-    //
-    //            for char in str.characters {
-    //                if numArray.contains(char) {
-    //                    finalNumArray.append(char)
-    //                } else if symbolsArray.contains(char) {
-    //                    // Do nothing
-    //                } else {
-    //                    break
-    //                }
-    //            }
-    //
-    //            //Checks to see if it is N/A or a number then converts it to a double
-    //            var newString: String = ""
-    //            if str.contains("N/A") {
-    //                myFinalDouble = 0.0
-    //                shouldRepeat = false
-    //                didReceievePointsVal = true
-    //
-    //                // Store dining points in UserDefaults
-    //                let defaults = UserDefaults.standard
-    //                defaults.set("0.00", forKey: "userDiningPointsDefaults")
-    //
-    //                if let navController = self.navigationController {
-    //                    navController.popViewController(animated: true)
-    //                }
-    //            } else {
-    //                for char in finalNumArray {
-    //                    newString.append(char)
-    //                }
-    //                myFinalDouble = Double(newString)!
-    //                shouldRepeat = false
-    //                didReceievePointsVal = true
-    //
-    //                // Update current dining points balance label
-    //                let textNum = String(format: "%.2f", arguments: [myFinalDouble])
-    //
-    //                // Store dining points in UserDefaults
-    //                let defaults = UserDefaults.standard
-    //                defaults.set(textNum, forKey: "userDiningPointsDefaults")
-    //
-    //                if let navController = self.navigationController {
-    //                    navController.popViewController(animated: true)
-    //                }
-    //            }
-    //        }
-    //    }
 }
 
 extension String {

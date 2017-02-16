@@ -11,6 +11,7 @@ import Foundation
 
 class HomeVC: UIViewController {
     @IBOutlet weak var currentDiningPointsHomeLbl: UILabel!
+    @IBOutlet weak var currentCougarBucksHomeLbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +21,18 @@ class HomeVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         let prefs = UserDefaults.standard
-        if let value = prefs.string(forKey: "userDiningPointsDefaults") {
+        if let val1 = prefs.string(forKey: "userDiningPointsDefaults") {
             currentDiningPointsHomeLbl.isHidden = false
-            currentDiningPointsHomeLbl.text = "Current Dining Points: \(value)"
+            currentDiningPointsHomeLbl.text = "Current Dining Points: \(val1)"
         } else {
             currentDiningPointsHomeLbl.isHidden = true
+        }
+        
+        if let val2 = prefs.string(forKey: "userCougarBucksDefaults") {
+            currentCougarBucksHomeLbl.isHidden = false
+            currentCougarBucksHomeLbl.text = "Current Cougar Bucks: \(val2)"
+        } else {
+            currentCougarBucksHomeLbl.isHidden = true
         }
     }
 }

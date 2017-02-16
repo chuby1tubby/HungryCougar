@@ -65,19 +65,6 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
             }
         } else {
             print("KYLE: THIS CODE PROBABLY SHOULD NEVER EXECUTE!")
-//            if didReceievePointsVal == true {
-//                usersDiningPointsView.isHidden = false
-//                refreshBtn.isHidden = false
-//                loginView.isHidden = true
-//                
-//                // Update current dining points balance label
-//                let textNum = String(format: "%.2f", arguments: [myFinalDouble])
-//                usersDiningPointsLbl.text = textNum
-//                
-//                // Store dining points in UserDefaults
-//                let defaults = UserDefaults.standard
-//                defaults.set(textNum, forKey: "userDiningPointsDefaults")
-//            }
         }
         
         // If user already saved a dining plan
@@ -266,10 +253,10 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         let namedView = self.allPointsView
         let centerPoint = self.view.frame.midY
         print("KYLE: CenterPoint = \(centerPoint)")
-        print("KYLE: CenterPointWithOffset = \(centerPoint + 50)")
+        print("KYLE: CenterPointWithOffset = \(centerPoint - 55)")
         print("KYLE: Actual origin.y = \(self.allPointsView.frame.origin.y)")
         // Move the views
-        if Double((self.allPointsView.frame.origin.y)) == Double(centerPoint - 60) {
+        if Double((self.allPointsView.frame.origin.y)) == Double(centerPoint - 55) {
             UIView.animate(withDuration: 0.25, delay: 0, options: [.curveEaseOut], animations: {
                 namedView?.frame.origin.y += 220
             }, completion: nil)
