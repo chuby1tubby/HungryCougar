@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DropDown
 
 public var restaurantChoice = ""
 
@@ -18,10 +19,12 @@ class HoursVC: UIViewController {
     var minutesUntilClose: Int = 0
     var currentTimeInMinutes: Int = 0
     var storeIsOpen: Bool = false
+    let dpDropDown = DropDown()   // Create a new drop down object
     
     // IBOutlets
     @IBOutlet weak var yesNoLbl: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet var userTappedHours: UITapGestureRecognizer!
     
     // Loads right before view appears
     override func viewWillAppear(_ animated: Bool) {
@@ -32,6 +35,54 @@ class HoursVC: UIViewController {
         calculateTimeUntilOpen()
         displayTimeUntilOpen()
     }
+    
+    // Apply custom attributes to Drop Down
+    func customizeDropDown(_ sender: AnyObject) {
+        
+        // Set values for drop down list
+        dpDropDown.dataSource = [
+            "Sunday              5:00am - 10:00pm",
+            "Monday             5:00am - 10:00pm",
+            "Tuesday             5:00am - 10:00pm",
+            "Wednesday        5:00am - 10:00pm",
+            "Thursday            5:00am - 10:00pm",
+            "Friday                 5:00am - 10:00pm",
+            "Saturday            5:00am - 10:00pm"
+        ]
+        
+        // Preferences for behavior and location
+        dpDropDown.dismissMode = .onTap // Options: .automatic or .onTap
+        dpDropDown.direction = .bottom // Options: .any, .bottom, .top
+        dpDropDown.bottomOffset = CGPoint(x: 5, y: 135)
+        
+        // Preferences for appearance
+        let appearance = DropDown.appearance()
+        appearance.cellHeight = 35
+        appearance.cornerRadius = 5
+        appearance.animationduration = 0.15 // Duration of animation can be changed!
+        appearance.textColor = .white
+        appearance.shadowOpacity = 0
+        appearance.textFont = UIFont(name: "Helvetica Neue", size: 14.0)!
+        appearance.separatorColor = UIColor(white: 0.7, alpha: 0)
+        appearance.backgroundColor = UIColor(colorLiteralRed: 150/256, green: 38/256, blue: 35/256, alpha: 1)
+        appearance.selectionBackgroundColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.1)
+        
+        dpDropDown.cellNib = UINib(nibName: "MyCell", bundle: nil)
+        dpDropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
+            guard let cell = cell as? MyCell else { return }
+            
+            // Setup your custom UI components
+            cell.suffixLabel.text = "" // Add grey sub-text for each label. Not necessary for now
+        }
+    }
+    
+    @IBAction func showRestaurantHoursDropDown(_ sender: Any) {
+        customizeDropDown(userTappedHours)
+        dpDropDown.show()
+    }
+   
+        
+        
     
     // Set the date manualy to test the calculator
     func manuallySetDay(_ mm: Int, dd: Int, yyyy: Int, wday: Int, hr: Int, min: Int) {
