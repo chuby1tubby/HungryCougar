@@ -13,6 +13,8 @@ var usernameStr: String? = ""
 var passwordStr: String? = ""
 var shouldRepeat: Bool = true
 var didReceievePointsVal: Bool = false
+var finalDiningPointsDouble: Double = 0.0
+var finalCougarBucksDouble: Double = 0.0
 var myFinalDouble: Double = 0.0
 
 class APUHomeVC: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWebViewDelegate {
@@ -55,7 +57,7 @@ class APUHomeVC: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWebView
         
         loginUser(username: usernameStr!, password: passwordStr!)
         
-        // Magical pause function           
+        // Magical pause function
         // *should not repeat, but it does anyway*
         let when = DispatchTime.now() + 1
         DispatchQueue.main.asyncAfter(deadline: when){
@@ -78,15 +80,6 @@ class APUHomeVC: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWebView
                 print("error")
             }
             URLCache.shared.removeAllCachedResponses()
-        }
-    }
-    
-    func getHTML(){
-        //Here is the line of code you need to run after it is logged in.
-        let html = webView.stringByEvaluatingJavaScript(from: "document.documentElement.innerHTML")
-        if let page = html {
-            //calls the parse function
-            parseHTML(html: page)
         }
     }
     
@@ -148,73 +141,132 @@ class APUHomeVC: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWebView
         }
     }
     
-    // This is the function that you need to call with the string of HTML that you grab
-    // Courtesy of David Bartholemew.
-    var count = 0
-    func parseHTML(html: String) {
-        count += 1
-        //Parses for the index Of specific location in the HTML
-        let fontString = "font-weight: bold;\">"
+    func getHTML(){
+        //Here is the line of code you need to run after it is logged in.
+        let html = webView.stringByEvaluatingJavaScript(from: "document.documentElement.innerHTML")
         
-        if let range = html.range(of: fontString) {
-            let lo = html.index((range.lowerBound), offsetBy: 20)
-            let hi = html.index((range.lowerBound), offsetBy: 27)
-            let subRange = lo ..< hi
-            
-            // Access the string by the range.
-            let substring = html[subRange]
-            
-            //Converts the number to a double
-            let str = substring
-            let numArray: [Character] = ["0","1","2","3","4","5","6","7","8","9","."]
-            let symbolsArray: [Character] = ["$", ",",]
-            var finalNumArray: [Character] = []
-            
-            for char in str.characters {
-                if numArray.contains(char) {
-                    finalNumArray.append(char)
-                } else if symbolsArray.contains(char) {
-                    // Do nothing
-                } else {
-                    break
-                }
+        /*
+         DINING POINTS HTML
+         COUGAR BUCKS HTML
+         Both stored as strings in Defaults
+         */
+        let defaults = UserDefaults.standard
+        
+        // Dining Points
+        var diningPointsString: String!
+        var diningPointsHTML = webView.stringByEvaluatingJavaScript(from: "document.getElementById('ADMN_APU_ONE_CARD_PAGELET_HMPG_Data').getElementsByTagName('td')[1].innerHTML")
+        if diningPointsHTML != "" {
+            diningPointsString = diningPointsHTML
+            finalDiningPointsDouble = Double(diningPointsString)!
+            defaults.set(diningPointsString, forKey: "userDiningPointsDefaults")
+            print("KYLE: FINAL DOUBLE VALUE = \(finalDiningPointsDouble)")
+            didReceievePointsVal = true
+        }
+        
+        // Cougar bucks
+        var cougarBucksString: String!
+        var cougarBucksHTML = webView.stringByEvaluatingJavaScript(from: "document.getElementById('ADMN_APU_ONE_CARD_PAGELET_HMPG_Data').getElementsByTagName('td')[0].innerHTML")
+        if cougarBucksHTML != "" {
+            cougarBucksString = cougarBucksHTML
+            if cougarBucksString.contains("N/A") {
+                defaults.set("0.00", forKey: "userCougarBucksDefaults")
+            } else {
+                defaults.set(cougarBucksString, forKey: "userCougarBucksDefaults")
             }
             
-            //Checks to see if it is N/A or a number then converts it to a double
-            var newString: String = ""
-            if str.contains("N/A") {
-                myFinalDouble = 0.0
-                shouldRepeat = false
-                didReceievePointsVal = true
-                
-                // Store dining points in UserDefaults
-                let defaults = UserDefaults.standard
-                defaults.set("0.00", forKey: "userDiningPointsDefaults")
-                
-                if let navController = self.navigationController {
-                    navController.popViewController(animated: true)
+            // Scrub the value for conversion
+            var temp = ""
+            for char in cougarBucksString.characters {
+                if char != "$" {
+                    temp.append(char)
                 }
-            } else {
-                for char in finalNumArray {
-                    newString.append(char)
-                }
-                myFinalDouble = Double(newString)!
-                shouldRepeat = false
-                didReceievePointsVal = true
-                
-                // Update current dining points balance label
-                let textNum = String(format: "%.2f", arguments: [myFinalDouble])
-                
-                // Store dining points in UserDefaults
-                let defaults = UserDefaults.standard
-                defaults.set(textNum, forKey: "userDiningPointsDefaults")
-                
-                if let navController = self.navigationController {
-                    navController.popViewController(animated: true)
-                }
+            }
+            cougarBucksString = temp
+            finalCougarBucksDouble = Double(cougarBucksString)!
+            print("KYLE: FINAL DOUBLE VALUE = \(finalCougarBucksDouble)")
+            didReceievePointsVal = true
+        }
+        
+        // Pop the view controller
+        if didReceievePointsVal {
+            shouldRepeat = false
+            if let navController = self.navigationController {
+                navController.popViewController(animated: true)
             }
         }
     }
+    
+    //    /*
+    //        DEPRECATED:
+    //    */
+    //
+    //    // This is the function that you need to call with the string of HTML that you grab
+    //    // Courtesy of David Bartholemew.
+    //    var count = 0
+    //    func parseHTML(html: String) {
+    //        count += 1
+    //        //Parses for the index Of specific location in the HTML
+    //        let fontString = "font-weight: bold;\">"
+    //
+    //        if let range = html.range(of: fontString) {
+    //            let lo = html.index((range.lowerBound), offsetBy: 20)
+    //            let hi = html.index((range.lowerBound), offsetBy: 27)
+    //            let subRange = lo ..< hi
+    //
+    //            // Access the string by the range.
+    //            let substring = html[subRange]
+    //
+    //            //Converts the number to a double
+    //            let str = substring
+    //            let numArray: [Character] = ["0","1","2","3","4","5","6","7","8","9","."]
+    //            let symbolsArray: [Character] = ["$", ",",]
+    //            var finalNumArray: [Character] = []
+    //
+    //            for char in str.characters {
+    //                if numArray.contains(char) {
+    //                    finalNumArray.append(char)
+    //                } else if symbolsArray.contains(char) {
+    //                    // Do nothing
+    //                } else {
+    //                    break
+    //                }
+    //            }
+    //
+    //            //Checks to see if it is N/A or a number then converts it to a double
+    //            var newString: String = ""
+    //            if str.contains("N/A") {
+    //                myFinalDouble = 0.0
+    //                shouldRepeat = false
+    //                didReceievePointsVal = true
+    //
+    //                // Store dining points in UserDefaults
+    //                let defaults = UserDefaults.standard
+    //                defaults.set("0.00", forKey: "userDiningPointsDefaults")
+    //
+    //                if let navController = self.navigationController {
+    //                    navController.popViewController(animated: true)
+    //                }
+    //            } else {
+    //                for char in finalNumArray {
+    //                    newString.append(char)
+    //                }
+    //                myFinalDouble = Double(newString)!
+    //                shouldRepeat = false
+    //                didReceievePointsVal = true
+    //
+    //                // Update current dining points balance label
+    //                let textNum = String(format: "%.2f", arguments: [myFinalDouble])
+    //
+    //                // Store dining points in UserDefaults
+    //                let defaults = UserDefaults.standard
+    //                defaults.set(textNum, forKey: "userDiningPointsDefaults")
+    //
+    //                if let navController = self.navigationController {
+    //                    navController.popViewController(animated: true)
+    //                }
+    //            }
+    //        }
+    //    }
 }
 
 extension String {

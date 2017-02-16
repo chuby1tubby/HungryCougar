@@ -726,6 +726,7 @@ Menu</string>
                         <outlet property="loginView" destination="Jsm-Xs-5Qj" id="1Da-sX-8FN"/>
                         <outlet property="refreshBtn" destination="4Mz-Jb-HCd" id="sr9-p7-uC5"/>
                         <outlet property="userTappedTitle" destination="1qJ-Ay-XA6" id="Jnd-OB-NyW"/>
+                        <outlet property="usersCougarBucksLbl" destination="AcD-LQ-9sR" id="neZ-Zi-EHg"/>
                         <outlet property="usersDiningPointsLbl" destination="dUy-li-Qn6" id="v2Z-gf-XHk"/>
                         <outlet property="usersDiningPointsView" destination="O3t-a3-86V" id="3GH-N7-Qdz"/>
                         <segue destination="WpJ-IH-Vbs" kind="show" identifier="APUHome" id="U44-L7-nPQ"/>

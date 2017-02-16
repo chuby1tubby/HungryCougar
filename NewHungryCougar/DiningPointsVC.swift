@@ -36,6 +36,7 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var diningPlanLbl: UILabel!
     @IBOutlet weak var diningPointsLbl: UILabel!
     @IBOutlet weak var usersDiningPointsLbl: DontCutMe!
+    @IBOutlet weak var usersCougarBucksLbl: DontCutMe!
     @IBOutlet weak var expectedDiningPointsView: CustomView!
     @IBOutlet weak var usersDiningPointsView: CustomView!
     @IBOutlet weak var loginView: CustomView!
@@ -50,27 +51,33 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         customizeDropDown(userTappedTitle)
 
         let prefs = UserDefaults.standard
-        if let value = prefs.string(forKey: "userDiningPointsDefaults") {
+        if let val1 = prefs.string(forKey: "userDiningPointsDefaults") {
             usersDiningPointsView.isHidden = false
             refreshBtn.isHidden = false
             loginView.isHidden = true
             
             // Update current dining points balance label
-            usersDiningPointsLbl.text = value
-        } else {
-            if didReceievePointsVal == true {
-                usersDiningPointsView.isHidden = false
-                refreshBtn.isHidden = false
-                loginView.isHidden = true
-                
-                // Update current dining points balance label
-                let textNum = String(format: "%.2f", arguments: [myFinalDouble])
-                usersDiningPointsLbl.text = textNum
-                
-                // Store dining points in UserDefaults
-                let defaults = UserDefaults.standard
-                defaults.set(textNum, forKey: "userDiningPointsDefaults")
+            usersDiningPointsLbl.text = val1
+            
+            if let val2 = prefs.string(forKey: "userCougarBucksDefaults") {
+                print("KYLE: Updating cougar bucks label...")
+                usersCougarBucksLbl.text = val2
             }
+        } else {
+            print("KYLE: THIS CODE PROBABLY SHOULD NEVER EXECUTE!")
+//            if didReceievePointsVal == true {
+//                usersDiningPointsView.isHidden = false
+//                refreshBtn.isHidden = false
+//                loginView.isHidden = true
+//                
+//                // Update current dining points balance label
+//                let textNum = String(format: "%.2f", arguments: [myFinalDouble])
+//                usersDiningPointsLbl.text = textNum
+//                
+//                // Store dining points in UserDefaults
+//                let defaults = UserDefaults.standard
+//                defaults.set(textNum, forKey: "userDiningPointsDefaults")
+//            }
         }
         
         // If user already saved a dining plan
