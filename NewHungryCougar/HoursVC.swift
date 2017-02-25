@@ -39,15 +39,112 @@ class HoursVC: UIViewController {
     // Apply custom attributes to Drop Down
     func customizeDropDown(_ sender: AnyObject) {
         
+        var dayOpenString = ""
+        var dayCloseString = ""
+        var sundayOpenString = ""
+        var mondayOpenString = ""
+        var tuesdayOpenString = ""
+        var wednesdayOpenString = ""
+        var thursdayOpenString = ""
+        var fridayOpenString = ""
+        var saturdayOpenString = ""
+        var sundayCloseString = ""
+        var mondayCloseString = ""
+        var tuesdayCloseString = ""
+        var wednesdayCloseString = ""
+        var thursdayCloseString = ""
+        var fridayCloseString = ""
+        var saturdayCloseString = ""
+        
+        for (index, day) in daysOfTheWeek.enumerated() {
+            let dayOpenDouble = day.openTime / 60
+            if day.openTime < 720 {
+                dayOpenString = "\(Int(dayOpenDouble))"
+            } else {
+                dayOpenString = "\(Int(dayOpenDouble)-12)"
+            }
+            if day.openTime < 60{
+                dayOpenString = "12"
+            }
+            if Int(dayOpenDouble) == dayOpenDouble {
+                dayOpenString.append(":00")
+            } else {
+                dayOpenString.append(":30")
+            }
+            if day.openTime < 720 {
+                dayOpenString.append("am")
+            } else {
+                dayOpenString.append("pm")
+            }
+            
+            let dayCloseDouble = day.closeTime / 60
+            if day.closeTime < 720 {
+                dayCloseString = "\(Int(dayCloseDouble))"
+            } else {
+                dayCloseString = "\(Int(dayCloseDouble)-12)"
+            }
+            if day.closeTime < 60{
+                dayCloseString = "12"
+            }
+            if Int(dayCloseDouble) == dayCloseDouble {
+                dayCloseString.append(":00")
+            } else {
+                dayCloseString.append(":30")
+            }
+            if Sunday.closeTime < 720 {
+                dayCloseString.append("am")
+            } else {
+                dayCloseString.append("pm")
+            }
+            if dayOpenString == "0:00am" {
+                dayOpenString = "12:00am"
+            } else if dayOpenString == "0:00pm" {
+                dayOpenString = "12:00pm"
+            }
+            
+            switch index {
+            case 0:
+                sundayOpenString = dayOpenString
+                sundayCloseString = dayCloseString
+                break
+            case 1:
+                mondayOpenString = dayOpenString
+                mondayCloseString = dayCloseString
+                break
+            case 2:
+                tuesdayOpenString = dayOpenString
+                tuesdayCloseString = dayCloseString
+                break
+            case 3:
+                wednesdayOpenString = dayOpenString
+                wednesdayCloseString = dayCloseString
+                break
+            case 4:
+                thursdayOpenString = dayOpenString
+                thursdayCloseString = dayCloseString
+                break
+            case 5:
+                fridayOpenString = dayOpenString
+                fridayCloseString = dayCloseString
+                break
+            case 6:
+                saturdayOpenString = dayOpenString
+                saturdayCloseString = dayCloseString
+                break
+            default:
+                break
+            }
+        }
+        
         // Set values for drop down list
         dpDropDown.dataSource = [
-            "Sunday              5:00am - 10:00pm",
-            "Monday             5:00am - 10:00pm",
-            "Tuesday             5:00am - 10:00pm",
-            "Wednesday        5:00am - 10:00pm",
-            "Thursday            5:00am - 10:00pm",
-            "Friday                 5:00am - 10:00pm",
-            "Saturday            5:00am - 10:00pm"
+            "Sunday              \(sundayOpenString) - \(sundayCloseString)",
+            "Monday             \(mondayOpenString) - \(mondayCloseString)",
+            "Tuesday             \(tuesdayOpenString) - \(tuesdayCloseString)",
+            "Wednesday        \(wednesdayOpenString) - \(wednesdayCloseString)",
+            "Thursday            \(thursdayOpenString) - \(thursdayCloseString)",
+            "Friday                 \(fridayOpenString) - \(fridayCloseString)",
+            "Saturday            \(saturdayOpenString) - \(saturdayCloseString)"
         ]
         
         // Preferences for behavior and location

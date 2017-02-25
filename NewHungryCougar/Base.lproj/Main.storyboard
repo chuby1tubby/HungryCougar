@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12100" systemVersion="16E154a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aYT-vv-QhX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E154a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aYT-vv-QhX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12072"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -589,7 +589,7 @@ Menu</string>
                                                                 <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999.99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="dUy-li-Qn6" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="dUy-li-Qn6" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
                                                                 <rect key="frame" x="228" y="0.0" width="115" height="40"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="115" id="De2-8H-jdN"/>
@@ -613,7 +613,7 @@ Menu</string>
                                                                 <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999.99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="AcD-LQ-9sR" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="AcD-LQ-9sR" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
                                                                 <rect key="frame" x="228" y="0.0" width="115" height="40"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="115" id="beT-8h-srj"/>
@@ -1712,7 +1712,7 @@ Convenience</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aYT-vv-QhX" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6j5-pb-k0w">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6j5-pb-k0w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
