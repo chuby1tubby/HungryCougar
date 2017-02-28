@@ -25,6 +25,8 @@ class HoursVC: UIViewController {
     @IBOutlet weak var yesNoLbl: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet var userTappedHours: UITapGestureRecognizer!
+    @IBOutlet var alsoTappedHours: UITapGestureRecognizer!
+    
     
     // Loads right before view appears
     override func viewWillAppear(_ animated: Bool) {
@@ -57,16 +59,16 @@ class HoursVC: UIViewController {
         var saturdayCloseString = ""
         
         for (index, day) in daysOfTheWeek.enumerated() {
-            let dayOpenDouble = day.openTime / 60
+            let dayOpenDouble = Double(day.openTime) / 60.0
             if day.openTime < 720 {
                 dayOpenString = "\(Int(dayOpenDouble))"
             } else {
                 dayOpenString = "\(Int(dayOpenDouble)-12)"
             }
-            if day.openTime < 60{
+            if day.openTime < 60 {
                 dayOpenString = "12"
             }
-            if Int(dayOpenDouble) == dayOpenDouble {
+            if floor(dayOpenDouble) == dayOpenDouble {
                 dayOpenString.append(":00")
             } else {
                 dayOpenString.append(":30")
@@ -77,21 +79,21 @@ class HoursVC: UIViewController {
                 dayOpenString.append("pm")
             }
             
-            let dayCloseDouble = day.closeTime / 60
+            let dayCloseDouble = Double(day.closeTime) / 60.0
             if day.closeTime < 720 {
                 dayCloseString = "\(Int(dayCloseDouble))"
             } else {
                 dayCloseString = "\(Int(dayCloseDouble)-12)"
             }
-            if day.closeTime < 60{
+            if day.closeTime < 60 {
                 dayCloseString = "12"
             }
-            if Int(dayCloseDouble) == dayCloseDouble {
+            if floor(dayCloseDouble) == dayCloseDouble {
                 dayCloseString.append(":00")
             } else {
                 dayCloseString.append(":30")
             }
-            if Sunday.closeTime < 720 {
+            if day.closeTime < 720 {
                 dayCloseString.append("am")
             } else {
                 dayCloseString.append("pm")
@@ -100,6 +102,16 @@ class HoursVC: UIViewController {
                 dayOpenString = "12:00am"
             } else if dayOpenString == "0:00pm" {
                 dayOpenString = "12:00pm"
+            }
+            if dayCloseString == "0:00am" {
+                dayCloseString = "12:00am"
+            } else if dayCloseString == "0:00pm" {
+                dayCloseString = "12:00pm"
+            }
+            dayOpenString.append(" -")
+            if dayOpenString.contains("12:00") && dayCloseString.contains("12:00") {
+                dayOpenString = "Closed"
+                dayCloseString = ""
             }
             
             switch index {
@@ -138,13 +150,13 @@ class HoursVC: UIViewController {
         
         // Set values for drop down list
         dpDropDown.dataSource = [
-            "Sunday              \(sundayOpenString) - \(sundayCloseString)",
-            "Monday             \(mondayOpenString) - \(mondayCloseString)",
-            "Tuesday             \(tuesdayOpenString) - \(tuesdayCloseString)",
-            "Wednesday        \(wednesdayOpenString) - \(wednesdayCloseString)",
-            "Thursday            \(thursdayOpenString) - \(thursdayCloseString)",
-            "Friday                 \(fridayOpenString) - \(fridayCloseString)",
-            "Saturday            \(saturdayOpenString) - \(saturdayCloseString)"
+            "Sunday              \(sundayOpenString) \(sundayCloseString)",
+            "Monday             \(mondayOpenString) \(mondayCloseString)",
+            "Tuesday             \(tuesdayOpenString) \(tuesdayCloseString)",
+            "Wednesday        \(wednesdayOpenString) \(wednesdayCloseString)",
+            "Thursday            \(thursdayOpenString) \(thursdayCloseString)",
+            "Friday                 \(fridayOpenString) \(fridayCloseString)",
+            "Saturday            \(saturdayOpenString) \(saturdayCloseString)"
         ]
         
         // Preferences for behavior and location
@@ -178,8 +190,9 @@ class HoursVC: UIViewController {
         dpDropDown.show()
     }
    
-        
-        
+    @IBAction func tappedDropdownIcon(_ sender: Any) {
+        showRestaurantHoursDropDown(alsoTappedHours)
+    }
     
     // Set the date manualy to test the calculator
     func manuallySetDay(_ mm: Int, dd: Int, yyyy: Int, wday: Int, hr: Int, min: Int) {

@@ -333,9 +333,21 @@ Menu</string>
                                             <segue destination="rCL-Cx-Z5G" kind="show" id="eC7-B8-qvl"/>
                                         </connections>
                                     </button>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-down" translatesAutoresizingMaskIntoConstraints="NO" id="9WB-f7-IHV">
+                                        <rect key="frame" x="295" y="357" width="24" height="24"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="Q9Y-8D-eQE"/>
+                                            <constraint firstAttribute="height" constant="24" id="Vha-RF-yrr"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="FJQ-1H-Ayl" appends="YES" id="frv-o2-4o1"/>
+                                        </connections>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.58727836609999995" green="0.1501453519" blue="0.13814073800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="9WB-f7-IHV" firstAttribute="centerY" secondItem="Vu1-9q-xnw" secondAttribute="centerY" id="0g1-x2-kDZ"/>
                                     <constraint firstAttribute="trailing" secondItem="Ept-U9-Ono" secondAttribute="trailing" constant="30" id="2pl-q9-dkh"/>
                                     <constraint firstAttribute="trailing" secondItem="jY5-cB-yZV" secondAttribute="trailing" id="4Gu-Ta-B6Q"/>
                                     <constraint firstItem="jY5-cB-yZV" firstAttribute="leading" secondItem="pDV-st-NNq" secondAttribute="leading" id="E5V-mb-DPr"/>
@@ -349,6 +361,7 @@ Menu</string>
                                     <constraint firstAttribute="bottom" secondItem="qUb-su-Det" secondAttribute="bottom" constant="25" id="cYf-Vq-lJ4"/>
                                     <constraint firstItem="jY5-cB-yZV" firstAttribute="top" secondItem="pDV-st-NNq" secondAttribute="top" id="cfx-2F-nXS"/>
                                     <constraint firstItem="jY5-cB-yZV" firstAttribute="top" secondItem="pDV-st-NNq" secondAttribute="top" id="dpV-Kk-Qeh"/>
+                                    <constraint firstItem="9WB-f7-IHV" firstAttribute="leading" secondItem="Vu1-9q-xnw" secondAttribute="trailing" constant="8" id="dz9-JW-VgT"/>
                                     <constraint firstAttribute="trailing" secondItem="jY5-cB-yZV" secondAttribute="trailing" id="fmg-3M-hft"/>
                                     <constraint firstAttribute="trailing" secondItem="jY5-cB-yZV" secondAttribute="trailing" id="hKc-7Y-AUh"/>
                                 </constraints>
@@ -387,6 +400,7 @@ Menu</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="alsoTappedHours" destination="FJQ-1H-Ayl" id="hGt-Eq-g8M"/>
                         <outlet property="timeLabel" destination="Vu1-9q-xnw" id="CKA-Iv-7zQ"/>
                         <outlet property="userTappedHours" destination="5Lb-EV-T1J" id="AE0-8a-kHf"/>
                         <outlet property="yesNoLbl" destination="ojc-Un-ovC" id="Ihm-xz-eVt"/>
@@ -396,6 +410,11 @@ Menu</string>
                 <tapGestureRecognizer id="5Lb-EV-T1J" userLabel="tappedHours">
                     <connections>
                         <action selector="showRestaurantHoursDropDown:" destination="BYZ-38-t0r" id="dIA-Xn-5au"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="FJQ-1H-Ayl" userLabel="alsoTappedHours">
+                    <connections>
+                        <action selector="tappedDropdownIcon:" destination="BYZ-38-t0r" id="8kM-ZK-MBS"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -939,7 +958,7 @@ Menu</string>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQA-yT-Yge">
-                                                <rect key="frame" x="8" y="317" width="359" height="142.5"/>
+                                                <rect key="frame" x="8" y="337" width="359" height="142.5"/>
                                                 <string key="text">Thanks for checking out Hungry Coug!
 
 Please send me a quick email if you notice any errors with restaurant hours or any other problems, or just to let me know what you think about the app. Positive or negative feedback is always welcome!</string>
@@ -950,7 +969,7 @@ Please send me a quick email if you notice any errors with restaurant hours or a
                                         </subviews>
                                         <color key="backgroundColor" red="0.97162515862944165" green="0.97162515862944165" blue="0.97162515862944165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="IQA-yT-Yge" firstAttribute="top" secondItem="jMe-WQ-YeX" secondAttribute="bottom" constant="40" id="2iH-Dn-LdX"/>
+                                            <constraint firstItem="IQA-yT-Yge" firstAttribute="top" secondItem="jMe-WQ-YeX" secondAttribute="bottom" constant="60" id="2iH-Dn-LdX"/>
                                             <constraint firstItem="HEf-Jr-fH6" firstAttribute="top" secondItem="Bga-Ol-Oqt" secondAttribute="bottom" constant="8" id="86v-vo-R3K"/>
                                             <constraint firstItem="OQN-wm-Nyf" firstAttribute="top" secondItem="izy-Yf-dBW" secondAttribute="bottom" constant="40" id="BMW-En-n1J"/>
                                             <constraint firstItem="Bga-Ol-Oqt" firstAttribute="top" secondItem="Hkq-ft-LF8" secondAttribute="top" constant="15" id="Dc2-Fh-NKY"/>
@@ -1724,7 +1743,7 @@ Convenience</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aYT-vv-QhX" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6j5-pb-k0w">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6j5-pb-k0w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1751,6 +1770,7 @@ Convenience</string>
         <image name="Sams-Subs-transparent-3" width="833" height="833"/>
         <image name="The-Market-transparent-2" width="833" height="833"/>
         <image name="Umai-Sushi-transparent-2" width="833" height="833"/>
+        <image name="arrow-down" width="128" height="128"/>
         <image name="coin-white" width="208" height="208"/>
         <image name="settings_cog" width="576" height="570"/>
     </resources>
