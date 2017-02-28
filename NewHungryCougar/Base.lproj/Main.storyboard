@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E154a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aYT-vv-QhX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12113" systemVersion="16E163f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aYT-vv-QhX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12078"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -938,9 +938,19 @@ Menu</string>
                                                     </label>
                                                 </subviews>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQA-yT-Yge">
+                                                <rect key="frame" x="8" y="317" width="359" height="142.5"/>
+                                                <string key="text">Thanks for checking out Hungry Coug!
+
+Please send me a quick email if you notice any errors with restaurant hours or any other problems, or just to let me know what you think about the app. Positive or negative feedback is always welcome!</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.97162515862944165" green="0.97162515862944165" blue="0.97162515862944165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="IQA-yT-Yge" firstAttribute="top" secondItem="jMe-WQ-YeX" secondAttribute="bottom" constant="40" id="2iH-Dn-LdX"/>
                                             <constraint firstItem="HEf-Jr-fH6" firstAttribute="top" secondItem="Bga-Ol-Oqt" secondAttribute="bottom" constant="8" id="86v-vo-R3K"/>
                                             <constraint firstItem="OQN-wm-Nyf" firstAttribute="top" secondItem="izy-Yf-dBW" secondAttribute="bottom" constant="40" id="BMW-En-n1J"/>
                                             <constraint firstItem="Bga-Ol-Oqt" firstAttribute="top" secondItem="Hkq-ft-LF8" secondAttribute="top" constant="15" id="Dc2-Fh-NKY"/>
@@ -948,12 +958,14 @@ Menu</string>
                                             <constraint firstAttribute="trailing" secondItem="HEf-Jr-fH6" secondAttribute="trailing" id="Hgp-ny-h0C"/>
                                             <constraint firstAttribute="trailing" secondItem="1Ah-ww-fRx" secondAttribute="trailing" id="Sgt-t5-6Qh"/>
                                             <constraint firstItem="Bga-Ol-Oqt" firstAttribute="leading" secondItem="Hkq-ft-LF8" secondAttribute="leading" constant="8" id="a6m-pX-B1d"/>
+                                            <constraint firstItem="IQA-yT-Yge" firstAttribute="leading" secondItem="Hkq-ft-LF8" secondAttribute="leading" constant="8" id="aSY-Y8-u5p"/>
                                             <constraint firstItem="1Ah-ww-fRx" firstAttribute="leading" secondItem="Hkq-ft-LF8" secondAttribute="leading" id="d7q-5L-Kfr"/>
                                             <constraint firstItem="HEf-Jr-fH6" firstAttribute="leading" secondItem="Hkq-ft-LF8" secondAttribute="leading" id="fmZ-Zm-NBI"/>
                                             <constraint firstItem="izy-Yf-dBW" firstAttribute="top" secondItem="1Ah-ww-fRx" secondAttribute="bottom" constant="8" id="hf8-x6-1qu"/>
                                             <constraint firstItem="izy-Yf-dBW" firstAttribute="leading" secondItem="Hkq-ft-LF8" secondAttribute="leading" constant="8" id="jAy-mX-GQ7"/>
                                             <constraint firstItem="jMe-WQ-YeX" firstAttribute="leading" secondItem="Hkq-ft-LF8" secondAttribute="leading" constant="8" id="mGy-0F-wVU"/>
                                             <constraint firstItem="OQN-wm-Nyf" firstAttribute="leading" secondItem="Hkq-ft-LF8" secondAttribute="leading" constant="8" id="wDt-Nf-smF"/>
+                                            <constraint firstAttribute="trailing" secondItem="IQA-yT-Yge" secondAttribute="trailing" constant="8" id="xTS-Yz-xlw"/>
                                             <constraint firstItem="jMe-WQ-YeX" firstAttribute="top" secondItem="OQN-wm-Nyf" secondAttribute="bottom" constant="8" id="zwp-C1-emc"/>
                                         </constraints>
                                         <connections>
