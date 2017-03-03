@@ -13,6 +13,7 @@ public var restaurantChoice = ""
 
 class HoursVC: UIViewController {
     // Base values
+    var now: Int = 0
     var minutesLeft: Int = 0
     var currentMinute: Int = 0
     var minutesUntilOpen: Int = 0
@@ -216,6 +217,7 @@ class HoursVC: UIViewController {
         //        manuallySetDay(1, dd: 18, yyyy: 2017, wday: 4, hr: 7, min: 37)
         
         currentTimeInMinutes = (hour! * 60) + minute!
+        now = hour! * 100 + minute!                         // Time is converted to format: HH:MM (9:30am = 09:30)
         
         // Set current day hours
         switch weekday! {
@@ -377,7 +379,7 @@ class HoursVC: UIViewController {
                 }
             }
             else {
-                if Tomorrow.hasNoHours {
+                if Tomorrow.hasNoHours && currentTimeInMinutes < Today.openTime {   // Note: Should find a more elegant solution for this
                     timeLabel.text = "Closed all day tomorrow"
                     if Sunday.hasNoHours {
                         timeLabel.text = "Closed until Monday"

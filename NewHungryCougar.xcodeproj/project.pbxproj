@@ -13,10 +13,12 @@
 		BF05BE401D59B97400AA3DF6 /* DiningPlanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF05BE3F1D59B97400AA3DF6 /* DiningPlanVC.swift */; };
 		BF05BE421D59BBA000AA3DF6 /* DiningPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF05BE411D59BBA000AA3DF6 /* DiningPlanCell.swift */; };
 		BF05BE441D59C65600AA3DF6 /* DiningPointsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF05BE431D59C65600AA3DF6 /* DiningPointsVC.swift */; };
+		BF06C7581E6793E5004EF0CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF06C7571E6793E5004EF0CE /* GoogleService-Info.plist */; };
 		BF21D39A1D552B4F001A38F2 /* EastVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21D3991D552B4F001A38F2 /* EastVC.swift */; };
 		BF21D39C1D552C00001A38F2 /* WestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21D39B1D552C00001A38F2 /* WestVC.swift */; };
 		BF21D39E1D55A138001A38F2 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21D39D1D55A138001A38F2 /* CircleView.swift */; };
 		BF21D3A01D55C51D001A38F2 /* RestaurantHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21D39F1D55C51D001A38F2 /* RestaurantHours.swift */; };
+		BF2D90E61E6645B200F8C1AC /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2D90E51E6645B200F8C1AC /* DataService.swift */; };
 		BF35900A1E34713800D5A5E7 /* UserSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3590091E34713800D5A5E7 /* UserSettingsVC.swift */; };
 		BF35985B1D4EF79400AF28B3 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF35985A1D4EF79400AF28B3 /* Day.swift */; };
 		BF8C1BC01D4FDAD700E7B2B7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8C1BBF1D4FDAD700E7B2B7 /* HomeVC.swift */; };
@@ -66,10 +68,12 @@
 		BF05BE3F1D59B97400AA3DF6 /* DiningPlanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningPlanVC.swift; sourceTree = "<group>"; };
 		BF05BE411D59BBA000AA3DF6 /* DiningPlanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningPlanCell.swift; sourceTree = "<group>"; };
 		BF05BE431D59C65600AA3DF6 /* DiningPointsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningPointsVC.swift; sourceTree = "<group>"; };
+		BF06C7571E6793E5004EF0CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF21D3991D552B4F001A38F2 /* EastVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EastVC.swift; sourceTree = "<group>"; };
 		BF21D39B1D552C00001A38F2 /* WestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WestVC.swift; sourceTree = "<group>"; };
 		BF21D39D1D55A138001A38F2 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		BF21D39F1D55C51D001A38F2 /* RestaurantHours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantHours.swift; sourceTree = "<group>"; };
+		BF2D90E51E6645B200F8C1AC /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		BF3590091E34713800D5A5E7 /* UserSettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingsVC.swift; sourceTree = "<group>"; };
 		BF35985A1D4EF79400AF28B3 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		BF54CECB1DCADB9800DFB40D /* Hungry Cougar 2.0.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hungry Cougar 2.0.entitlements"; sourceTree = SOURCE_ROOT; };
@@ -168,6 +172,7 @@
 		BFC2FCA61E1FB385003A3149 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BF2D90E51E6645B200F8C1AC /* DataService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				BFECDD461D4EE5B100E626D3 /* Info.plist */,
+				BF06C7571E6793E5004EF0CE /* GoogleService-Info.plist */,
 				BFECDD3A1D4EE5B100E626D3 /* AppDelegate.swift */,
 				BF54CECB1DCADB9800DFB40D /* Hungry Cougar 2.0.entitlements */,
 			);
@@ -399,6 +405,7 @@
 				BFECDD421D4EE5B100E626D3 /* Assets.xcassets in Resources */,
 				BFE6F27F1E381C890083685B /* MyCell.xib in Resources */,
 				BFECDD401D4EE5B100E626D3 /* Main.storyboard in Resources */,
+				BF06C7581E6793E5004EF0CE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +574,7 @@
 				BF8C1BC21D4FDCAF00E7B2B7 /* RoundCornersView.swift in Sources */,
 				BFECDD3D1D4EE5B100E626D3 /* HoursVC.swift in Sources */,
 				BF91ED4D1D7ABD49007B161E /* InformationVC.swift in Sources */,
+				BF2D90E61E6645B200F8C1AC /* DataService.swift in Sources */,
 				BF21D39C1D552C00001A38F2 /* WestVC.swift in Sources */,
 				BF35900A1E34713800D5A5E7 /* UserSettingsVC.swift in Sources */,
 				BF91ED4F1D7ABD52007B161E /* DontCutMe.swift in Sources */,
