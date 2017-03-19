@@ -8,6 +8,7 @@
 
 import UIKit
 import DropDown
+import Firebase
 
 public var restaurantChoice = ""
 
@@ -18,7 +19,6 @@ class HoursVC: UIViewController {
     var currentMinute: Int = 0
     var minutesUntilOpen: Int = 0
     var minutesUntilClose: Int = 0
-    var currentTimeInMinutes: Int = 0
     var storeIsOpen: Bool = false
     let dpDropDown = DropDown()   // Create a new drop down object
     
@@ -28,12 +28,11 @@ class HoursVC: UIViewController {
     @IBOutlet var userTappedHours: UITapGestureRecognizer!
     @IBOutlet var alsoTappedHours: UITapGestureRecognizer!
     
-    
     // Loads right before view appears
     override func viewWillAppear(_ animated: Bool) {
         self.title = restaurantChoice
-        setHours()
         loadCurrentDateTime()
+        setHours()
         checkIfOpen()
         calculateTimeUntilOpen()
         displayTimeUntilOpen()
@@ -59,60 +58,43 @@ class HoursVC: UIViewController {
         var fridayCloseString = ""
         var saturdayCloseString = ""
         
-        for (index, day) in daysOfTheWeek.enumerated() {
-            let dayOpenDouble = Double(day.openTime) / 60.0
-            if day.openTime < 720 {
-                dayOpenString = "\(Int(dayOpenDouble))"
-            } else {
-                dayOpenString = "\(Int(dayOpenDouble)-12)"
+        for (index, day) in daysOfTheWeek.enumerated() {        // 9:30am  == 0930
+            var dayOpen = day.openTime
+            var dayClose = day.closeTime
+            
+            if day.openTime > 1200 {
+                dayOpen = dayOpen - 1200
             }
-            if day.openTime < 60 {
-                dayOpenString = "12"
+            if day.closeTime > 1200 {
+                dayClose = dayClose - 1200
             }
-            if floor(dayOpenDouble) == dayOpenDouble {
-                dayOpenString.append(":00")
-            } else {
-                dayOpenString.append(":30")
+            
+            dayOpenString = "\(dayOpen / 100):\(day.openTime - Int(day.openTime/100)*100)"
+            dayCloseString = "\(dayClose / 100):\(day.closeTime - Int(day.closeTime/100)*100)"
+            
+            if (day.openTime - Int(day.openTime/100)*100) == 0 {
+                dayOpenString.append("0")
             }
-            if day.openTime < 720 {
+            if (day.closeTime - Int(day.closeTime/100)*100) == 0 {
+                dayCloseString.append("0")
+            }
+            
+            if day.openTime < 1200 {
                 dayOpenString.append("am")
             } else {
                 dayOpenString.append("pm")
             }
-            
-            let dayCloseDouble = Double(day.closeTime) / 60.0
-            if day.closeTime < 720 {
-                dayCloseString = "\(Int(dayCloseDouble))"
-            } else {
-                dayCloseString = "\(Int(dayCloseDouble)-12)"
-            }
-            if day.closeTime < 60 {
-                dayCloseString = "12"
-            }
-            if floor(dayCloseDouble) == dayCloseDouble {
-                dayCloseString.append(":00")
-            } else {
-                dayCloseString.append(":30")
-            }
-            if day.closeTime < 720 {
+            if day.closeTime < 1200 {
                 dayCloseString.append("am")
             } else {
                 dayCloseString.append("pm")
             }
-            if dayOpenString == "0:00am" {
-                dayOpenString = "12:00am"
-            } else if dayOpenString == "0:00pm" {
-                dayOpenString = "12:00pm"
-            }
-            if dayCloseString == "0:00am" {
-                dayCloseString = "12:00am"
-            } else if dayCloseString == "0:00pm" {
-                dayCloseString = "12:00pm"
-            }
-            dayOpenString.append(" -")
-            if dayOpenString.contains("12:00") && dayCloseString.contains("12:00") {
+            
+            if day.openTime == 0 && day.closeTime == 0 {
                 dayOpenString = "Closed"
                 dayCloseString = ""
+            } else {
+                dayOpenString.append(" -")
             }
             
             switch index {
@@ -216,8 +198,7 @@ class HoursVC: UIViewController {
         // Manually set current date and time
         //        manuallySetDay(1, dd: 18, yyyy: 2017, wday: 4, hr: 7, min: 37)
         
-        currentTimeInMinutes = (hour! * 60) + minute!
-        now = hour! * 100 + minute!                         // Time is converted to format: HH:MM (9:30am = 09:30)
+        now = hour! * 100 + minute!                         // Time is converted to format: HH:MM (9:30am = 0930)
         
         // Set current day hours
         switch weekday! {
@@ -261,14 +242,14 @@ class HoursVC: UIViewController {
         storeIsOpen = true
         
         // If current time is between midnight and open time
-        if currentTimeInMinutes < Today.openTime {
+        if now < Today.openTime {
             // If yesterday closed at normal hours
-            if Yesterday.closeTime > 120 {
+            if Yesterday.closeTime > 0200 {
                 storeIsOpen = false
                 print("KYLE: OPEN-CLOSE BOOL #1")
             } else {
                 // If time has past yesterday close time
-                if currentTimeInMinutes >= Yesterday.closeTime {
+                if now >= Yesterday.closeTime {
                     storeIsOpen = false
                     print("KYLE: OPEN-CLOSE BOOL #2")
                 }
@@ -277,13 +258,13 @@ class HoursVC: UIViewController {
         // Else if current time is between open time and 11:59pm
         else {
             // If today closes after midnight
-            if Today.closeTime <= 120 {
+            if Today.closeTime <= 0200 {
                 print("KYLE: OPEN-CLOSE BOOL #3")
                 print("KYLE: STORE IS OPEN")
                 storeIsOpen = true
             } else {
                 // If current time is after today close time
-                if currentTimeInMinutes >= Today.closeTime {
+                if now >= Today.closeTime {
                     storeIsOpen = false
                     print("KYLE: OPEN-CLOSE BOOL #4")
                 }
@@ -292,16 +273,16 @@ class HoursVC: UIViewController {
         
         // Extra cases for Dining Hall and Fusion Grill due to mid-day breaks
         if restaurantChoice == "1899 Dining Hall" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
-            if currentTimeInMinutes >= 570 && currentTimeInMinutes < 660 {
+            if now >= 0950 && now < 1100 {
                 storeIsOpen = false
                 print("KYLE: TRIGGERED WRONG BOOLEAN")
-            } else if currentTimeInMinutes >= 840 && currentTimeInMinutes < 1020 {
+            } else if now >= 1400 && now < 1020 {
                 storeIsOpen = false
                 print("KYLE: TRIGGERED WRONG BOOLEAN")
 
             }
         } else if restaurantChoice == "The Grill at Heritage" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
-            if currentTimeInMinutes >= 600 && currentTimeInMinutes < 630 {
+            if now >= 1000 && now < 1030 {
                 storeIsOpen = false
                 print("KYLE: TRIGGERED WRONG BOOLEAN")
 
@@ -311,7 +292,6 @@ class HoursVC: UIViewController {
         if Today.hasNoHours {
             storeIsOpen = false
             print("KYLE: TRIGGERED WRONG BOOLEAN")
-
         }
         
         // Set yesNoLabel
@@ -325,35 +305,35 @@ class HoursVC: UIViewController {
     func calculateTimeUntilOpen() {
         // If the store is CLOSED
         if storeIsOpen == false {
-            if Today.openTime > currentTimeInMinutes {
-                minutesUntilOpen = Today.openTime - currentTimeInMinutes
+            if Today.openTime > now {
+                minutesUntilOpen = Today.openTime - now
             } else {
-                minutesUntilOpen = Tomorrow.openTime + (1439 - currentTimeInMinutes)
+                minutesUntilOpen = Tomorrow.openTime + (2359 - now)
             }
         }
             // If the store is OPEN
         else {
-            if Today.closeTime > currentTimeInMinutes {
-                if currentTimeInMinutes < 120 {
-                    minutesUntilClose = Yesterday.closeTime - currentTimeInMinutes
+            if Today.closeTime > now {
+                if now < 0200 {
+                    minutesUntilClose = Yesterday.closeTime - now
                 } else {
-                    minutesUntilClose = Today.closeTime - currentTimeInMinutes
+                    minutesUntilClose = Today.closeTime - now
                 }
             } else {
-                minutesUntilClose = 1439 - currentTimeInMinutes + Today.closeTime
+                minutesUntilClose = 2359 - now + Today.closeTime
             }
         }
         
         // Extra cases for Dining Hall and Fusion Grill due to mid-day breaks
         if restaurantChoice == "1899 Dining Hall" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
-            if currentTimeInMinutes >= 570 && currentTimeInMinutes < 660 {
-                minutesUntilOpen = 660 - currentTimeInMinutes
-            } else if currentTimeInMinutes >= 840 && currentTimeInMinutes < 1020 {
-                minutesUntilOpen = 1020 - currentTimeInMinutes
+            if now >= 0950 && now < 1100 {
+                minutesUntilOpen = 1100 - now
+            } else if now >= 1400 && now < 1700 {
+                minutesUntilOpen = 1700 - now
             }
         } else if restaurantChoice == "The Grill at Heritage" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
-            if currentTimeInMinutes >= 600 && currentTimeInMinutes < 630 {
-                minutesUntilOpen = 630 - currentTimeInMinutes
+            if now >= 1000 && now < 1030 {
+                minutesUntilOpen = 1030 - now
             }
         }
         
@@ -366,6 +346,28 @@ class HoursVC: UIViewController {
     }
     
     func displayTimeUntilOpen() {
+        var HHOpen = Today.openTime/100
+        if HHOpen > 12 {
+            HHOpen = HHOpen - 12
+        }
+        let MMOpen = Today.openTime - Int(Today.openTime/100)*100
+        var HHClose = Today.closeTime/100
+        if HHClose > 12 {
+            HHClose = HHClose - 12
+        }
+        let MMClose = Today.closeTime - Int(Today.closeTime/100)*100
+        
+        var HHOpenTomorrow = Tomorrow.openTime/100
+        if HHOpenTomorrow > 12 {
+            HHOpenTomorrow = HHOpenTomorrow - 12
+        }
+        let MMOpenTomorrow = Tomorrow.openTime - Int(Tomorrow.openTime/100)*100
+        var HHCloseTomorrow = Tomorrow.closeTime/100
+        if HHCloseTomorrow > 12 {
+            HHCloseTomorrow = HHCloseTomorrow - 12
+        }
+        let MMCloseTomorrow = Tomorrow.closeTime - Int(Tomorrow.closeTime/100)*100
+        
         // If the store is CLOSED
         if storeIsOpen == false {
             // If store has no hours today
@@ -379,7 +381,7 @@ class HoursVC: UIViewController {
                 }
             }
             else {
-                if Tomorrow.hasNoHours && currentTimeInMinutes < Today.openTime {   // Note: Should find a more elegant solution for this
+                if Tomorrow.hasNoHours && now < Today.openTime {   // Note: Should find a more elegant solution for this
                     timeLabel.text = "Closed all day tomorrow"
                     if Sunday.hasNoHours {
                         timeLabel.text = "Closed until Monday"
@@ -391,50 +393,12 @@ class HoursVC: UIViewController {
                     }
                     else {
                         // If currently between midnight and open hours (0 to 7am roughly)
-                        if currentTimeInMinutes < Today.openTime {
-                            // For whole numbers
-                            if floor(Double(Today.openTime / 60)) == Double(Today.openTime) / 60.0 {
-                                // If opens before 12:00pm
-                                if Today.openTime < 720 {
-                                    print("KYLE: Display time BOOL #1")
-                                    timeLabel.text = "Opening at \(Today.openTime / 60)am"
-                                } else {
-                                    print("KYLE: Display time BOOL #2")
-                                    timeLabel.text = "Opening at \((Today.openTime / 60) - 12)pm"
-                                }
-                            } else {
-                                // If opens before 12:30pm
-                                if Tomorrow.openTime < 750 {
-                                    print("KYLE: Display time BOOL #3")
-                                    timeLabel.text = "Opening at \(Int(floor(Double(Tomorrow.openTime) / 60.0))):30am"
-                                } else {
-                                    print("KYLE: Display time BOOL #4")
-                                    timeLabel.text = "Opening at \(Int(floor(Double(Tomorrow.openTime) / 60.0)) - 12):30pm"
-                                }
-                            }
+                        if now < Today.openTime {
+                            timeLabel.text = "Opening at \(HHOpen):\(MMOpen)"
                         }
                         // If currently between roughly 7am and midnight
                         else {
-                            // For whole numbers
-                            if floor(Double(Tomorrow.openTime) / 60.0) == Double(Tomorrow.openTime) / 60.0 {
-                                // If opens before 12:00pm
-                                if Tomorrow.openTime < 720 {
-                                    print("KYLE: Display time BOOL #5")
-                                    timeLabel.text = "Opening at \(Tomorrow.openTime / 60)am"
-                                } else {
-                                    print("KYLE: Display time BOOL #6")
-                                    timeLabel.text = "Opening at \((Tomorrow.openTime / 60) - 12)pm"
-                                }
-                            } else {
-                                // If opens before 12:30pm
-                                if Tomorrow.openTime < 750 {
-                                    print("KYLE: Display time BOOL #7")
-                                    timeLabel.text = "Opening at \(Int(floor(Double(Tomorrow.openTime) / 60.0))):30am"
-                                } else {
-                                    print("KYLE: Display time BOOL #8")
-                                    timeLabel.text = "Opening at \(Int(floor(Double(Tomorrow.openTime) / 60.0)) - 12):30pm"
-                                }
-                            }
+                            timeLabel.text = "Opening at \(HHOpenTomorrow):\(MMOpenTomorrow)"
                         }
                     }
                 }
@@ -445,43 +409,27 @@ class HoursVC: UIViewController {
             if minutesLeft < 60 {
                 timeLabel.text = "Closing in \(minutesLeft) minutes"
             } else {
-                if (Yesterday.closeTime == 0 && currentTimeInMinutes < 120) || (Today.closeTime == 0 && currentTimeInMinutes >= 120) {
+                if (Yesterday.closeTime == 0 && now < 0200) || (Today.closeTime == 0 && now >= 0200) {
                     print("KYLE: Display time BOOL #9")
                     timeLabel.text = "Closing at midnight"
-                } else if (Yesterday.closeTime == 60 && currentTimeInMinutes < 120) || (Today.closeTime == 60 && currentTimeInMinutes >= 120) {
+                } else if (Yesterday.closeTime == 0100 && now < 0200) || (Today.closeTime == 0100 && now >= 0200) {
                     print("KYLE: Display time BOOL #10")
                     timeLabel.text = "Closing at 1am"
                 } else {
-                    if floor(Double(Today.closeTime)/60.0) == (Double(Today.closeTime) / 60.0) {
-                        if Today.closeTime < 720 {
-                            print("KYLE: Display time BOOL #11")
-                            timeLabel.text = "Closing at \(Today.closeTime / 60)pm"
-                        } else {
-                            print("KYLE: Display time BOOL #12")
-                            timeLabel.text = "Closing at \(Today.closeTime / 60 - 12)pm"
-                        }
-                    } else {
-                        if Today.closeTime < 750 {
-                            print("KYLE: Display time BOOL #13")
-                            timeLabel.text = "Closing at \(Int(floor(Double(Today.closeTime) / 60.0))):30pm"
-                        } else {
-                            print("KYLE: Display time BOOL #14")
-                            timeLabel.text = "Closing at \(Int(floor(Double(Today.closeTime) / 60.0)) - 12):30pm"
-                        }
-                    }
+                    timeLabel.text = "Closing at \(HHClose):\(MMClose)"
                 }
             }
         }
         
         // Extra cases for Dining Hall and Fusion Grill due to mid-day breaks
         if restaurantChoice == "1899 Dining Hall" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
-            if currentTimeInMinutes >= 570 && currentTimeInMinutes < 660 {
+            if now >= 0930 && now < 1100 {
                 timeLabel.text = "Opening at 11am\nfor lunch"
-            } else if currentTimeInMinutes >= 840 && currentTimeInMinutes < 1020 {
+            } else if now >= 1400 && now < 1700 {
                 timeLabel.text = "Opening at 5pm\nfor dinner"
             }
         } else if restaurantChoice == "The Grill at Heritage" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
-            if currentTimeInMinutes >= 600 && currentTimeInMinutes < 630 {
+            if now >= 1000 && now < 1030 {
                 timeLabel.text = "Opening at 10:30am\nfor lunch"
             }
         }

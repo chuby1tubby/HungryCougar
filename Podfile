@@ -7,6 +7,7 @@ target 'NewHungryCougar' do
 
   # Pods for NewHungryCougar
   pod 'DropDown', '~> 2'
+  pod ‘Firebase/Core’
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
 

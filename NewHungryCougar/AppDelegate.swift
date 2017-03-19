@@ -14,12 +14,14 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    override init() {
+        FIRApp.configure()
+    }
 
     private func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: Any]?) -> Bool {
         // Override point for customization after application launch.
         DropDown.startListeningToKeyboard()
-        FIRApp.configure()
         
         return true
     }

@@ -35,6 +35,7 @@ PODS:
 
 DEPENDENCIES:
   - DropDown (~> 2)
+  - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
 
@@ -51,6 +52,6 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 6f8d8b28b7e345549ac471071608170b31cb4977
 
-PODFILE CHECKSUM: 003736d05b22e4b72e8881f6560204e76de9ee90
+PODFILE CHECKSUM: a23918cf6f5b5157c77057c2c7dedd975f3111ca
 
 COCOAPODS: 1.2.0.beta.1

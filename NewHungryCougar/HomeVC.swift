@@ -8,8 +8,10 @@
 
 import UIKit
 import Foundation
+import Firebase
 
 class HomeVC: UIViewController {
+    
     @IBOutlet weak var currentDiningPointsHomeLbl: UILabel!
     @IBOutlet weak var currentCougarBucksHomeLbl: UILabel!
     

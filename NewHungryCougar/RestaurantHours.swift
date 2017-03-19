@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseDatabase
 import Foundation
 
@@ -25,15 +26,24 @@ var ZeroDay: Day = Day(openTime: 0, closeTime: 0, hasNoHours: false)
 
 var daysOfTheWeek = [Day]()
 
+var ref: FIRDatabaseReference! = FIRDatabase.database().reference().child("venue")
+
 func setHours() {
+    
+    ref.child("1899").child("day").child("MonFri").observeSingleEvent(of: .value, with: { (snapshot) in
+        let value = snapshot.value as? NSDictionary
+        let testNumber = value?["closeDMonFri"] as? Int ?? 0
+        print("KYLE: The number from Firebase: \(testNumber)")
+    })
+     
     if restaurantChoice == "1899 Dining Hall" {
-        setupDay(day: Sunday, open: 480, close: 1020)
-        setupDay(day: Monday, open: 390, close: 1170)
-        setupDay(day: Tuesday, open: 390, close: 1170)
-        setupDay(day: Wednesday, open: 390, close: 1170)
-        setupDay(day: Thursday, open: 390, close: 1170)
-        setupDay(day: Friday, open: 390, close: 1170)
-        setupDay(day: Saturday, open: 480, close: 840)
+        setupDay(day: Sunday, open: 0800, close: 1700)
+        setupDay(day: Monday, open: 0630, close: 1930)
+        setupDay(day: Tuesday, open: 0630, close: 1930)
+        setupDay(day: Wednesday, open: 0630, close: 1930)
+        setupDay(day: Thursday, open: 0630, close: 1930)
+        setupDay(day: Friday, open: 0630, close: 1930)
+        setupDay(day: Saturday, open: 0800, close: 1400)
     } else if restaurantChoice == "Cornerstone Coffeehouse" {
         setupDay(day: Sunday, open: 720, close: 0)
         setupDay(day: Monday, open: 390, close: 60)
