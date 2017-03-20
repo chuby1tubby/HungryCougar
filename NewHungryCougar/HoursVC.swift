@@ -11,6 +11,7 @@ import DropDown
 import Firebase
 
 public var restaurantChoice = ""
+public var loadedDataFromFirebase = false
 
 class HoursVC: UIViewController {
     // Base values
@@ -21,6 +22,11 @@ class HoursVC: UIViewController {
     var minutesUntilClose: Int = 0
     var storeIsOpen: Bool = false
     let dpDropDown = DropDown()   // Create a new drop down object
+    
+    var oldTodayOpenTime = 0
+    var oldTodayCloseTime = 0
+    var oldTomorrowOpenTime = 0
+    var oldTomorrowCloseTime = 0
     
     // IBOutlets
     @IBOutlet weak var yesNoLbl: UILabel!
@@ -33,9 +39,19 @@ class HoursVC: UIViewController {
         self.title = restaurantChoice
         loadCurrentDateTime()
         setHours()
-        checkIfOpen()
-        calculateTimeUntilOpen()
-        displayTimeUntilOpen()
+        timeLabel.text = "Loading hours..."
+        yesNoLbl.text = "..."
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        while true {
+            if loadedDataFromFirebase == true {
+                self.checkIfOpen()
+                self.calculateTimeUntilOpen()
+                self.displayTimeUntilOpen()
+                break
+            }
+        }
     }
     
     // Apply custom attributes to Drop Down
@@ -88,6 +104,10 @@ class HoursVC: UIViewController {
                 dayCloseString.append("am")
             } else {
                 dayCloseString.append("pm")
+            }
+            
+            if dayCloseString.contains("11:59") {
+                dayCloseString = "midnight"
             }
             
             if day.openTime == 0 && day.closeTime == 0 {
@@ -192,11 +212,14 @@ class HoursVC: UIViewController {
         let calendar = Calendar.current
         let components = calendar.dateComponents([.minute, .hour, .weekday], from: date as Date)
         let weekday = components.weekday
-        let hour = components.hour
-        let minute = components.minute
+        var hour = components.hour
+        var minute = components.minute
         
         // Manually set current date and time
         //        manuallySetDay(1, dd: 18, yyyy: 2017, wday: 4, hr: 7, min: 37)
+        
+        hour = 16
+        minute = 59
         
         now = hour! * 100 + minute!                         // Time is converted to format: HH:MM (9:30am = 0930)
         
@@ -275,23 +298,18 @@ class HoursVC: UIViewController {
         if restaurantChoice == "1899 Dining Hall" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
             if now >= 0950 && now < 1100 {
                 storeIsOpen = false
-                print("KYLE: TRIGGERED WRONG BOOLEAN")
             } else if now >= 1400 && now < 1020 {
                 storeIsOpen = false
-                print("KYLE: TRIGGERED WRONG BOOLEAN")
 
             }
         } else if restaurantChoice == "The Grill at Heritage" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
             if now >= 1000 && now < 1030 {
                 storeIsOpen = false
-                print("KYLE: TRIGGERED WRONG BOOLEAN")
-
             }
         }
         
         if Today.hasNoHours {
             storeIsOpen = false
-            print("KYLE: TRIGGERED WRONG BOOLEAN")
         }
         
         // Set yesNoLabel
@@ -311,22 +329,22 @@ class HoursVC: UIViewController {
                 minutesUntilOpen = Tomorrow.openTime + (2359 - now)
             }
         }
-            // If the store is OPEN
+        // If the store is OPEN
         else {
             if Today.closeTime > now {
                 if now < 0200 {
-                    minutesUntilClose = Yesterday.closeTime - now
+                    minutesUntilClose = Yesterday.closeTime - now - 40      // PROBLEMATIC CODE HERE! MINUTESUNTILCLOSE NEEDS TO COMPENSATE FOR DIFFERENT TIMES WHERE 1700-1659, FOR EXAMPLE, SHOULD BE 1 (SO SUBTRACT 40), BUT 1730-1700 SHOULD BE 30, AND 1700-1601 SHOULD BE 59 (SO SUBTRACT 40)
                 } else {
-                    minutesUntilClose = Today.closeTime - now
+                    minutesUntilClose = Today.closeTime - now - 40
                 }
             } else {
-                minutesUntilClose = 2359 - now + Today.closeTime
+                minutesUntilClose = 2360 - now + Today.closeTime
             }
         }
         
         // Extra cases for Dining Hall and Fusion Grill due to mid-day breaks
         if restaurantChoice == "1899 Dining Hall" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
-            if now >= 0950 && now < 1100 {
+            if now >= 0930 && now < 1100 {
                 minutesUntilOpen = 1100 - now
             } else if now >= 1400 && now < 1700 {
                 minutesUntilOpen = 1700 - now
@@ -381,7 +399,7 @@ class HoursVC: UIViewController {
                 }
             }
             else {
-                if Tomorrow.hasNoHours && now < Today.openTime {   // Note: Should find a more elegant solution for this
+                if Tomorrow.hasNoHours && now > Today.openTime {   // Note: Should find a more elegant solution for this
                     timeLabel.text = "Closed all day tomorrow"
                     if Sunday.hasNoHours {
                         timeLabel.text = "Closed until Monday"
@@ -409,14 +427,25 @@ class HoursVC: UIViewController {
             if minutesLeft < 60 {
                 timeLabel.text = "Closing in \(minutesLeft) minutes"
             } else {
-                if (Yesterday.closeTime == 0 && now < 0200) || (Today.closeTime == 0 && now >= 0200) {
+                if ((Yesterday.closeTime == 0 || Yesterday.closeTime == 2359) && now < 0200) || ((Today.closeTime == 0 || Today.closeTime == 2359) && now >= 0200) {
                     print("KYLE: Display time BOOL #9")
                     timeLabel.text = "Closing at midnight"
                 } else if (Yesterday.closeTime == 0100 && now < 0200) || (Today.closeTime == 0100 && now >= 0200) {
                     print("KYLE: Display time BOOL #10")
                     timeLabel.text = "Closing at 1am"
                 } else {
-                    timeLabel.text = "Closing at \(HHClose):\(MMClose)"
+                    var timeString = ""
+                    timeString = "Closing at \(HHClose):\(MMClose)"
+                    
+                    if (Today.closeTime - Int(Today.closeTime/100)*100) == 0 {
+                        timeString.append("0")
+                    }
+                    if Today.closeTime < 1200 {
+                        timeString.append("am")
+                    } else {
+                        timeString.append("pm")
+                    }
+                    timeLabel.text = timeString
                 }
             }
         }
