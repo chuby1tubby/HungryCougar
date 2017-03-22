@@ -59,7 +59,7 @@ class APUHomeVC: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWebView
         
         // Magical pause function
         // *should not repeat, but it does anyway*
-        let when = DispatchTime.now() + 1
+        let when = DispatchTime.now() + 1                   // Should this be +1 or does +0 work as well?
         DispatchQueue.main.asyncAfter(deadline: when){
             if shouldRepeat == true {
                 self.getHTML()
