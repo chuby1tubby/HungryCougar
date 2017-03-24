@@ -142,18 +142,24 @@ class HomeVC: UIViewController {
         let prefs = UserDefaults.standard
         if let val1 = prefs.string(forKey: "userDiningPointsDefaults") {
             currentDiningPointsHomeLbl.isHidden = false
-            currentDiningPointsHomeLbl.text = "Current Dining Points: \(val1)"
+            currentDiningPointsHomeLbl.text = "\(val1)"
         } else {
-            currentDiningPointsHomeLbl.isHidden = true
+            currentDiningPointsHomeLbl.text = "0.00"
         }
         
         if let val2 = prefs.string(forKey: "userCougarBucksDefaults") {
             currentCougarBucksHomeLbl.isHidden = false
-            currentCougarBucksHomeLbl.text = "Current Cougar Bucks: \(val2)"
+            currentCougarBucksHomeLbl.text = "\(val2)"
+            
         } else {
-            currentCougarBucksHomeLbl.isHidden = true
+            currentCougarBucksHomeLbl.text = "$0.00"
         }
     }
+    
+    @IBAction func termsOfServiceTapped(_ sender: Any) {
+        // pop up view
+    }
+    
     
     /*
      *  downloadHours()
@@ -402,7 +408,7 @@ class HomeVC: UIViewController {
         })
         
         /*
-         *  Heritage Grill
+         *  The Grill at Heritage
          */
         
         // Monday through Thursday

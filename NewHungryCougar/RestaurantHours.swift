@@ -412,7 +412,7 @@ func setHours() {
         } else {
             print("KYLE: No hours were found in prefs. #10")
         }
-        if let val = prefs.string(forKey: "grillOpenFri") {
+        if let val = prefs.string(forKey: "grillOpenBFri") {
             openFri = Int(val)!
             print("KYLE: Hours were retreived from UserDefaults.")
         } else {
@@ -436,7 +436,7 @@ func setHours() {
         } else {
             print("KYLE: No hours were found in prefs. #10")
         }
-        if let val = prefs.string(forKey: "grillCloseFri") {
+        if let val = prefs.string(forKey: "grillCloseLFri") {   // Currently only works for lunch closing hour
             closeFri = Int(val)!
             print("KYLE: Hours were retreived from UserDefaults.")
         } else {

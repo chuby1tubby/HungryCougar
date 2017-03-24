@@ -260,8 +260,8 @@ class HoursVC: UIViewController {
         // Manually set current date and time
         //        manuallySetDay(1, dd: 18, yyyy: 2017, wday: 4, hr: 7, min: 37)
         
-//        hour = 16
-//        minute = 59
+//        hour = 11
+//        minute = 00
         
         now = hour! * 100 + minute!                         // Time is converted to format: HH:MM (9:30am = 0930)
         
