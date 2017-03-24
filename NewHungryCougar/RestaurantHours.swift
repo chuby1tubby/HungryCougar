@@ -260,7 +260,7 @@ func setHours() {
             print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "cafeCloseMonFri") {
-            closeMonThur = Int(val)!
+            closeMonFri = Int(val)!
             print("KYLE: Hours were retreived from UserDefaults.")
         } else {
             print("KYLE: No hours were found in prefs. #10")

@@ -33,6 +33,7 @@ class HoursVC: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet var userTappedHours: UITapGestureRecognizer!
     @IBOutlet var alsoTappedHours: UITapGestureRecognizer!
+    @IBOutlet weak var viewToMove: UIView!
     
     // Loads right before view appears
     override func viewWillAppear(_ animated: Bool) {
@@ -42,10 +43,6 @@ class HoursVC: UIViewController {
         checkIfOpen()
         calculateTimeUntilOpen()
         displayTimeUntilOpen()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
     }
     
     // Apply custom attributes to Drop Down
@@ -145,21 +142,52 @@ class HoursVC: UIViewController {
             }
         }
         
-        // Set values for drop down list
-        dpDropDown.dataSource = [
-            "Sunday              \(sundayOpenString) \(sundayCloseString)",
-            "Monday             \(mondayOpenString) \(mondayCloseString)",
-            "Tuesday             \(tuesdayOpenString) \(tuesdayCloseString)",
-            "Wednesday        \(wednesdayOpenString) \(wednesdayCloseString)",
-            "Thursday            \(thursdayOpenString) \(thursdayCloseString)",
-            "Friday                 \(fridayOpenString) \(fridayCloseString)",
-            "Saturday            \(saturdayOpenString) \(saturdayCloseString)"
-        ]
+        // ACTION: User selected an item
+        dpDropDown.selectionAction = { [] (index: Int, item: String) in
+            self.moveEverything()
+        }
+        
+        // ACTION: User cancelled dropDown
+        dpDropDown.cancelAction = { [unowned self] in
+            self.moveEverything()
+        }
+        
+        // Extra cases for Dining Hall and Fusion Grill due to mid-day breaks
+        if restaurantChoice == "1899 Dining Hall" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
+            dpDropDown.dataSource = [
+                "Sunday                   \(sundayOpenString) \(sundayCloseString)",
+                "Mon-Thur               \(mondayOpenString) \(mondayCloseString)",
+                "Friday                     \(fridayOpenString) \(fridayCloseString)",
+                "Saturday                 \(saturdayOpenString) \(saturdayCloseString)"
+            ]
+        } else if restaurantChoice == "The Grill at Heritage" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
+            dpDropDown.dataSource = [
+                "Sunday                   \(sundayOpenString) \(sundayCloseString)",
+                "Mon-Thur               \(mondayOpenString) \(mondayCloseString)",
+                "Friday                     \(fridayOpenString) \(fridayCloseString)",
+                "Saturday                 \(saturdayOpenString) \(saturdayCloseString)"
+            ]
+        } else if restaurantChoice == "The Grill at Heritage" && Today.openTime == Friday.openTime && Today.closeTime == Friday.closeTime {
+            dpDropDown.dataSource = [
+                "Sunday                   \(sundayOpenString) \(sundayCloseString)",
+                "Mon-Thur               \(mondayOpenString) \(mondayCloseString)",
+                "Friday                     \(fridayOpenString) \(fridayCloseString)",
+                "Saturday                 \(saturdayOpenString) \(saturdayCloseString)"
+            ]
+        } else {
+            // Set values for drop down list
+            dpDropDown.dataSource = [
+                "Sunday                   \(sundayOpenString) \(sundayCloseString)",
+                "Mon-Thur               \(mondayOpenString) \(mondayCloseString)",
+                "Friday                     \(fridayOpenString) \(fridayCloseString)",
+                "Saturday                 \(saturdayOpenString) \(saturdayCloseString)"
+            ]
+        }
         
         // Preferences for behavior and location
         dpDropDown.dismissMode = .onTap // Options: .automatic or .onTap
         dpDropDown.direction = .bottom // Options: .any, .bottom, .top
-        dpDropDown.bottomOffset = CGPoint(x: 5, y: 135)
+        dpDropDown.bottomOffset = CGPoint(x: 5, y: 80)
         
         // Preferences for appearance
         let appearance = DropDown.appearance()
@@ -170,8 +198,8 @@ class HoursVC: UIViewController {
         appearance.shadowOpacity = 0
         appearance.textFont = UIFont(name: "Helvetica Neue", size: 14.0)!
         appearance.separatorColor = UIColor(white: 0.7, alpha: 0)
-        appearance.backgroundColor = UIColor(colorLiteralRed: 150/256, green: 38/256, blue: 35/256, alpha: 1)
-        appearance.selectionBackgroundColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.1)
+        appearance.backgroundColor = UIColor.clear
+        appearance.selectionBackgroundColor = UIColor.clear
         
         dpDropDown.cellNib = UINib(nibName: "MyCell", bundle: nil)
         dpDropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
@@ -185,10 +213,30 @@ class HoursVC: UIViewController {
     @IBAction func showRestaurantHoursDropDown(_ sender: Any) {
         customizeDropDown(userTappedHours)
         dpDropDown.show()
+        self.moveEverything()
     }
    
     @IBAction func tappedDropdownIcon(_ sender: Any) {
         showRestaurantHoursDropDown(alsoTappedHours)
+    }
+    
+    func moveEverything() {
+        let namedView = self.viewToMove
+        let centerPoint = self.view.frame.midY
+        print("KYLE: CenterPoint = \(centerPoint)")
+        print("KYLE: CenterPointWithOffset = \(centerPoint - 125)")
+        print("KYLE: Actual origin.y = \(self.viewToMove.frame.origin.y)")
+        // Move the views
+        if Double((self.viewToMove.frame.origin.y)) == Double(centerPoint - 125) {
+            UIView.animate(withDuration: 0.15, delay: 0, options: [.curveEaseOut], animations: {
+                namedView?.frame.origin.y -= 100
+            }, completion: nil)
+        } else {
+            UIView.animate(withDuration: 0.15, delay: 0, options: [.curveEaseOut], animations: {
+                namedView?.frame.origin.y += 100
+            }, completion: nil)
+        }
+        
     }
     
     // Set the date manualy to test the calculator
@@ -509,7 +557,11 @@ class HoursVC: UIViewController {
                 }
                 let MMOpen = diningHallOpenLMonFri - Int(diningHallOpenLMonFri/100)*100
                 
-                timeLabel.text = "Opening at \(HHOpen):\(MMOpen) for lunch"
+                if MMOpen == 0 {
+                    timeLabel.text = "Opening at \(HHOpen):\(MMOpen)0am for lunch"
+                } else {
+                    timeLabel.text = "Opening at \(HHOpen):\(MMOpen)am for lunch"
+                }
             } else if now >= diningHallCloseLMonFri && now < diningHallOpenDMonFri {
                 var HHOpen = diningHallOpenLMonFri/100
                 if HHOpen > 12 {
@@ -517,7 +569,11 @@ class HoursVC: UIViewController {
                 }
                 let MMOpen = diningHallOpenLMonFri - Int(diningHallOpenLMonFri/100)*100
                 
-                timeLabel.text = "Opening at \(HHOpen):\(MMOpen) for dinner"
+                if MMOpen == 0 {
+                    timeLabel.text = "Opening at \(HHOpen):\(MMOpen)0pm for dinner"
+                } else {
+                    timeLabel.text = "Opening at \(HHOpen):\(MMOpen)pm for dinner"
+                }
             }
         } else if restaurantChoice == "The Grill at Heritage" && Today.openTime == Monday.openTime && Today.closeTime == Monday.closeTime {
             if now >= grillCloseBMonThur && now < grillOpenLMonThur {
@@ -527,7 +583,11 @@ class HoursVC: UIViewController {
                 }
                 let MMOpen = grillOpenLMonThur - Int(grillOpenLMonThur/100)*100
                 
-                timeLabel.text = "Opening at \(HHOpen):\(MMOpen) for lunch"
+                if MMOpen == 0 {
+                    timeLabel.text = "Opening at \(HHOpen):\(MMOpen)0am for lunch"
+                } else {
+                    timeLabel.text = "Opening at \(HHOpen):\(MMOpen)am for lunch"
+                }
             }
         } else if restaurantChoice == "The Grill at Heritage" && Today.openTime == Friday.openTime && Today.closeTime == Friday.closeTime {
             if now >= grillCloseBFri && now < grillOpenLFri {
@@ -537,7 +597,11 @@ class HoursVC: UIViewController {
                 }
                 let MMOpen = grillOpenLFri - Int(grillOpenLFri/100)*100
                 
-                timeLabel.text = "Opening at \(HHOpen):\(MMOpen) for lunch"
+                if MMOpen == 0 {
+                    timeLabel.text = "Opening at \(HHOpen):\(MMOpen)0am for lunch"
+                } else {
+                    timeLabel.text = "Opening at \(HHOpen):\(MMOpen)am for lunch"
+                }
             }
         }
     }
