@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E192b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aYT-vv-QhX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aYT-vv-QhX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -157,7 +157,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms of Service" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="D3A-ns-Nnd" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                        <rect key="frame" x="96" y="592" width="182" height="40"/>
+                                        <rect key="frame" x="96" y="577" width="182" height="40"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="aA5-tg-yjj"/>
@@ -181,7 +181,7 @@
                                     <constraint firstItem="u4P-MF-30M" firstAttribute="leading" secondItem="ED6-DO-6u5" secondAttribute="leading" id="P9E-gm-r55"/>
                                     <constraint firstAttribute="trailing" secondItem="Aa7-Qd-59g" secondAttribute="trailing" id="crS-0m-Qgz"/>
                                     <constraint firstItem="D3A-ns-Nnd" firstAttribute="centerX" secondItem="ED6-DO-6u5" secondAttribute="centerX" id="lxy-rE-PJ8"/>
-                                    <constraint firstAttribute="bottom" secondItem="D3A-ns-Nnd" secondAttribute="bottom" constant="35" id="n1i-X2-O56"/>
+                                    <constraint firstAttribute="bottom" secondItem="D3A-ns-Nnd" secondAttribute="bottom" constant="50" id="n1i-X2-O56"/>
                                     <constraint firstItem="u4P-MF-30M" firstAttribute="top" secondItem="Aa7-Qd-59g" secondAttribute="bottom" id="pMO-kw-LOb"/>
                                     <constraint firstItem="Aa7-Qd-59g" firstAttribute="leading" secondItem="ED6-DO-6u5" secondAttribute="leading" id="svN-vx-gDq"/>
                                     <constraint firstItem="Zba-6i-l47" firstAttribute="centerY" secondItem="ED6-DO-6u5" secondAttribute="centerY" constant="20" id="wog-2m-33c"/>
@@ -299,8 +299,9 @@ Menu</string>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3UD-x8-G89">
                                                 <rect key="frame" x="45" y="65" width="285" height="121"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLOSED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojc-Un-ovC">
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLOSED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojc-Un-ovC">
                                                         <rect key="frame" x="9.5" y="0.0" width="266" height="71"/>
+                                                        <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="97" id="TW0-ST-AeX"/>
                                                             <constraint firstAttribute="width" constant="350" id="eeJ-7m-Azr"/>
@@ -314,6 +315,9 @@ Menu</string>
                                                                 <exclude reference="eeJ-7m-Azr"/>
                                                             </mask>
                                                         </variation>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="ueV-LJ-d0P" appends="YES" id="U4p-xp-Drx"/>
+                                                        </connections>
                                                     </label>
                                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours are unavailable" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vu1-9q-xnw">
                                                         <rect key="frame" x="47.5" y="71" width="190" height="50"/>
@@ -433,6 +437,11 @@ Menu</string>
                         <action selector="tappedDropdownIcon:" destination="BYZ-38-t0r" id="8kM-ZK-MBS"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="ueV-LJ-d0P" userLabel="tappedOpenClose">
+                    <connections>
+                        <action selector="tappedOpenClose:" destination="BYZ-38-t0r" id="9Rb-DL-bdK"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2005.5999999999999" y="115.59220389805098"/>
         </scene>
@@ -461,8 +470,8 @@ Menu</string>
                             </webView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yjV-uO-bFq">
                                 <rect key="frame" x="0.0" y="64" width="375" height="2"/>
-                                <color key="backgroundColor" red="0.95294117647058818" green="0.78431372549019607" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="0.58823529409999997" green="0.14901960780000001" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -503,11 +512,31 @@ Menu</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xn4-Vp-Rq3">
-                                <rect key="frame" x="16" y="60" width="343" height="527"/>
+                                <rect key="frame" x="16" y="78" width="343" height="509"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">This End User License Agreement (“Agreement”) is between you and Hungry Coug and governs use of this app made available through the Apple App Store. By installing the Hungry Coug App, you agree to be bound by this Agreement and understand that there is no tolerance for objectionable content. If you do not agree with the terms and conditions of this Agreement, you are not entitled to use the Hungry Coug App.In order to ensure Hungry Coug provides the best experience possible for everyone, we strongly enforce a no tolerance policy for objectionable content. If you see inappropriate content, please use the "Report as offensive" feature found under each post.1. Parties This Agreement is between you and Hungry Coug only, and not Apple, Inc. (“Apple”). Notwithstanding the foregoing, you acknowledge that Apple and its subsidiaries are third party beneficiaries of this Agreement and Apple has the right to enforce this Agreement against you. Hungry Coug, not Apple, is solely responsible for the Hungry Coug App and its content.2. Privacy Hungry Coug may collect and use information about your usage of the Hungry Coug App, including certain types of information from and about your device. Hungry Coug may use this information, as long as it is in a form that does not personally identify you, to measure the use and performance of the Hungry Coug App.3. Limited License Hungry Coug grants you a limited, non-exclusive, non-transferable, revocable license to use theHungry Coug App for your personal, non-commercial purposes. You may only use theHungry Coug App on Apple devices that you own or control and as permitted by the App Store Terms of Service.4. Age Restrictions By using the Hungry Coug App, you represent and warrant that (a) you are 17 years of age or older and you agree to be bound by this Agreement; (b) if you are under 17 years of age, you have obtained verifiable consent from a parent or legal guardian; and (c) your use of the Hungry Coug App does not violate any applicable law or regulation. Your access to the Hungry Coug App may be terminated without warning if Hungry Coug believes, in its sole discretion, that you are under the age of 17 years and have not obtained verifiable consent from a parent or legal guardian. If you are a parent or legal guardian and you provide your consent to your child's use of the Hungry Coug App, you agree to be bound by this Agreement in respect to your child's use of the Hungry Coug App.5. Objectionable Content Policy Content may not be submitted to Hungry Coug, who will moderate all content and ultimately decide whether or not to post a submission to the extent such content includes, is in conjunction with, or alongside any, Objectionable Content. Objectionable Content includes, but is not limited to: (i) sexually explicit materials; (ii) obscene, defamatory, libelous, slanderous, violent and/or unlawful content or profanity; (iii) content that infringes upon the rights of any third party, including copyright, trademark, privacy, publicity or other personal or proprietary right, or that is deceptive or fraudulent; (iv) content that promotes the use or sale of illegal or regulated substances, tobacco products, ammunition and/or firearms; and (v) gambling, including without limitation, any online casino, sports books, bingo or poker.6. Warranty Hungry Coug disclaims all warranties about the Hungry Coug App to the fullest extent permitted by law. To the extent any warranty exists under law that cannot be disclaimed, Hungry Coug, not Apple, shall be solely responsible for such warranty.7. Maintenance and Support Hungry Coug does provide minimal maintenance or support for it but not to the extent that any maintenance or support is required by applicable law, Hungry Coug, not Apple, shall be obligated to furnish any such maintenance or support.8. Product Claims Hungry Coug, not Apple, is responsible for addressing any claims by you relating to the Hungry Coug App or use of it, including, but not limited to: (i) any product liability claim; (ii) any claim that the Hungry Coug App fails to conform to any applicable legal or regulatory requirement; and (iii) any claim arising under consumer protection or similar legislation. Nothing in this Agreement shall be deemed an admission that you may have such claims.9. Third Party Intellectual Property Claims Hungry Coug shall not be obligated to indemnify or defend you with respect to any third party claim arising out or relating to the Hungry Coug App. To the extent Hungry Coug is required to provide indemnification by applicable law, Hungry Coug, not Apple, shall be solely responsible for the investigation, defense, settlement and discharge of any claim that the Hungry Coug App or your use of it infringes any third party intellectual property right.
+                                <string key="text">This End User License Agreement (“Agreement”) is between you and Hungry Coug and governs use of this app made available through the Apple App Store. By installing the Hungry Coug App, you agree to be bound by this Agreement and understand that there is no tolerance for objectionable content. If you do not agree with the terms and conditions of this Agreement, you are not entitled to use the Hungry Coug App.
 
-By using any functions of the Hungry Coug app, you hereby agree to all previously stated terms and conditions.</mutableString>
+In order to ensure Hungry Coug provides the best experience possible for everyone, we strongly enforce a no tolerance policy for objectionable content. If you see inappropriate content, please use the "Report as offensive" feature found under each post.
+
+1. Parties This Agreement is between you and Hungry Coug only, and not Apple, Inc. (“Apple”). Notwithstanding the foregoing, you acknowledge that Apple and its subsidiaries are third party beneficiaries of this Agreement and Apple has the right to enforce this Agreement against you. Hungry Coug, not Apple, is solely responsible for the Hungry Coug App and its content.
+
+2. Privacy Hungry Coug may collect and use information about your usage of the Hungry Coug App, including certain types of information from and about your device. Hungry Coug may use this information, as long as it is in a form that does not personally identify you, to measure the use and performance of the Hungry Coug App.
+
+3. Limited License Hungry Coug grants you a limited, non-exclusive, non-transferable, revocable license to use theHungry Coug App for your personal, non-commercial purposes. You may only use theHungry Coug App on Apple devices that you own or control and as permitted by the App Store Terms of Service.
+
+4. Age Restrictions By using the Hungry Coug App, you represent and warrant that (a) you are 17 years of age or older and you agree to be bound by this Agreement; (b) if you are under 17 years of age, you have obtained verifiable consent from a parent or legal guardian; and (c) your use of the Hungry Coug App does not violate any applicable law or regulation. Your access to the Hungry Coug App may be terminated without warning if Hungry Coug believes, in its sole discretion, that you are under the age of 17 years and have not obtained verifiable consent from a parent or legal guardian. If you are a parent or legal guardian and you provide your consent to your child's use of the Hungry Coug App, you agree to be bound by this Agreement in respect to your child's use of the Hungry Coug App.
+
+5. Objectionable Content Policy Content may not be submitted to Hungry Coug, who will moderate all content and ultimately decide whether or not to post a submission to the extent such content includes, is in conjunction with, or alongside any, Objectionable Content. Objectionable Content includes, but is not limited to: (i) sexually explicit materials; (ii) obscene, defamatory, libelous, slanderous, violent and/or unlawful content or profanity; (iii) content that infringes upon the rights of any third party, including copyright, trademark, privacy, publicity or other personal or proprietary right, or that is deceptive or fraudulent; (iv) content that promotes the use or sale of illegal or regulated substances, tobacco products, ammunition and/or firearms; and (v) gambling, including without limitation, any online casino, sports books, bingo or poker.
+
+6. Warranty Hungry Coug disclaims all warranties about the Hungry Coug App to the fullest extent permitted by law. To the extent any warranty exists under law that cannot be disclaimed, Hungry Coug, not Apple, shall be solely responsible for such warranty.
+
+7. Maintenance and Support Hungry Coug does provide minimal maintenance or support for it but not to the extent that any maintenance or support is required by applicable law, Hungry Coug, not Apple, shall be obligated to furnish any such maintenance or support.
+
+8. Product Claims Hungry Coug, not Apple, is responsible for addressing any claims by you relating to the Hungry Coug App or use of it, including, but not limited to: (i) any product liability claim; (ii) any claim that the Hungry Coug App fails to conform to any applicable legal or regulatory requirement; and (iii) any claim arising under consumer protection or similar legislation. Nothing in this Agreement shall be deemed an admission that you may have such claims.
+
+9. Third Party Intellectual Property Claims Hungry Coug shall not be obligated to indemnify or defend you with respect to any third party claim arising out or relating to the Hungry Coug App. To the extent Hungry Coug is required to provide indemnification by applicable law, Hungry Coug, not Apple, shall be solely responsible for the investigation, defense, settlement and discharge of any claim that the Hungry Coug App or your use of it infringes any third party intellectual property right.
+
+By using any functions of the Hungry Coug app, you hereby agree to all previously stated terms and conditions.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
                             </textView>
@@ -526,7 +555,7 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                 </connections>
                             </label>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms of Service" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="6Il-eL-lvh" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                <rect key="frame" x="96" y="12" width="182" height="40"/>
+                                <rect key="frame" x="96" y="30" width="182" height="40"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="675-2X-yso"/>
@@ -544,7 +573,7 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                             <constraint firstItem="Xn4-Vp-Rq3" firstAttribute="top" secondItem="6Il-eL-lvh" secondAttribute="bottom" constant="8" id="Jig-8g-3J2"/>
                             <constraint firstItem="rG0-Zt-bds" firstAttribute="centerX" secondItem="Hat-BV-rf1" secondAttribute="centerX" id="MQb-w3-Neb"/>
                             <constraint firstItem="rG0-Zt-bds" firstAttribute="top" secondItem="Xn4-Vp-Rq3" secondAttribute="bottom" constant="20" id="Wa5-qF-4k2"/>
-                            <constraint firstItem="6Il-eL-lvh" firstAttribute="top" secondItem="Hat-BV-rf1" secondAttribute="topMargin" constant="12" id="ban-Jg-XlL"/>
+                            <constraint firstItem="6Il-eL-lvh" firstAttribute="top" secondItem="Hat-BV-rf1" secondAttribute="topMargin" constant="30" id="ban-Jg-XlL"/>
                             <constraint firstItem="VmP-7p-Tfw" firstAttribute="top" secondItem="rG0-Zt-bds" secondAttribute="bottom" constant="20" id="e4o-Rb-x6u"/>
                             <constraint firstItem="Xn4-Vp-Rq3" firstAttribute="trailing" secondItem="Hat-BV-rf1" secondAttribute="trailingMargin" id="lCh-mq-2BW"/>
                         </constraints>
@@ -1156,8 +1185,8 @@ Please send me a quick email if you notice any errors with restaurant hours or a
                             </view>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FWB-Gi-4jx">
                                 <rect key="frame" x="0.0" y="22" width="375" height="645"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.58823529409999997" green="0.14901960780000001" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.78114880180000001" green="0.78114880180000001" blue="0.78114880180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="geB-hg-5dH">
                                 <rect key="frame" x="0.0" y="20" width="375" height="2"/>
@@ -1457,7 +1486,7 @@ Subs</string>
                                                             <constraint firstAttribute="width" constant="75" id="Ya5-Ql-FFT"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="14"/>
-                                                        <color key="textColor" red="0.58823529411764708" green="0.14901960784313725" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -1843,7 +1872,7 @@ Convenience</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aYT-vv-QhX" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6j5-pb-k0w">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6j5-pb-k0w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1876,6 +1905,6 @@ Convenience</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="FUf-Zg-ioX"/>
-        <segue reference="HmY-Vi-mCP"/>
+        <segue reference="X8Z-Ic-x0s"/>
     </inferredMetricsTieBreakers>
 </document>
