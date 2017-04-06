@@ -32,12 +32,14 @@ PODS:
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - GTMSessionFetcher/Core (1.1.8)
+  - Locksmith (3.0.0)
 
 DEPENDENCIES:
   - DropDown (~> 2)
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - Locksmith
 
 SPEC CHECKSUMS:
   DropDown: 744784d9c9aa505100e942c16acd05430cbb2f0a
@@ -51,7 +53,8 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 6f8d8b28b7e345549ac471071608170b31cb4977
+  Locksmith: 310b4cc5031af5728bf4db5d4de547a5100c6a3b
 
-PODFILE CHECKSUM: a23918cf6f5b5157c77057c2c7dedd975f3111ca
+PODFILE CHECKSUM: 89b7ea233436120d449f6c170e455e965fdd025a
 
 COCOAPODS: 1.2.0.beta.1

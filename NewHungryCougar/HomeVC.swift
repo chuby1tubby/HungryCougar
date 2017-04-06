@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 import Firebase
+import Locksmith
 
 /*
  *  Global hours variables
@@ -129,6 +130,23 @@ class HomeVC: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        // Transfering previously saved UserDefaults to Keychain, then erasing the defaults
+        let prefs = UserDefaults.standard
+        if let name = prefs.string(forKey: "username") {
+            if let pass = prefs.string(forKey: "password") {
+                if name != "" && pass != "" {
+                    // Keychain
+                    do {
+                        try Locksmith.updateData(data: ["keychainUsername":name, "keychainPassword":pass], forUserAccount: "userAccount")
+                    } catch {
+                        // Could not save data to keychain
+                    }
+                }
+            }
+        }
+        UserDefaults.standard.set("", forKey: "username")
+        UserDefaults.standard.set("", forKey: "password")
     }
     
     override func viewWillAppear(_ animated: Bool) {

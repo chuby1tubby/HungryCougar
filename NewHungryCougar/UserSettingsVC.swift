@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Locksmith
 
 class UserSettingsVC: UIViewController, UITextFieldDelegate {
     
@@ -19,16 +20,15 @@ class UserSettingsVC: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         usernameField.delegate = self
         passwordField.delegate = self
-        
         scrollView.contentSize.height = 700
         
-        let prefs = UserDefaults.standard
-        if let name = prefs.string(forKey: "username") {
-            if let pass = prefs.string(forKey: "password") {
-                usernameStr = name
-                passwordStr = pass
-                usernameField.text = usernameStr
-                passwordField.text = passwordStr
+        // Retrieve from Keychain
+        if let dictionary = Locksmith.loadDataForUserAccount(userAccount: "userAccount") {
+            if let keyVal1 = dictionary["keychainUsername"] {
+                if let keyVal2 = dictionary["keychainPassword"] {
+                    usernameField.text = keyVal1 as! String
+                    passwordField.text = keyVal2 as! String
+                }
             }
         }
         
@@ -57,15 +57,18 @@ class UserSettingsVC: UIViewController, UITextFieldDelegate {
     }
     
     func updateUserData() {
-        let defaults = UserDefaults.standard
         var str = usernameField.text
         if let dotRange = str?.range(of: "@") { // Scrub username input after the @ character
             str?.removeSubrange(dotRange.lowerBound..<(str?.endIndex)!)
         }
-        defaults.set(str, forKey: "username")
-        defaults.set(passwordField.text, forKey: "password")
-        defaults.set(true, forKey: "userSavedDetails")
         
+        // Keychain
+        do {
+            try Locksmith.updateData(data: ["keychainUsername":str!, "keychainPassword":passwordField.text!], forUserAccount: "userAccount")
+        } catch {
+            // Could not save data to keychain
+        }
+
         presentAlertToUser()
     }
     
@@ -92,7 +95,6 @@ class UserSettingsVC: UIViewController, UITextFieldDelegate {
         } else {
             usernameField.resignFirstResponder()
             passwordField.resignFirstResponder()
-            
             updateUserData()
         }
         return true

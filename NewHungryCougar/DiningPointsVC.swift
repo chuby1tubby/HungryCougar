@@ -10,6 +10,7 @@ import UIKit
 import DropDown
 import Firebase
 import StoreKit // Used to display Review request
+import Locksmith
 
 // Global Variables
 var expectedBalance = 0.0
@@ -59,7 +60,7 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         let defaults = UserDefaults.standard
         let prefs = UserDefaults.standard
         if let val1 = prefs.string(forKey: "userViewsDiningPointsVC") {
-            if Int(val1)! == 20 || Int(val1)! % 50 == 0 {   // If the user has viewed this page 10 times or if their view is divisible by 40
+            if Int(val1)! == 20 || Int(val1)! % 60 == 0 {   // If the user has viewed this page 10 times or if their view is divisible by 40
                 if #available(iOS 10.3, *) {
                     SKStoreReviewController.requestReview()     // Display a request for a review
                     print("KYLE: Requsted user review")
@@ -217,11 +218,13 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
     
     // Main function for performing login
     func loginFunction() {
-        let prefs = UserDefaults.standard
-        if let name = prefs.string(forKey: "username") {
-            if let pass = prefs.string(forKey: "password") {
-                usernameStr = name
-                passwordStr = pass
+        // Retrieve from Keychain
+        if let dictionary = Locksmith.loadDataForUserAccount(userAccount: "userAccount") {
+            if let keyVal1 = dictionary["keychainUsername"] {
+                if let keyVal2 = dictionary["keychainPassword"] {
+                    usernameStr = keyVal1 as! String
+                    passwordStr = keyVal2 as! String
+                }
             }
         }
         performSegue(withIdentifier: "APUHome", sender: nil)
@@ -238,15 +241,17 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
     
     // Load dining points when no balance has been stored
     @IBAction func clickToLoadPressed(_ sender: Any) {
-        let prefs = UserDefaults.standard
-        if let _ = prefs.string(forKey: "username") {
-            if let _ = prefs.string(forKey: "password") {
-                loginFunction()
+        // Retrieve from Keychain
+        if let dictionary = Locksmith.loadDataForUserAccount(userAccount: "userAccount") {
+            if let _ = dictionary["keychainUsername"] {
+                if let _ = dictionary["keychainPassword"] {
+                    loginFunction()
+                } else {
+                    presentAlertToUser()
+                }
             } else {
                 presentAlertToUser()
             }
-        } else {
-            presentAlertToUser()
         }
     }
     
