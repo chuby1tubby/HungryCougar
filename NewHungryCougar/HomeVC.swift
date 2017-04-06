@@ -117,10 +117,7 @@ var umaiCloseFri = 0
 var umaiCloseSat = 0
 var umaiCloseSun = 0
 
-
 class HomeVC: UIViewController {
-    
-    var ref: FIRDatabaseReference!
     
     @IBOutlet weak var currentDiningPointsHomeLbl: UILabel!
     @IBOutlet weak var currentCougarBucksHomeLbl: UILabel!
@@ -135,9 +132,41 @@ class HomeVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("KYLE: BEGIN DOWNLOADING FIREBASE DATA.")
-        downloadHours()
-        print("KYLE: FINISHED DOWNLOADING FIREBASE DATA.")
+        
+        DB_BASE.child("stats").observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            var firebaseCount = value?["home"] as? Int ?? 0
+            firebaseCount += 1
+            DB_BASE.child("stats").child("home").setValue(firebaseCount)
+        })
+        
+        var updatedVersionNum = 0
+        DB_BASE.observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            updatedVersionNum = value?["hourVersion"] as? Int ?? 0
+            
+            let prefs = UserDefaults.standard
+            if let userVersionNum = prefs.string(forKey: "downloadedHoursVersionNum") {
+                if Int(userVersionNum) != updatedVersionNum {
+                    print("KYLE: BEGIN DOWNLOADING FIREBASE DATA.")
+                    self.downloadHours()
+                    print("KYLE: FINISHED DOWNLOADING FIREBASE DATA.")
+                    let defaults = UserDefaults.standard
+                    defaults.set(updatedVersionNum, forKey: "downloadedHoursVersionNum")
+                } else {
+                    // Do not update the hours
+                    print("KYLE: Hours are up to date.")
+                }
+            } else {
+                print("KYLE: UPDATING FOR THE VERY FIRST TIME!")
+                print("KYLE: BEGIN DOWNLOADING FIREBASE DATA.")
+                self.downloadHours()
+                print("KYLE: FINISHED DOWNLOADING FIREBASE DATA.")
+                let defaults = UserDefaults.standard
+                defaults.set(updatedVersionNum, forKey: "downloadedHoursVersionNum")
+            }
+            setHours()
+        })
         
         let prefs = UserDefaults.standard
         if let val1 = prefs.string(forKey: "userDiningPointsDefaults") {
@@ -157,7 +186,7 @@ class HomeVC: UIViewController {
     }
     
     @IBAction func termsOfServiceTapped(_ sender: Any) {
-        // pop up view
+        // Action Code
     }
     
     
@@ -168,7 +197,6 @@ class HomeVC: UIViewController {
                         This process takes only a matter of milliseconds.
     */
     func downloadHours() {
-        ref = FIRDatabase.database().reference().child("venue")
         let defaults = UserDefaults.standard
         
         /*
@@ -176,7 +204,7 @@ class HomeVC: UIViewController {
          */
         
         // Monday through Friday
-        ref.child("1899").child("day").child("MonFri").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("1899").child("day").child("MonFri").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             diningHallOpenBMonFri = value?["openBMonFri"] as? Int ?? 0
             diningHallOpenLMonFri = value?["openLMonFri"] as? Int ?? 0
@@ -193,7 +221,7 @@ class HomeVC: UIViewController {
             defaults.set(diningHallCloseDMonFri, forKey: "diningHallCloseDMonFri")
         })
         // Saturday
-        ref.child("1899").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("1899").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             diningHallOpenSat = value?["openSat"] as? Int ?? 0
             diningHallCloseSat = value?["closeSat"] as? Int ?? 0
@@ -202,7 +230,7 @@ class HomeVC: UIViewController {
             defaults.set(diningHallCloseSat, forKey: "diningHallCloseSat")
         })
         // Sunday
-        ref.child("1899").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("1899").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             diningHallOpenSun = value?["openSun"] as? Int ?? 0
             diningHallCloseSun = value?["closeSun"] as? Int ?? 0
@@ -216,7 +244,7 @@ class HomeVC: UIViewController {
          */
         
         // Monday through Thursday
-        ref.child("cornerstone").child("day").child("MonThur").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("cornerstone").child("day").child("MonThur").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             cornerstoneOpenMonThur = value?["openMonThur"] as? Int ?? 0
             cornerstoneCloseMonThur = value?["closeMonThur"] as? Int ?? 0
@@ -225,7 +253,7 @@ class HomeVC: UIViewController {
             defaults.set(cornerstoneCloseMonThur, forKey: "cornerstoneCloseMonThur")
         })
         // Friday
-        ref.child("cornerstone").child("day").child("Fri").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("cornerstone").child("day").child("Fri").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             cornerstoneOpenFri = value?["openFri"] as? Int ?? 0
             cornerstoneCloseFri = value?["closeFri"] as? Int ?? 0
@@ -234,7 +262,7 @@ class HomeVC: UIViewController {
             defaults.set(cornerstoneCloseFri, forKey: "cornerstoneCloseFri")
         })
         // Saturday
-        ref.child("cornerstone").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("cornerstone").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             cornerstoneOpenSat = value?["openSat"] as? Int ?? 0
             cornerstoneCloseSat = value?["closeSat"] as? Int ?? 0
@@ -243,7 +271,7 @@ class HomeVC: UIViewController {
             defaults.set(cornerstoneCloseSat, forKey: "cornerstoneCloseSat")
         })
         // Sunday
-        ref.child("cornerstone").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("cornerstone").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             cornerstoneOpenSun = value?["openSun"] as? Int ?? 0
             cornerstoneCloseSun = value?["closeSun"] as? Int ?? 0
@@ -257,7 +285,7 @@ class HomeVC: UIViewController {
          */
         
         // Monday through Thursday
-        ref.child("den").child("day").child("MonThur").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("den").child("day").child("MonThur").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             denOpenMonThur = value?["openMonThur"] as? Int ?? 0
             denCloseMonThur = value?["closeMonThur"] as? Int ?? 0
@@ -266,7 +294,7 @@ class HomeVC: UIViewController {
             defaults.set(denCloseMonThur, forKey: "denCloseMonThur")
         })
         // Friday
-        ref.child("den").child("day").child("Fri").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("den").child("day").child("Fri").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             denOpenFri = value?["openFri"] as? Int ?? 0
             denCloseFri = value?["closeFri"] as? Int ?? 0
@@ -275,7 +303,7 @@ class HomeVC: UIViewController {
             defaults.set(denCloseFri, forKey: "denCloseFri")
         })
         // Saturday
-        ref.child("den").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("den").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             denOpenSat = value?["openSat"] as? Int ?? 0
             denCloseSat = value?["closeSat"] as? Int ?? 0
@@ -284,7 +312,7 @@ class HomeVC: UIViewController {
             defaults.set(denCloseSat, forKey: "denCloseSat")
         })
         // Sunday
-        ref.child("den").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("den").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             denOpenSun = value?["openSun"] as? Int ?? 0
             denCloseSun = value?["closeSun"] as? Int ?? 0
@@ -298,7 +326,7 @@ class HomeVC: UIViewController {
          */
         
         // Monday through Thursday
-        ref.child("cafe").child("day").child("MonFri").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("cafe").child("day").child("MonFri").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             cafeOpenMonFri = value?["openMonFri"] as? Int ?? 0
             cafeCloseMonFri = value?["closeMonFri"] as? Int ?? 0
@@ -307,7 +335,7 @@ class HomeVC: UIViewController {
             defaults.set(cafeCloseMonFri, forKey: "cafeCloseMonFri")
         })
         // Saturday
-        ref.child("cafe").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("cafe").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             cafeOpenSat = value?["openSat"] as? Int ?? 0
             cafeCloseSat = value?["closeSat"] as? Int ?? 0
@@ -316,7 +344,7 @@ class HomeVC: UIViewController {
             defaults.set(cafeCloseSat, forKey: "cafeCloseSat")
         })
         // Sunday
-        ref.child("cafe").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("cafe").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             cafeOpenSun = value?["openSun"] as? Int ?? 0
             cafeCloseSun = value?["closeSun"] as? Int ?? 0
@@ -330,7 +358,7 @@ class HomeVC: UIViewController {
          */
         
         // Monday through Thursday
-        ref.child("mexicali").child("day").child("MonThur").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("mexicali").child("day").child("MonThur").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             mexicaliOpenMonThur = value?["openMonThur"] as? Int ?? 0
             mexicaliCloseMonThur = value?["closeMonThur"] as? Int ?? 0
@@ -339,7 +367,7 @@ class HomeVC: UIViewController {
             defaults.set(mexicaliCloseMonThur, forKey: "mexicaliCloseMonThur")
         })
         // Friday
-        ref.child("mexicali").child("day").child("Fri").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("mexicali").child("day").child("Fri").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             mexicaliOpenFri = value?["openFri"] as? Int ?? 0
             mexicaliCloseFri = value?["closeFri"] as? Int ?? 0
@@ -348,7 +376,7 @@ class HomeVC: UIViewController {
             defaults.set(mexicaliCloseFri, forKey: "mexicaliCloseFri")
         })
         // Saturday
-        ref.child("mexicali").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("mexicali").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             mexicaliOpenSat = value?["openSat"] as? Int ?? 0
             mexicaliCloseSat = value?["closeSat"] as? Int ?? 0
@@ -357,7 +385,7 @@ class HomeVC: UIViewController {
             defaults.set(mexicaliCloseSat, forKey: "mexicaliCloseSat")
         })
         // Sunday
-        ref.child("mexicali").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("mexicali").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             mexicaliOpenSun = value?["openSun"] as? Int ?? 0
             mexicaliCloseSun = value?["closeSun"] as? Int ?? 0
@@ -371,7 +399,7 @@ class HomeVC: UIViewController {
          */
         
         // Monday through Thursday
-        ref.child("pawsngo").child("day").child("MonThur").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("pawsngo").child("day").child("MonThur").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             pawsOpenMonThur = value?["openMonThur"] as? Int ?? 0
             pawsCloseMonThur = value?["closeMonThur"] as? Int ?? 0
@@ -380,7 +408,7 @@ class HomeVC: UIViewController {
             defaults.set(pawsCloseMonThur, forKey: "pawsCloseMonThur")
         })
         // Friday
-        ref.child("pawsngo").child("day").child("Fri").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("pawsngo").child("day").child("Fri").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             pawsOpenFri = value?["openFri"] as? Int ?? 0
             pawsCloseFri = value?["closeFri"] as? Int ?? 0
@@ -389,7 +417,7 @@ class HomeVC: UIViewController {
             defaults.set(pawsCloseFri, forKey: "pawsCloseFri")
         })
         // Saturday
-        ref.child("pawsngo").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("pawsngo").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             pawsOpenSat = value?["openSat"] as? Int ?? 0
             pawsCloseSat = value?["closeSat"] as? Int ?? 0
@@ -398,7 +426,7 @@ class HomeVC: UIViewController {
             defaults.set(pawsCloseSat, forKey: "pawsCloseSat")
         })
         // Sunday
-        ref.child("pawsngo").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("pawsngo").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             pawsOpenSun = value?["openSun"] as? Int ?? 0
             pawsCloseSun = value?["closeSun"] as? Int ?? 0
@@ -412,7 +440,7 @@ class HomeVC: UIViewController {
          */
         
         // Monday through Thursday
-        ref.child("grill").child("day").child("MonThur").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("grill").child("day").child("MonThur").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             grillOpenBMonThur = value?["openBMonThur"] as? Int ?? 0
             grillOpenLMonThur = value?["openLMonThur"] as? Int ?? 0
@@ -425,7 +453,7 @@ class HomeVC: UIViewController {
             defaults.set(grillCloseLMonThur, forKey: "grillCloseLMonThur")
         })
         // Friday
-        ref.child("grill").child("day").child("Fri").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("grill").child("day").child("Fri").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             grillOpenBFri = value?["openBFri"] as? Int ?? 0
             grillOpenLFri = value?["openLFri"] as? Int ?? 0
@@ -438,7 +466,7 @@ class HomeVC: UIViewController {
             defaults.set(grillCloseLFri, forKey: "grillCloseLFri")
         })
         // Saturday
-        ref.child("grill").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("grill").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             grillOpenSat = value?["openSat"] as? Int ?? 0
             grillCloseSat = value?["closeSat"] as? Int ?? 0
@@ -447,7 +475,7 @@ class HomeVC: UIViewController {
             defaults.set(grillCloseSat, forKey: "grillCloseSat")
         })
         // Sunday
-        ref.child("grill").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("grill").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             grillOpenSun = value?["openSun"] as? Int ?? 0
             grillCloseSun = value?["closeSun"] as? Int ?? 0
@@ -461,7 +489,7 @@ class HomeVC: UIViewController {
          */
         
         // Monday through Thursday
-        ref.child("hillside").child("day").child("MonThur").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("hillside").child("day").child("MonThur").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             hillsideOpenMonThur = value?["openMonThur"] as? Int ?? 0
             hillsideCloseMonThur = value?["closeMonThur"] as? Int ?? 0
@@ -470,7 +498,7 @@ class HomeVC: UIViewController {
             defaults.set(hillsideCloseMonThur, forKey: "hillsideCloseMonThur")
         })
         // Friday
-        ref.child("hillside").child("day").child("Fri").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("hillside").child("day").child("Fri").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             hillsideOpenFri = value?["openFri"] as? Int ?? 0
             hillsideCloseFri = value?["closeFri"] as? Int ?? 0
@@ -479,7 +507,7 @@ class HomeVC: UIViewController {
             defaults.set(hillsideCloseFri, forKey: "hillsideCloseFri")
         })
         // Saturday
-        ref.child("hillside").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("hillside").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             hillsideOpenSat = value?["openSat"] as? Int ?? 0
             hillsideCloseSat = value?["closeSat"] as? Int ?? 0
@@ -488,7 +516,7 @@ class HomeVC: UIViewController {
             defaults.set(hillsideCloseSat, forKey: "hillsideCloseSat")
         })
         // Sunday
-        ref.child("hillside").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("hillside").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             hillsideOpenSun = value?["openSun"] as? Int ?? 0
             hillsideCloseSun = value?["closeSun"] as? Int ?? 0
@@ -502,7 +530,7 @@ class HomeVC: UIViewController {
          */
         
         // Monday through Thursday
-        ref.child("market").child("day").child("MonThur").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("market").child("day").child("MonThur").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             marketOpenMonThur = value?["openMonThur"] as? Int ?? 0
             marketCloseMonThur = value?["closeMonThur"] as? Int ?? 0
@@ -511,7 +539,7 @@ class HomeVC: UIViewController {
             defaults.set(marketCloseMonThur, forKey: "marketCloseMonThur")
         })
         // Friday
-        ref.child("market").child("day").child("Fri").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("market").child("day").child("Fri").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             marketOpenFri = value?["openFri"] as? Int ?? 0
             marketCloseFri = value?["closeFri"] as? Int ?? 0
@@ -520,7 +548,7 @@ class HomeVC: UIViewController {
             defaults.set(marketCloseFri, forKey: "marketCloseFri")
         })
         // Saturday
-        ref.child("market").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("market").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             marketOpenSat = value?["openSat"] as? Int ?? 0
             marketCloseSat = value?["closeSat"] as? Int ?? 0
@@ -529,7 +557,7 @@ class HomeVC: UIViewController {
             defaults.set(marketCloseSat, forKey: "marketCloseSat")
         })
         // Sunday
-        ref.child("market").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("market").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             marketOpenSun = value?["openSun"] as? Int ?? 0
             marketCloseSun = value?["closeSun"] as? Int ?? 0
@@ -543,7 +571,7 @@ class HomeVC: UIViewController {
          */
         
         // Monday through Thursday
-        ref.child("sams").child("day").child("MonThur").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("sams").child("day").child("MonThur").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             samsOpenMonThur = value?["openMonThur"] as? Int ?? 0
             samsCloseMonThur = value?["closeMonThur"] as? Int ?? 0
@@ -552,7 +580,7 @@ class HomeVC: UIViewController {
             defaults.set(samsCloseMonThur, forKey: "samsCloseMonThur")
         })
         // Friday
-        ref.child("sams").child("day").child("Fri").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("sams").child("day").child("Fri").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             samsOpenFri = value?["openFri"] as? Int ?? 0
             samsCloseFri = value?["closeFri"] as? Int ?? 0
@@ -561,7 +589,7 @@ class HomeVC: UIViewController {
             defaults.set(samsCloseFri, forKey: "samsCloseFri")
         })
         // Saturday
-        ref.child("sams").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("sams").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             samsOpenSat = value?["openSat"] as? Int ?? 0
             samsCloseSat = value?["closeSat"] as? Int ?? 0
@@ -570,7 +598,7 @@ class HomeVC: UIViewController {
             defaults.set(samsCloseSat, forKey: "samsCloseSat")
         })
         // Sunday
-        ref.child("sams").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("sams").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             samsOpenSun = value?["openSun"] as? Int ?? 0
             samsCloseSun = value?["closeSun"] as? Int ?? 0
@@ -584,7 +612,7 @@ class HomeVC: UIViewController {
          */
         
         // Monday through Thursday
-        ref.child("umai").child("day").child("MonThur").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("umai").child("day").child("MonThur").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             umaiOpenMonThur = value?["openMonThur"] as? Int ?? 0
             umaiCloseMonThur = value?["closeMonThur"] as? Int ?? 0
@@ -593,7 +621,7 @@ class HomeVC: UIViewController {
             defaults.set(umaiCloseMonThur, forKey: "umaiCloseMonThur")
         })
         // Friday
-        ref.child("umai").child("day").child("Fri").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("umai").child("day").child("Fri").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             umaiOpenFri = value?["openFri"] as? Int ?? 0
             umaiCloseFri = value?["closeFri"] as? Int ?? 0
@@ -602,7 +630,7 @@ class HomeVC: UIViewController {
             defaults.set(umaiCloseFri, forKey: "umaiCloseFri")
         })
         // Saturday
-        ref.child("umai").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("umai").child("day").child("Sat").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             umaiOpenSat = value?["openSat"] as? Int ?? 0
             umaiCloseSat = value?["closeSat"] as? Int ?? 0
@@ -611,7 +639,7 @@ class HomeVC: UIViewController {
             defaults.set(umaiCloseSat, forKey: "umaiCloseSat")
         })
         // Sunday
-        ref.child("umai").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue").child("umai").child("day").child("Sun").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             umaiOpenSun = value?["openSun"] as? Int ?? 0
             umaiCloseSun = value?["closeSun"] as? Int ?? 0

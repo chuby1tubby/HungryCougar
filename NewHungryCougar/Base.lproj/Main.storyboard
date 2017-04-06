@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aYT-vv-QhX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F43c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aYT-vv-QhX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -45,12 +45,24 @@
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="28"/>
                                                                 <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="28"/>
+                                                                </variation>
+                                                                <variation key="widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="40"/>
+                                                                </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="SBF-FL-qBT" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
                                                                 <rect key="frame" x="156.5" y="0.0" width="146.5" height="30"/>
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="30"/>
                                                                 <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="30"/>
+                                                                </variation>
+                                                                <variation key="widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="45"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <constraints>
@@ -65,12 +77,24 @@
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="28"/>
                                                                 <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="28"/>
+                                                                </variation>
+                                                                <variation key="widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="40"/>
+                                                                </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="Fkg-9w-1uS" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
                                                                 <rect key="frame" x="156.5" y="0.0" width="146.5" height="30"/>
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="30"/>
                                                                 <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="30"/>
+                                                                </variation>
+                                                                <variation key="widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="45"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <constraints>
@@ -83,8 +107,12 @@
                                                 <rect key="frame" x="325" y="30" width="40" height="40"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="bZj-cs-qaI"/>
-                                                    <constraint firstAttribute="width" constant="40" id="ssL-u6-H7E"/>
+                                                    <constraint firstAttribute="height" constant="40" id="bZj-cs-qaI">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="width" constant="40" id="ssL-u6-H7E">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                                    </constraint>
                                                 </constraints>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="Mig-SF-jAm" appends="YES" id="fGh-hi-25X"/>
@@ -95,13 +123,20 @@
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="NkV-5j-V5O" firstAttribute="top" secondItem="Aa7-Qd-59g" secondAttribute="top" constant="14" id="19A-Rp-tCA"/>
-                                            <constraint firstItem="NkV-5j-V5O" firstAttribute="leading" secondItem="Aa7-Qd-59g" secondAttribute="leading" constant="10" id="CQm-GL-fo2"/>
-                                            <constraint firstItem="WKH-wg-e04" firstAttribute="leading" secondItem="NkV-5j-V5O" secondAttribute="trailing" constant="12" id="EAm-bW-MsJ"/>
+                                            <constraint firstItem="NkV-5j-V5O" firstAttribute="leading" secondItem="Aa7-Qd-59g" secondAttribute="leading" constant="10" id="CQm-GL-fo2">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                            </constraint>
+                                            <constraint firstItem="WKH-wg-e04" firstAttribute="leading" secondItem="NkV-5j-V5O" secondAttribute="trailing" constant="12" id="EAm-bW-MsJ">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                            </constraint>
                                             <constraint firstItem="WKH-wg-e04" firstAttribute="centerY" secondItem="Aa7-Qd-59g" secondAttribute="centerY" id="Ec9-jW-zXG"/>
-                                            <constraint firstAttribute="height" constant="100" id="OJS-3o-GF6"/>
-                                            <constraint firstAttribute="width" constant="375" id="On5-Ji-zGk"/>
+                                            <constraint firstAttribute="height" constant="100" id="OJS-3o-GF6">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                            </constraint>
                                             <constraint firstAttribute="bottom" secondItem="NkV-5j-V5O" secondAttribute="bottom" constant="14" id="d4c-tH-JGE"/>
-                                            <constraint firstAttribute="trailing" secondItem="WKH-wg-e04" secondAttribute="trailing" constant="10" id="f5e-aJ-C66"/>
+                                            <constraint firstAttribute="trailing" secondItem="WKH-wg-e04" secondAttribute="trailing" constant="10" id="f5e-aJ-C66">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                            </constraint>
                                         </constraints>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="bX9-9u-8vA" appends="YES" id="0C9-VN-CQ2"/>
@@ -126,8 +161,12 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAi-II-7Kg">
                                                 <rect key="frame" x="20" y="0.0" width="180" height="80"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="MMs-0K-aI0"/>
-                                                    <constraint firstAttribute="width" constant="180" id="gqO-tb-HNS"/>
+                                                    <constraint firstAttribute="height" constant="80" id="MMs-0K-aI0">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="160"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="width" constant="180" id="gqO-tb-HNS">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="330"/>
+                                                    </constraint>
                                                 </constraints>
                                                 <connections>
                                                     <segue destination="Bn5-0n-IEe" kind="show" id="ML2-LM-tmR"/>
@@ -136,8 +175,12 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRP-Mx-rYm">
                                                 <rect key="frame" x="215" y="152" width="160" height="80"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="RsP-Mn-yVa"/>
-                                                    <constraint firstAttribute="width" constant="160" id="wPC-Uz-Fwd"/>
+                                                    <constraint firstAttribute="height" constant="80" id="RsP-Mn-yVa">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="width" constant="160" id="wPC-Uz-Fwd">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="320"/>
+                                                    </constraint>
                                                 </constraints>
                                                 <connections>
                                                     <segue destination="IC1-M4-iXJ" kind="show" id="O0M-cR-mML"/>
@@ -146,13 +189,17 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="HAi-II-7Kg" firstAttribute="leading" secondItem="Zba-6i-l47" secondAttribute="leading" constant="20" id="ArB-O6-mjr"/>
+                                            <constraint firstItem="HAi-II-7Kg" firstAttribute="leading" secondItem="Zba-6i-l47" secondAttribute="leading" constant="20" id="ArB-O6-mjr">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="70"/>
+                                            </constraint>
                                             <constraint firstAttribute="trailing" secondItem="PRP-Mx-rYm" secondAttribute="trailing" id="IEg-pv-tDE"/>
                                             <constraint firstAttribute="trailing" secondItem="Nk8-Ff-afX" secondAttribute="trailing" id="S4H-at-yII"/>
                                             <constraint firstItem="Nk8-Ff-afX" firstAttribute="top" secondItem="Zba-6i-l47" secondAttribute="top" id="Tt7-BY-ZF9"/>
                                             <constraint firstItem="Nk8-Ff-afX" firstAttribute="leading" secondItem="Zba-6i-l47" secondAttribute="leading" id="Zxz-kd-MAG"/>
                                             <constraint firstItem="HAi-II-7Kg" firstAttribute="top" secondItem="Zba-6i-l47" secondAttribute="top" id="dRY-NE-aUN"/>
-                                            <constraint firstAttribute="bottom" secondItem="PRP-Mx-rYm" secondAttribute="bottom" constant="14" id="f1a-0k-9pq"/>
+                                            <constraint firstAttribute="bottom" secondItem="PRP-Mx-rYm" secondAttribute="bottom" constant="14" id="f1a-0k-9pq">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                                            </constraint>
                                             <constraint firstAttribute="bottom" secondItem="Nk8-Ff-afX" secondAttribute="bottom" id="fk6-qm-dP6"/>
                                         </constraints>
                                     </view>
@@ -160,12 +207,22 @@
                                         <rect key="frame" x="96" y="577" width="182" height="40"/>
                                         <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="aA5-tg-yjj"/>
-                                            <constraint firstAttribute="width" constant="182" id="jKl-2e-oXC"/>
+                                            <constraint firstAttribute="height" constant="40" id="aA5-tg-yjj">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="182" id="jKl-2e-oXC">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="275"/>
+                                            </constraint>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="22"/>
+                                        </variation>
+                                        <variation key="widthClass=regular">
+                                            <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="36"/>
+                                        </variation>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="Wso-pK-Yzt" appends="YES" id="Hvs-f6-Xft"/>
                                         </connections>
@@ -273,20 +330,34 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ept-U9-Ono" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
                                         <rect key="frame" x="262" y="595" width="83" height="42"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="83" id="Jxy-XV-sko"/>
-                                            <constraint firstAttribute="height" constant="42" id="ORN-0k-x7C"/>
+                                            <constraint firstAttribute="width" constant="83" id="Jxy-XV-sko">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="42" id="ORN-0k-x7C">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                            </constraint>
                                         </constraints>
                                         <string key="text">Restaurant
 Menu</string>
                                         <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="17"/>
+                                        </variation>
+                                        <variation key="widthClass=regular">
+                                            <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="28"/>
+                                        </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUb-su-Det">
                                         <rect key="frame" x="231" y="592" width="126" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="6qO-n5-U41"/>
-                                            <constraint firstAttribute="width" constant="126" id="l0a-yG-Dcd"/>
+                                            <constraint firstAttribute="height" constant="50" id="6qO-n5-U41">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="85"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="126" id="l0a-yG-Dcd">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="160"/>
+                                            </constraint>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
                                         <connections>
@@ -309,6 +380,12 @@ Menu</string>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="64"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="widthClass=compact">
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="64"/>
+                                                        </variation>
+                                                        <variation key="widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="75"/>
+                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <mask key="constraints">
                                                                 <exclude reference="TW0-ST-AeX"/>
@@ -328,6 +405,12 @@ Menu</string>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                         <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="widthClass=compact">
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                        </variation>
+                                                        <variation key="widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                                                        </variation>
                                                         <connections>
                                                             <outletCollection property="gestureRecognizers" destination="5Lb-EV-T1J" appends="YES" id="XBy-Uo-YtL"/>
                                                         </connections>
@@ -346,8 +429,12 @@ Menu</string>
                                                 <rect key="frame" x="290" y="149" width="24" height="24"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="Q9Y-8D-eQE"/>
-                                                    <constraint firstAttribute="height" constant="24" id="Vha-RF-yrr"/>
+                                                    <constraint firstAttribute="width" constant="24" id="Q9Y-8D-eQE">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="24" id="Vha-RF-yrr">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                                                    </constraint>
                                                 </constraints>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="FJQ-1H-Ayl" appends="YES" id="frv-o2-4o1"/>
@@ -360,7 +447,9 @@ Menu</string>
                                             <constraint firstItem="3UD-x8-G89" firstAttribute="centerX" secondItem="9n4-kF-t4o" secondAttribute="centerX" id="AeG-KO-tCk"/>
                                             <constraint firstAttribute="height" constant="250" id="E7E-JB-fIS"/>
                                             <constraint firstItem="3UD-x8-G89" firstAttribute="centerY" secondItem="9n4-kF-t4o" secondAttribute="centerY" id="Sz6-sq-W6e"/>
-                                            <constraint firstItem="9WB-f7-IHV" firstAttribute="leading" secondItem="Vu1-9q-xnw" secondAttribute="trailing" constant="7.5" id="xQa-WE-ghj"/>
+                                            <constraint firstItem="9WB-f7-IHV" firstAttribute="leading" secondItem="Vu1-9q-xnw" secondAttribute="trailing" constant="7.5" id="xQa-WE-ghj">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="10"/>
+                                            </constraint>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -371,14 +460,18 @@ Menu</string>
                                     <constraint firstItem="9n4-kF-t4o" firstAttribute="leading" secondItem="pDV-st-NNq" secondAttribute="leading" id="Aqn-2z-Nhx"/>
                                     <constraint firstItem="jY5-cB-yZV" firstAttribute="leading" secondItem="pDV-st-NNq" secondAttribute="leading" id="E5V-mb-DPr"/>
                                     <constraint firstItem="jY5-cB-yZV" firstAttribute="leading" secondItem="pDV-st-NNq" secondAttribute="leading" id="IJs-Z4-asg"/>
-                                    <constraint firstAttribute="trailing" secondItem="qUb-su-Det" secondAttribute="trailing" constant="18" id="NAL-7M-pbB"/>
+                                    <constraint firstAttribute="trailing" secondItem="qUb-su-Det" secondAttribute="trailing" constant="18" id="NAL-7M-pbB">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="12"/>
+                                    </constraint>
                                     <constraint firstAttribute="bottom" secondItem="Ept-U9-Ono" secondAttribute="bottom" constant="30" id="RAA-eR-uYl"/>
                                     <constraint firstAttribute="trailing" secondItem="9n4-kF-t4o" secondAttribute="trailing" id="SpO-nj-uej"/>
                                     <constraint firstItem="jY5-cB-yZV" firstAttribute="leading" secondItem="pDV-st-NNq" secondAttribute="leading" id="Sz2-cQ-Lpk"/>
                                     <constraint firstItem="9n4-kF-t4o" firstAttribute="centerY" secondItem="pDV-st-NNq" secondAttribute="centerY" id="UQb-CP-khn"/>
                                     <constraint firstItem="9n4-kF-t4o" firstAttribute="centerX" secondItem="pDV-st-NNq" secondAttribute="centerX" id="Ylp-Uh-oNT"/>
                                     <constraint firstItem="jY5-cB-yZV" firstAttribute="top" secondItem="pDV-st-NNq" secondAttribute="top" id="Zmn-iL-3Bf"/>
-                                    <constraint firstAttribute="bottom" secondItem="qUb-su-Det" secondAttribute="bottom" constant="25" id="cYf-Vq-lJ4"/>
+                                    <constraint firstAttribute="bottom" secondItem="qUb-su-Det" secondAttribute="bottom" constant="25" id="cYf-Vq-lJ4">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                    </constraint>
                                     <constraint firstItem="jY5-cB-yZV" firstAttribute="top" secondItem="pDV-st-NNq" secondAttribute="top" id="cfx-2F-nXS"/>
                                     <constraint firstItem="jY5-cB-yZV" firstAttribute="top" secondItem="pDV-st-NNq" secondAttribute="top" id="dpV-Kk-Qeh"/>
                                     <constraint firstAttribute="trailing" secondItem="jY5-cB-yZV" secondAttribute="trailing" id="fmg-3M-hft"/>
@@ -443,7 +536,7 @@ Menu</string>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2005.5999999999999" y="115.59220389805098"/>
+            <point key="canvasLocation" x="2005.46875" y="115.42968749999999"/>
         </scene>
         <!--Restaurant Menu-->
         <scene sceneID="h8h-XA-rPZ">
@@ -539,42 +632,76 @@ In order to ensure Hungry Coug provides the best experience possible for every
 By using any functions of the Hungry Coug app, you hereby agree to all previously stated terms and conditions.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                </variation>
                             </textView>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dismiss" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="rG0-Zt-bds" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                <rect key="frame" x="96" y="607" width="182" height="40"/>
+                                <rect key="frame" x="96.5" y="607" width="182" height="40"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="8JR-bc-eJ9"/>
-                                    <constraint firstAttribute="width" constant="182" id="bgj-qy-XQd"/>
+                                    <constraint firstAttribute="height" constant="40" id="8JR-bc-eJ9">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="45"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="182" id="bgj-qy-XQd">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="250"/>
+                                    </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="22"/>
                                 <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="22"/>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="35"/>
+                                </variation>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="emg-5w-ynR" appends="YES" id="IT4-l3-w7O"/>
                                 </connections>
                             </label>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms of Service" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="6Il-eL-lvh" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                <rect key="frame" x="96" y="30" width="182" height="40"/>
+                                <rect key="frame" x="96.5" y="30" width="182" height="40"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="675-2X-yso"/>
-                                    <constraint firstAttribute="width" constant="182" id="a3b-H1-9BT"/>
+                                    <constraint firstAttribute="height" constant="40" id="675-2X-yso">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="45"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="182" id="a3b-H1-9BT">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="250"/>
+                                    </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="22"/>
                                 <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="22"/>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="40"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6Il-eL-lvh" firstAttribute="centerX" secondItem="Hat-BV-rf1" secondAttribute="centerX" id="5bN-zF-mSq"/>
                             <constraint firstItem="Xn4-Vp-Rq3" firstAttribute="leading" secondItem="Hat-BV-rf1" secondAttribute="leadingMargin" id="DEV-1L-IAr"/>
-                            <constraint firstItem="Xn4-Vp-Rq3" firstAttribute="top" secondItem="6Il-eL-lvh" secondAttribute="bottom" constant="8" id="Jig-8g-3J2"/>
+                            <constraint firstItem="Xn4-Vp-Rq3" firstAttribute="top" secondItem="6Il-eL-lvh" secondAttribute="bottom" constant="8" id="Jig-8g-3J2">
+                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                            </constraint>
                             <constraint firstItem="rG0-Zt-bds" firstAttribute="centerX" secondItem="Hat-BV-rf1" secondAttribute="centerX" id="MQb-w3-Neb"/>
-                            <constraint firstItem="rG0-Zt-bds" firstAttribute="top" secondItem="Xn4-Vp-Rq3" secondAttribute="bottom" constant="20" id="Wa5-qF-4k2"/>
-                            <constraint firstItem="6Il-eL-lvh" firstAttribute="top" secondItem="Hat-BV-rf1" secondAttribute="topMargin" constant="30" id="ban-Jg-XlL"/>
-                            <constraint firstItem="VmP-7p-Tfw" firstAttribute="top" secondItem="rG0-Zt-bds" secondAttribute="bottom" constant="20" id="e4o-Rb-x6u"/>
+                            <constraint firstItem="rG0-Zt-bds" firstAttribute="top" secondItem="Xn4-Vp-Rq3" secondAttribute="bottom" constant="20" id="Wa5-qF-4k2">
+                                <variation key="heightClass=regular-widthClass=regular" constant="35"/>
+                            </constraint>
+                            <constraint firstItem="6Il-eL-lvh" firstAttribute="top" secondItem="Hat-BV-rf1" secondAttribute="topMargin" constant="30" id="ban-Jg-XlL">
+                                <variation key="heightClass=regular-widthClass=regular" constant="35"/>
+                            </constraint>
+                            <constraint firstItem="VmP-7p-Tfw" firstAttribute="top" secondItem="rG0-Zt-bds" secondAttribute="bottom" constant="20" id="e4o-Rb-x6u">
+                                <variation key="heightClass=regular-widthClass=regular" constant="35"/>
+                            </constraint>
                             <constraint firstItem="Xn4-Vp-Rq3" firstAttribute="trailing" secondItem="Hat-BV-rf1" secondAttribute="trailingMargin" id="lCh-mq-2BW"/>
                         </constraints>
                     </view>
@@ -612,14 +739,27 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="344" id="B0t-l4-i3C"/>
+                                            <constraint firstAttribute="width" constant="540" id="b24-MG-F3F"/>
                                             <constraint firstAttribute="height" constant="58" id="dZt-ge-kvu"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="b24-MG-F3F"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="32"/>
+                                        </variation>
+                                        <variation key="widthClass=regular">
+                                            <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="55"/>
+                                        </variation>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <mask key="constraints">
                                                 <exclude reference="B0t-l4-i3C"/>
+                                                <include reference="b24-MG-F3F"/>
                                                 <exclude reference="dZt-ge-kvu"/>
                                             </mask>
                                         </variation>
@@ -627,21 +767,15 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                             <outletCollection property="gestureRecognizers" destination="1qJ-Ay-XA6" appends="YES" id="jf9-ii-7FA"/>
                                         </connections>
                                     </label>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwi-76-HYX">
-                                        <rect key="frame" x="86" y="608" width="203" height="39"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="22"/>
-                                        <state key="normal" title="Dining Points Analysis">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pointsHistoryButtonPressed:" destination="Ih7-xX-Njt" eventType="touchUpInside" id="u9h-n6-VPH"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zet-Hh-fSs">
                                         <rect key="frame" x="332" y="72" width="35" height="35"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="4qd-ef-3IX"/>
-                                            <constraint firstAttribute="width" constant="35" id="gGq-7A-C9x"/>
+                                            <constraint firstAttribute="height" constant="35" id="4qd-ef-3IX">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="55"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="35" id="gGq-7A-C9x">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="55"/>
+                                            </constraint>
                                         </constraints>
                                         <color key="tintColor" red="0.95203000309999997" green="0.77870243790000004" blue="0.7743010521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="settings_cog">
@@ -660,20 +794,29 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dbH-ku-6ET">
                                                         <rect key="frame" x="8" y="15.5" width="343" height="40"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expected Dining Points:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="8xD-xO-ok1" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="218" height="40"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Expected Dining Points:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="8xD-xO-ok1" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="222" height="40"/>
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="22"/>
                                                                 <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="22"/>
+                                                                </variation>
+                                                                <variation key="widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="30"/>
+                                                                </variation>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1068.50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="2au-c1-jMq" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                                                <rect key="frame" x="228" y="0.0" width="115" height="40"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="115" id="Fdg-da-rlC"/>
-                                                                </constraints>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1068.50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="2au-c1-jMq" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
+                                                                <rect key="frame" x="232" y="0.0" width="111" height="40"/>
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="32"/>
                                                                 <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="32"/>
+                                                                </variation>
+                                                                <variation key="widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="48"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <constraints>
@@ -684,9 +827,15 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="dbH-ku-6ET" firstAttribute="leading" secondItem="MIV-Xz-5hs" secondAttribute="leading" constant="8" id="KPH-Qu-nz9"/>
-                                                    <constraint firstAttribute="height" constant="70" id="g8D-LT-HNa"/>
-                                                    <constraint firstAttribute="trailing" secondItem="dbH-ku-6ET" secondAttribute="trailing" constant="8" id="jiO-qB-2dY"/>
+                                                    <constraint firstItem="dbH-ku-6ET" firstAttribute="leading" secondItem="MIV-Xz-5hs" secondAttribute="leading" constant="8" id="KPH-Qu-nz9">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="70" id="g8D-LT-HNa">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="trailing" secondItem="dbH-ku-6ET" secondAttribute="trailing" constant="8" id="jiO-qB-2dY">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                                    </constraint>
                                                     <constraint firstItem="dbH-ku-6ET" firstAttribute="centerY" secondItem="MIV-Xz-5hs" secondAttribute="centerY" id="pEY-53-eIu"/>
                                                 </constraints>
                                             </view>
@@ -711,8 +860,15 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                     <constraint firstAttribute="bottom" secondItem="W1J-EW-Ozl" secondAttribute="bottom" id="YQc-up-uhk"/>
                                                     <constraint firstItem="W1J-EW-Ozl" firstAttribute="top" secondItem="Jsm-Xs-5Qj" secondAttribute="top" id="aU5-24-bn7"/>
                                                     <constraint firstAttribute="trailing" secondItem="W1J-EW-Ozl" secondAttribute="trailing" constant="8" id="k6x-pK-qAE"/>
-                                                    <constraint firstAttribute="height" constant="71" id="u14-uj-vKE"/>
+                                                    <constraint firstAttribute="height" constant="71" id="u14-uj-vKE">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="90"/>
+                                                    </constraint>
                                                 </constraints>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <exclude reference="HL1-6c-7T3"/>
+                                                    </mask>
+                                                </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3t-a3-86V" customClass="CustomView" customModule="NewHungryCougar" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="90" width="359" height="100"/>
@@ -725,6 +881,12 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="22"/>
                                                                 <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="22"/>
+                                                                </variation>
+                                                                <variation key="widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="30"/>
+                                                                </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="dUy-li-Qn6" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
                                                                 <rect key="frame" x="228" y="0.0" width="115" height="40"/>
@@ -734,6 +896,17 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="32"/>
                                                                 <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="32"/>
+                                                                </variation>
+                                                                <variation key="widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="48"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <mask key="constraints">
+                                                                        <exclude reference="De2-8H-jdN"/>
+                                                                    </mask>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <constraints>
@@ -749,6 +922,12 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="22"/>
                                                                 <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="22"/>
+                                                                </variation>
+                                                                <variation key="widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="30"/>
+                                                                </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="AcD-LQ-9sR" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
                                                                 <rect key="frame" x="228" y="0.0" width="115" height="40"/>
@@ -758,6 +937,17 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="32"/>
                                                                 <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="32"/>
+                                                                </variation>
+                                                                <variation key="widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="48"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <mask key="constraints">
+                                                                        <exclude reference="beT-8h-srj"/>
+                                                                    </mask>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <constraints>
@@ -768,25 +958,49 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="7CM-pH-cnW" firstAttribute="leading" secondItem="O3t-a3-86V" secondAttribute="leading" constant="8" id="4Ja-p7-KIA"/>
-                                                    <constraint firstItem="19k-Fz-lzF" firstAttribute="top" secondItem="O3t-a3-86V" secondAttribute="top" constant="8" id="7pw-5y-zwm"/>
-                                                    <constraint firstAttribute="trailing" secondItem="7CM-pH-cnW" secondAttribute="trailing" constant="8" id="Xx8-AR-deU"/>
-                                                    <constraint firstItem="19k-Fz-lzF" firstAttribute="leading" secondItem="O3t-a3-86V" secondAttribute="leading" constant="8" id="YF7-s5-s2S"/>
-                                                    <constraint firstAttribute="height" constant="100" id="f81-aQ-iiJ"/>
-                                                    <constraint firstAttribute="trailing" secondItem="19k-Fz-lzF" secondAttribute="trailing" constant="8" id="fcb-tx-82x"/>
-                                                    <constraint firstAttribute="bottom" secondItem="7CM-pH-cnW" secondAttribute="bottom" constant="8" id="hz6-sZ-hZ4"/>
+                                                    <constraint firstItem="7CM-pH-cnW" firstAttribute="leading" secondItem="O3t-a3-86V" secondAttribute="leading" constant="8" id="4Ja-p7-KIA">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                                    </constraint>
+                                                    <constraint firstItem="19k-Fz-lzF" firstAttribute="top" secondItem="O3t-a3-86V" secondAttribute="top" constant="8" id="7pw-5y-zwm">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="14"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="trailing" secondItem="7CM-pH-cnW" secondAttribute="trailing" constant="8" id="Xx8-AR-deU">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                                    </constraint>
+                                                    <constraint firstItem="19k-Fz-lzF" firstAttribute="leading" secondItem="O3t-a3-86V" secondAttribute="leading" constant="8" id="YF7-s5-s2S">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="100" id="f81-aQ-iiJ">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="130"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="trailing" secondItem="19k-Fz-lzF" secondAttribute="trailing" constant="8" id="fcb-tx-82x">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="bottom" secondItem="7CM-pH-cnW" secondAttribute="bottom" constant="8" id="hz6-sZ-hZ4">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="14"/>
+                                                    </constraint>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Mz-Jb-HCd">
                                                 <rect key="frame" x="139" y="210" width="80" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="lQJ-FG-qDv"/>
-                                                    <constraint firstAttribute="height" constant="30" id="xcm-fV-lYN"/>
+                                                    <constraint firstAttribute="width" constant="80" id="lQJ-FG-qDv">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="30" id="xcm-fV-lYN">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                                    </constraint>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="22"/>
                                                 <state key="normal" title="Refresh">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <variation key="widthClass=compact">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="22"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="35"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="onRefreshPressed:" destination="Ih7-xX-Njt" eventType="touchUpInside" id="B2b-4n-rCV"/>
                                                 </connections>
@@ -800,8 +1014,12 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                             <constraint firstItem="4Mz-Jb-HCd" firstAttribute="centerX" secondItem="TLP-76-JKj" secondAttribute="centerX" id="DhL-Le-6Da"/>
                                             <constraint firstItem="O3t-a3-86V" firstAttribute="top" secondItem="MIV-Xz-5hs" secondAttribute="bottom" constant="20" id="Gda-Yb-pNt"/>
                                             <constraint firstItem="MIV-Xz-5hs" firstAttribute="leading" secondItem="TLP-76-JKj" secondAttribute="leading" id="TJk-JD-KCp"/>
-                                            <constraint firstItem="4Mz-Jb-HCd" firstAttribute="top" secondItem="O3t-a3-86V" secondAttribute="bottom" constant="20" id="UfE-ip-AzR"/>
-                                            <constraint firstAttribute="height" constant="250" id="cVh-21-cgo"/>
+                                            <constraint firstItem="4Mz-Jb-HCd" firstAttribute="top" secondItem="O3t-a3-86V" secondAttribute="bottom" constant="20" id="UfE-ip-AzR">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="250" id="cVh-21-cgo">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="320"/>
+                                            </constraint>
                                             <constraint firstItem="O3t-a3-86V" firstAttribute="leading" secondItem="TLP-76-JKj" secondAttribute="leading" id="vaz-al-rHy"/>
                                             <constraint firstItem="Jsm-Xs-5Qj" firstAttribute="leading" secondItem="TLP-76-JKj" secondAttribute="leading" id="wlo-De-tcO"/>
                                             <constraint firstItem="Jsm-Xs-5Qj" firstAttribute="top" secondItem="MIV-Xz-5hs" secondAttribute="bottom" constant="20" id="ydu-8D-tTr"/>
@@ -812,12 +1030,22 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                         <rect key="frame" x="89" y="178" width="196" height="16"/>
                                         <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="16" id="2DL-j2-GXk"/>
-                                            <constraint firstAttribute="width" constant="196" id="qEs-Vn-A7O"/>
+                                            <constraint firstAttribute="height" constant="16" id="2DL-j2-GXk">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="196" id="qEs-Vn-A7O">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="350"/>
+                                            </constraint>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="12"/>
+                                        </variation>
+                                        <variation key="widthClass=regular">
+                                            <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="25"/>
+                                        </variation>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="aUW-XW-oYE" appends="YES" id="7by-oD-y21"/>
                                         </connections>
@@ -828,19 +1056,25 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                     <constraint firstItem="WHX-RX-sIg" firstAttribute="top" secondItem="mcw-QY-ZdD" secondAttribute="top" constant="120" id="5xu-iq-yRs">
                                         <variation key="heightClass=regular-widthClass=regular" constant="200"/>
                                     </constraint>
-                                    <constraint firstAttribute="trailing" secondItem="TLP-76-JKj" secondAttribute="trailing" constant="8" id="GVb-p0-WDL"/>
+                                    <constraint firstAttribute="trailing" secondItem="TLP-76-JKj" secondAttribute="trailing" constant="8" id="GVb-p0-WDL">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                    </constraint>
                                     <constraint firstItem="WHX-RX-sIg" firstAttribute="leading" secondItem="mcw-QY-ZdD" secondAttribute="leadingMargin" id="Kle-NQ-6v3"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="WHX-RX-sIg" secondAttribute="trailing" id="R52-Ph-2pU"/>
                                     <constraint firstItem="WHX-RX-sIg" firstAttribute="centerX" secondItem="mcw-QY-ZdD" secondAttribute="centerX" id="Tdn-64-C2f"/>
                                     <constraint firstItem="FRT-Np-FWW" firstAttribute="top" secondItem="WHX-RX-sIg" secondAttribute="bottom" id="VLf-hM-y4h"/>
-                                    <constraint firstAttribute="bottom" secondItem="Fwi-76-HYX" secondAttribute="bottom" constant="20" id="Wyr-02-qYx"/>
-                                    <constraint firstItem="Fwi-76-HYX" firstAttribute="centerX" secondItem="mcw-QY-ZdD" secondAttribute="centerX" id="YKR-6V-lvd"/>
                                     <constraint firstItem="FRT-Np-FWW" firstAttribute="centerX" secondItem="mcw-QY-ZdD" secondAttribute="centerX" id="fcK-vC-D1S"/>
                                     <constraint firstItem="TLP-76-JKj" firstAttribute="centerY" secondItem="mcw-QY-ZdD" secondAttribute="centerY" constant="70" id="gHP-zh-gwL"/>
-                                    <constraint firstItem="zet-Hh-fSs" firstAttribute="top" secondItem="mcw-QY-ZdD" secondAttribute="top" constant="72" id="jag-rb-Xqa"/>
+                                    <constraint firstItem="zet-Hh-fSs" firstAttribute="top" secondItem="mcw-QY-ZdD" secondAttribute="top" constant="72" id="jag-rb-Xqa">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="90"/>
+                                    </constraint>
                                     <constraint firstItem="TLP-76-JKj" firstAttribute="centerX" secondItem="mcw-QY-ZdD" secondAttribute="centerX" id="kvE-R5-DtK"/>
-                                    <constraint firstAttribute="trailing" secondItem="zet-Hh-fSs" secondAttribute="trailing" constant="8" id="qfj-hx-GX2"/>
-                                    <constraint firstItem="TLP-76-JKj" firstAttribute="leading" secondItem="mcw-QY-ZdD" secondAttribute="leading" constant="8" id="xJn-vg-bmd"/>
+                                    <constraint firstAttribute="trailing" secondItem="zet-Hh-fSs" secondAttribute="trailing" constant="8" id="qfj-hx-GX2">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                    </constraint>
+                                    <constraint firstItem="TLP-76-JKj" firstAttribute="leading" secondItem="mcw-QY-ZdD" secondAttribute="leading" constant="8" id="xJn-vg-bmd">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                    </constraint>
                                 </constraints>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
@@ -870,7 +1104,6 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                         <outlet property="usersDiningPointsLbl" destination="dUy-li-Qn6" id="v2Z-gf-XHk"/>
                         <outlet property="usersDiningPointsView" destination="O3t-a3-86V" id="3GH-N7-Qdz"/>
                         <segue destination="WpJ-IH-Vbs" kind="show" identifier="APUHome" id="U44-L7-nPQ"/>
-                        <segue destination="Ia0-ao-UOS" kind="show" identifier="pointsHistorySegue" id="Bho-Qj-xdm"/>
                         <segue destination="6mq-gA-Yq1" kind="show" identifier="settingsSegue" id="0Df-4I-UOg"/>
                     </connections>
                 </viewController>
@@ -892,24 +1125,6 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1097" y="1173"/>
-        </scene>
-        <!--Dining Points Analysis-->
-        <scene sceneID="GhI-xN-L6N">
-            <objects>
-                <viewController title="Dining Points Analysis" id="Ia0-ao-UOS" customClass="DiningPointsAnalysisVC" customModule="NewHungryCougar" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3Az-so-Jgz"/>
-                        <viewControllerLayoutGuide type="bottom" id="F7u-SR-WXF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="io9-7l-g3p" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MZh-QC-q8T" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1093.5999999999999" y="1861.6191904047978"/>
         </scene>
         <!--Settings-->
         <scene sceneID="6Rh-0j-Eyc">
@@ -1083,7 +1298,7 @@ Please send me a quick email if you notice any errors with restaurant hours or a
                                                 <color key="textColor" red="0.54117647058823526" green="0.55294117647058827" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version: 2.0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEe-a9-3ne">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version: 0.0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEe-a9-3ne">
                                                 <rect key="frame" x="58.5" y="609.5" width="250" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="cQD-A4-9rm"/>
@@ -1153,6 +1368,7 @@ Please send me a quick email if you notice any errors with restaurant hours or a
                         <outlet property="passwordField" destination="nD8-Wf-Q9H" id="qDL-rX-JHA"/>
                         <outlet property="scrollView" destination="usF-IJ-dJg" id="hTr-xz-HUz"/>
                         <outlet property="usernameField" destination="HYg-CD-Gd9" id="e9T-xz-9MK"/>
+                        <outlet property="versionNumberLbl" destination="gEe-a9-3ne" id="eYd-C0-Dkx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qa1-IG-t43" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1266,16 +1482,26 @@ Please send me a quick email if you notice any errors with restaurant hours or a
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agO-QE-b70">
-                                                        <rect key="frame" x="25" y="107.5" width="100.5" height="45"/>
+                                                        <rect key="frame" x="25" y="107.5" width="100" height="45"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="45" id="Mod-Ff-T8N"/>
-                                                            <constraint firstAttribute="width" constant="100" id="PKE-Gn-i9i"/>
+                                                            <constraint firstAttribute="height" constant="45" id="Mod-Ff-T8N">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="52"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="width" constant="100" id="PKE-Gn-i9i">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="130"/>
+                                                            </constraint>
                                                         </constraints>
                                                         <string key="text">The Grill
 at Heritage</string>
                                                         <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="widthClass=compact">
+                                                            <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
+                                                        </variation>
+                                                        <variation key="widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="23"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                             </stackView>
@@ -1308,16 +1534,26 @@ at Heritage</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ul-oU-bAi">
-                                                        <rect key="frame" x="25" y="107" width="100.5" height="45"/>
+                                                        <rect key="frame" x="25" y="107" width="100" height="45"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="45" id="CZU-fR-e7g"/>
-                                                            <constraint firstAttribute="width" constant="100" id="mK1-Xb-NbX"/>
+                                                            <constraint firstAttribute="height" constant="45" id="CZU-fR-e7g">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="52"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="width" constant="100" id="mK1-Xb-NbX">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="130"/>
+                                                            </constraint>
                                                         </constraints>
                                                         <string key="text">The Market
 at Heritage</string>
                                                         <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="widthClass=compact">
+                                                            <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
+                                                        </variation>
+                                                        <variation key="widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="23"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                             </stackView>
@@ -1350,16 +1586,26 @@ at Heritage</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWB-0p-qnE">
-                                                        <rect key="frame" x="25" y="107.5" width="100.5" height="45"/>
+                                                        <rect key="frame" x="25" y="107.5" width="100" height="45"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="45" id="Znb-c3-53R"/>
-                                                            <constraint firstAttribute="width" constant="100" id="cxK-tD-jTh"/>
+                                                            <constraint firstAttribute="height" constant="45" id="Znb-c3-53R">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="52"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="width" constant="100" id="cxK-tD-jTh">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="130"/>
+                                                            </constraint>
                                                         </constraints>
                                                         <string key="text">Umai
 Sushi</string>
                                                         <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="widthClass=compact">
+                                                            <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
+                                                        </variation>
+                                                        <variation key="widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="23"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                             </stackView>
@@ -1372,9 +1618,13 @@ Sushi</string>
                                 <color key="backgroundColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="zQK-fc-s9Y" firstAttribute="centerY" secondItem="swx-Ps-VMF" secondAttribute="centerY" id="8lL-uC-ZMA"/>
-                                    <constraint firstItem="zQK-fc-s9Y" firstAttribute="top" secondItem="swx-Ps-VMF" secondAttribute="top" constant="35" id="DaD-KH-awm"/>
+                                    <constraint firstItem="zQK-fc-s9Y" firstAttribute="top" secondItem="swx-Ps-VMF" secondAttribute="top" constant="35" id="DaD-KH-awm">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                    </constraint>
                                     <constraint firstItem="zQK-fc-s9Y" firstAttribute="centerX" secondItem="swx-Ps-VMF" secondAttribute="centerX" constant="10" id="PWS-MX-slM"/>
-                                    <constraint firstAttribute="bottom" secondItem="zQK-fc-s9Y" secondAttribute="bottom" constant="35" id="bWB-lw-dDN"/>
+                                    <constraint firstAttribute="bottom" secondItem="zQK-fc-s9Y" secondAttribute="bottom" constant="35" id="bWB-lw-dDN">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                    </constraint>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPM-Ac-I9v" userLabel="RIGHT">
@@ -1415,14 +1665,24 @@ Sushi</string>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ac-iH-zfJ">
                                                         <rect key="frame" x="25" y="107.5" width="100" height="45"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="100" id="O8A-GU-Prl"/>
-                                                            <constraint firstAttribute="height" constant="45" id="xan-lv-5Vg"/>
+                                                            <constraint firstAttribute="width" constant="100" id="O8A-GU-Prl">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="140"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="height" constant="45" id="xan-lv-5Vg">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="52"/>
+                                                            </constraint>
                                                         </constraints>
                                                         <string key="text">Fresh Grounds
 at Heritage</string>
                                                         <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="widthClass=compact">
+                                                            <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
+                                                        </variation>
+                                                        <variation key="widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="23"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                             </stackView>
@@ -1457,14 +1717,24 @@ at Heritage</string>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHm-fe-rxf">
                                                         <rect key="frame" x="25" y="107" width="100" height="45"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="45" id="H7N-3T-O6h"/>
-                                                            <constraint firstAttribute="width" constant="100" id="qTz-VI-v0Q"/>
+                                                            <constraint firstAttribute="height" constant="45" id="H7N-3T-O6h">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="52"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="width" constant="100" id="qTz-VI-v0Q">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="130"/>
+                                                            </constraint>
                                                         </constraints>
                                                         <string key="text">Sam's
 Subs</string>
                                                         <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="widthClass=compact">
+                                                            <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
+                                                        </variation>
+                                                        <variation key="widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="23"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                             </stackView>
@@ -1482,8 +1752,12 @@ Subs</string>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eO-JP-Ksz">
                                                         <rect key="frame" x="37.5" y="135.5" width="75" height="17"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="17" id="Exk-Vy-pE2"/>
-                                                            <constraint firstAttribute="width" constant="75" id="Ya5-Ql-FFT"/>
+                                                            <constraint firstAttribute="height" constant="17" id="Exk-Vy-pE2">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="52"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="width" constant="75" id="Ya5-Ql-FFT">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="130"/>
+                                                            </constraint>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="14"/>
                                                         <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1499,9 +1773,13 @@ Subs</string>
                                 </subviews>
                                 <color key="backgroundColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Ppc-pf-rmb" firstAttribute="top" secondItem="GPM-Ac-I9v" secondAttribute="top" constant="35" id="LuP-bX-B11"/>
+                                    <constraint firstItem="Ppc-pf-rmb" firstAttribute="top" secondItem="GPM-Ac-I9v" secondAttribute="top" constant="35" id="LuP-bX-B11">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                    </constraint>
                                     <constraint firstItem="Ppc-pf-rmb" firstAttribute="centerX" secondItem="GPM-Ac-I9v" secondAttribute="centerX" constant="-10" id="LwJ-O0-O5W"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ppc-pf-rmb" secondAttribute="bottom" constant="35" id="Mjw-Il-3Ut"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ppc-pf-rmb" secondAttribute="bottom" constant="35" id="Mjw-Il-3Ut">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                    </constraint>
                                     <constraint firstItem="Ppc-pf-rmb" firstAttribute="centerY" secondItem="GPM-Ac-I9v" secondAttribute="centerY" id="S7n-mM-DwB"/>
                                 </constraints>
                             </view>
@@ -1578,14 +1856,24 @@ Subs</string>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Lb-fE-poO">
                                                                 <rect key="frame" x="25" y="107.5" width="100" height="45"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="100" id="eO8-Fm-zla"/>
-                                                                    <constraint firstAttribute="height" constant="45" id="zh1-9F-Agg"/>
+                                                                    <constraint firstAttribute="width" constant="100" id="eO8-Fm-zla">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="130"/>
+                                                                    </constraint>
+                                                                    <constraint firstAttribute="height" constant="45" id="zh1-9F-Agg">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="52"/>
+                                                                    </constraint>
                                                                 </constraints>
                                                                 <string key="text">1899 
 Dining Hall</string>
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
+                                                                </variation>
+                                                                <variation key="widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="23"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
@@ -1620,14 +1908,24 @@ Dining Hall</string>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFU-ce-ghj">
                                                                 <rect key="frame" x="25" y="107" width="100" height="45"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="100" id="mRV-KA-GSz"/>
-                                                                    <constraint firstAttribute="height" constant="45" id="x2z-EZ-DgM"/>
+                                                                    <constraint firstAttribute="width" constant="100" id="mRV-KA-GSz">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="130"/>
+                                                                    </constraint>
+                                                                    <constraint firstAttribute="height" constant="45" id="x2z-EZ-DgM">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="52"/>
+                                                                    </constraint>
                                                                 </constraints>
                                                                 <string key="text">Cougars' Den
 Café</string>
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
+                                                                </variation>
+                                                                <variation key="widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="23"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
@@ -1662,14 +1960,24 @@ Café</string>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6G-y6-AcA">
                                                                 <rect key="frame" x="25" y="107.5" width="100" height="45"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="45" id="GV6-oA-Z2w"/>
-                                                                    <constraint firstAttribute="width" constant="100" id="l0T-en-DZO"/>
+                                                                    <constraint firstAttribute="height" constant="45" id="GV6-oA-Z2w">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="52"/>
+                                                                    </constraint>
+                                                                    <constraint firstAttribute="width" constant="100" id="l0T-en-DZO">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="130"/>
+                                                                    </constraint>
                                                                 </constraints>
                                                                 <string key="text">Mexicali
 Grill</string>
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
+                                                                </variation>
+                                                                <variation key="widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="23"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
@@ -1683,10 +1991,14 @@ Grill</string>
                                         </subviews>
                                         <color key="backgroundColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="QMW-Nr-MdC" firstAttribute="top" secondItem="FnD-kq-uei" secondAttribute="top" constant="35" id="bXF-C3-v7y"/>
+                                            <constraint firstItem="QMW-Nr-MdC" firstAttribute="top" secondItem="FnD-kq-uei" secondAttribute="top" constant="35" id="bXF-C3-v7y">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                            </constraint>
                                             <constraint firstItem="QMW-Nr-MdC" firstAttribute="centerX" secondItem="FnD-kq-uei" secondAttribute="centerX" constant="10" id="bc6-gC-Xa4"/>
                                             <constraint firstItem="QMW-Nr-MdC" firstAttribute="centerY" secondItem="FnD-kq-uei" secondAttribute="centerY" id="eY6-5r-fqu"/>
-                                            <constraint firstAttribute="bottom" secondItem="QMW-Nr-MdC" secondAttribute="bottom" constant="35" id="rAc-vU-rDU"/>
+                                            <constraint firstAttribute="bottom" secondItem="QMW-Nr-MdC" secondAttribute="bottom" constant="35" id="rAc-vU-rDU">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                            </constraint>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DHA-k0-7Dp" userLabel="RIGHT">
@@ -1726,14 +2038,24 @@ Grill</string>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RM7-9o-y7x">
                                                                 <rect key="frame" x="25" y="107.5" width="100" height="45"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="45" id="UM2-Vk-E2o"/>
-                                                                    <constraint firstAttribute="width" constant="100" id="s9q-eV-YWo"/>
+                                                                    <constraint firstAttribute="height" constant="45" id="UM2-Vk-E2o">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="52"/>
+                                                                    </constraint>
+                                                                    <constraint firstAttribute="width" constant="100" id="s9q-eV-YWo">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="130"/>
+                                                                    </constraint>
                                                                 </constraints>
                                                                 <string key="text">Cornerstone
 Coffeehouse</string>
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
+                                                                </variation>
+                                                                <variation key="widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="23"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
@@ -1768,14 +2090,24 @@ Coffeehouse</string>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfF-Vk-40m">
                                                                 <rect key="frame" x="25" y="107" width="100" height="45"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="100" id="CT6-HL-UOz"/>
-                                                                    <constraint firstAttribute="height" constant="45" id="Fri-d3-StX"/>
+                                                                    <constraint firstAttribute="width" constant="100" id="CT6-HL-UOz">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="130"/>
+                                                                    </constraint>
+                                                                    <constraint firstAttribute="height" constant="45" id="Fri-d3-StX">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="52"/>
+                                                                    </constraint>
                                                                 </constraints>
                                                                 <string key="text">Cougar Walk
 Café</string>
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
+                                                                </variation>
+                                                                <variation key="widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="23"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
@@ -1810,14 +2142,24 @@ Café</string>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLr-uM-ehu">
                                                                 <rect key="frame" x="25" y="107.5" width="100" height="45"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="100" id="Ml8-b8-96o"/>
-                                                                    <constraint firstAttribute="height" constant="45" id="qOx-OW-wQc"/>
+                                                                    <constraint firstAttribute="width" constant="100" id="Ml8-b8-96o">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="130"/>
+                                                                    </constraint>
+                                                                    <constraint firstAttribute="height" constant="45" id="qOx-OW-wQc">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="52"/>
+                                                                    </constraint>
                                                                 </constraints>
                                                                 <string key="text">Paws 'N Go
 Convenience</string>
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
+                                                                </variation>
+                                                                <variation key="widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="23"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
@@ -1832,9 +2174,13 @@ Convenience</string>
                                         <color key="backgroundColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="pEW-si-ATN" firstAttribute="centerX" secondItem="DHA-k0-7Dp" secondAttribute="centerX" constant="-10" id="82m-4U-OVy"/>
-                                            <constraint firstItem="pEW-si-ATN" firstAttribute="top" secondItem="DHA-k0-7Dp" secondAttribute="top" constant="35" id="9g2-4o-Uaz"/>
+                                            <constraint firstItem="pEW-si-ATN" firstAttribute="top" secondItem="DHA-k0-7Dp" secondAttribute="top" constant="35" id="9g2-4o-Uaz">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                            </constraint>
                                             <constraint firstItem="pEW-si-ATN" firstAttribute="centerY" secondItem="DHA-k0-7Dp" secondAttribute="centerY" id="VqX-3s-Da8"/>
-                                            <constraint firstAttribute="bottom" secondItem="pEW-si-ATN" secondAttribute="bottom" constant="35" id="xnM-PM-0QG"/>
+                                            <constraint firstAttribute="bottom" secondItem="pEW-si-ATN" secondAttribute="bottom" constant="35" id="xnM-PM-0QG">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                            </constraint>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1872,7 +2218,7 @@ Convenience</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aYT-vv-QhX" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6j5-pb-k0w">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6j5-pb-k0w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1904,7 +2250,7 @@ Convenience</string>
         <image name="settings_cog" width="576" height="570"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="HmY-Vi-mCP"/>
         <segue reference="FUf-Zg-ioX"/>
-        <segue reference="X8Z-Ic-x0s"/>
     </inferredMetricsTieBreakers>
 </document>

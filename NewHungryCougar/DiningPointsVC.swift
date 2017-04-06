@@ -8,6 +8,8 @@
 
 import UIKit
 import DropDown
+import Firebase
+import StoreKit // Used to display Review request
 
 // Global Variables
 var expectedBalance = 0.0
@@ -45,6 +47,28 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         setupViews()
+        
+        DB_BASE.child("stats").observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            var firebaseCount = value?["refresh"] as? Int ?? 0
+            firebaseCount += 1
+            DB_BASE.child("stats").child("refresh").setValue(firebaseCount)
+        })
+        
+        // Count number of views on this page
+        let defaults = UserDefaults.standard
+        let prefs = UserDefaults.standard
+        if let val1 = prefs.string(forKey: "userViewsDiningPointsVC") {
+            if Int(val1)! == 20 || Int(val1)! % 50 == 0 {   // If the user has viewed this page 10 times or if their view is divisible by 40
+                if #available(iOS 10.3, *) {
+                    SKStoreReviewController.requestReview()     // Display a request for a review
+                    print("KYLE: Requsted user review")
+                }
+            }
+            defaults.set((Int(val1)!+1), forKey: "userViewsDiningPointsVC")
+        } else {
+            defaults.set(0, forKey: "userViewsDiningPointsVC")
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -253,10 +277,10 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         let namedView = self.allPointsView
         let centerPoint = self.view.frame.midY
         print("KYLE: CenterPoint = \(centerPoint)")
-        print("KYLE: CenterPointWithOffset = \(centerPoint - 55)")
+        print("KYLE: CenterPointWithOffset = \(centerPoint - allPointsView.frame.height/2 + 70)")
         print("KYLE: Actual origin.y = \(self.allPointsView.frame.origin.y)")
         // Move the views
-        if Double((self.allPointsView.frame.origin.y)) == Double(centerPoint - 55) {
+        if Double((self.allPointsView.frame.origin.y)) == Double(centerPoint - allPointsView.frame.height/2 + 70) {
             UIView.animate(withDuration: 0.25, delay: 0, options: [.curveEaseOut], animations: {
                 namedView?.frame.origin.y += 220
             }, completion: nil)
@@ -341,6 +365,7 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
 //        manuallySetDay(1, dd: 18, woy: 1, yyyy: 2017, wday: 4)
         
         todayDate = String("\(month).\(day).\(year-2000)")
+        print("KYLE: TODAY DATE: \(todayDate!)")
         
         // School has yet to begin
         if month == 1 && day < 8 {
@@ -356,7 +381,7 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
             schoolWeek = 2
         } else if (month == 9 && (day >= 18 && day <= 24)) {
             schoolWeek = 3
-        } else if (month == 9 && (day >= 25 && day <= 30)) || todayDate == "10.1.16" {
+        } else if (month == 9 && (day >= 25 && day <= 30)) || monthBetweenDays(MM: 10, ST: 1, ED: 1) {
             schoolWeek = 4
         }
         
@@ -440,7 +465,7 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         }
         
         // April
-        if monthBetweenDays(MM: 3, ST: 26, ED: 31) || todayDate == "3.1.1" {
+        if monthBetweenDays(MM: 3, ST: 26, ED: 31) || monthBetweenDays(MM: 4, ST: 1, ED: 1) {
             schoolWeek = 10
         } else if monthBetweenDays(MM: 4, ST: 2, ED: 8) {
             schoolWeek = 11
@@ -450,8 +475,13 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
             schoolWeek = 13
         } else if monthBetweenDays(MM: 4, ST: 23, ED: 29) {
             schoolWeek = 14
-        } else if monthBetweenDays(MM: 4, ST: 24, ED: 30) {
+        } else if monthBetweenDays(MM: 4, ST: 30, ED: 30) || monthBetweenDays(MM: 5, ST: 1, ED: 6) {
             schoolWeek = 15
+        }
+        
+        // Summer Vacation
+        if monthBetweenDays(MM: 5, ST: 7, ED: 31) || month > 5 {
+            schoolWeek = 0
         }
     }
     

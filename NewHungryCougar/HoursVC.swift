@@ -38,6 +38,9 @@ class HoursVC: UIViewController {
     // Loads right before view appears
     override func viewWillAppear(_ animated: Bool) {
         self.title = restaurantChoice
+        let defaults = UserDefaults.standard
+        defaults.set(restaurantChoice, forKey: "restaurantChoice")
+        
         loadCurrentDateTime()
         setHours()
         checkIfOpen()
@@ -220,6 +223,11 @@ class HoursVC: UIViewController {
         showRestaurantHoursDropDown(alsoTappedHours)
     }
     
+    @IBAction func tappedOpenClose(_ sender: Any) {
+        showRestaurantHoursDropDown(alsoTappedHours)
+    }
+    
+    
     func moveEverything() {
         let namedView = self.viewToMove
         let centerPoint = self.view.frame.midY
@@ -353,7 +361,7 @@ class HoursVC: UIViewController {
             }
         }
         
-        if Today.hasNoHours {
+        if Today.openTime == 0 && Today.closeTime == 0 {
             storeIsOpen = false
         }
         
@@ -479,13 +487,23 @@ class HoursVC: UIViewController {
         // If the store is CLOSED
         if storeIsOpen == false {
             // If store has no hours today
-            if Today.hasNoHours {
+            if Today.openTime == 0 && Today.closeTime == 0 {
                 timeLabel.text = "Closed all day"
                 Today.hasNoHours = false
             }
             else {
-                if Tomorrow.hasNoHours && now > Today.openTime {
-                    timeLabel.text = "Closed all day tomorrow"
+                if Tomorrow.openTime == 0 && Tomorrow.closeTime == 0 && now > Today.openTime {
+                    var HHOpen = Monday.openTime/100
+                    if HHOpen > 12 {
+                        HHOpen = HHOpen - 12
+                    }
+                    let MMOpen = Monday.openTime - Int(Monday.openTime/100)*100
+                    
+                    timeLabel.text = "Opening Monday at \(HHOpen):\(MMOpen)"
+                    if MMOpen == 0 {
+                        timeLabel.text?.append("0")
+                    }
+                    timeLabel.text?.append("am")
                 } else {
                     // Calculate hours until open only if store is opening soon
                     if minutesLeft < 60 {
@@ -498,7 +516,7 @@ class HoursVC: UIViewController {
                             if (Today.openTime - Int(Today.openTime/100)*100) == 0 {
                                 timeLabel.text?.append("0")
                             }
-                            if HHOpen < 12 {
+                            if Today.openTime < 1200 {
                                 timeLabel.text?.append("am")
                             } else {
                                 timeLabel.text?.append("pm")
@@ -510,7 +528,7 @@ class HoursVC: UIViewController {
                             if (Tomorrow.openTime - Int(Tomorrow.openTime/100)*100) == 0 {
                                 timeLabel.text?.append("0")
                             }
-                            if HHOpenTomorrow < 12 {
+                            if Tomorrow.openTime < 1200 {
                                 timeLabel.text?.append("am")
                             } else {
                                 timeLabel.text?.append("pm")

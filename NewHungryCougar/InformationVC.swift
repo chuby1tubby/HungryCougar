@@ -20,10 +20,48 @@ class InformationVC: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWeb
     var url: URL!
     var timeBool: Bool!
     var timer: Timer!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         webView.delegate = self
+        
+        var name = ""
+        switch restaurantChoice {
+        // East campus
+        case "1899 Dining Hall":
+            name = "1899"
+        case "Cornerstone Coffeehouse":
+            name = "cornerstone"
+        case "Cougar's Den Café":
+            name = "den"
+        case "Cougar Walk Café":
+            name = "cafe"
+        case "Mexicali Grill":
+            name = "mexicali"
+        case "Paws 'N Go Convenience":
+            name = "pawsngo"
+            
+        // West campus
+        case "The Grill at Heritage":
+            name = "grill"
+        case "Hillside Grounds at Heritage":
+            name = "hillside"
+        case "The Market at Heritage":
+            name = "market"
+        case "Sam's Subs":
+            name = "sams"
+        case "Umai Sushi":
+            name = "umai"
+        default:
+            name = "error"
+        }
+        
+        DB_BASE.child("venue").child(name).observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            var firebaseViews = value?["menu"] as? Int ?? 0
+            firebaseViews += 1
+            DB_BASE.child("venue").child(name).child("menu").setValue(firebaseViews)
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,7 +103,7 @@ class InformationVC: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWeb
         // West campus
         case "The Grill at Heritage":
             nameOfRestaurant = "grill"
-        case "Hillside Ground at Heritage":
+        case "Hillside Grounds at Heritage":
             nameOfRestaurant = "hillside"
         case "The Market at Heritage":
             nameOfRestaurant = "market"

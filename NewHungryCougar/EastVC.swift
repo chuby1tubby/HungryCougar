@@ -7,40 +7,102 @@
 //
 
 import UIKit
+import Firebase
 
 class EastVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        DB_BASE.child("stats").observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            var firebaseCount = value?["east"] as? Int ?? 0
+            firebaseCount += 1
+            DB_BASE.child("stats").child("east").setValue(firebaseCount)
+        })
     }
     
     @IBAction func diningHallButtonPressed(_ sender: AnyObject) {
         restaurantChoice = "1899 Dining Hall"
+        
+        // Count number of views for the restaurant
+        DB_BASE.child("venue").child("1899").child("views").observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            var firebaseViews = value?["count"] as? Int ?? 0
+            firebaseViews += 1
+            DB_BASE.child("venue").child("1899").child("views").child("count").setValue(firebaseViews)
+        })
+        
         performSegue(withIdentifier: "restaurantSelected1", sender: nil)
     }
     
     @IBAction func cornerstoneButtonPressed(_ sender: AnyObject) {
         restaurantChoice = "Cornerstone Coffeehouse"
+        
+        // Count number of views for the restaurant
+        DB_BASE.child("venue").child("cornerstone").child("views").observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            var firebaseViews = value?["count"] as? Int ?? 0
+            firebaseViews += 1
+            DB_BASE.child("venue").child("cornerstone").child("views").child("count").setValue(firebaseViews)
+        })
+        
         performSegue(withIdentifier: "restaurantSelected1", sender: nil)
     }
     
     @IBAction func denButtonPressed(_ sender: AnyObject) {
         restaurantChoice = "Cougar's Den Café"
+        
+        // Count number of views for the restaurant
+        DB_BASE.child("venue").child("den").child("views").observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            var firebaseViews = value?["count"] as? Int ?? 0
+            firebaseViews += 1
+            DB_BASE.child("venue").child("den").child("views").child("count").setValue(firebaseViews)
+        })
+        
         performSegue(withIdentifier: "restaurantSelected1", sender: nil)
     }
     
     @IBAction func cougarButtonPressed(_ sender: AnyObject) {
         restaurantChoice = "Cougar Walk Café"
+        
+        // Count number of views for the restaurant
+        DB_BASE.child("venue").child("cafe").child("views").observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            var firebaseViews = value?["count"] as? Int ?? 0
+            firebaseViews += 1
+            DB_BASE.child("venue").child("cafe").child("views").child("count").setValue(firebaseViews)
+        })
+        
         performSegue(withIdentifier: "restaurantSelected1", sender: nil)
     }
     
     @IBAction func mexicaliButtonPressed(_ sender: AnyObject) {
         restaurantChoice = "Mexicali Grill"
+        
+        // Count number of views for the restaurant
+        DB_BASE.child("venue").child("mexicali").child("views").observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            var firebaseViews = value?["count"] as? Int ?? 0
+            firebaseViews += 1
+            DB_BASE.child("venue").child("mexicali").child("views").child("count").setValue(firebaseViews)
+        })
+        
         performSegue(withIdentifier: "restaurantSelected1", sender: nil)
     }
     
     @IBAction func pawsButtonPressed(_ sender: AnyObject) {
         restaurantChoice = "Paws 'N Go Convenience"
+        
+        // Count number of views for the restaurant
+        DB_BASE.child("venue").child("pawsngo").child("views").observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            var firebaseViews = value?["count"] as? Int ?? 0
+            firebaseViews += 1
+            DB_BASE.child("venue").child("pawsngo").child("views").child("count").setValue(firebaseViews)
+        })
+        
         performSegue(withIdentifier: "restaurantSelected1", sender: nil)
     }
 }

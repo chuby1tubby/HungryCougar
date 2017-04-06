@@ -14,6 +14,7 @@ class UserSettingsVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var versionNumberLbl: UILabel!
 
     override func viewWillAppear(_ animated: Bool) {
         usernameField.delegate = self
@@ -30,6 +31,22 @@ class UserSettingsVC: UIViewController, UITextFieldDelegate {
                 passwordField.text = passwordStr
             }
         }
+        
+        // Retreive current app version number
+        let nsObject: AnyObject? = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as AnyObject
+        if let version = nsObject as? String {
+            versionNumberLbl.text = "Version: \(version)"
+        } else {
+            versionNumberLbl.isHidden = true
+        }
+        
+        
+        DB_BASE.child("stats").observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            var firebaseCount = value?["settings"] as? Int ?? 0
+            firebaseCount += 1
+            DB_BASE.child("stats").child("settings").setValue(firebaseCount)
+        })
     }
     
     // Alert user that navigation away from Dining Services is denied
@@ -41,7 +58,11 @@ class UserSettingsVC: UIViewController, UITextFieldDelegate {
     
     func updateUserData() {
         let defaults = UserDefaults.standard
-        defaults.set(usernameField.text, forKey: "username")
+        var str = usernameField.text
+        if let dotRange = str?.range(of: "@") { // Scrub username input after the @ character
+            str?.removeSubrange(dotRange.lowerBound..<(str?.endIndex)!)
+        }
+        defaults.set(str, forKey: "username")
         defaults.set(passwordField.text, forKey: "password")
         defaults.set(true, forKey: "userSavedDetails")
         

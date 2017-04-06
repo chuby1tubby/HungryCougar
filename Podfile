@@ -10,6 +10,7 @@ target 'NewHungryCougar' do
   pod ‘Firebase/Core’
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'Locksmith'
 
   target 'NewHungryCougarTests' do
     inherit! :search_paths

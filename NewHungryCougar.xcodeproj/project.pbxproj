@@ -31,7 +31,6 @@
 		BFC1BB971E7E523A004450FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFA989091E7E47A400C42C4C /* GoogleService-Info.plist */; };
 		BFC1BB981E7E523B004450FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFA989091E7E47A400C42C4C /* GoogleService-Info.plist */; };
 		BFC1BB991E7E5241004450FD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFECDD461D4EE5B100E626D3 /* Info.plist */; };
-		BFCE9E0A1E23121D004D9B9B /* DiningPointsAnalysisVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE9E091E23121D004D9B9B /* DiningPointsAnalysisVC.swift */; };
 		BFE6F27D1E381C4C0083685B /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6F27C1E381C4C0083685B /* MyCell.swift */; };
 		BFE6F27F1E381C890083685B /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE6F27E1E381C890083685B /* MyCell.xib */; };
 		BFECDD3B1D4EE5B100E626D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFECDD3A1D4EE5B100E626D3 /* AppDelegate.swift */; };
@@ -88,7 +87,7 @@
 		BFA0D7591E85BA440068988B /* TermsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsVC.swift; sourceTree = "<group>"; };
 		BFA989091E7E47A400C42C4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BFBA146B1E37DE6200A00CF1 /* HarvestItal Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HarvestItal Regular.ttf"; sourceTree = "<group>"; };
-		BFCE9E091E23121D004D9B9B /* DiningPointsAnalysisVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningPointsAnalysisVC.swift; sourceTree = "<group>"; };
+		BFCEAE351E8AFA9E0062F712 /* NewHungryCougar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NewHungryCougar.entitlements; sourceTree = "<group>"; };
 		BFE6F27C1E381C4C0083685B /* MyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
 		BFE6F27E1E381C890083685B /* MyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
 		BFECDD371D4EE5B100E626D3 /* NewHungryCougar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewHungryCougar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,7 +146,6 @@
 				BF05BE431D59C65600AA3DF6 /* DiningPointsVC.swift */,
 				BF91ED4A1D7ABD40007B161E /* APUHomeVC.swift */,
 				BF3590091E34713800D5A5E7 /* UserSettingsVC.swift */,
-				BFCE9E091E23121D004D9B9B /* DiningPointsAnalysisVC.swift */,
 				BFA0D7591E85BA440068988B /* TermsVC.swift */,
 			);
 			name = Controller;
@@ -219,6 +217,7 @@
 		BFECDD391D4EE5B100E626D3 /* NewHungryCougar */ = {
 			isa = PBXGroup;
 			children = (
+				BFCEAE351E8AFA9E0062F712 /* NewHungryCougar.entitlements */,
 				BFC2FCA61E1FB385003A3149 /* Services */,
 				BFC2FCA71E1FB397003A3149 /* Util */,
 				BF21D3981D552A78001A38F2 /* Model */,
@@ -357,6 +356,9 @@
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
 							};
 							com.apple.SafariKeychain = {
 								enabled = 0;
@@ -588,7 +590,6 @@
 				BFA0D75A1E85BA440068988B /* TermsVC.swift in Sources */,
 				BF35900A1E34713800D5A5E7 /* UserSettingsVC.swift in Sources */,
 				BF91ED4F1D7ABD52007B161E /* DontCutMe.swift in Sources */,
-				BFCE9E0A1E23121D004D9B9B /* DiningPointsAnalysisVC.swift in Sources */,
 				BFECDD3B1D4EE5B100E626D3 /* AppDelegate.swift in Sources */,
 				BF35985B1D4EF79400AF28B3 /* Day.swift in Sources */,
 				BF21D39A1D552B4F001A38F2 /* EastVC.swift in Sources */,
@@ -749,6 +750,7 @@
 			baseConfigurationReference = A20BA227F806ECC39F8B95C5 /* Pods-NewHungryCougar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NewHungryCougar/NewHungryCougar.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7GDSF452LB;
@@ -760,7 +762,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -769,6 +771,7 @@
 			baseConfigurationReference = 1A14BCE60673E1C67F2540CC /* Pods-NewHungryCougar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NewHungryCougar/NewHungryCougar.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7GDSF452LB;
@@ -780,7 +783,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

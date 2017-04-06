@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import Firebase
 
 var usernameStr: String? = ""
 var passwordStr: String? = ""
@@ -29,11 +30,60 @@ class APUHomeVC: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWebView
     var timer: Timer!
     var timer2: Timer!
     var regexConverter: String = ""
+    var ref = FIRDatabase.database().reference()
     
     // Main functions
     override func viewDidLoad() {
         super.viewDidLoad()
         webView.delegate = self
+        
+        let prefs = UserDefaults.standard
+        if let plan = prefs.string(forKey: "userDiningPlanDefaults") {
+            switch plan {
+            case "No Worries":
+                // Count number of views for the button
+                DB_BASE.child("stats").child("mealplans").child("worries").observeSingleEvent(of: .value, with: { (snapshot) in
+                    let value = snapshot.value as? NSDictionary
+                    var firebaseCount = value?["refresh"] as? Int ?? 0
+                    firebaseCount += 1
+                    DB_BASE.child("stats").child("mealplans").child("worries").child("refresh").setValue(firebaseCount)
+                })
+            case "We've Got You Covered":
+                // Count number of views for the button
+                DB_BASE.child("stats").child("mealplans").child("covered").observeSingleEvent(of: .value, with: { (snapshot) in
+                    let value = snapshot.value as? NSDictionary
+                    var firebaseCount = value?["refresh"] as? Int ?? 0
+                    firebaseCount += 1
+                    DB_BASE.child("stats").child("mealplans").child("covered").child("refresh").setValue(firebaseCount)
+                })
+            case "Weekend Away":
+                // Count number of views for the button
+                DB_BASE.child("stats").child("mealplans").child("weekend").observeSingleEvent(of: .value, with: { (snapshot) in
+                    let value = snapshot.value as? NSDictionary
+                    var firebaseCount = value?["refresh"] as? Int ?? 0
+                    firebaseCount += 1
+                    DB_BASE.child("stats").child("mealplans").child("weekend").child("refresh").setValue(firebaseCount)
+                })
+            case "Forgot To Cook":
+                // Count number of views for the button
+                DB_BASE.child("stats").child("mealplans").child("forgot").observeSingleEvent(of: .value, with: { (snapshot) in
+                    let value = snapshot.value as? NSDictionary
+                    var firebaseCount = value?["refresh"] as? Int ?? 0
+                    firebaseCount += 1
+                    DB_BASE.child("stats").child("mealplans").child("forgot").child("refresh").setValue(firebaseCount)
+                })
+            case "Grab And Go":
+                // Count number of views for the button
+                DB_BASE.child("stats").child("mealplans").child("grab").observeSingleEvent(of: .value, with: { (snapshot) in
+                    let value = snapshot.value as? NSDictionary
+                    var firebaseCount = value?["refresh"] as? Int ?? 0
+                    firebaseCount += 1
+                    DB_BASE.child("stats").child("mealplans").child("grab").child("refresh").setValue(firebaseCount)
+                })
+            default:
+                break
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
