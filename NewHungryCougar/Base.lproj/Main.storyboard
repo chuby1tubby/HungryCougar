@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F43c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aYT-vv-QhX">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F54b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aYT-vv-QhX">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -25,23 +25,23 @@
                         <viewControllerLayoutGuide type="bottom" id="aD4-LC-AFc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XXd-Rs-Bxe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ED6-DO-6u5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aa7-Qd-59g" userLabel="White Rect">
-                                        <rect key="frame" x="0.0" y="60" width="375" height="100"/>
+                                        <rect key="frame" x="0.0" y="60" width="414" height="100"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="NkV-5j-V5O">
-                                                <rect key="frame" x="10" y="14" width="303" height="72"/>
+                                                <rect key="frame" x="10" y="14" width="342" height="72"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DlR-th-k02">
-                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dining Points:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FuU-fz-RND" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="146.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="166" height="30"/>
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="28"/>
                                                                 <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -53,7 +53,7 @@
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="SBF-FL-qBT" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                                                <rect key="frame" x="156.5" y="0.0" width="146.5" height="30"/>
+                                                                <rect key="frame" x="176" y="0.0" width="166" height="30"/>
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="30"/>
                                                                 <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -70,10 +70,10 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dqy-V0-eqH">
-                                                        <rect key="frame" x="0.0" y="42" width="303" height="30"/>
+                                                        <rect key="frame" x="0.0" y="42" width="342" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cougar Bucks:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H97-o1-0yR" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="146.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="166" height="30"/>
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="28"/>
                                                                 <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -85,7 +85,7 @@
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="Fkg-9w-1uS" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                                                <rect key="frame" x="156.5" y="0.0" width="146.5" height="30"/>
+                                                                <rect key="frame" x="176" y="0.0" width="166" height="30"/>
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="30"/>
                                                                 <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -104,7 +104,7 @@
                                                 </subviews>
                                             </stackView>
                                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Right_arrow_hungry_coug-1" translatesAutoresizingMaskIntoConstraints="NO" id="WKH-wg-e04">
-                                                <rect key="frame" x="325" y="30" width="40" height="40"/>
+                                                <rect key="frame" x="364" y="30" width="40" height="40"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="bZj-cs-qaI">
@@ -143,23 +143,23 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4P-MF-30M" userLabel="Grey Bar">
-                                        <rect key="frame" x="0.0" y="160" width="375" height="4"/>
+                                        <rect key="frame" x="0.0" y="160" width="414" height="4"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="4" id="M0d-Hm-99c"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zba-6i-l47">
-                                        <rect key="frame" x="0.0" y="230.5" width="375" height="246"/>
+                                        <rect key="frame" x="0.0" y="252.33333333333337" width="414" height="271.33333333333326"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Map_white" translatesAutoresizingMaskIntoConstraints="NO" id="Nk8-Ff-afX">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="246"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="271.33333333333326"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Nk8-Ff-afX" secondAttribute="height" multiplier="125:82" id="mIZ-gz-7Hc"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAi-II-7Kg">
-                                                <rect key="frame" x="20" y="0.0" width="180" height="80"/>
+                                                <rect key="frame" x="20" y="0.0" width="180" height="79.999999999999972"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="MMs-0K-aI0">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="160"/>
@@ -173,7 +173,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRP-Mx-rYm">
-                                                <rect key="frame" x="215" y="152" width="160" height="80"/>
+                                                <rect key="frame" x="254" y="177.33333333333334" width="160" height="80.000000000000028"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="RsP-Mn-yVa">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="150"/>
@@ -204,7 +204,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms of Service" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="D3A-ns-Nnd" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                        <rect key="frame" x="96" y="577" width="182" height="40"/>
+                                        <rect key="frame" x="115.66666666666669" y="646" width="182" height="40"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="aA5-tg-yjj">
@@ -288,14 +288,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDV-st-NNq">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jY5-cB-yZV">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="76" id="PFu-da-pQL"/>
@@ -328,7 +328,7 @@
                                         </variation>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ept-U9-Ono" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                        <rect key="frame" x="262" y="595" width="83" height="42"/>
+                                        <rect key="frame" x="301" y="664" width="83" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="83" id="Jxy-XV-sko">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="150"/>
@@ -350,7 +350,7 @@ Menu</string>
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUb-su-Det">
-                                        <rect key="frame" x="231" y="592" width="126" height="50"/>
+                                        <rect key="frame" x="270" y="661" width="126" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="6qO-n5-U41">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="85"/>
@@ -365,13 +365,13 @@ Menu</string>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9n4-kF-t4o" userLabel="viewToMove">
-                                        <rect key="frame" x="0.0" y="208" width="375" height="250"/>
+                                        <rect key="frame" x="0.0" y="242.66666666666669" width="414" height="250.00000000000006"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3UD-x8-G89">
-                                                <rect key="frame" x="45" y="65" width="285" height="121"/>
+                                                <rect key="frame" x="64.666666666666686" y="65.000000000000028" width="285" height="121"/>
                                                 <subviews>
                                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLOSED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojc-Un-ovC">
-                                                        <rect key="frame" x="9.5" y="0.0" width="266" height="71"/>
+                                                        <rect key="frame" x="9.6666666666666572" y="0.0" width="265.66666666666674" height="71"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="97" id="TW0-ST-AeX"/>
@@ -397,7 +397,7 @@ Menu</string>
                                                         </connections>
                                                     </label>
                                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours are unavailable" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vu1-9q-xnw">
-                                                        <rect key="frame" x="47.5" y="71" width="190" height="50"/>
+                                                        <rect key="frame" x="47.666666666666657" y="71" width="189.66666666666669" height="50"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="2K0-Ob-MMR"/>
@@ -426,7 +426,7 @@ Menu</string>
                                                 </constraints>
                                             </stackView>
                                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-down" translatesAutoresizingMaskIntoConstraints="NO" id="9WB-f7-IHV">
-                                                <rect key="frame" x="290" y="149" width="24" height="24"/>
+                                                <rect key="frame" x="309.33333333333331" y="149.00000000000003" width="24" height="24"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="24" id="Q9Y-8D-eQE">
@@ -547,22 +547,22 @@ Menu</string>
                         <viewControllerLayoutGuide type="bottom" id="JuP-Au-9Zg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rn2-vj-Uwt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAl-IA-0Eb">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                                 <color key="backgroundColor" red="0.58888870477676392" green="0.15054461359977722" blue="0.13530883193016052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="p7R-qC-h0Q"/>
                                 </constraints>
                             </view>
                             <webView contentMode="scaleToFill" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8g6-7X-MQ8">
-                                <rect key="frame" x="0.0" y="66" width="375" height="601"/>
+                                <rect key="frame" x="0.0" y="66" width="414" height="670"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yjV-uO-bFq">
-                                <rect key="frame" x="0.0" y="64" width="375" height="2"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="2"/>
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
@@ -601,11 +601,11 @@ Menu</string>
                         <viewControllerLayoutGuide type="bottom" id="VmP-7p-Tfw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Hat-BV-rf1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xn4-Vp-Rq3">
-                                <rect key="frame" x="16" y="78" width="343" height="509"/>
+                                <rect key="frame" x="20" y="78" width="374" height="578"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">This End User License Agreement (“Agreement”) is between you and Hungry Coug and governs use of this app made available through the Apple App Store. By installing the Hungry Coug App, you agree to be bound by this Agreement and understand that there is no tolerance for objectionable content. If you do not agree with the terms and conditions of this Agreement, you are not entitled to use the Hungry Coug App.
 
@@ -640,7 +640,7 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                 </variation>
                             </textView>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dismiss" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="rG0-Zt-bds" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                <rect key="frame" x="96.5" y="607" width="182" height="40"/>
+                                <rect key="frame" x="116" y="676" width="182" height="40"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="8JR-bc-eJ9">
@@ -664,7 +664,7 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                 </connections>
                             </label>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms of Service" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="6Il-eL-lvh" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                <rect key="frame" x="96.5" y="30" width="182" height="40"/>
+                                <rect key="frame" x="116" y="30" width="182" height="40"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="675-2X-yso">
@@ -728,14 +728,14 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                         <viewControllerLayoutGuide type="bottom" id="xRM-tP-B3d"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uMD-V8-z0P">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mcw-QY-ZdD" customClass="UIControl">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We've Got You Covered" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="29" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WHX-RX-sIg">
-                                        <rect key="frame" x="8" y="120" width="344" height="58"/>
+                                        <rect key="frame" x="35" y="120" width="344" height="58"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="344" id="B0t-l4-i3C"/>
@@ -768,7 +768,7 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                         </connections>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zet-Hh-fSs">
-                                        <rect key="frame" x="332" y="72" width="35" height="35"/>
+                                        <rect key="frame" x="371" y="72" width="35" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="4qd-ef-3IX">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="55"/>
@@ -786,16 +786,16 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TLP-76-JKj">
-                                        <rect key="frame" x="8" y="278.5" width="359" height="250"/>
+                                        <rect key="frame" x="8" y="313.33333333333337" width="398" height="250.00000000000011"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MIV-Xz-5hs" customClass="CustomView" customModule="NewHungryCougar" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="359" height="70"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="70"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dbH-ku-6ET">
-                                                        <rect key="frame" x="8" y="15.5" width="343" height="40"/>
+                                                        <rect key="frame" x="8" y="15.333333333333371" width="382" height="40"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Expected Dining Points:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="8xD-xO-ok1" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="222" height="40"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expected Dining Points:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="8xD-xO-ok1" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="261" height="40"/>
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="22"/>
                                                                 <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -806,13 +806,24 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                                     <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="30"/>
                                                                 </variation>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1068.50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="2au-c1-jMq" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                                                <rect key="frame" x="232" y="0.0" width="111" height="40"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1068.50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="2au-c1-jMq" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
+                                                                <rect key="frame" x="271" y="0.0" width="111" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="111" id="Xwv-m9-lSM"/>
+                                                                </constraints>
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="32"/>
                                                                 <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="default">
+                                                                    <mask key="constraints">
+                                                                        <exclude reference="Xwv-m9-lSM"/>
+                                                                    </mask>
+                                                                </variation>
                                                                 <variation key="widthClass=compact">
                                                                     <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="32"/>
+                                                                    <mask key="constraints">
+                                                                        <include reference="Xwv-m9-lSM"/>
+                                                                    </mask>
                                                                 </variation>
                                                                 <variation key="widthClass=regular">
                                                                     <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="48"/>
@@ -840,10 +851,10 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jsm-Xs-5Qj" customClass="CustomView" customModule="NewHungryCougar" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="90" width="359" height="71"/>
+                                                <rect key="frame" x="0.0" y="90" width="398" height="71"/>
                                                 <subviews>
                                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click to load dining points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1J-EW-Ozl" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                                        <rect key="frame" x="8" y="0.0" width="343" height="71"/>
+                                                        <rect key="frame" x="8" y="0.0" width="382" height="71"/>
                                                         <gestureRecognizers/>
                                                         <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="25"/>
                                                         <color key="textColor" red="0.5888887048" green="0.15054461359999999" blue="0.13530883190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -871,13 +882,13 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3t-a3-86V" customClass="CustomView" customModule="NewHungryCougar" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="90" width="359" height="100"/>
+                                                <rect key="frame" x="0.0" y="90" width="398" height="100"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="19k-Fz-lzF">
-                                                        <rect key="frame" x="8" y="8" width="343" height="40"/>
+                                                        <rect key="frame" x="8" y="8" width="382" height="40"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Dining Points:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Jpl-fm-mfl" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="218" height="40"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="257" height="40"/>
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="22"/>
                                                                 <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -889,7 +900,7 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="dUy-li-Qn6" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                                                <rect key="frame" x="228" y="0.0" width="115" height="40"/>
+                                                                <rect key="frame" x="267" y="0.0" width="115" height="40"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="115" id="De2-8H-jdN"/>
                                                                 </constraints>
@@ -915,10 +926,10 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7CM-pH-cnW">
-                                                        <rect key="frame" x="8" y="52" width="343" height="40"/>
+                                                        <rect key="frame" x="8" y="52" width="382" height="40"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Cougar Bucks:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="YNc-R0-M1H" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="218" height="40"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="257" height="40"/>
                                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="22"/>
                                                                 <color key="textColor" red="0.60058677199999999" green="0.17196440700000001" blue="0.17363679409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -930,7 +941,7 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="AcD-LQ-9sR" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                                                <rect key="frame" x="228" y="0.0" width="115" height="40"/>
+                                                                <rect key="frame" x="267" y="0.0" width="115" height="40"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="115" id="beT-8h-srj"/>
                                                                 </constraints>
@@ -982,7 +993,7 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Mz-Jb-HCd">
-                                                <rect key="frame" x="139" y="210" width="80" height="30"/>
+                                                <rect key="frame" x="158.66666666666666" y="210.00000000000006" width="80" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="lQJ-FG-qDv">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="120"/>
@@ -1027,7 +1038,7 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                         </constraints>
                                     </view>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(tap to select a dining plan)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRT-Np-FWW">
-                                        <rect key="frame" x="89" y="178" width="196" height="16"/>
+                                        <rect key="frame" x="108.66666666666669" y="178" width="196" height="16"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="2DL-j2-GXk">
@@ -1059,8 +1070,6 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                     <constraint firstAttribute="trailing" secondItem="TLP-76-JKj" secondAttribute="trailing" constant="8" id="GVb-p0-WDL">
                                         <variation key="heightClass=regular-widthClass=regular" constant="25"/>
                                     </constraint>
-                                    <constraint firstItem="WHX-RX-sIg" firstAttribute="leading" secondItem="mcw-QY-ZdD" secondAttribute="leadingMargin" id="Kle-NQ-6v3"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="WHX-RX-sIg" secondAttribute="trailing" id="R52-Ph-2pU"/>
                                     <constraint firstItem="WHX-RX-sIg" firstAttribute="centerX" secondItem="mcw-QY-ZdD" secondAttribute="centerX" id="Tdn-64-C2f"/>
                                     <constraint firstItem="FRT-Np-FWW" firstAttribute="top" secondItem="WHX-RX-sIg" secondAttribute="bottom" id="VLf-hM-y4h"/>
                                     <constraint firstItem="FRT-Np-FWW" firstAttribute="centerX" secondItem="mcw-QY-ZdD" secondAttribute="centerX" id="fcK-vC-D1S"/>
@@ -1076,12 +1085,6 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                         <variation key="heightClass=regular-widthClass=regular" constant="25"/>
                                     </constraint>
                                 </constraints>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="constraints">
-                                        <exclude reference="Kle-NQ-6v3"/>
-                                        <exclude reference="R52-Ph-2pU"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1142,10 +1145,10 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hkq-ft-LF8" userLabel="Content View" customClass="UIControl">
-                                        <rect key="frame" x="-0.5" y="0.0" width="375" height="700"/>
+                                        <rect key="frame" x="-0.66666666666665719" y="0.0" width="375.33333333333337" height="700"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bga-Ol-Oqt">
-                                                <rect key="frame" x="8" y="15" width="143.5" height="20"/>
+                                                <rect key="frame" x="8.3333333333333286" y="15" width="143.33333333333337" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="1oQ-s6-5or"/>
                                                 </constraints>
@@ -1154,20 +1157,20 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HEf-Jr-fH6">
-                                                <rect key="frame" x="0.0" y="43" width="375" height="42"/>
+                                                <rect key="frame" x="0.0" y="43" width="375.33333333333337" height="42"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URW-EH-ebK" userLabel="line1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375.33333333333337" height="1"/>
                                                         <color key="backgroundColor" red="0.54117647059999996" green="0.55294117649999996" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="m8V-gj-Ofa"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Im3-Yx-iTF">
-                                                        <rect key="frame" x="0.0" y="1" width="375" height="40"/>
+                                                        <rect key="frame" x="0.0" y="1" width="375.33333333333337" height="40"/>
                                                         <subviews>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="APU NetID (do not include @apu.edu)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HYg-CD-Gd9">
-                                                                <rect key="frame" x="8" y="0.0" width="359" height="40"/>
+                                                                <rect key="frame" x="8.3333333333333428" y="0.0" width="359" height="40"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                                             </textField>
@@ -1183,7 +1186,7 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Hd-GF-WGO" userLabel="line2">
-                                                        <rect key="frame" x="0.0" y="41" width="375" height="1"/>
+                                                        <rect key="frame" x="0.0" y="41" width="375.33333333333337" height="1"/>
                                                         <color key="backgroundColor" red="0.54117647059999996" green="0.55294117649999996" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="q9K-TP-blg"/>
@@ -1195,20 +1198,20 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Ah-ww-fRx">
-                                                <rect key="frame" x="0.0" y="84" width="375" height="42"/>
+                                                <rect key="frame" x="0.0" y="84" width="375.33333333333337" height="42"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdf-Cc-eug" userLabel="line1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375.33333333333337" height="1"/>
                                                         <color key="backgroundColor" red="0.54117647059999996" green="0.55294117649999996" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="Iwv-6J-iDb"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OdX-tf-Wor">
-                                                        <rect key="frame" x="0.0" y="1" width="375" height="40"/>
+                                                        <rect key="frame" x="0.0" y="1" width="375.33333333333337" height="40"/>
                                                         <subviews>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nD8-Wf-Q9H">
-                                                                <rect key="frame" x="8" y="0.0" width="359" height="40"/>
+                                                                <rect key="frame" x="8.3333333333333428" y="0.0" width="359" height="40"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
@@ -1225,7 +1228,7 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEh-w3-Naw" userLabel="line2">
-                                                        <rect key="frame" x="0.0" y="41" width="375" height="1"/>
+                                                        <rect key="frame" x="0.0" y="41" width="375.33333333333337" height="1"/>
                                                         <color key="backgroundColor" red="0.54117647059999996" green="0.55294117649999996" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="57m-T1-xLB"/>
@@ -1237,7 +1240,7 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izy-Yf-dBW">
-                                                <rect key="frame" x="8" y="134" width="72" height="30"/>
+                                                <rect key="frame" x="8.3333333333333357" y="134" width="72" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="72" id="J6E-cc-85c"/>
                                                     <constraint firstAttribute="height" constant="30" id="n2Y-rO-OPt"/>
@@ -1251,7 +1254,7 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developer Contact Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQN-wm-Nyf">
-                                                <rect key="frame" x="8" y="204" width="250" height="20"/>
+                                                <rect key="frame" x="8.3333333333333286" y="204" width="250.00000000000006" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="MNj-wZ-JSe"/>
                                                     <constraint firstAttribute="height" constant="20" id="sTu-7d-AHL"/>
@@ -1261,7 +1264,7 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jMe-WQ-YeX">
-                                                <rect key="frame" x="8" y="232" width="188" height="45"/>
+                                                <rect key="frame" x="8.3333333333333286" y="232" width="188" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kyle Nakamura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tS-Gh-cGZ">
                                                         <rect key="frame" x="0.0" y="0.0" width="188" height="20"/>
@@ -1290,7 +1293,7 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQA-yT-Yge">
-                                                <rect key="frame" x="8" y="337" width="359" height="142.5"/>
+                                                <rect key="frame" x="8.3333333333333428" y="337" width="359" height="142.33333333333331"/>
                                                 <string key="text">Thanks for checking out Hungry Coug!
 
 Please send me a quick email if you notice any errors with restaurant hours or any other problems, or just to let me know what you think about the app. Positive or negative feedback is always welcome!</string>
@@ -1299,7 +1302,7 @@ Please send me a quick email if you notice any errors with restaurant hours or a
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version: 0.0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEe-a9-3ne">
-                                                <rect key="frame" x="58.5" y="609.5" width="250" height="20"/>
+                                                <rect key="frame" x="58.666666666666657" y="609.33333333333337" width="249.99999999999997" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="cQD-A4-9rm"/>
                                                     <constraint firstAttribute="height" constant="20" id="xSO-sq-FUy"/>
@@ -1389,23 +1392,23 @@ Please send me a quick email if you notice any errors with restaurant hours or a
                         <viewControllerLayoutGuide type="bottom" id="qb7-lR-u8d"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="x8A-Ga-kjb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAY-Re-vGh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="mW8-fc-aUc"/>
                                 </constraints>
                             </view>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FWB-Gi-4jx">
-                                <rect key="frame" x="0.0" y="22" width="375" height="645"/>
+                                <rect key="frame" x="0.0" y="22" width="414" height="714"/>
                                 <color key="backgroundColor" red="0.78114880180000001" green="0.78114880180000001" blue="0.78114880180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="geB-hg-5dH">
-                                <rect key="frame" x="0.0" y="20" width="375" height="2"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="2"/>
                                 <color key="backgroundColor" red="0.95294117647058818" green="0.78431372549019607" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.58823529409999997" green="0.14901960780000001" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
@@ -1443,26 +1446,26 @@ Please send me a quick email if you notice any errors with restaurant hours or a
                         <viewControllerLayoutGuide type="bottom" id="CNb-6g-Xe1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GCE-9l-gTB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swx-Ps-VMF" userLabel="LEFT">
-                                <rect key="frame" x="0.0" y="60" width="187.5" height="607"/>
+                                <rect key="frame" x="0.0" y="60" width="207" height="676"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="zQK-fc-s9Y">
-                                        <rect key="frame" x="29.5" y="35" width="150" height="537"/>
+                                        <rect key="frame" x="38.666666666666657" y="35" width="150" height="606"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cQ2-pI-rZe">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="152.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="175.33333333333331"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UXe-ru-TbA">
-                                                        <rect key="frame" x="24" y="0.0" width="102" height="102.5"/>
+                                                        <rect key="frame" x="12.666666666666671" y="0.0" width="125.00000000000001" height="125.33333333333334"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Grill-transparent" translatesAutoresizingMaskIntoConstraints="NO" id="OYH-zo-cEa">
-                                                                <rect key="frame" x="0.0" y="0.0" width="102" height="102.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="125" height="125.33333333333334"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oty-Fu-v7o">
-                                                                <rect key="frame" x="0.0" y="0.0" width="102" height="102.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="125" height="125.33333333333334"/>
                                                                 <connections>
                                                                     <action selector="grillButtonPressed:" destination="Bn5-0n-IEe" eventType="touchUpInside" id="ic8-Vu-0zF"/>
                                                                 </connections>
@@ -1482,7 +1485,7 @@ Please send me a quick email if you notice any errors with restaurant hours or a
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agO-QE-b70">
-                                                        <rect key="frame" x="25" y="107.5" width="100" height="45"/>
+                                                        <rect key="frame" x="25" y="130.33333333333331" width="100" height="44.999999999999972"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="Mod-Ff-T8N">
                                                                 <variation key="heightClass=regular-widthClass=regular" constant="52"/>
@@ -1506,16 +1509,16 @@ at Heritage</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pJo-rZ-7yk">
-                                                <rect key="frame" x="0.0" y="192.5" width="150" height="152"/>
+                                                <rect key="frame" x="0.0" y="215.33333333333331" width="150" height="175.33333333333337"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1lp-PA-pkC">
-                                                        <rect key="frame" x="24" y="0.0" width="102" height="102"/>
+                                                        <rect key="frame" x="12.333333333333329" y="0.0" width="125.33333333333336" height="125.33333333333337"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="The-Market-transparent-2" translatesAutoresizingMaskIntoConstraints="NO" id="Pex-oe-3gw">
-                                                                <rect key="frame" x="0.0" y="0.0" width="102" height="102"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="125.33333333333334" height="125.33333333333337"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUb-ug-hd7">
-                                                                <rect key="frame" x="0.0" y="0.0" width="102" height="102"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="125.33333333333334" height="125.33333333333337"/>
                                                                 <connections>
                                                                     <action selector="marketButtonPressed:" destination="Bn5-0n-IEe" eventType="touchUpInside" id="RZK-7U-bfT"/>
                                                                 </connections>
@@ -1534,7 +1537,7 @@ at Heritage</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ul-oU-bAi">
-                                                        <rect key="frame" x="25" y="107" width="100" height="45"/>
+                                                        <rect key="frame" x="25" y="130.33333333333337" width="100" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="CZU-fR-e7g">
                                                                 <variation key="heightClass=regular-widthClass=regular" constant="52"/>
@@ -1558,16 +1561,16 @@ at Heritage</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rEm-ud-9aR">
-                                                <rect key="frame" x="0.0" y="384.5" width="150" height="152.5"/>
+                                                <rect key="frame" x="0.0" y="430.66666666666657" width="150" height="175.33333333333343"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGB-Rt-Mza">
-                                                        <rect key="frame" x="23.5" y="0.0" width="103" height="102.5"/>
+                                                        <rect key="frame" x="12.333333333333329" y="0.0" width="125.66666666666667" height="125.33333333333337"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Umai-Sushi-transparent-2" translatesAutoresizingMaskIntoConstraints="NO" id="tTd-IG-Y7X">
-                                                                <rect key="frame" x="0.0" y="0.0" width="103" height="102.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="125.66666666666666" height="125.33333333333337"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYT-WP-Gni">
-                                                                <rect key="frame" x="0.0" y="0.0" width="103" height="102.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="125.66666666666666" height="125.33333333333337"/>
                                                                 <connections>
                                                                     <action selector="umaiButtonPressed:" destination="Bn5-0n-IEe" eventType="touchUpInside" id="Msi-kB-3a4"/>
                                                                 </connections>
@@ -1586,7 +1589,7 @@ at Heritage</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWB-0p-qnE">
-                                                        <rect key="frame" x="25" y="107.5" width="100" height="45"/>
+                                                        <rect key="frame" x="25" y="130.33333333333337" width="100" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="Znb-c3-53R">
                                                                 <variation key="heightClass=regular-widthClass=regular" constant="52"/>
@@ -1628,22 +1631,22 @@ Sushi</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPM-Ac-I9v" userLabel="RIGHT">
-                                <rect key="frame" x="187.5" y="60" width="187.5" height="607"/>
+                                <rect key="frame" x="207" y="60" width="207" height="676"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Ppc-pf-rmb">
-                                        <rect key="frame" x="9.5" y="35" width="150" height="537"/>
+                                        <rect key="frame" x="18.666666666666657" y="35" width="150.00000000000003" height="606"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="V0g-RO-fFA">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="152.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="150.00000000000003" height="175.33333333333331"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ih0-gO-xCu">
-                                                        <rect key="frame" x="24" y="0.0" width="102" height="102.5"/>
+                                                        <rect key="frame" x="12.666666666666686" y="0.0" width="124.99999999999997" height="125.33333333333334"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HillsideGrounds-Transparent" translatesAutoresizingMaskIntoConstraints="NO" id="Bfa-Zo-xed">
-                                                                <rect key="frame" x="0.0" y="0.0" width="102" height="102.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="124.99999999999997" height="125.33333333333334"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V26-EY-JKj">
-                                                                <rect key="frame" x="0.0" y="0.0" width="102" height="102.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="124.99999999999997" height="125.33333333333334"/>
                                                                 <connections>
                                                                     <action selector="hillsideButtonPressed:" destination="Bn5-0n-IEe" eventType="touchUpInside" id="EH3-Zo-v62"/>
                                                                 </connections>
@@ -1663,7 +1666,7 @@ Sushi</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ac-iH-zfJ">
-                                                        <rect key="frame" x="25" y="107.5" width="100" height="45"/>
+                                                        <rect key="frame" x="25" y="130.33333333333331" width="100.00000000000003" height="44.999999999999972"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="100" id="O8A-GU-Prl">
                                                                 <variation key="heightClass=regular-widthClass=regular" constant="140"/>
@@ -1687,16 +1690,16 @@ at Heritage</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aGV-MR-syC">
-                                                <rect key="frame" x="0.0" y="192.5" width="150" height="152"/>
+                                                <rect key="frame" x="0.0" y="215.33333333333331" width="150.00000000000003" height="175.33333333333337"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qx-4P-yqD">
-                                                        <rect key="frame" x="23.5" y="0.0" width="103" height="102"/>
+                                                        <rect key="frame" x="12" y="0.0" width="126.33333333333334" height="125.33333333333337"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sams-Subs-transparent-3" translatesAutoresizingMaskIntoConstraints="NO" id="B7o-ZN-ixA">
-                                                                <rect key="frame" x="0.0" y="0.0" width="103" height="102"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="126.33333333333334" height="125.33333333333337"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bo0-Na-HZx">
-                                                                <rect key="frame" x="0.0" y="0.0" width="103" height="102"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="126.33333333333334" height="125.33333333333337"/>
                                                                 <connections>
                                                                     <action selector="subsButtonPressed:" destination="Bn5-0n-IEe" eventType="touchUpInside" id="kl7-W6-fHZ"/>
                                                                 </connections>
@@ -1715,7 +1718,7 @@ at Heritage</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHm-fe-rxf">
-                                                        <rect key="frame" x="25" y="107" width="100" height="45"/>
+                                                        <rect key="frame" x="25" y="130.33333333333337" width="100.00000000000003" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="H7N-3T-O6h">
                                                                 <variation key="heightClass=regular-widthClass=regular" constant="52"/>
@@ -1739,10 +1742,10 @@ Subs</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ph3-OP-s4m">
-                                                <rect key="frame" x="0.0" y="384.5" width="150" height="152.5"/>
+                                                <rect key="frame" x="0.0" y="430.66666666666657" width="150.00000000000003" height="175.33333333333343"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVj-XA-f1i">
-                                                        <rect key="frame" x="35" y="0.0" width="80" height="130.5"/>
+                                                        <rect key="frame" x="35.000000000000028" y="0.0" width="80" height="153.33333333333337"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="80" id="8cJ-gY-hPy"/>
@@ -1750,7 +1753,7 @@ Subs</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eO-JP-Ksz">
-                                                        <rect key="frame" x="37.5" y="135.5" width="75" height="17"/>
+                                                        <rect key="frame" x="37.666666666666657" y="158.33333333333337" width="75" height="17"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="17" id="Exk-Vy-pE2">
                                                                 <variation key="heightClass=regular-widthClass=regular" constant="52"/>
@@ -1813,29 +1816,29 @@ Subs</string>
                         <viewControllerLayoutGuide type="bottom" id="fOc-zZ-41e"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ahr-VJ-MPq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rh0-tf-fVg">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FnD-kq-uei" userLabel="LEFT">
-                                        <rect key="frame" x="0.0" y="60" width="188" height="607"/>
+                                        <rect key="frame" x="0.0" y="60" width="207.66666666666666" height="676"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="QMW-Nr-MdC">
-                                                <rect key="frame" x="29.5" y="35" width="150" height="537"/>
+                                                <rect key="frame" x="38.666666666666657" y="35" width="150" height="606"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IFu-Qk-aSw">
-                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="152.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="175.33333333333331"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTy-AV-BoI">
-                                                                <rect key="frame" x="24" y="0.0" width="102" height="102.5"/>
+                                                                <rect key="frame" x="12.333333333333329" y="0.0" width="125.33333333333336" height="125.33333333333334"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiningHall-transparent-2" translatesAutoresizingMaskIntoConstraints="NO" id="Jqe-RZ-2cM">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="102" height="102.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="125.33333333333334" height="125.33333333333334"/>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7t3-Jp-k6K">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="102" height="102.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="125.33333333333334" height="125.33333333333334"/>
                                                                         <connections>
                                                                             <action selector="diningHallButtonPressed:" destination="IC1-M4-iXJ" eventType="touchUpInside" id="Arp-iL-ZxJ"/>
                                                                         </connections>
@@ -1854,7 +1857,7 @@ Subs</string>
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Lb-fE-poO">
-                                                                <rect key="frame" x="25" y="107.5" width="100" height="45"/>
+                                                                <rect key="frame" x="25" y="130.33333333333331" width="100" height="44.999999999999972"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="100" id="eO8-Fm-zla">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="130"/>
@@ -1878,16 +1881,16 @@ Dining Hall</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="y9p-4x-VWa">
-                                                        <rect key="frame" x="0.0" y="192.5" width="150" height="152"/>
+                                                        <rect key="frame" x="0.0" y="215.33333333333331" width="150" height="175.33333333333337"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thQ-Kk-cfF">
-                                                                <rect key="frame" x="24" y="0.0" width="102" height="102"/>
+                                                                <rect key="frame" x="12.333333333333329" y="0.0" width="125.66666666666667" height="125.33333333333337"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CougarsDen-transparent-2" translatesAutoresizingMaskIntoConstraints="NO" id="DIx-2v-hGA">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="102" height="102"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="125.66666666666666" height="125.33333333333337"/>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZX-Cl-tmi">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="102" height="102"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="125.66666666666666" height="125.33333333333337"/>
                                                                         <connections>
                                                                             <action selector="denButtonPressed:" destination="IC1-M4-iXJ" eventType="touchUpInside" id="Oph-RZ-9vx"/>
                                                                         </connections>
@@ -1906,7 +1909,7 @@ Dining Hall</string>
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFU-ce-ghj">
-                                                                <rect key="frame" x="25" y="107" width="100" height="45"/>
+                                                                <rect key="frame" x="25" y="130.33333333333337" width="100" height="45"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="100" id="mRV-KA-GSz">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="130"/>
@@ -1930,16 +1933,16 @@ Café</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gAf-FM-y0M">
-                                                        <rect key="frame" x="0.0" y="384.5" width="150" height="152.5"/>
+                                                        <rect key="frame" x="0.0" y="430.66666666666657" width="150" height="175.33333333333343"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZz-uE-zYz">
-                                                                <rect key="frame" x="24" y="0.0" width="102" height="102.5"/>
+                                                                <rect key="frame" x="12.333333333333329" y="0.0" width="125.33333333333336" height="125.33333333333337"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mexicali-Grill-transparent-2" translatesAutoresizingMaskIntoConstraints="NO" id="lws-P8-xEp">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="102" height="102.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="125.33333333333334" height="125.33333333333337"/>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ek-Ji-uNr">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="102" height="102.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="125.33333333333334" height="125.33333333333337"/>
                                                                         <connections>
                                                                             <action selector="mexicaliButtonPressed:" destination="IC1-M4-iXJ" eventType="touchUpInside" id="P1R-U5-clL"/>
                                                                         </connections>
@@ -1958,7 +1961,7 @@ Café</string>
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6G-y6-AcA">
-                                                                <rect key="frame" x="25" y="107.5" width="100" height="45"/>
+                                                                <rect key="frame" x="25" y="130.33333333333337" width="100" height="45"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="GV6-oA-Z2w">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="52"/>
@@ -2002,22 +2005,22 @@ Grill</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DHA-k0-7Dp" userLabel="RIGHT">
-                                        <rect key="frame" x="188" y="60" width="187" height="607"/>
+                                        <rect key="frame" x="207.66666666666663" y="60" width="206.33333333333337" height="676"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="pEW-si-ATN">
-                                                <rect key="frame" x="9" y="35" width="150" height="537"/>
+                                                <rect key="frame" x="18" y="35" width="150.00000000000003" height="606"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1Da-ui-v6m">
-                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="152.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="150.00000000000003" height="175.33333333333331"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nd1-iD-sEv">
-                                                                <rect key="frame" x="24" y="0.0" width="102" height="102.5"/>
+                                                                <rect key="frame" x="12.333333333333343" y="0.0" width="125.33333333333331" height="125.33333333333334"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CornerstoneCoffeehouse-transparent-2" translatesAutoresizingMaskIntoConstraints="NO" id="lLP-Yz-8m6">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="102" height="102.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="125.33333333333331" height="125.33333333333334"/>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FV-Ah-QbL">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="102" height="102.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="125.33333333333331" height="125.33333333333334"/>
                                                                         <connections>
                                                                             <action selector="cornerstoneButtonPressed:" destination="IC1-M4-iXJ" eventType="touchUpInside" id="bTR-OY-LED"/>
                                                                         </connections>
@@ -2036,7 +2039,7 @@ Grill</string>
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RM7-9o-y7x">
-                                                                <rect key="frame" x="25" y="107.5" width="100" height="45"/>
+                                                                <rect key="frame" x="25" y="130.33333333333331" width="100.00000000000003" height="44.999999999999972"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="UM2-Vk-E2o">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="52"/>
@@ -2060,16 +2063,16 @@ Coffeehouse</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Sh0-lF-gve">
-                                                        <rect key="frame" x="0.0" y="192.5" width="150" height="152"/>
+                                                        <rect key="frame" x="0.0" y="215.33333333333331" width="150.00000000000003" height="175.33333333333337"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atv-zT-DMq">
-                                                                <rect key="frame" x="24" y="0.0" width="102" height="102"/>
+                                                                <rect key="frame" x="12.333333333333343" y="0.0" width="125.66666666666669" height="125.33333333333337"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CougarWalkGrill-transparent-2" translatesAutoresizingMaskIntoConstraints="NO" id="Cu4-lf-864">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="102" height="102"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="125.66666666666669" height="125.33333333333337"/>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfV-yo-1Kw">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="102" height="102"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="125.66666666666669" height="125.33333333333337"/>
                                                                         <connections>
                                                                             <action selector="cougarButtonPressed:" destination="IC1-M4-iXJ" eventType="touchUpInside" id="J4L-5E-6VY"/>
                                                                         </connections>
@@ -2088,7 +2091,7 @@ Coffeehouse</string>
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfF-Vk-40m">
-                                                                <rect key="frame" x="25" y="107" width="100" height="45"/>
+                                                                <rect key="frame" x="25" y="130.33333333333337" width="100.00000000000003" height="45"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="100" id="CT6-HL-UOz">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="130"/>
@@ -2112,16 +2115,16 @@ Café</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1wT-Vc-zdc">
-                                                        <rect key="frame" x="0.0" y="384.5" width="150" height="152.5"/>
+                                                        <rect key="frame" x="0.0" y="430.66666666666657" width="150.00000000000003" height="175.33333333333343"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBS-TC-9gX">
-                                                                <rect key="frame" x="24" y="0.0" width="102" height="102.5"/>
+                                                                <rect key="frame" x="12.333333333333343" y="0.0" width="125.33333333333331" height="125.33333333333337"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Paws-N-Go-transparent-2" translatesAutoresizingMaskIntoConstraints="NO" id="eUk-Io-vEM">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="102" height="102.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="125.33333333333331" height="125.33333333333337"/>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCi-V8-O16">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="102" height="102.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="125.33333333333331" height="125.33333333333337"/>
                                                                         <connections>
                                                                             <action selector="pawsButtonPressed:" destination="IC1-M4-iXJ" eventType="touchUpInside" id="bqo-BY-gyj"/>
                                                                         </connections>
@@ -2140,7 +2143,7 @@ Café</string>
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLr-uM-ehu">
-                                                                <rect key="frame" x="25" y="107.5" width="100" height="45"/>
+                                                                <rect key="frame" x="25" y="130.33333333333337" width="100.00000000000003" height="45"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="100" id="Ml8-b8-96o">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="130"/>
@@ -2251,6 +2254,6 @@ Convenience</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="HmY-Vi-mCP"/>
-        <segue reference="FUf-Zg-ioX"/>
+        <segue reference="FaX-Lw-aQM"/>
     </inferredMetricsTieBreakers>
 </document>
