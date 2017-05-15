@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F54b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aYT-vv-QhX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F54b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1Hy-Vu-Qya">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -591,6 +591,186 @@ Menu</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Nz-DK-Lrm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2917.5999999999999" y="115.59220389805098"/>
+        </scene>
+        <!--AuthenticationVC-->
+        <scene sceneID="6rR-JV-hJP">
+            <objects>
+                <viewController id="1Hy-Vu-Qya" customClass="AuthenticationVC" customModule="NewHungryCougar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yux-lt-hQ5"/>
+                        <viewControllerLayoutGuide type="bottom" id="DgO-Cs-yV7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wT4-yi-Pcm" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authentication" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="zWz-5j-VwX" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
+                                <rect key="frame" x="116" y="28" width="182" height="40"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="pfa-GO-Ata">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="182" id="xwZ-Gl-Wju">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="275"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="26"/>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="36"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="you'll only see this once" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="bcf-7n-T0h" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
+                                <rect key="frame" x="116" y="51" width="182" height="40"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cNt-Cb-f22">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="182" id="nOw-a9-Y3o">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="275"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="15"/>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="25"/>
+                                </variation>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="cDQ-qJ-nDt">
+                                <rect key="frame" x="90" y="184" width="235" height="45"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_male_white" translatesAutoresizingMaskIntoConstraints="NO" id="1PC-3q-SaK">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="IzQ-kX-3qt"/>
+                                            <constraint firstAttribute="height" constant="45" id="Yv4-XP-oLx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_female_white" translatesAutoresizingMaskIntoConstraints="NO" id="Ucr-mM-rPu">
+                                        <rect key="frame" x="95" y="0.0" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="3SW-jK-vNY"/>
+                                            <constraint firstAttribute="height" constant="45" id="CYC-fh-r65"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_transgender_white" translatesAutoresizingMaskIntoConstraints="NO" id="XkG-iD-Nx4">
+                                        <rect key="frame" x="190" y="0.0" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="CII-PQ-X7i"/>
+                                            <constraint firstAttribute="height" constant="45" id="LTn-0l-tN7"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Gender:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="ws2-ns-VOD" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
+                                <rect key="frame" x="90" y="136" width="76" height="40"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7Uj-kS-Znp">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="182" id="QoH-oo-Fw4">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="275"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="28"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class Standing:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="cor-V8-BBq" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
+                                <rect key="frame" x="60" y="274" width="182" height="40"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="hpk-9Y-jsY">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="275"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="40" id="vrx-uu-iEz">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="28"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Department:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="kUT-cT-tTm" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
+                                <rect key="frame" x="60" y="463" width="182" height="40"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="Uhb-ol-XsE">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="275"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="40" id="k0R-8z-khl">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="28"/>
+                                </variation>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjo-fW-JJP">
+                                <rect key="frame" x="47.666666666666657" y="474" width="320" height="216"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CU3-1w-tOA">
+                                <rect key="frame" x="47.666666666666657" y="279" width="320" height="216"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kUT-cT-tTm" firstAttribute="leading" secondItem="wT4-yi-Pcm" secondAttribute="leadingMargin" constant="40" id="2Ft-Rl-cfx"/>
+                            <constraint firstItem="kjo-fW-JJP" firstAttribute="top" secondItem="cor-V8-BBq" secondAttribute="bottom" constant="160" id="2k2-ia-PEW"/>
+                            <constraint firstItem="bcf-7n-T0h" firstAttribute="top" secondItem="yux-lt-hQ5" secondAttribute="bottom" constant="31" id="4hX-TH-DHz"/>
+                            <constraint firstItem="cor-V8-BBq" firstAttribute="leading" secondItem="wT4-yi-Pcm" secondAttribute="leadingMargin" constant="40" id="4u8-hq-XYp"/>
+                            <constraint firstItem="CU3-1w-tOA" firstAttribute="top" secondItem="cDQ-qJ-nDt" secondAttribute="bottom" constant="50" id="8sF-jF-JkS"/>
+                            <constraint firstItem="cDQ-qJ-nDt" firstAttribute="centerX" secondItem="wT4-yi-Pcm" secondAttribute="centerX" id="NC6-Nq-ZWL"/>
+                            <constraint firstItem="zWz-5j-VwX" firstAttribute="top" secondItem="yux-lt-hQ5" secondAttribute="bottom" constant="8" id="QCM-Qh-apR"/>
+                            <constraint firstItem="cor-V8-BBq" firstAttribute="top" secondItem="cDQ-qJ-nDt" secondAttribute="bottom" constant="45" id="Qbd-tA-b4I"/>
+                            <constraint firstItem="cDQ-qJ-nDt" firstAttribute="top" secondItem="ws2-ns-VOD" secondAttribute="bottom" constant="8" id="frU-aS-bG0"/>
+                            <constraint firstItem="kUT-cT-tTm" firstAttribute="top" secondItem="cor-V8-BBq" secondAttribute="bottom" constant="149" id="hTD-kM-yYL"/>
+                            <constraint firstItem="ws2-ns-VOD" firstAttribute="top" secondItem="bcf-7n-T0h" secondAttribute="bottom" constant="45" id="hbo-13-qbD"/>
+                            <constraint firstItem="CU3-1w-tOA" firstAttribute="centerX" secondItem="wT4-yi-Pcm" secondAttribute="centerX" id="ieZ-S5-bVI"/>
+                            <constraint firstItem="kjo-fW-JJP" firstAttribute="centerX" secondItem="wT4-yi-Pcm" secondAttribute="centerX" id="se9-Tj-ugy"/>
+                            <constraint firstItem="bcf-7n-T0h" firstAttribute="centerX" secondItem="wT4-yi-Pcm" secondAttribute="centerX" id="ujb-t6-yc6"/>
+                            <constraint firstItem="zWz-5j-VwX" firstAttribute="centerX" secondItem="wT4-yi-Pcm" secondAttribute="centerX" id="vNP-E9-TS6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="classPicker" destination="CU3-1w-tOA" id="2tn-FN-jYa"/>
+                        <outlet property="departmentPicker" destination="kjo-fW-JJP" id="wq3-Kf-aRd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0uO-hp-Lg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1688.4057971014495" y="114.94565217391305"/>
         </scene>
         <!--TermsVC-->
         <scene sceneID="FTO-6F-Yt3">
@@ -2232,7 +2412,7 @@ Convenience</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdJ-j6-1NA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-774" y="116"/>
+            <point key="canvasLocation" x="-775" y="114"/>
         </scene>
     </scenes>
     <resources>
@@ -2250,6 +2430,9 @@ Convenience</string>
         <image name="The-Market-transparent-2" width="833" height="833"/>
         <image name="Umai-Sushi-transparent-2" width="833" height="833"/>
         <image name="arrow-down" width="128" height="128"/>
+        <image name="icon_female_white" width="229" height="345"/>
+        <image name="icon_male_white" width="279" height="279"/>
+        <image name="icon_transgender_white" width="292" height="313"/>
         <image name="settings_cog" width="576" height="570"/>
     </resources>
     <inferredMetricsTieBreakers>

@@ -31,6 +31,7 @@
 		BFC1BB971E7E523A004450FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFA989091E7E47A400C42C4C /* GoogleService-Info.plist */; };
 		BFC1BB981E7E523B004450FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFA989091E7E47A400C42C4C /* GoogleService-Info.plist */; };
 		BFC1BB991E7E5241004450FD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFECDD461D4EE5B100E626D3 /* Info.plist */; };
+		BFC3E4841EA0A7F900B73771 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3E4831EA0A7F900B73771 /* AuthenticationVC.swift */; };
 		BFE6F27D1E381C4C0083685B /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6F27C1E381C4C0083685B /* MyCell.swift */; };
 		BFE6F27F1E381C890083685B /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE6F27E1E381C890083685B /* MyCell.xib */; };
 		BFECDD3B1D4EE5B100E626D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFECDD3A1D4EE5B100E626D3 /* AppDelegate.swift */; };
@@ -87,6 +88,7 @@
 		BFA0D7591E85BA440068988B /* TermsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsVC.swift; sourceTree = "<group>"; };
 		BFA989091E7E47A400C42C4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BFBA146B1E37DE6200A00CF1 /* HarvestItal Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HarvestItal Regular.ttf"; sourceTree = "<group>"; };
+		BFC3E4831EA0A7F900B73771 /* AuthenticationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
 		BFCEAE351E8AFA9E0062F712 /* NewHungryCougar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NewHungryCougar.entitlements; sourceTree = "<group>"; };
 		BFE6F27C1E381C4C0083685B /* MyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
 		BFE6F27E1E381C890083685B /* MyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		BF21D3961D552A5A001A38F2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BFC3E4831EA0A7F900B73771 /* AuthenticationVC.swift */,
 				BF8C1BBF1D4FDAD700E7B2B7 /* HomeVC.swift */,
 				BF21D3991D552B4F001A38F2 /* EastVC.swift */,
 				BF21D39B1D552C00001A38F2 /* WestVC.swift */,
@@ -582,6 +585,7 @@
 				BF21D39E1D55A138001A38F2 /* CircleView.swift in Sources */,
 				BF21D3A01D55C51D001A38F2 /* RestaurantHours.swift in Sources */,
 				BF05BE421D59BBA000AA3DF6 /* DiningPlanCell.swift in Sources */,
+				BFC3E4841EA0A7F900B73771 /* AuthenticationVC.swift in Sources */,
 				BF8C1BC21D4FDCAF00E7B2B7 /* RoundCornersView.swift in Sources */,
 				BFECDD3D1D4EE5B100E626D3 /* HoursVC.swift in Sources */,
 				BF91ED4D1D7ABD49007B161E /* InformationVC.swift in Sources */,
