@@ -198,9 +198,13 @@ class APUHomeVC: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWebView
         
         // Dining Points
         var diningPointsString: String!
-        var diningPointsHTML = webView.stringByEvaluatingJavaScript(from: "document.getElementById('ADMN_APU_ONE_CARD_PAGELET_HMPG_Data').getElementsByTagName('td')[1].innerHTML")
+        let diningPointsHTML = webView.stringByEvaluatingJavaScript(from: "document.getElementById('ADMN_APU_ONE_CARD_PAGELET_HMPG_Data').getElementsByTagName('td')[1].innerHTML")
         if diningPointsHTML != "" {
-            diningPointsString = diningPointsHTML
+            if diningPointsHTML == "N/A" {
+                diningPointsString = "0.00"
+            } else {
+                diningPointsString = diningPointsHTML
+            }
             finalDiningPointsDouble = Double(diningPointsString)!
             defaults.set(diningPointsString, forKey: "userDiningPointsDefaults")
             print("KYLE: FINAL DOUBLE VALUE = \(finalDiningPointsDouble)")
