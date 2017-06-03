@@ -35,19 +35,14 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
     let dpDropDown = DropDown()   // Create a new drop down object
     
     // Outlets
-    @IBOutlet weak var refreshBtn: UIButton!
     @IBOutlet weak var diningPlanLbl: UILabel!
     @IBOutlet weak var diningPointsLbl: UILabel!
-    @IBOutlet weak var usersDiningPointsLbl: DontCutMe!
-    @IBOutlet weak var usersCougarBucksLbl: DontCutMe!
     @IBOutlet weak var expectedDiningPointsView: CustomView!
-    @IBOutlet weak var usersDiningPointsView: CustomView!
-    @IBOutlet weak var loginView: CustomView!
     @IBOutlet var userTappedTitle: UITapGestureRecognizer!  // Tapped Dining Plan Title
-    @IBOutlet weak var allPointsView: UIView!
+    
+    var diningPlanChoice = ""
     
     override func viewDidLoad() {
-        setupViews()
         
         DB_BASE.child("stats").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
@@ -75,23 +70,11 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         customizeDropDown(userTappedTitle)
 
-        let prefs = UserDefaults.standard
-        if let val1 = prefs.string(forKey: "userDiningPointsDefaults") {
-            usersDiningPointsView.isHidden = false
-            refreshBtn.isHidden = false
-            loginView.isHidden = true
-            
-            // Update current dining points balance label
-            usersDiningPointsLbl.text = val1
-            
-            if let val2 = prefs.string(forKey: "userCougarBucksDefaults") {
-                print("KYLE: Updating cougar bucks label...")
-                usersCougarBucksLbl.text = val2
-            }
-        } else {
-            print("KYLE: THIS CODE PROBABLY SHOULD NEVER EXECUTE!")
-        }
+        let defaults = UserDefaults.standard
+        defaults.set("", forKey: "userDiningPointsDefaults")
+        defaults.set("", forKey: "userCougarBucksDefaults")
         
+        let prefs = UserDefaults.standard
         // If user already saved a dining plan
         if let plan = prefs.string(forKey: "userDiningPlanDefaults") {
             diningPlanLbl.text = plan
@@ -121,17 +104,12 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
             }
         }
         
-        calculateDiningPoints()
-        setSchoolWeek()
-        calculateBalance()
-    }
-    
-    func setupViews() {
-        usersDiningPointsView.isHidden = true
-        refreshBtn.isHidden = true
-        loginView.isHidden = false
-        loginView.isHidden = false
-        diningPlanLbl.text = diningPlanChoice
+        if prefs.string(forKey: "didDisplayMessageOnDiningPoints") != "Yes" {
+            prefs.set("Yes", forKey: "didDisplayMessageOnDiningPoints")
+            let alert = UIAlertController(title: "Goodbye", message: "As of this update we will no longer be maintaining Hungry Coug. \n\nWith the help of IMT, the dining points functionality from this app now exists on the APU Home page. \n\nThank you for all of your support! \n\n\n -The Hungry Coug Team", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     // Apply custom attributes to Drop Down
@@ -144,17 +122,10 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
             defaults.set(item, forKey: "userDiningPlanDefaults")
             
             self.diningPlanLbl.text = item
-            diningPlanChoice = item
+            self.diningPlanChoice = item
             self.calculateDiningPoints()
             self.setSchoolWeek()
             self.calculateBalance()
-            
-            self.moveEverything()
-        }
-        
-        // ACTION: User cancelled dropDown
-        dpDropDown.cancelAction = { [unowned self] in
-            self.moveEverything()
         }
         
         // Set values for drop down list
@@ -216,50 +187,6 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         }
     }
     
-    // Main function for performing login
-    func loginFunction() {
-        // Retrieve from Keychain
-        if let dictionary = Locksmith.loadDataForUserAccount(userAccount: "userAccount") {
-            if let keyVal1 = dictionary["keychainUsername"] {
-                if let keyVal2 = dictionary["keychainPassword"] {
-                    usernameStr = keyVal1 as! String
-                    passwordStr = keyVal2 as! String
-                }
-            }
-        }
-        performSegue(withIdentifier: "APUHome", sender: nil)
-    }
-    
-    /*
-     *  Actions
-    */
-    
-    // Refresh dining points balance manually
-    @IBAction func onRefreshPressed(_ sender: Any) {
-        loginFunction()
-    }
-    
-    // Load dining points when no balance has been stored
-    @IBAction func clickToLoadPressed(_ sender: Any) {
-        // Retrieve from Keychain
-        if let dictionary = Locksmith.loadDataForUserAccount(userAccount: "userAccount") {
-            if let _ = dictionary["keychainUsername"] {
-                if let _ = dictionary["keychainPassword"] {
-                    loginFunction()
-                } else {
-                    presentAlertToUser()
-                }
-            } else {
-                presentAlertToUser()
-            }
-        }
-    }
-    
-    // Segue to Points History
-    @IBAction func pointsHistoryButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "pointsHistorySegue", sender: nil)
-    }
-    
     // Segue to Settings
     @IBAction func settingsButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "settingsSegue", sender: nil)
@@ -269,43 +196,16 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
     @IBAction func chooseDiningPlan(_ sender: AnyObject) {
         customizeDropDown(userTappedTitle)
         dpDropDown.show()
-        self.moveEverything()
     }
     
     @IBAction func tappedTinyLabel(_ sender: Any) {
         customizeDropDown(userTappedTitle)
         dpDropDown.show()
-        self.moveEverything()
     }
-    
-    func moveEverything() {
-        let namedView = self.allPointsView
-        let centerPoint = self.view.frame.midY
-        print("KYLE: CenterPoint = \(centerPoint)")
-        print("KYLE: CenterPointWithOffset = \(centerPoint - allPointsView.frame.height/2 + 70)")
-        print("KYLE: Actual origin.y = \(self.allPointsView.frame.origin.y)")
-        // Move the views
-        if Double((self.allPointsView.frame.origin.y)) == Double(centerPoint - allPointsView.frame.height/2 + 70) {
-            UIView.animate(withDuration: 0.25, delay: 0, options: [.curveEaseOut], animations: {
-                namedView?.frame.origin.y += 220
-            }, completion: nil)
-            } else {
-            UIView.animate(withDuration: 0.25, delay: 0, options: [.curveEaseOut], animations: {
-                namedView?.frame.origin.y -= 220
-            }, completion: nil)
-        }
-    }
-    // Alert user that navigation away from Dining Services is denied
-    func presentAlertToUser() {
-        let alert = UIAlertController(title: "Missing Login Details", message: "Please update your account details in the settings page.", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
     
     /*
-        Dining Points calculation functions
-    */
+     Dining Points calculation functions
+     */
     
     func calculateDiningPoints() {
         switch diningPlanChoice {
@@ -330,14 +230,15 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         weeklyBudget = dailyBudget * 7.0
         
         // Balance for summer vacation and winter vacation
-        if schoolWeek == -1 {
-            expectedBalance = 0.0
+        if schoolWeek == -1 || schoolWeek == 0 {
+            expectedBalance = mealBudget
         }
+        
         // Balance for mid-semester break
         else if schoolWeek == -2 {
             expectedBalance = mealBudget/2
         }
-        // Balance for rest of the year
+            // Balance for rest of the year
         else {
             expectedBalance = mealBudget - (weeklyBudget * Double(schoolWeek)) - (dailyBudget * Double(weekday)) + dailyBudget
         }
@@ -345,6 +246,7 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         // Update expected balance label
         let textNum = String(format: "%.2f", arguments: [expectedBalance])
         diningPointsLbl.text = textNum
+        print(textNum)
     }
     
     // Set the date manualy to test the calculator
@@ -367,7 +269,7 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         year = components.year!
         
         // Optional function for testing a day
-//        manuallySetDay(1, dd: 18, woy: 1, yyyy: 2017, wday: 4)
+        //        manuallySetDay(1, dd: 18, woy: 1, yyyy: 2017, wday: 4)
         
         todayDate = String("\(month).\(day).\(year-2000)")
         print("KYLE: TODAY DATE: \(todayDate!)")
@@ -421,7 +323,7 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
             schoolWeek = 15
         }
         
- 
+        
         /*
          *
          * NEW SEMESTER

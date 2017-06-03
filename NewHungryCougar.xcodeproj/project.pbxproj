@@ -10,7 +10,6 @@
 		6F29974A81B001D1D0CBEA01 /* Pods_NewHungryCougar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AFC7DEA70D653F87FF4A47 /* Pods_NewHungryCougar.framework */; };
 		81F5F515AFB1BD27AD50A05F /* Pods_NewHungryCougarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA17B5C3FEA8DBA30230FE1 /* Pods_NewHungryCougarTests.framework */; };
 		8DD1C8B7DEBEA555033CB5E8 /* Pods_NewHungryCougarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6F044B865F2E7E3AD6CE1B /* Pods_NewHungryCougarUITests.framework */; };
-		BF05BE401D59B97400AA3DF6 /* DiningPlanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF05BE3F1D59B97400AA3DF6 /* DiningPlanVC.swift */; };
 		BF05BE421D59BBA000AA3DF6 /* DiningPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF05BE411D59BBA000AA3DF6 /* DiningPlanCell.swift */; };
 		BF05BE441D59C65600AA3DF6 /* DiningPointsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF05BE431D59C65600AA3DF6 /* DiningPointsVC.swift */; };
 		BF21D39A1D552B4F001A38F2 /* EastVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21D3991D552B4F001A38F2 /* EastVC.swift */; };
@@ -69,7 +68,6 @@
 		A20BA227F806ECC39F8B95C5 /* Pods-NewHungryCougar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewHungryCougar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewHungryCougar/Pods-NewHungryCougar.debug.xcconfig"; sourceTree = "<group>"; };
 		AC6F044B865F2E7E3AD6CE1B /* Pods_NewHungryCougarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewHungryCougarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA17B5C3FEA8DBA30230FE1 /* Pods_NewHungryCougarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewHungryCougarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF05BE3F1D59B97400AA3DF6 /* DiningPlanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningPlanVC.swift; sourceTree = "<group>"; };
 		BF05BE411D59BBA000AA3DF6 /* DiningPlanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningPlanCell.swift; sourceTree = "<group>"; };
 		BF05BE431D59C65600AA3DF6 /* DiningPointsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningPointsVC.swift; sourceTree = "<group>"; };
 		BF21D3991D552B4F001A38F2 /* EastVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EastVC.swift; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 				BF21D39B1D552C00001A38F2 /* WestVC.swift */,
 				BFECDD3C1D4EE5B100E626D3 /* HoursVC.swift */,
 				BF91ED4C1D7ABD49007B161E /* InformationVC.swift */,
-				BF05BE3F1D59B97400AA3DF6 /* DiningPlanVC.swift */,
 				BF05BE431D59C65600AA3DF6 /* DiningPointsVC.swift */,
 				BF91ED4A1D7ABD40007B161E /* APUHomeVC.swift */,
 				BF3590091E34713800D5A5E7 /* UserSettingsVC.swift */,
@@ -597,7 +594,6 @@
 				BFECDD3B1D4EE5B100E626D3 /* AppDelegate.swift in Sources */,
 				BF35985B1D4EF79400AF28B3 /* Day.swift in Sources */,
 				BF21D39A1D552B4F001A38F2 /* EastVC.swift in Sources */,
-				BF05BE401D59B97400AA3DF6 /* DiningPlanVC.swift in Sources */,
 				BF8C1BC01D4FDAD700E7B2B7 /* HomeVC.swift in Sources */,
 				BFE6F27D1E381C4C0083685B /* MyCell.swift in Sources */,
 				BF91ED4B1D7ABD40007B161E /* APUHomeVC.swift in Sources */,

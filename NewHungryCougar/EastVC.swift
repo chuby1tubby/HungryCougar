@@ -26,11 +26,11 @@ class EastVC: UIViewController {
         restaurantChoice = "1899 Dining Hall"
         
         // Count number of views for the restaurant
-        DB_BASE.child("venue").child("1899").child("views").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue2").child("1899").child("views").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             var firebaseViews = value?["count"] as? Int ?? 0
             firebaseViews += 1
-            DB_BASE.child("venue").child("1899").child("views").child("count").setValue(firebaseViews)
+            DB_BASE.child("venue2").child("1899").child("views").child("count").setValue(firebaseViews)
         })
         
         performSegue(withIdentifier: "restaurantSelected1", sender: nil)
@@ -40,11 +40,11 @@ class EastVC: UIViewController {
         restaurantChoice = "Cornerstone Coffeehouse"
         
         // Count number of views for the restaurant
-        DB_BASE.child("venue").child("cornerstone").child("views").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue2").child("cornerstone").child("views").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             var firebaseViews = value?["count"] as? Int ?? 0
             firebaseViews += 1
-            DB_BASE.child("venue").child("cornerstone").child("views").child("count").setValue(firebaseViews)
+            DB_BASE.child("venue2").child("cornerstone").child("views").child("count").setValue(firebaseViews)
         })
         
         performSegue(withIdentifier: "restaurantSelected1", sender: nil)
@@ -54,11 +54,11 @@ class EastVC: UIViewController {
         restaurantChoice = "Cougar's Den Café"
         
         // Count number of views for the restaurant
-        DB_BASE.child("venue").child("den").child("views").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue2").child("den").child("views").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             var firebaseViews = value?["count"] as? Int ?? 0
             firebaseViews += 1
-            DB_BASE.child("venue").child("den").child("views").child("count").setValue(firebaseViews)
+            DB_BASE.child("venue2").child("den").child("views").child("count").setValue(firebaseViews)
         })
         
         performSegue(withIdentifier: "restaurantSelected1", sender: nil)
@@ -68,11 +68,11 @@ class EastVC: UIViewController {
         restaurantChoice = "Cougar Walk Café"
         
         // Count number of views for the restaurant
-        DB_BASE.child("venue").child("cafe").child("views").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue2").child("cafe").child("views").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             var firebaseViews = value?["count"] as? Int ?? 0
             firebaseViews += 1
-            DB_BASE.child("venue").child("cafe").child("views").child("count").setValue(firebaseViews)
+            DB_BASE.child("venue2").child("cafe").child("views").child("count").setValue(firebaseViews)
         })
         
         performSegue(withIdentifier: "restaurantSelected1", sender: nil)
@@ -82,11 +82,11 @@ class EastVC: UIViewController {
         restaurantChoice = "Mexicali Grill"
         
         // Count number of views for the restaurant
-        DB_BASE.child("venue").child("mexicali").child("views").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue2").child("mexicali").child("views").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             var firebaseViews = value?["count"] as? Int ?? 0
             firebaseViews += 1
-            DB_BASE.child("venue").child("mexicali").child("views").child("count").setValue(firebaseViews)
+            DB_BASE.child("venue2").child("mexicali").child("views").child("count").setValue(firebaseViews)
         })
         
         performSegue(withIdentifier: "restaurantSelected1", sender: nil)
@@ -96,11 +96,11 @@ class EastVC: UIViewController {
         restaurantChoice = "Paws 'N Go Convenience"
         
         // Count number of views for the restaurant
-        DB_BASE.child("venue").child("pawsngo").child("views").observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue2").child("pawsngo").child("views").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             var firebaseViews = value?["count"] as? Int ?? 0
             firebaseViews += 1
-            DB_BASE.child("venue").child("pawsngo").child("views").child("count").setValue(firebaseViews)
+            DB_BASE.child("venue2").child("pawsngo").child("views").child("count").setValue(firebaseViews)
         })
         
         performSegue(withIdentifier: "restaurantSelected1", sender: nil)
