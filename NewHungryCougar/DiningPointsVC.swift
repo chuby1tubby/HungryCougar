@@ -43,6 +43,7 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
     var diningPlanChoice = ""
     
     override func viewDidLoad() {
+        customizeDropDown(userTappedTitle)
         
         DB_BASE.child("stats").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
@@ -79,6 +80,10 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         if let plan = prefs.string(forKey: "userDiningPlanDefaults") {
             diningPlanLbl.text = plan
             diningPlanChoice = plan
+            
+            self.calculateDiningPoints()
+            self.setSchoolWeek()
+            self.calculateBalance()
             
             switch plan {
             case "No Worries":
@@ -258,6 +263,16 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         weekday = wday
     }
     
+    /*
+     
+     How it works: 
+     The switch covers every week of the year from 1 to 52.
+     One must manually enter the schoolweek for each week of the year within the switch. 
+     Looking at a calendar, I see that the school year starts on August 28, which is week 35 on a calendar, 
+     so I adjust the switch cases accordingly for this school year. Some school years will be the same as the
+     previous year, so no adjustments are necessary.
+     
+    */
     func setSchoolWeek() {
         let date = Date()
         let calendar = Calendar.current
@@ -269,127 +284,201 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         year = components.year!
         
         // Optional function for testing a day
-        //        manuallySetDay(1, dd: 18, woy: 1, yyyy: 2017, wday: 4)
+        // manuallySetDay(1, dd: 18, woy: 1, yyyy: 2017, wday: 4)
         
         todayDate = String("\(month).\(day).\(year-2000)")
         print("KYLE: TODAY DATE: \(todayDate!)")
         
-        // School has yet to begin
-        if month == 1 && day < 8 {
-            schoolWeek = -1
-        }
-        
-        // September
-        if (month == 8 && (day >= 28 && day <= 31)) || (month == 9 && (day >= 1 && day <= 3)) {
-            schoolWeek = 0
-        } else if (month == 9 && (day >= 4 && day <= 10)) {
+        switch weekOfYear {
+        case 1:                 // week 1 is winter vacation
+            schoolWeek = -1     // -1 means school is not currently in session
+            break
+            
+        case 2, 35:
+            schoolWeek = 0      // 0 means first day of semester
+            break
+        case 3, 36:
             schoolWeek = 1
-        } else if (month == 9 && (day >= 11 && day <= 17)) {
+            break
+        case 4, 37:
             schoolWeek = 2
-        } else if (month == 9 && (day >= 18 && day <= 24)) {
+            break
+        case 5, 38:
             schoolWeek = 3
-        } else if (month == 9 && (day >= 25 && day <= 30)) || monthBetweenDays(MM: 10, ST: 1, ED: 1) {
+            break
+        case 6, 39:
             schoolWeek = 4
-        }
-        
-        // October
-        if (month == 10 && (day >= 2 && day <= 8)) {
+            break
+        case 7, 40:
             schoolWeek = 5
-        } else if (month == 10 && (day >= 9 && day <= 15)) {
+            break
+        case 8, 41:
             schoolWeek = 6
-        } else if (month == 10 && (day >= 16 && day <= 22)) {
+            break
+        case 9, 42:
             schoolWeek = 7
-        } else if (month == 10 && (day >= 23 && day <= 29)) {
+            break
+            
+        case 10:
+            schoolWeek = -2     // -2 means mid-semester break
+            break
+            
+        case 11, 43:
             schoolWeek = 8
-        }
-        
-        // November
-        if (month == 10 && (day >= 30 && day <= 31) || month == 11 && (day >= 1 && day <= 5)) {
+            break
+        case 12, 44:
             schoolWeek = 9
-        } else if (month == 11 && (day >= 6 && day <= 12)) {
+            break
+        case 13, 45:
             schoolWeek = 10
-        } else if (month == 11 && (day >= 13 && day <= 19)) {
+            break
+        case 14, 46:
             schoolWeek = 11
-        } else if (month == 11 && (day >= 20 && day <= 26)) {
+            break
+        case 15, 47:
             schoolWeek = 12
-        }
-        
-        // December
-        if (month == 11 && (day >= 27 && day <= 30) || month == 12 && (day >= 1 && day <= 3)) {
+            break
+        case 16, 48:
             schoolWeek = 13
-        } else if (month == 12 && (day >= 4 && day <= 10)) {
+            break
+        case 17, 49:
             schoolWeek = 14
-        } else if (month == 12 && (day >= 11 && day <= 17)) {
+            break
+        case 18, 50:
             schoolWeek = 15
-        }
-        
-        
-        /*
-         *
-         * NEW SEMESTER
-         *
-         */
-        
-        
-        // Christmas break
-        if monthBetweenDays(MM: 12, ST: 18, ED: 31) || monthBetweenDays(MM: 1, ST: 1, ED: 14) {
-            schoolWeek = -1
-        }
-        
-        // January
-        if monthBetweenDays(MM: 1, ST: 8, ED: 14) {
-            schoolWeek = 0
-        } else if monthBetweenDays(MM: 1, ST: 15, ED: 21) {
-            schoolWeek = 1
-        } else if monthBetweenDays(MM: 1, ST: 22, ED: 28) {
-            schoolWeek = 2
-        } else if monthBetweenDays(MM: 1, ST: 29, ED: 31) || monthBetweenDays(MM: 2, ST: 1, ED: 4) {
-            schoolWeek = 3
+            break
+            
+        case 19...34:           // weeks 19 to 34 are summer vacation
+            schoolWeek = -1     // -1 means school is not currently in session
+            break
+
+        case 51...52:           // weeks 51 and 52 are winter vacation
+            schoolWeek = -1     // -1 means school is not currently in session
+            break
+            
+        default:
+            // swith is exhaustive, so default will not execute
+            break
         }
         print("KYLE: The school week is: \(schoolWeek)")
         
-        // February
-        if monthBetweenDays(MM: 2, ST: 5, ED: 11) {
-            schoolWeek = 4
-        } else if monthBetweenDays(MM: 2, ST: 12, ED: 18) {
-            schoolWeek = 5
-        } else if monthBetweenDays(MM: 2, ST: 19, ED: 25) {
-            schoolWeek = 6
-        } else if monthBetweenDays(MM: 2, ST: 26, ED: 28) || monthBetweenDays(MM: 3, ST: 1, ED: 4) {
-            schoolWeek = 7
-        }
-        
-        // Mid-Semester Break
-        if monthBetweenDays(MM: 3, ST: 5, ED: 11) {
-            schoolWeek = -2
-        }
-        
-        // March
-        if monthBetweenDays(MM: 3, ST: 12, ED: 18) {
-            schoolWeek = 8
-        } else if monthBetweenDays(MM: 3, ST: 19, ED: 25) {
-            schoolWeek = 9
-        }
-        
-        // April
-        if monthBetweenDays(MM: 3, ST: 26, ED: 31) || monthBetweenDays(MM: 4, ST: 1, ED: 1) {
-            schoolWeek = 10
-        } else if monthBetweenDays(MM: 4, ST: 2, ED: 8) {
-            schoolWeek = 11
-        } else if monthBetweenDays(MM: 4, ST: 9, ED: 15) {
-            schoolWeek = 12
-        } else if monthBetweenDays(MM: 4, ST: 16, ED: 22) {
-            schoolWeek = 13
-        } else if monthBetweenDays(MM: 4, ST: 23, ED: 29) {
-            schoolWeek = 14
-        } else if monthBetweenDays(MM: 4, ST: 30, ED: 30) || monthBetweenDays(MM: 5, ST: 1, ED: 6) {
-            schoolWeek = 15
-        }
-        
-        // Summer Vacation
-        if monthBetweenDays(MM: 5, ST: 7, ED: 31) || month > 5 {
-            schoolWeek = 0
-        }
+//        
+//        // School has yet to begin
+//        if month == 1 && day < 8 {
+//            schoolWeek = -1
+//        }
+//        
+//        // September
+//        if (month == 8 && (day >= 28 && day <= 31)) || (month == 9 && (day >= 1 && day <= 3)) {
+//            schoolWeek = 0  // week 35
+//        } else if (month == 9 && (day >= 4 && day <= 10)) {
+//            schoolWeek = 1  // week 36
+//        } else if (month == 9 && (day >= 11 && day <= 17)) {
+//            schoolWeek = 2  // week 37
+//        } else if (month == 9 && (day >= 18 && day <= 24)) {
+//            schoolWeek = 3  // week 38
+//        } else if (month == 9 && (day >= 25 && day <= 30)) || monthBetweenDays(MM: 10, ST: 1, ED: 1) {
+//            schoolWeek = 4  // week 39
+//        }
+//        
+//        // October
+//        if (month == 10 && (day >= 2 && day <= 8)) {
+//            schoolWeek = 5  // week 40
+//        } else if (month == 10 && (day >= 9 && day <= 15)) {
+//            schoolWeek = 6  // week 41
+//        } else if (month == 10 && (day >= 16 && day <= 22)) {
+//            schoolWeek = 7  // week 42
+//        } else if (month == 10 && (day >= 23 && day <= 29)) {
+//            schoolWeek = 8  // week 43
+//        }
+//        
+//        // November
+//        if (month == 10 && (day >= 30 && day <= 31) || month == 11 && (day >= 1 && day <= 5)) {
+//            schoolWeek = 9  // week 44
+//        } else if (month == 11 && (day >= 6 && day <= 12)) {
+//            schoolWeek = 10  // week 45
+//        } else if (month == 11 && (day >= 13 && day <= 19)) {
+//            schoolWeek = 11  // week 46
+//        } else if (month == 11 && (day >= 20 && day <= 26)) {
+//            schoolWeek = 12  // week 47
+//        }
+//        
+//        // December
+//        if (month == 11 && (day >= 27 && day <= 30) || month == 12 && (day >= 1 && day <= 3)) {
+//            schoolWeek = 13  // week 48
+//        } else if (month == 12 && (day >= 4 && day <= 10)) {
+//            schoolWeek = 14  // week 49
+//        } else if (month == 12 && (day >= 11 && day <= 17)) {
+//            schoolWeek = 15  // week 50
+//        }
+//        
+//        
+//        /*
+//         *
+//         * NEW SEMESTER
+//         *
+//         */
+//        
+//        
+//        // Christmas break
+//        if monthBetweenDays(MM: 12, ST: 18, ED: 31) || monthBetweenDays(MM: 1, ST: 1, ED: 14) {
+//            schoolWeek = -1 // week 51, 52, 1
+//        }
+//        
+//        // January
+//        if monthBetweenDays(MM: 1, ST: 8, ED: 14) {
+//            schoolWeek = 0  // week 2
+//        } else if monthBetweenDays(MM: 1, ST: 15, ED: 21) {
+//            schoolWeek = 1  // week 3
+//        } else if monthBetweenDays(MM: 1, ST: 22, ED: 28) {
+//            schoolWeek = 2  // week 4
+//        } else if monthBetweenDays(MM: 1, ST: 29, ED: 31) || monthBetweenDays(MM: 2, ST: 1, ED: 4) {
+//            schoolWeek = 3  // week 5
+//        }
+//        print("KYLE: The school week is: \(schoolWeek)")
+//        
+//        // February
+//        if monthBetweenDays(MM: 2, ST: 5, ED: 11) {
+//            schoolWeek = 4  // week 6
+//        } else if monthBetweenDays(MM: 2, ST: 12, ED: 18) {
+//            schoolWeek = 5  // week 7
+//        } else if monthBetweenDays(MM: 2, ST: 19, ED: 25) {
+//            schoolWeek = 6  // week 8
+//        } else if monthBetweenDays(MM: 2, ST: 26, ED: 28) || monthBetweenDays(MM: 3, ST: 1, ED: 4) {
+//            schoolWeek = 7  // week 9
+//        }
+//        
+//        // Mid-Semester Break
+//        if monthBetweenDays(MM: 3, ST: 5, ED: 11) {
+//            schoolWeek = -2  // week 10
+//        }
+//        
+//        // March
+//        if monthBetweenDays(MM: 3, ST: 12, ED: 18) {
+//            schoolWeek = 8  // week 11
+//        } else if monthBetweenDays(MM: 3, ST: 19, ED: 25) {
+//            schoolWeek = 9  // week 12
+//        }
+//        
+//        // April
+//        if monthBetweenDays(MM: 3, ST: 26, ED: 31) || monthBetweenDays(MM: 4, ST: 1, ED: 1) {
+//            schoolWeek = 10  // week 13
+//        } else if monthBetweenDays(MM: 4, ST: 2, ED: 8) {
+//            schoolWeek = 11  // week 14
+//        } else if monthBetweenDays(MM: 4, ST: 9, ED: 15) {
+//            schoolWeek = 12  // week 15
+//        } else if monthBetweenDays(MM: 4, ST: 16, ED: 22) {
+//            schoolWeek = 13  // week 16
+//        } else if monthBetweenDays(MM: 4, ST: 23, ED: 29) {
+//            schoolWeek = 14  // week 17
+//        } else if monthBetweenDays(MM: 4, ST: 30, ED: 30) || monthBetweenDays(MM: 5, ST: 1, ED: 6) {
+//            schoolWeek = 15  // week 18
+//        }
+//        
+//        // Summer Vacation
+//        if monthBetweenDays(MM: 5, ST: 7, ED: 31) || month > 5 {
+//            schoolWeek = -1 // week 19...34
+//        }
     }
     
     func monthBetweenDays(MM: Int, ST: Int, ED: Int) -> Bool {

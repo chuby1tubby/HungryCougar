@@ -702,14 +702,6 @@ func setHours() {
     }
     
     daysOfTheWeek = [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
-    
-    
-    for day in daysOfTheWeek {
-        if day.openTime == 0 && day.closeTime == 0 {
-            day.hasNoHours = true
-        }
-        print("KYLE: \(day.openTime)\t-\t\(day.closeTime)")
-    }
 }
 
 func setupDay(day: Day, open: Int, close: Int) {
