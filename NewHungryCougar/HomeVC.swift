@@ -119,7 +119,6 @@ var umaiCloseSat = 0
 var umaiCloseSun = 0
 
 class HomeVC: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Campus Restaurants"
@@ -129,10 +128,8 @@ class HomeVC: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         /*
-         DELETING KEYCHAIN VALUES
-         */
-        
-        // Keychain
+        *  DELETING KEYCHAIN VALUES
+        */
         do {
             try Locksmith.deleteDataForUserAccount(userAccount: "userAccount")
         } catch {
@@ -142,8 +139,8 @@ class HomeVC: UIViewController {
         let prefs = UserDefaults.standard
         if prefs.string(forKey: "didDisplayMessageOnHome") != "Yes" {
             prefs.set("Yes", forKey: "didDisplayMessageOnHome")
-            let alert = UIAlertController(title: "Goodbye", message: "As of this update we will no longer be maintaining Hungry Coug. \n\nWith the help of IMT, the dining points functionality from this app now exists on the APU Home page. \n\nThank you for all of your support! \n\n\n -The Hungry Coug Team", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
+            let alert = UIAlertController(title: "Welcome Home, APU!", message: "", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Thanks!", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
     }
@@ -163,23 +160,15 @@ class HomeVC: UIViewController {
             
             let prefs = UserDefaults.standard
             if let userVersionNum = prefs.string(forKey: "downloadedHoursVersionNum") {
-                print("TEST TEST: Firebase Version Num \(updatedVersionNum)")
-                print("TEST TEST: User Version Num \(userVersionNum)")
                 if Int(userVersionNum) != updatedVersionNum {
-                    print("KYLE: BEGIN DOWNLOADING FIREBASE DATA.")
                     self.downloadHours()
-                    print("KYLE: FINISHED DOWNLOADING FIREBASE DATA.")
                     let defaults = UserDefaults.standard
                     defaults.set(updatedVersionNum, forKey: "downloadedHoursVersionNum")
                 } else {
                     // Do not update the hours
-                    print("KYLE: Hours are up to date.")
                 }
             } else {
-                print("KYLE: UPDATING FOR THE VERY FIRST TIME!")
-                print("KYLE: BEGIN DOWNLOADING FIREBASE DATA.")
                 self.downloadHours()
-                print("KYLE: FINISHED DOWNLOADING FIREBASE DATA.")
                 let defaults = UserDefaults.standard
                 defaults.set(updatedVersionNum, forKey: "downloadedHoursVersionNum")
             }
@@ -190,7 +179,6 @@ class HomeVC: UIViewController {
     @IBAction func termsOfServiceTapped(_ sender: Any) {
         // Action Code
     }
-    
     
     /*
      *  downloadHours()

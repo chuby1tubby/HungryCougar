@@ -14,6 +14,7 @@ class UserSettingsVC: UIViewController {
     // Outlets
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var versionNumberLbl: UILabel!
+    @IBOutlet weak var messageLbl: UILabel!
 
     override func viewWillAppear(_ animated: Bool) {
         // Keychain
@@ -22,6 +23,11 @@ class UserSettingsVC: UIViewController {
         } catch {
             // Could not save data to keychain
         }
+        
+        messageLbl.text = "Welcome Back, APU! \n\n" +
+            "I worked with IMT to integrate some Hungry Coug features with the APU Mobile app. \n\n" +
+            "APU Mobile now displays your Dining Points, Expected Points, as well as tons of other cool features we have been working on. \n\n" +
+            "Check everything new out at \nhttps://mobile.apu.edu"
         
         scrollView.contentSize.height = 700
         

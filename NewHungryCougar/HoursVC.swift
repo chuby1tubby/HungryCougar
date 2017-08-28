@@ -231,9 +231,6 @@ class HoursVC: UIViewController {
     func moveEverything() {
         let namedView = self.viewToMove
         let centerPoint = self.view.frame.midY
-        print("KYLE: CenterPoint = \(centerPoint)")
-        print("KYLE: CenterPointWithOffset = \(centerPoint - 125)")
-        print("KYLE: Actual origin.y = \(self.viewToMove.frame.origin.y)")
         // Move the views
         if Double((self.viewToMove.frame.origin.y)) == Double(centerPoint - 125) {
             UIView.animate(withDuration: 0.15, delay: 0, options: [.curveEaseOut], animations: {
@@ -586,7 +583,7 @@ class HoursVC: UIViewController {
                     HHOpen = HHOpen - 12
                 }
                 let MMOpen = diningHallOpenLMonFri - Int(diningHallOpenLMonFri/100)*100
-                
+
                 if MMOpen == 0 {
                     timeLabel.text = "Opening at \(HHOpen):\(MMOpen)0pm for dinner"
                 } else {

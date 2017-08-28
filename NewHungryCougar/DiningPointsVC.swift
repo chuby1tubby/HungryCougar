@@ -31,13 +31,16 @@ var todayTime: String? = ""
 class DiningPointsVC: UIViewController, UITextFieldDelegate {
     
     // Constants
-    let mealBudgets: [Double] = [1162, 978, 696, 554, 363]
+    let mealBudgets: [Double] = [1139, 975, 711, 561, 364]
     let dpDropDown = DropDown()   // Create a new drop down object
+    let defaults = UserDefaults.standard
+    let prefs = UserDefaults.standard
     
     // Outlets
     @IBOutlet weak var diningPlanLbl: UILabel!
     @IBOutlet weak var diningPointsLbl: UILabel!
     @IBOutlet weak var expectedDiningPointsView: CustomView!
+    @IBOutlet weak var dropDown: UIPickerView!
     @IBOutlet var userTappedTitle: UITapGestureRecognizer!  // Tapped Dining Plan Title
     
     var diningPlanChoice = ""
@@ -53,13 +56,10 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         })
         
         // Count number of views on this page
-        let defaults = UserDefaults.standard
-        let prefs = UserDefaults.standard
         if let val1 = prefs.string(forKey: "userViewsDiningPointsVC") {
             if Int(val1)! == 20 || Int(val1)! % 60 == 0 {   // If the user has viewed this page 10 times or if their view is divisible by 40
                 if #available(iOS 10.3, *) {
                     SKStoreReviewController.requestReview()     // Display a request for a review
-                    print("KYLE: Requsted user review")
                 }
             }
             defaults.set((Int(val1)!+1), forKey: "userViewsDiningPointsVC")
@@ -70,12 +70,7 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         customizeDropDown(userTappedTitle)
-
-        let defaults = UserDefaults.standard
-        defaults.set("", forKey: "userDiningPointsDefaults")
-        defaults.set("", forKey: "userCougarBucksDefaults")
         
-        let prefs = UserDefaults.standard
         // If user already saved a dining plan
         if let plan = prefs.string(forKey: "userDiningPlanDefaults") {
             diningPlanLbl.text = plan
@@ -111,7 +106,7 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         
         if prefs.string(forKey: "didDisplayMessageOnDiningPoints") != "Yes" {
             prefs.set("Yes", forKey: "didDisplayMessageOnDiningPoints")
-            let alert = UIAlertController(title: "Goodbye", message: "As of this update we will no longer be maintaining Hungry Coug. \n\nWith the help of IMT, the dining points functionality from this app now exists on the APU Home page. \n\nThank you for all of your support! \n\n\n -The Hungry Coug Team", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Where is the login button?", message: "I worked with IMT to move my Hungry Coug expected points functionality to the APU Mobile app. \nYou can now view your expected points and more information at mobile.apu.edu.", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
@@ -122,9 +117,7 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         
         // ACTION: User selected an item
         dpDropDown.selectionAction = { [] (index: Int, item: String) in
-            print("KYLE: Selected item: \(item)")
-            let defaults = UserDefaults.standard
-            defaults.set(item, forKey: "userDiningPlanDefaults")
+            self.defaults.set(item, forKey: "userDiningPlanDefaults")
             
             self.diningPlanLbl.text = item
             self.diningPlanChoice = item
@@ -171,7 +164,6 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         }
         
         // If user already saved a dining plan
-        let prefs = UserDefaults.standard
         if let plan = prefs.string(forKey: "userDiningPlanDefaults") {
             switch plan {
             case "No Worries":
@@ -208,6 +200,11 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         dpDropDown.show()
     }
     
+    @IBAction func tappedAPUMobile(_ sender: Any) {
+        performSegue(withIdentifier: "mobileSegue", sender: nil)
+    }
+    
+    
     /*
      Dining Points calculation functions
      */
@@ -231,11 +228,11 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
     }
     
     func calculateBalance() {
-        dailyBudget = mealBudget / 112.0
+        dailyBudget = mealBudget / 105.0
         weeklyBudget = dailyBudget * 7.0
         
         // Balance for summer vacation and winter vacation
-        if schoolWeek == -1 || schoolWeek == 0 {
+        if schoolWeek == -1 {
             expectedBalance = mealBudget
         }
         
@@ -243,7 +240,7 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         else if schoolWeek == -2 {
             expectedBalance = mealBudget/2
         }
-            // Balance for rest of the year
+        // Balance for rest of the year
         else {
             expectedBalance = mealBudget - (weeklyBudget * Double(schoolWeek)) - (dailyBudget * Double(weekday)) + dailyBudget
         }
@@ -251,7 +248,6 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         // Update expected balance label
         let textNum = String(format: "%.2f", arguments: [expectedBalance])
         diningPointsLbl.text = textNum
-        print(textNum)
     }
     
     // Set the date manualy to test the calculator
@@ -266,7 +262,7 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
     /*
      
      How it works: 
-     The switch covers every week of the year from 1 to 52.
+     The switch covers every week of the year from 1 to 52 (also 53).
      One must manually enter the schoolweek for each week of the year within the switch. 
      Looking at a calendar, I see that the school year starts on August 28, which is week 35 on a calendar, 
      so I adjust the switch cases accordingly for this school year. Some school years will be the same as the
@@ -287,7 +283,6 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
         // manuallySetDay(1, dd: 18, woy: 1, yyyy: 2017, wday: 4)
         
         todayDate = String("\(month).\(day).\(year-2000)")
-        print("KYLE: TODAY DATE: \(todayDate!)")
         
         switch weekOfYear {
         case 1:                 // week 1 is winter vacation
@@ -352,133 +347,14 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
             schoolWeek = -1     // -1 means school is not currently in session
             break
 
-        case 51...52:           // weeks 51 and 52 are winter vacation
+        case 51...53:           // weeks 51 and 52 are winter vacation, week 53 will occur in the year 2020
             schoolWeek = -1     // -1 means school is not currently in session
             break
             
         default:
-            // swith is exhaustive, so default will not execute
+            // switch is exhaustive, so default will not execute
             break
         }
-        print("KYLE: The school week is: \(schoolWeek)")
-        
-//        
-//        // School has yet to begin
-//        if month == 1 && day < 8 {
-//            schoolWeek = -1
-//        }
-//        
-//        // September
-//        if (month == 8 && (day >= 28 && day <= 31)) || (month == 9 && (day >= 1 && day <= 3)) {
-//            schoolWeek = 0  // week 35
-//        } else if (month == 9 && (day >= 4 && day <= 10)) {
-//            schoolWeek = 1  // week 36
-//        } else if (month == 9 && (day >= 11 && day <= 17)) {
-//            schoolWeek = 2  // week 37
-//        } else if (month == 9 && (day >= 18 && day <= 24)) {
-//            schoolWeek = 3  // week 38
-//        } else if (month == 9 && (day >= 25 && day <= 30)) || monthBetweenDays(MM: 10, ST: 1, ED: 1) {
-//            schoolWeek = 4  // week 39
-//        }
-//        
-//        // October
-//        if (month == 10 && (day >= 2 && day <= 8)) {
-//            schoolWeek = 5  // week 40
-//        } else if (month == 10 && (day >= 9 && day <= 15)) {
-//            schoolWeek = 6  // week 41
-//        } else if (month == 10 && (day >= 16 && day <= 22)) {
-//            schoolWeek = 7  // week 42
-//        } else if (month == 10 && (day >= 23 && day <= 29)) {
-//            schoolWeek = 8  // week 43
-//        }
-//        
-//        // November
-//        if (month == 10 && (day >= 30 && day <= 31) || month == 11 && (day >= 1 && day <= 5)) {
-//            schoolWeek = 9  // week 44
-//        } else if (month == 11 && (day >= 6 && day <= 12)) {
-//            schoolWeek = 10  // week 45
-//        } else if (month == 11 && (day >= 13 && day <= 19)) {
-//            schoolWeek = 11  // week 46
-//        } else if (month == 11 && (day >= 20 && day <= 26)) {
-//            schoolWeek = 12  // week 47
-//        }
-//        
-//        // December
-//        if (month == 11 && (day >= 27 && day <= 30) || month == 12 && (day >= 1 && day <= 3)) {
-//            schoolWeek = 13  // week 48
-//        } else if (month == 12 && (day >= 4 && day <= 10)) {
-//            schoolWeek = 14  // week 49
-//        } else if (month == 12 && (day >= 11 && day <= 17)) {
-//            schoolWeek = 15  // week 50
-//        }
-//        
-//        
-//        /*
-//         *
-//         * NEW SEMESTER
-//         *
-//         */
-//        
-//        
-//        // Christmas break
-//        if monthBetweenDays(MM: 12, ST: 18, ED: 31) || monthBetweenDays(MM: 1, ST: 1, ED: 14) {
-//            schoolWeek = -1 // week 51, 52, 1
-//        }
-//        
-//        // January
-//        if monthBetweenDays(MM: 1, ST: 8, ED: 14) {
-//            schoolWeek = 0  // week 2
-//        } else if monthBetweenDays(MM: 1, ST: 15, ED: 21) {
-//            schoolWeek = 1  // week 3
-//        } else if monthBetweenDays(MM: 1, ST: 22, ED: 28) {
-//            schoolWeek = 2  // week 4
-//        } else if monthBetweenDays(MM: 1, ST: 29, ED: 31) || monthBetweenDays(MM: 2, ST: 1, ED: 4) {
-//            schoolWeek = 3  // week 5
-//        }
-//        print("KYLE: The school week is: \(schoolWeek)")
-//        
-//        // February
-//        if monthBetweenDays(MM: 2, ST: 5, ED: 11) {
-//            schoolWeek = 4  // week 6
-//        } else if monthBetweenDays(MM: 2, ST: 12, ED: 18) {
-//            schoolWeek = 5  // week 7
-//        } else if monthBetweenDays(MM: 2, ST: 19, ED: 25) {
-//            schoolWeek = 6  // week 8
-//        } else if monthBetweenDays(MM: 2, ST: 26, ED: 28) || monthBetweenDays(MM: 3, ST: 1, ED: 4) {
-//            schoolWeek = 7  // week 9
-//        }
-//        
-//        // Mid-Semester Break
-//        if monthBetweenDays(MM: 3, ST: 5, ED: 11) {
-//            schoolWeek = -2  // week 10
-//        }
-//        
-//        // March
-//        if monthBetweenDays(MM: 3, ST: 12, ED: 18) {
-//            schoolWeek = 8  // week 11
-//        } else if monthBetweenDays(MM: 3, ST: 19, ED: 25) {
-//            schoolWeek = 9  // week 12
-//        }
-//        
-//        // April
-//        if monthBetweenDays(MM: 3, ST: 26, ED: 31) || monthBetweenDays(MM: 4, ST: 1, ED: 1) {
-//            schoolWeek = 10  // week 13
-//        } else if monthBetweenDays(MM: 4, ST: 2, ED: 8) {
-//            schoolWeek = 11  // week 14
-//        } else if monthBetweenDays(MM: 4, ST: 9, ED: 15) {
-//            schoolWeek = 12  // week 15
-//        } else if monthBetweenDays(MM: 4, ST: 16, ED: 22) {
-//            schoolWeek = 13  // week 16
-//        } else if monthBetweenDays(MM: 4, ST: 23, ED: 29) {
-//            schoolWeek = 14  // week 17
-//        } else if monthBetweenDays(MM: 4, ST: 30, ED: 30) || monthBetweenDays(MM: 5, ST: 1, ED: 6) {
-//            schoolWeek = 15  // week 18
-//        }
-//        
-//        // Summer Vacation
-//        if monthBetweenDays(MM: 5, ST: 7, ED: 31) || month > 5 {
-//            schoolWeek = -1 // week 19...34
-//        }
     }
     
     func monthBetweenDays(MM: Int, ST: Int, ED: Int) -> Bool {

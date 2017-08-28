@@ -56,11 +56,11 @@ class InformationVC: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWeb
             name = "error"
         }
         
-        DB_BASE.child("venue").child(name).observeSingleEvent(of: .value, with: { (snapshot) in
+        DB_BASE.child("venue2").child(name).observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             var firebaseViews = value?["menu"] as? Int ?? 0
             firebaseViews += 1
-            DB_BASE.child("venue").child(name).child("menu").setValue(firebaseViews)
+            DB_BASE.child("venue2").child(name).child("menu").setValue(firebaseViews)
         })
     }
     
@@ -128,12 +128,17 @@ class InformationVC: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWeb
     
     // Prevent web view from navigating away from APU dining services web pages.
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        if String(describing: request.url).range(of: "www.apu.edu/diningservices/") != nil {
-            return true
-        } else {
-            presentAlertToUser()
-            return false
+        webView.scrollView.contentOffset = CGPoint(x: 0, y: 0)
+        let requestString = String(describing: request)
+        if navigationType == .linkClicked {
+            if requestString.contains("www.apu.edu/diningservices/") {
+                // navigate normally
+            } else {
+                presentAlertToUser()
+                return false
+            }
         }
+        return true
     }
     
     // Alert user that navigation away from Dining Services is denied
