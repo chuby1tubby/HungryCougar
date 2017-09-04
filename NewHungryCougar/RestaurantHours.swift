@@ -55,63 +55,33 @@ func setHours() {
         
         if let val = prefs.string(forKey: "diningHallOpenBMonFri") {
             openBMonFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #1")
         }
         if let val = prefs.string(forKey: "diningHallOpenLMonFri") {
             openLMonFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #2")
         }
         if let val = prefs.string(forKey: "diningHallOpenDMonFri") {
             openDMonFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #3")
         }
         if let val = prefs.string(forKey: "diningHallOpenSat") {
             openSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #4")
         }
         if let val = prefs.string(forKey: "diningHallOpenSun") {
             openSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #5")
         }
         if let val = prefs.string(forKey: "diningHallCloseBMonFri") {
             closeBMonFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #6")
         }
         if let val = prefs.string(forKey: "diningHallCloseLMonFri") {
             closeLMonFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #7")
         }
         if let val = prefs.string(forKey: "diningHallCloseDMonFri") {
             closeDMonFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #8")
         }
         if let val = prefs.string(forKey: "diningHallCloseSat") {
             closeSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #9")
         }
         if let val = prefs.string(forKey: "diningHallCloseSun") {
             closeSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         
         setupDay(day: Monday, open: openBMonFri, close: closeDMonFri)
@@ -126,51 +96,27 @@ func setHours() {
         
         if let val = prefs.string(forKey: "cornerstoneOpenMonThur") {
             openMonThur = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "cornerstoneOpenFri") {
             openFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "cornerstoneOpenSat") {
             openSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "cornerstoneOpenSun") {
             openSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "cornerstoneCloseMonThur") {
             closeMonThur = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "cornerstoneCloseFri") {
             closeFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "cornerstoneCloseSat") {
             closeSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "cornerstoneCloseSun") {
             closeSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         setupDay(day: Monday, open: openMonThur, close: closeMonThur)
         setupDay(day: Tuesday, open: openMonThur, close: closeMonThur)
@@ -184,51 +130,27 @@ func setHours() {
         
         if let val = prefs.string(forKey: "denOpenMonThur") {
             openMonThur = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "denOpenFri") {
             openFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "denOpenSat") {
             openSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "denOpenSun") {
             openSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "denCloseMonThur") {
             closeMonThur = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "denCloseFri") {
             closeFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "denCloseSat") {
             closeSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "denCloseSun") {
             closeSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         
         setupDay(day: Monday, open: openMonThur, close: closeMonThur)
@@ -243,39 +165,21 @@ func setHours() {
         
         if let val = prefs.string(forKey: "cafeOpenMonFri") {
             openMonFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "cafeOpenSat") {
             openSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "cafeOpenSun") {
             openSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "cafeCloseMonFri") {
             closeMonFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "cafeCloseSat") {
             closeSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "cafeCloseSun") {
             closeSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         
         setupDay(day: Monday, open: openMonFri, close: closeMonFri)
@@ -290,51 +194,27 @@ func setHours() {
         
         if let val = prefs.string(forKey: "mexicaliOpenMonThur") {
             openMonThur = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "mexicaliOpenFri") {
             openFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "mexicaliOpenSat") {
             openSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "mexicaliOpenSun") {
             openSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "mexicaliCloseMonThur") {
             closeMonThur = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "mexicaliCloseFri") {
             closeFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "mexicaliCloseSat") {
             closeSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "mexicaliCloseSun") {
             closeSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         
         setupDay(day: Monday, open: openMonThur, close: closeMonThur)
@@ -349,51 +229,27 @@ func setHours() {
         
         if let val = prefs.string(forKey: "pawsOpenMonThur") {
             openMonThur = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "pawsOpenFri") {
             openFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "pawsOpenSat") {
             openSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "pawsOpenSun") {
             openSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "pawsCloseMonThur") {
             closeMonThur = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "pawsCloseFri") {
             closeFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "pawsCloseSat") {
             closeSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "pawsCloseSun") {
             closeSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         
         setupDay(day: Monday, open: openMonThur, close: closeMonThur)
@@ -408,51 +264,27 @@ func setHours() {
         
         if let val = prefs.string(forKey: "grillOpenBMonThur") {
             openMonThur = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "grillOpenBFri") {
             openFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "grillOpenSat") {
             openSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "grillOpenSun") {
             openSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "grillCloseLMonThur") {
             closeMonThur = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "grillCloseLFri") {   // Currently only works for lunch closing hour
             closeFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "grillCloseSat") {
             closeSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "grillCloseSun") {
             closeSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         
         setupDay(day: Monday, open: openMonThur, close: closeMonThur)
@@ -467,51 +299,27 @@ func setHours() {
         
         if let val = prefs.string(forKey: "hillsideOpenMonThur") {
             openMonThur = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "hillsideOpenFri") {
             openFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "hillsideOpenSat") {
             openSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "hillsideOpenSun") {
             openSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "hillsideCloseMonThur") {
             closeMonThur = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "hillsideCloseFri") {
             closeFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "hillsideCloseSat") {
             closeSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "hillsideCloseSun") {
             closeSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         
         setupDay(day: Monday, open: openMonThur, close: closeMonThur)
@@ -526,51 +334,27 @@ func setHours() {
         
         if let val = prefs.string(forKey: "marketOpenMonThur") {
             openMonThur = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "marketOpenFri") {
             openFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "marketOpenSat") {
             openSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "marketOpenSun") {
             openSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "marketCloseMonThur") {
             closeMonThur = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "marketCloseFri") {
             closeFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "marketCloseSat") {
             closeSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "marketCloseSun") {
             closeSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         
         setupDay(day: Monday, open: openMonThur, close: closeMonThur)
@@ -585,51 +369,27 @@ func setHours() {
         
         if let val = prefs.string(forKey: "samsOpenMonThur") {
             openMonThur = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "samsOpenFri") {
             openFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "samsOpenSat") {
             openSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "samsOpenSun") {
             openSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "samsCloseMonThur") {
             closeMonThur = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "samsCloseFri") {
             closeFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "samsCloseSat") {
             closeSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "samsCloseSun") {
             closeSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         
         setupDay(day: Monday, open: openMonThur, close: closeMonThur)
@@ -644,51 +404,27 @@ func setHours() {
         
         if let val = prefs.string(forKey: "umaiOpenMonThur") {
             openMonThur = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "umaiOpenFri") {
             openFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "umaiOpenSat") {
             openSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "umaiOpenSun") {
             openSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "umaiCloseMonThur") {
             closeMonThur = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "umaiCloseFri") {
             closeFri = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "umaiCloseSat") {
             closeSat = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         if let val = prefs.string(forKey: "umaiCloseSun") {
             closeSun = Int(val)!
-            print("KYLE: Hours were retreived from UserDefaults.")
-        } else {
-            print("KYLE: No hours were found in prefs. #10")
         }
         
         setupDay(day: Monday, open: openMonThur, close: closeMonThur)
@@ -698,7 +434,6 @@ func setHours() {
         setupDay(day: Friday, open: openFri, close: closeFri)
         setupDay(day: Saturday, open: openSat, close: closeSat)
         setupDay(day: Sunday, open: openSun, close: closeSun)
-        
     }
     
     daysOfTheWeek = [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]

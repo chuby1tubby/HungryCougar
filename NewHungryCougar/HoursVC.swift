@@ -307,7 +307,6 @@ class HoursVC: UIViewController {
     }
     
     func checkIfOpen() {
-        print("KYLE: BEGIN CHECK IF OPEN FUNCTION..........")
         // Default values
         yesNoLbl.text = "OPEN"
         storeIsOpen = true
@@ -317,12 +316,10 @@ class HoursVC: UIViewController {
             // If yesterday closed at normal hours
             if Yesterday.closeTime > 0200 {
                 storeIsOpen = false
-                print("KYLE: OPEN-CLOSE BOOL #1")
             } else {
                 // If time has past yesterday close time
                 if now >= Yesterday.closeTime {
                     storeIsOpen = false
-                    print("KYLE: OPEN-CLOSE BOOL #2")
                 }
             }
         }
@@ -330,13 +327,11 @@ class HoursVC: UIViewController {
         else {
             // If today closes after midnight
             if Today.closeTime <= 0200 {
-                print("KYLE: OPEN-CLOSE BOOL #3")
                 storeIsOpen = true
             } else {
                 // If current time is after today close time
                 if now >= Today.closeTime {
                     storeIsOpen = false
-                    print("KYLE: OPEN-CLOSE BOOL #4")
                 }
             }
         }
@@ -368,7 +363,6 @@ class HoursVC: UIViewController {
         } else {
             yesNoLbl.text = "CLOSED"
         }
-        print("KYLE: END CHECK IF OPEN FUNCTION..........")
     }
     
     func calculateTimeUntilOpen() {
@@ -541,10 +535,8 @@ class HoursVC: UIViewController {
                 timeLabel.text = "Closing in \(minutesLeft) minutes"
             } else {
                 if ((Yesterday.closeTime == 0 || Yesterday.closeTime == 2359) && now < 0200) || ((Today.closeTime == 0 || Today.closeTime == 2359) && now >= 0200) {
-                    print("KYLE: Display time BOOL #9")
                     timeLabel.text = "Closing at midnight"
                 } else if (Yesterday.closeTime == 0100 && now < 0200) || (Today.closeTime == 0100 && now >= 0200) {
-                    print("KYLE: Display time BOOL #10")
                     timeLabel.text = "Closing at 1am"
                 } else {
                     var timeString = ""
