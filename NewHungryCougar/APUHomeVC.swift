@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 import Firebase
 
-var usernameStr: String? = ""
+var usernameStr: String? = ""   // new comment to be deleted later...
 var passwordStr: String? = ""
 var shouldRepeat: Bool = true
 var didReceievePointsVal: Bool = false
