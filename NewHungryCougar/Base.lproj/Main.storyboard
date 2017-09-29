@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A352a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aYT-vv-QhX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aYT-vv-QhX">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -13,6 +14,11 @@
     <customFonts key="customFonts">
         <array key="HarvestItal Regular.ttf">
             <string>HarvestItal</string>
+        </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Medium</string>
         </array>
     </customFonts>
     <scenes>
@@ -188,12 +194,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="noB-ys-rHW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="bX9-9u-8vA" userLabel="WhiteRectTapped">
                     <connections>
-                        <segue destination="Ih7-xX-Njt" kind="show" id="FaX-Lw-aQM"/>
+                        <segue destination="mtq-Pt-ULM" kind="show" id="j8L-IJ-04g"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Mig-SF-jAm" userLabel="RightArrowTapped">
                     <connections>
-                        <segue destination="Ih7-xX-Njt" kind="show" id="FUf-Zg-ioX"/>
+                        <segue destination="mtq-Pt-ULM" kind="show" id="FlK-I6-dUW"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Wso-pK-Yzt" userLabel="TermsOfServiceTapped">
@@ -531,7 +537,7 @@ Menu</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xn4-Vp-Rq3">
-                                <rect key="frame" x="20" y="78" width="374" height="578"/>
+                                <rect key="frame" x="20" y="98" width="374" height="558"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">This End User License Agreement (“Agreement”) is between you and Hungry Coug and governs use of this app made available through the Apple App Store. By installing the Hungry Coug App, you agree to be bound by this Agreement and understand that there is no tolerance for objectionable content. If you do not agree with the terms and conditions of this Agreement, you are not entitled to use the Hungry Coug App.
 
@@ -590,7 +596,7 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                 </connections>
                             </label>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms of Service" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="6Il-eL-lvh" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                <rect key="frame" x="116" y="30" width="182" height="40"/>
+                                <rect key="frame" x="116" y="50" width="182" height="40"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="675-2X-yso">
@@ -798,16 +804,16 @@ By using any functions of the Hungry Coug app, you hereby agree to all previousl
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCJ-zW-Tgz" customClass="CustomView" customModule="NewHungryCougar" customModuleProvider="target">
-                                        <rect key="frame" x="88.333333333333314" y="423" width="237.33333333333337" height="70"/>
+                                        <rect key="frame" x="88.666666666666657" y="423" width="237.33333333333334" height="70"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="APU_Red_Short" translatesAutoresizingMaskIntoConstraints="NO" id="ojH-NS-aJH">
-                                                <rect key="frame" x="12" y="0.0" width="70.000000000000014" height="70"/>
+                                                <rect key="frame" x="12" y="0.0" width="69.999999999999986" height="70"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="BDn-wW-YHU"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visit APU Mobile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="hFc-VE-WYN" customClass="DontCutMe" customModule="NewHungryCougar" customModuleProvider="target">
-                                                <rect key="frame" x="102.00000000000001" y="8" width="123.33333333333336" height="54"/>
+                                                <rect key="frame" x="101.99999999999999" y="8" width="123.33333333333333" height="54"/>
                                                 <fontDescription key="fontDescription" name="HarvestItal" family="HarvestItal" pointSize="18"/>
                                                 <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -1823,7 +1829,7 @@ Convenience</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aYT-vv-QhX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6j5-pb-k0w">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1855,7 +1861,7 @@ Convenience</string>
                                 </constraints>
                             </view>
                             <webView contentMode="scaleToFill" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdn-2y-umf">
-                                <rect key="frame" x="0.0" y="66" width="414" height="670"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="37n-8h-5Xw">
@@ -1869,7 +1875,7 @@ Convenience</string>
                             <constraint firstAttribute="trailing" secondItem="b7E-F9-0Gi" secondAttribute="trailing" id="35n-Vj-wiz"/>
                             <constraint firstItem="37n-8h-5Xw" firstAttribute="centerX" secondItem="fYD-GB-f2y" secondAttribute="centerX" id="3ww-Po-SUt"/>
                             <constraint firstItem="L3h-bo-GaC" firstAttribute="top" secondItem="rdn-2y-umf" secondAttribute="bottom" id="DU2-Zz-ue2"/>
-                            <constraint firstItem="rdn-2y-umf" firstAttribute="top" secondItem="37n-8h-5Xw" secondAttribute="bottom" id="Krx-00-lfi"/>
+                            <constraint firstItem="rdn-2y-umf" firstAttribute="top" secondItem="b7E-F9-0Gi" secondAttribute="bottom" id="N8g-36-UN4"/>
                             <constraint firstItem="37n-8h-5Xw" firstAttribute="leading" secondItem="fYD-GB-f2y" secondAttribute="leading" id="RIu-sL-Eru"/>
                             <constraint firstItem="b7E-F9-0Gi" firstAttribute="leading" secondItem="fYD-GB-f2y" secondAttribute="leading" id="h6C-5g-pm7"/>
                             <constraint firstItem="b7E-F9-0Gi" firstAttribute="top" secondItem="fYD-GB-f2y" secondAttribute="top" id="hCh-zS-85F"/>
@@ -1886,7 +1892,7 @@ Convenience</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Mb-17-FBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2004" y="1604"/>
+            <point key="canvasLocation" x="2002.8985507246377" y="1603.5326086956522"/>
         </scene>
     </scenes>
     <resources>
@@ -1908,7 +1914,7 @@ Convenience</string>
         <image name="settings_cog" width="576" height="570"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="FlK-I6-dUW"/>
         <segue reference="X8Z-Ic-x0s"/>
-        <segue reference="FaX-Lw-aQM"/>
     </inferredMetricsTieBreakers>
 </document>

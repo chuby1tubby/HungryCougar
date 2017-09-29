@@ -124,6 +124,7 @@ class InformationVC: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWeb
     func webViewDidFinishLoad(_ webView: UIWebView) {
         timeBool = false
         progressBar.progress = 1.0
+        progressBar.isHidden = true
     }
     
     // Prevent web view from navigating away from APU dining services web pages.
