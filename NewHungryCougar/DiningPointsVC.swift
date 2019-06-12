@@ -46,6 +46,10 @@ class DiningPointsVC: UIViewController, UITextFieldDelegate {
     var diningPlanChoice = ""
     
     override func viewDidLoad() {
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.blackTranslucent
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.isTranslucent = true
+        
         customizeDropDown(userTappedTitle)
         
         DB_BASE.child("stats").observeSingleEvent(of: .value, with: { (snapshot) in

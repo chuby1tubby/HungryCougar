@@ -122,27 +122,10 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Campus Restaurants"
-        self.navigationController?.navigationBar.barTintColor = UIColor.black
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
-        self.navigationController?.navigationBar.tintColor = UIColor.white
         
-        /*
-        *  DELETING KEYCHAIN VALUES
-        */
-        do {
-            try Locksmith.deleteDataForUserAccount(userAccount: "userAccount")
-        } catch {
-            // Could not save data to keychain
-        }
-        
-        let prefs = UserDefaults.standard
-        if prefs.string(forKey: "didDisplayMessageOnHome") != "Yes" {
-            prefs.set("Yes", forKey: "didDisplayMessageOnHome")
-            let alert = UIAlertController(title: "Welcome Home, APU!", message: "", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Thanks!", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.blackTranslucent
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.isTranslucent = true
     }
     
     override func viewWillAppear(_ animated: Bool) {

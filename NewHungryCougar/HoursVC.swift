@@ -38,6 +38,11 @@ class HoursVC: UIViewController {
     // Loads right before view appears
     override func viewWillAppear(_ animated: Bool) {
         self.title = restaurantChoice
+        
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.blackTranslucent
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.isTranslucent = true
+        
         let defaults = UserDefaults.standard
         defaults.set(restaurantChoice, forKey: "restaurantChoice")
         
@@ -241,7 +246,6 @@ class HoursVC: UIViewController {
                 namedView?.frame.origin.y += 100
             }, completion: nil)
         }
-        
     }
     
     // Set the date manualy to test the calculator

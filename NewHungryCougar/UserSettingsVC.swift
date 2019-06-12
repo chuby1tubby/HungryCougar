@@ -15,15 +15,16 @@ class UserSettingsVC: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var versionNumberLbl: UILabel!
     @IBOutlet weak var messageLbl: UILabel!
+    
+    override func viewDidLoad() {
+        self.viewDidLoad()
+        
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.blackTranslucent
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.isTranslucent = true
+    }
 
     override func viewWillAppear(_ animated: Bool) {
-        // Keychain
-        do {
-            try Locksmith.updateData(data: ["keychainUsername":"", "keychainPassword":""], forUserAccount: "userAccount")
-        } catch {
-            // Could not save data to keychain
-        }
-        
         messageLbl.text = "Welcome Back, APU! \n\n" +
             "I worked with IMT to integrate some Hungry Coug features with the APU Mobile app. \n\n" +
             "APU Mobile now displays your Dining Points, Expected Points, as well as tons of other cool features we have been working on. \n\n" +

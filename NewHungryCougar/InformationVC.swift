@@ -25,6 +25,10 @@ class InformationVC: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWeb
         super.viewDidLoad()
         webView.delegate = self
         
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.blackTranslucent
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.isTranslucent = true
+        
         var name = ""
         switch restaurantChoice {
         // East campus

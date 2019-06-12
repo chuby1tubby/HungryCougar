@@ -2,6 +2,8 @@
 import UIKit
 import WebKit
 
+//var shouldRepeat: Bool = true
+
 class MobileVC: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWebViewDelegate {
     
     // Outlets
@@ -14,8 +16,14 @@ class MobileVC: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWebViewD
     var timeBool: Bool!
     var timer: Timer!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.blackTranslucent
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.isTranslucent = true
+        
         webView.delegate = self
     }
     
@@ -35,6 +43,10 @@ class MobileVC: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWebViewD
     func webViewDidFinishLoad(_ webView: UIWebView) {
         timeBool = false
         progressBar.progress = 1.0
+//        if shouldRepeat == true {
+//            self.loginUser()
+//            shouldRepeat = false
+//        }
     }
     
     // Prevent web view from navigating away from APU dining services web pages.
@@ -51,6 +63,19 @@ class MobileVC: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWebViewD
         }
         return true
     }
+    
+//    func loginUser() {
+//        // Run JavaScript script to automatically login the user
+//        _ = webView.stringByEvaluatingJavaScript(from: "var script = document.createElement('script');" +
+//            "script.type = 'text/javascript';" +
+//            "script.text = " +
+//            "\"function insertLoginDetails() { " +
+//                "document.getElementById('password').value = '{PASSWORD}';" +
+//                "document.getElementById('login-btn').click();" +
+//            "}\";" +
+//            "document.getElementsByTagName('head')[0].appendChild(script);")!
+//        webView.stringByEvaluatingJavaScript(from: "insertLoginDetails();")!
+//    }
     
     // Alert user that navigation away from Dining Services is denied
     func presentAlertToUser() {
